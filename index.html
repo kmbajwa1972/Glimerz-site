@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glimerz | Aesthetic Home & Kitchen Ideas</title>
-    <!-- Stable direct-login library wrapper -->
-    <script src="https://unpkg.com@^3.0.0/dist/decap-cms.js"></script>
     <style>
         body { font-family: 'Georgia', serif; margin: 0; padding: 0; color: #2c2c2c; background: #fdfbf7; }
         header { text-align: center; padding: 80px 20px; background: #fff; border-bottom: 1px solid #f4f0ea; }
@@ -37,11 +35,53 @@
                 <div class="card-content">
                     <h2 class="card-title">Launch Dashboard Editor</h2>
                     <p style="color: #777; margin-bottom: 20px;">Click below to log in, write product reviews, and upload pictures directly from your PC.</p>
-                    Enter Admin Panel</button>
+                    <button onclick="launchCMS()" class="btn">Enter Admin Panel</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        // Step 1: Tell Decap CMS to wait for a manual initialization signal
+        window.CMS_MANUAL_INIT = true;
+
+        function launchCMS() {
+            // Step 2: Inject the core script file dynamically only when button is pressed
+            const script = document.createElement('script');
+            script.src = "https://unpkg.com@^3.0.0/dist/decap-cms.js";
+            
+            script.onload = () => {
+                // Step 3: Run the login fields layout block directly on the active canvas
+                window.CMS.init({
+                    config: {
+                        backend: {
+                            name: 'github',
+                            repo: 'kmbajwa1972/Glimerz-site',
+                            branch: 'main',
+                            base_url: 'https://staticcms.org',
+                            auth_endpoint: '/api/auth'
+                        },
+                        media_folder: 'images',
+                        public_folder: '/images',
+                        collections: [{
+                            name: 'blog',
+                            label: 'Blog Posts',
+                            folder: '_posts',
+                            create: true,
+                            slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
+                            fields: [
+                                {label: 'Post Title', name: 'title', widget: 'string'},
+                                {label: 'Publish Date', name: 'date', widget: 'datetime'},
+                                {label: 'Featured Image (Upload from PC)', name: 'image', widget: 'image'},
+                                {label: 'Blog Content & Affiliate Links', name: 'body', widget: 'markdown'}
+                            ]
+                        }]
+                    }
+                });
+            };
+            document.head.appendChild(script);
+        }
+    </script>
 
 </body>
 </html>
