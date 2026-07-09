@@ -1,0 +1,16 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | jsonify }},
+  "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  "image": [{{ if .Params.image }}{{ .Params.image | absURL | jsonify }}{{ else }}{{ "images/logo.jpg" | absURL | jsonify }}{{ end }}],
+  "author": { "@type": "Organization", "name": "Glimerz" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Glimerz",
+    "logo": { "@type": "ImageObject", "url": {{ "images/logo.jpg" | absURL | jsonify }} }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": {{ .Permalink | jsonify }} }
+}
+</script>

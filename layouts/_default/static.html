@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | Glimerz</title>
+    {{ partial "seo-meta.html" . }}
+    <style>
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; background: #fdfbf7; color: #2c2c2c; }
+        .wrapper { max-width: 700px; margin: 60px auto; background: #fff; padding: 50px; box-shadow: 0 6px 20px rgba(170,132,83,0.04); border: 1px solid #f4f0ea; border-radius: 4px; }
+        h1 { font-size: 2.2rem; color: #aa8453; font-weight: 300; letter-spacing: 1px; margin-top: 0; }
+        h2 { font-size: 1.3rem; font-weight: 400; color: #2c2c2c; margin-top: 35px; }
+        .back-link { display: block; text-align: center; margin: 30px 0 0; text-decoration: none; color: #aa8453; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; }
+        .content { font-size: 1.05rem; color: #3a3a3a; }
+        .content a { color: #aa8453; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>{{ .Title }}</h1>
+        <div class="content">{{ .Content }}</div>
+    </div>
+    <a href="/" class="back-link">← Back to Home</a>
+    {{ partial "footer.html" . }}
+</body>
+</html>

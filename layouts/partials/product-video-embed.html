@@ -1,0 +1,13 @@
+{{- $url := . -}}
+{{- if strings.Contains $url "youtube.com" -}}
+  {{- $id := replaceRE `.*[?&]v=([^&]+).*` "$1" $url -}}
+  <iframe class="product-video-frame" src="https://www.youtube.com/embed/{{ $id }}" title="Product video" frameborder="0" allowfullscreen loading="lazy"></iframe>
+{{- else if strings.Contains $url "youtu.be" -}}
+  {{- $id := replaceRE `youtu\.be/([^?&]+).*` "$1" $url -}}
+  <iframe class="product-video-frame" src="https://www.youtube.com/embed/{{ $id }}" title="Product video" frameborder="0" allowfullscreen loading="lazy"></iframe>
+{{- else if strings.Contains $url "vimeo.com" -}}
+  {{- $id := replaceRE `vimeo\.com/([0-9]+).*` "$1" $url -}}
+  <iframe class="product-video-frame" src="https://player.vimeo.com/video/{{ $id }}" title="Product video" frameborder="0" allowfullscreen loading="lazy"></iframe>
+{{- else -}}
+  <a href="{{ $url }}" target="_blank" rel="noopener">Watch video</a>
+{{- end -}}
