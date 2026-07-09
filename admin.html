@@ -9,7 +9,12 @@
   <link rel="stylesheet" href="https://unpkg.com@^3.0.0/dist/decap-cms.css" />
   <script src="https://unpkg.com@^3.0.0/dist/decap-cms.js"></script>
   
-  <!-- Updated Configuration Block Provided by DecapBridge -->
+  <!-- CRITICAL FIX: Tell Decap CMS to expect inline JS data instead of a config.yml file -->
+  <script type="text/javascript">
+    window.CMS_MANUAL_INIT = true;
+  </script>
+
+  <!-- Configuration Block Provided by DecapBridge -->
   <script type="text/javascript">
     window.CMS_CONFIG = {
       backend: {
@@ -17,10 +22,10 @@
         repo: 'kmbajwa1972/Glimerz-site',
         branch: 'main',
         auth_type: 'pkce',
-        base_url: 'https://auth.decapbridge.com',
+        base_url: 'https://decapbridge.com',
         auth_endpoint: '/sites/087b36a3-18d5-48e4-ae18-5bcb264a8d9f/pkce',
         auth_token_endpoint: '/sites/087b36a3-18d5-48e4-ae18-5bcb264a8d9f/token',
-        gateway_url: 'https://gateway.decapbridge.com',
+        gateway_url: 'https://decapbridge.com',
         commit_messages: {
           create: 'Create {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge',
           update: 'Update {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge',
@@ -36,8 +41,8 @@
         last_name_claim: 'last_name',
         avatar_url_claim: 'avatar_url'
       },
-      logo_url: 'https://decapbridge.com/decapcms-with-bridge.svg',
-      site_url: 'https://github.io',
+      logo_url: 'https://decapbridge.com',
+      site_url: 'https://glimerz.com',
       media_folder: 'images',
       public_folder: '/images',
       collections: [{
