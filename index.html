@@ -16,7 +16,7 @@
         .card { background: #fff; border-radius: 4px; overflow: hidden; box-shadow: 0 6px 20px rgba(170,132,83,0.04); border: 1px solid #f4f0ea; }
         .card-content { padding: 25px; text-align: center; }
         .card-title { font-size: 1.3rem; margin: 0 0 15px 0; color: #2c2c2c; font-weight: 400; }
-        .btn { display: inline-block; background: #2c2c2c; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 2px; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; border: none; }
+        .btn { display: inline-block; background: #2c2c2c; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 2px; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; }
         .btn:hover { background: #aa8453; }
     </style>
 </head>
@@ -34,55 +34,12 @@
             <div class="card">
                 <div class="card-content">
                     <h2 class="card-title">Launch Dashboard Editor</h2>
-                    <p style="color: #777; margin-bottom: 20px;">Click below to log in, write product reviews, and upload pictures directly from your PC.</p>
-                    <button onclick="launchCMS()" class="btn">Enter Admin Panel</button>
+                    <p style="color: #777; margin-bottom: 20px;">Click below to open your secure text editor, write reviews, and upload pictures directly from your PC.</p>
+                    <a href="/admin.html" class="btn">Enter Admin Panel</a>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        // Step 1: Tell Decap CMS to wait for a manual initialization signal
-        window.CMS_MANUAL_INIT = true;
-
-        function launchCMS() {
-            // Step 2: Inject the core script file dynamically only when button is pressed
-            const script = document.createElement('script');
-            script.src = "https://unpkg.com@^3.0.0/dist/decap-cms.js";
-            
-            script.onload = () => {
-                // Step 3: Run the login fields layout block directly on the active canvas
-                window.CMS.init({
-                    config: {
-                                                backend: {
-                            name: 'github',
-                            repo: 'kmbajwa1972/Glimerz-site',
-                            branch: 'main',
-                            base_url: 'https://vercel.app',
-                            auth_endpoint: '/api/auth'
-                        },
-                        
-                        media_folder: 'images',
-                        public_folder: '/images',
-                        collections: [{
-                            name: 'blog',
-                            label: 'Blog Posts',
-                            folder: '_posts',
-                            create: true,
-                            slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
-                            fields: [
-                                {label: 'Post Title', name: 'title', widget: 'string'},
-                                {label: 'Publish Date', name: 'date', widget: 'datetime'},
-                                {label: 'Featured Image (Upload from PC)', name: 'image', widget: 'image'},
-                                {label: 'Blog Content & Affiliate Links', name: 'body', widget: 'markdown'}
-                            ]
-                        }]
-                    }
-                });
-            };
-            document.head.appendChild(script);
-        }
-    </script>
 
 </body>
 </html>
