@@ -6,19 +6,18 @@
   <title>Glimerz Admin Workspace</title>
   
   <!-- Load the Decap CMS Stylesheet -->
-  <link rel="stylesheet" href="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.css" />
+  <link rel="stylesheet" href="https://unpkg.com@^3.0.0/dist/decap-cms.css" />
 
-  <!-- Tell the core engine to WAIT and not self-start -->
+  <!-- Pre-load configuration safety flag -->
   <script type="text/javascript">
     window.CMS_MANUAL_INIT = true;
   </script>
   
-  <!-- Load the core engine script AFTER setting the manual flag -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- Load core engine framework -->
+  <script src="https://unpkg.com@^3.0.0/dist/decap-cms.js"></script>
 </head>
 <body>
   <script type="text/javascript">
-    // Explicit execution call passing your configurations safely
     CMS.init({
       config: {
         backend: {
@@ -26,10 +25,10 @@
           repo: 'kmbajwa1972/Glimerz-site',
           branch: 'main',
           auth_type: 'pkce',
-          base_url: 'https://decapbridge.com',
+          base_url: 'https://auth.decapbridge.com',
           auth_endpoint: '/sites/087b36a3-18d5-48e4-ae18-5bcb264a8d9f/pkce',
           auth_token_endpoint: '/sites/087b36a3-18d5-48e4-ae18-5bcb264a8d9f/token',
-          gateway_url: 'https://decapbridge.com',
+          gateway_url: 'https://gateway.decapbridge.com',
           commit_messages: {
             create: 'Create {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge',
             update: 'Update {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge',
@@ -39,12 +38,7 @@
             openAuthoring: 'Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge'
           }
         },
-        auth: {
-          email_claim: 'email',
-          first_name_claim: 'first_name',
-          last_name_claim: 'last_name',
-          avatar_url_claim: 'avatar_url'
-        },
+        // CRITICAL FIX: Custom fields must reside inside the baseline configuration object
         logo_url: 'https://decapbridge.com',
         site_url: 'https://glimerz.com',
         media_folder: 'images',
