@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glimerz Admin Workspace</title>
+  
+  <!-- Core Decap CMS Stylesheet and App Script via UNPKG CDN -->
+  <link rel="stylesheet" href="https://unpkg.com@^3.0.0/dist/decap-cms.css" />
+  <script src="https://unpkg.com@^3.0.0/dist/decap-cms.js"></script>
+  
+  <!-- Explicit inline data settings mapping your exact layout paths -->
+  <script type="text/javascript">
+    window.CMS_CONFIG = {
+      backend: {
+        name: 'github',
+        repo: 'kmbajwa1972/Glimerz-site',
+        branch: 'main',
+        // Connects your GitHub Pages site to a free external OAuth helper
+        gateway_url: 'https://api.decapbridge.com' 
+      },
+      media_folder: 'images',
+      public_folder: '/images',
+      collections: [{
+        name: 'blog',
+        label: 'Blog Posts',
+        folder: '_posts',
+        create: true,
+        slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
+        fields: [
+          {label: 'Post Title', name: 'title', widget: 'string'},
+          {label: 'Publish Date', name: 'date', widget: 'datetime'},
+          {label: 'Featured Image (Upload from PC)', name: 'image', widget: 'image'},
+          {label: 'Blog Content & Affiliate Links', name: 'body', widget: 'markdown'}
+        ]
+      }]
+    };
+  </script>
+</head>
+<body>
+  <!-- Decap CMS injects the entire dashboard UI right here automatically -->
+</body>
+</html>
