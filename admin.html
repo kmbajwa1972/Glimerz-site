@@ -4,38 +4,35 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glimerz Admin Workspace</title>
-  <!-- Stable direct-login core engine script -->
-  <script src="https://unpkg.com@^3.0.0/dist/decap-cms.js"></script>
+  <!-- Native, lightweight content editor core engine for GitHub Pages hosting -->
+  <script src="https://unpkg.com" type="module"></script>
+  
+  <!-- Explicit inline data settings mapping your exact layout paths -->
+  <script type="text/javascript">
+    window.CMS_CONFIG = {
+      backend: {
+        name: 'github',
+        repo: 'kmbajwa1972/Glimerz-site',
+        branch: 'main'
+      },
+      media_folder: 'images',
+      public_folder: '/images',
+      collections: [{
+        name: 'blog',
+        label: 'Blog Posts',
+        folder: '_posts',
+        create: true,
+        slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
+        fields: [
+          {label: 'Post Title', name: 'title', widget: 'string'},
+          {label: 'Publish Date', name: 'date', widget: 'datetime'},
+          {label: 'Featured Image (Upload from PC)', name: 'image', widget: 'image'},
+          {label: 'Blog Content & Affiliate Links', name: 'body', widget: 'markdown'}
+        ]
+      }]
+    };
+  </script>
 </head>
 <body>
-  <script>
-    // Initialize the backend connection directly on a clean page canvas
-    CMS.init({
-      config: {
-        backend: {
-          name: 'github',
-          repo: 'kmbajwa1972/Glimerz-site',
-          branch: 'main',
-          base_url: 'https://vercel.app',
-          auth_endpoint: '/api/auth'
-        },
-        media_folder: 'images',
-        public_folder: '/images',
-        collections: [{
-          name: 'blog',
-          label: 'Blog Posts',
-          folder: '_posts',
-          create: true,
-          slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
-          fields: [
-            {label: 'Post Title', name: 'title', widget: 'string'},
-            {label: 'Publish Date', name: 'date', widget: 'datetime'},
-            {label: 'Featured Image (Upload from PC)', name: 'image', widget: 'image'},
-            {label: 'Blog Content & Affiliate Links', name: 'body', widget: 'markdown'}
-          ]
-        }]
-      }
-    });
-  </script>
 </body>
 </html>
