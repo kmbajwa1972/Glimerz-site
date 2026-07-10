@@ -9,8 +9,8 @@ categories:
 guest_post: false
 products:
   - product_name: Drawer Dividers for Utensils
-    photo: https://a.co/d/07FL50Bc
-    affiliate_link: https://a.co/d/0asxeFWQ?hunterpro0e-20
+    photo: https://m.media-amazon.com/images/I/71eQSN6b17L._AC_SY300_SX300_QL70_FMwebp_.jpg
+    affiliate_link: https://a.co/d/0asxeFWQ?tag=hunterpro0e-20
 ---
 *9 Kitchen Storage Ideas That Actually Make a Difference*
 
