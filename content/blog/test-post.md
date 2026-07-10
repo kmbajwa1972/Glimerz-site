@@ -7,7 +7,7 @@ categories:
 products:
   - product_name: Example Ceramic Knife Set
     affiliate_link: https://www.amazon.com/dp/REPLACE-WITH-YOUR-ASIN?tag=your-affiliate-id
-    photo: /images/logo.jpg
+    photo: /images/images-3-.jpeg
     video_url: ""
     video_file: ""
 ---
