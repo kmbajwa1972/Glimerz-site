@@ -1,11 +1,13 @@
 ---
-title: "My First Elegant Kitchen Setup"
+title: My First Elegant Kitchen Setup
 date: 2026-07-09
-image: "/images/logo.jpg"
+image: /images/images-3-.jpeg
+categories:
+  - Kitchen Accessories
 products:
-  - product_name: "Example Ceramic Knife Set"
-    affiliate_link: "https://www.amazon.com/dp/REPLACE-WITH-YOUR-ASIN?tag=your-affiliate-id"
-    photo: "/images/logo.jpg"
+  - product_name: Example Ceramic Knife Set
+    affiliate_link: https://www.amazon.com/dp/REPLACE-WITH-YOUR-ASIN?tag=your-affiliate-id
+    photo: /images/logo.jpg
     video_url: ""
     video_file: ""
 ---
