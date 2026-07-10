@@ -1,0 +1,16 @@
+{{- $desc := "Glimerz — curated home & kitchen inspiration, reviews, and product picks." -}}
+{{- if .Params.description -}}{{ $desc = .Params.description }}{{- else if .IsPage -}}{{ if .Summary }}{{ $desc = .Summary | plainify | truncate 160 }}{{ end }}{{- end -}}
+{{- $img := "images/logo.jpg" | absURL -}}
+{{- if .Params.image -}}{{ $img = .Params.image | absURL }}{{- end -}}
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:site_name" content="Glimerz">
+<meta property="og:title" content="{{ if .Title }}{{ .Title }} | Glimerz{{ else }}Glimerz{{ end }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ $img }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .Title }}{{ .Title }} | Glimerz{{ else }}Glimerz{{ end }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $img }}">

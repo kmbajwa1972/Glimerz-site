@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | Glimerz</title>
+    {{ partial "seo-meta.html" . }}
+    <style>
+        body { font-family: 'Georgia', serif; margin: 0; padding: 0; color: #2c2c2c; background: #fdfbf7; }
+        header { text-align: center; padding: 60px 20px; background: #fff; border-bottom: 1px solid #f4f0ea; }
+        header h1 { font-size: 2.6rem; color: #aa8453; margin: 0 0 10px 0; font-weight: 300; letter-spacing: 3px; }
+        header p { color: #777; max-width: 500px; margin: 0 auto; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 50px 20px; }
+
+        .categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .cat-card { position: relative; border-radius: 6px; overflow: hidden; box-shadow: 0 6px 20px rgba(170,132,83,0.08); }
+        .cat-card a.cat-link { display: block; text-decoration: none; }
+        .cat-card img { width: 100%; height: 320px; object-fit: cover; display: block; transition: transform 0.3s ease; }
+        .cat-card:hover img { transform: scale(1.04); }
+        .cat-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.6)); padding: 30px 20px 20px; }
+        .cat-overlay h2 { color: #fff; font-size: 1.6rem; font-weight: 400; margin: 0 0 12px 0; letter-spacing: 1px; }
+        .cat-btn { display: inline-block; background: #fff; color: #2c2c2c; padding: 10px 24px; text-decoration: none; border-radius: 2px; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+        .cat-btn:hover { background: #aa8453; color: #fff; }
+        .save-btn { position: absolute; top: 14px; right: 14px; background: rgba(255,255,255,0.9); color: #2c2c2c; border: none; border-radius: 20px; padding: 7px 14px; font-size: 0.75rem; letter-spacing: 0.5px; text-decoration: none; font-family: 'Georgia', serif; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+        .save-btn:hover { background: #e60023; color: #fff; }
+
+        .ad-section { margin-top: 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .ad-box { border: 1px dashed #d8cfc2; border-radius: 4px; background: #fff; padding: 20px; text-align: center; }
+        .ad-box img { width: 100%; height: 140px; object-fit: cover; border-radius: 2px; margin-bottom: 8px; }
+        .ad-label { font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; color: #aaa; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DISCOVER GLIMERZ</h1>
+        <p>Browse our favorite home decor and kitchen accessory finds, sorted by category.</p>
+    </header>
+
+    <div class="container">
+        <div class="categories">
+
+            <div class="cat-card">
+                <a href="/categories/kitchen-accessories/" class="cat-link">
+                    <img src="{{ .Params.kitchen_image }}" alt="Kitchen Accessories">
+                    <div class="cat-overlay">
+                        <h2>Kitchen Accessories</h2>
+                        <span class="cat-btn">Browse Kitchen →</span>
+                    </div>
+                </a>
+                <a class="save-btn" target="_blank" rel="noopener" href="https://www.pinterest.com/pin/create/button/?url={{ .Permalink }}&media={{ .Params.kitchen_image | absURL }}&description=Kitchen%20Accessories%20-%20Glimerz">♥ Save</a>
+            </div>
+
+            <div class="cat-card">
+                <a href="/categories/home-decor/" class="cat-link">
+                    <img src="{{ .Params.home_image }}" alt="Home Decor">
+                    <div class="cat-overlay">
+                        <h2>Home Decor</h2>
+                        <span class="cat-btn">Browse Home Decor →</span>
+                    </div>
+                </a>
+                <a class="save-btn" target="_blank" rel="noopener" href="https://www.pinterest.com/pin/create/button/?url={{ .Permalink }}&media={{ .Params.home_image | absURL }}&description=Home%20Decor%20-%20Glimerz">♥ Save</a>
+            </div>
+
+        </div>
+
+        <div class="ad-section">
+            <div class="ad-box">
+                <img src="/images/logo.jpg" alt="Advertisement">
+                <div class="ad-label">Advertisement</div>
+            </div>
+            <div class="ad-box">
+                <img src="/images/logo.jpg" alt="Advertisement">
+                <div class="ad-label">Advertisement</div>
+            </div>
+        </div>
+    </div>
+
+    {{ partial "footer.html" . }}
+
+</body>
+</html>

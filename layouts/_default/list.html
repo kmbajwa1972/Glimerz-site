@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }} | Glimerz</title>
+    {{ partial "seo-meta.html" . }}
+    <style>
+        body { font-family: 'Georgia', serif; margin: 0; padding: 0; color: #2c2c2c; background: #fdfbf7; }
+        header { text-align: center; padding: 60px 20px; background: #fff; border-bottom: 1px solid #f4f0ea; }
+        header h1 { font-size: 2.6rem; color: #aa8453; margin: 0; font-weight: 300; letter-spacing: 3px; }
+        .back-link { display: block; text-align: center; margin: 30px 0 0; text-decoration: none; color: #aa8453; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; }
+        .container { max-width: 900px; margin: 30px auto 80px; padding: 0 20px; }
+        .post-card { display: flex; gap: 25px; background: #fff; border: 1px solid #f4f0ea; border-radius: 4px; padding: 25px; margin-bottom: 25px; text-decoration: none; color: inherit; box-shadow: 0 6px 20px rgba(170,132,83,0.04); }
+        .post-card img { width: 160px; height: 120px; object-fit: cover; border-radius: 2px; flex-shrink: 0; }
+        .post-card h2 { margin: 0 0 8px 0; font-size: 1.3rem; font-weight: 400; color: #2c2c2c; }
+        .post-card .meta { font-size: 0.85rem; color: #999; font-style: italic; }
+        .empty { text-align: center; color: #999; padding: 60px 20px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>GLIMERZ BLOG</h1>
+    </header>
+
+    <a href="/" class="back-link">← Back to Home</a>
+
+    <div class="container">
+        {{ if .Pages }}
+            {{ range .Pages.ByDate.Reverse }}
+            <a class="post-card" href="{{ .RelPermalink }}">
+                {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}">{{ end }}
+                <div>
+                    <h2>{{ .Title }}</h2>
+                    <div class="meta">{{ .Date.Format "January 2, 2006" }}</div>
+                </div>
+            </a>
+            {{ end }}
+        {{ else }}
+            <p class="empty">No posts yet — check back soon!</p>
+        {{ end }}
+    </div>
+
+    {{ partial "footer.html" . }}
+
+</body>
+</html>
