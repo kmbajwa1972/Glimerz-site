@@ -1,6 +1,7 @@
 ---
 title: Kitchen Gadgets That Earn Their Spot on Your Counter
 date: 2026-07-11T14:22:00.000+05:00
+slug: "kitchen-gadgets-that-earn-their-spot"
 description: We tested dozens of kitchen gadgets and kept only the ones that genuinely earn their counter space — here are our top picks for 2026.
 keywords: kitchen gadgets, best kitchen tools 2026, kitchen accessories, counter space, vegetable chopper
 image: /images/kitchen-gadgets.jpg
