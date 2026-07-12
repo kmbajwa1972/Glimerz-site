@@ -1,4 +1,5 @@
 ---
+---
 title: Kitchen Gadgets That Earn Their Spot on Your Counter
 date: 2026-07-11T14:22:00.000+05:00
 slug: "kitchen-gadgets-that-earn-their-spot"
@@ -7,6 +8,8 @@ keywords: kitchen gadgets, best kitchen tools 2026, kitchen accessories, counter
 image: /images/kitchen-gadgets.jpg
 categories:
   - Kitchen Accessories
+ aliases:
+  - /blog/test-post/
 products:
   - affiliate_link: https://a.co/d/03xdmMDm?tag=hunterpro0e-20
     product_name: Fullstar Pro Original Vegetable Chopper - Chopper and Spiralizer -
@@ -16,6 +19,7 @@ products:
       Fruit Cutter
     photo: https://m.media-amazon.com/images/I/41aKSI8TZiL._AC_SL1024_.jpg
     affiliate_link: https://a.co/d/0bTaVfNZ?tag=hunterpro0e-20
+---
 ---
  **Kitchen Gadgets That Earn Their Spot on Your Counter**
 
