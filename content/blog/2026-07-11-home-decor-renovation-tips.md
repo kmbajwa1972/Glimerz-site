@@ -1,7 +1,8 @@
 ---
-title: "Home Decor Renovation Tips "
+title: "Home Decor Renovation Tips on a Budget"
 date: 2026-07-11T13:42:00.000+05:00
-description: Budget Friendly Home Decor Improvements.
+description: Smart, budget-friendly home decor renovation tips that transform your space without overspending — practical ideas for every room.
+keywords: home decor renovation, budget home improvements, affordable home decor, room renovation tips, home makeover ideas
 image: /images/home-renovation.jpg
 categories:
   - Home Decor
