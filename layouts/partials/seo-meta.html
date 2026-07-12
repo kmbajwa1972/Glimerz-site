@@ -1,0 +1,40 @@
+{{- $desc := "Glimerz — curated home & kitchen inspiration, reviews, and product picks." -}}
+{{- if .Params.description -}}{{ $desc = .Params.description }}{{- else if .IsPage -}}{{ if .Summary }}{{ $desc = .Summary | plainify | truncate 160 }}{{ end }}{{- end -}}
+{{- $img := "images/logo.jpg" | absURL -}}
+{{- if .Params.image -}}{{ $img = .Params.image | absURL }}{{- end -}}
+{{- $keywords := "home decor, kitchen accessories, kitchen ideas, home inspiration, kitchen storage, home decor ideas" -}}
+{{- if .Params.keywords -}}{{ $keywords = .Params.keywords }}{{- else if .Params.categories -}}{{ $keywords = delimit .Params.categories ", " }}{{- end -}}
+<meta name="description" content="{{ $desc }}">
+<meta name="keywords" content="{{ $keywords }}">
+<meta name="author" content="{{ if .Params.author }}{{ .Params.author }}{{ else }}Glimerz Editorial Team{{ end }}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ if .IsPage }}<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
+<meta property="og:site_name" content="Glimerz">
+<meta property="og:title" content="{{ if .Title }}{{ .Title }} | Glimerz{{ else }}Glimerz | Home & Kitchen Inspiration{{ end }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ $img }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@glimerz">
+<meta name="twitter:title" content="{{ if .Title }}{{ .Title }} | Glimerz{{ else }}Glimerz | Home & Kitchen Inspiration{{ end }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $img }}">
+<link rel="icon" type="image/jpeg" href="/images/logo.jpg">
+<link rel="apple-touch-icon" href="/images/logo.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Glimerz",
+  "url": "https://glimerz.com",
+  "logo": "https://glimerz.com/images/logo.jpg",
+  "sameAs": [],
+  "description": "Curated home decor and kitchen accessories inspiration, reviews, and Amazon product picks."
+}
+</script>
