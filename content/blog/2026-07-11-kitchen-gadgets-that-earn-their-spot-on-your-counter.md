@@ -7,8 +7,8 @@ keywords: kitchen gadgets, best kitchen tools 2026, kitchen accessories, counter
 image: /images/kitchen-gadgets.jpg
 categories:
   - Kitchen Accessories
- aliases:
-  - /blog/test-post/
+aliases:
+   - /blog/test-post/
 products:
   - affiliate_link: https://a.co/d/03xdmMDm?tag=hunterpro0e-20
     product_name: Fullstar Pro Original Vegetable Chopper - Chopper and Spiralizer -
