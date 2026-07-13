@@ -1,0 +1,12 @@
+<div class="mid-product-block">
+    {{ with .Get "image" }}
+    <a href="{{ $.Get "link" }}" target="_blank" rel="nofollow sponsored noopener" class="mp-photo-link">
+        <img class="mp-photo" src="{{ . }}" alt="{{ $.Get "name" }}">
+    </a>
+    {{ end }}
+    <div class="mp-info">
+        <div class="mp-name">{{ .Get "name" }}</div>
+        <a href="{{ .Get "link" }}" target="_blank" rel="nofollow sponsored noopener" class="mp-shop-btn">Shop on Amazon →</a>
+        <div class="mp-disclosure">As an Amazon Associate, we earn from qualifying purchases.</div>
+    </div>
+</div>
