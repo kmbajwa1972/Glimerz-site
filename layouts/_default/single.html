@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }} | Glimerz</title>
+    {{ partial "seo-meta.html" . }}
+    {{ partial "article-jsonld.html" . }}
+    <style>
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; background: #fdfbf7; color: #2c2c2c; }
+        .wrapper { max-width: 820px; margin: 60px auto; background: #fff; padding: 40px; box-shadow: 0 6px 20px rgba(170,132,83,0.04); border: 1px solid #f4f0ea; border-radius: 4px; }
+        h1 { font-size: 2.4rem; line-height: 1.3; color: #2c2c2c; font-weight: 400; margin-top: 20px; }
+        .meta { color: #8a8a8a; font-size: 0.9rem; font-style: italic; margin-bottom: 30px; }
+        .feat-img { width: 100%; max-height: 450px; object-fit: cover; border-radius: 2px; margin-bottom: 30px; }
+        .back-link { text-decoration: none; color: #aa8453; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; }
+        .content { font-size: 1.1rem; color: #3a3a3a; }
+        .content a { color: #aa8453; font-weight: bold; text-decoration: underline; }
+        .content a:hover { color: #2c2c2c; }
+
+        .products { margin-top: 50px; border-top: 1px solid #f4f0ea; padding-top: 40px; }
+        .products h2 { font-size: 1.3rem; font-weight: 400; letter-spacing: 1px; color: #aa8453; text-transform: uppercase; margin-bottom: 25px; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+        .product-card { position: relative; border: 1px solid #f4f0ea; border-radius: 4px; padding: 16px; background: #fdfbf7; display: flex; flex-direction: column; }
+        .save-btn { position: absolute; top: 24px; right: 24px; background: rgba(255,255,255,0.92); color: #2c2c2c; border: none; border-radius: 20px; padding: 4px 10px; font-size: 0.65rem; letter-spacing: 0.5px; text-decoration: none; font-family: 'Georgia', serif; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+        .save-btn:hover { background: #e60023; color: #fff; }
+        .product-card h3 { margin: 0 0 10px 0; font-size: 1rem; font-weight: 400; }
+        .product-photo-link { display: block; }
+        .product-photo { width: 100%; height: 160px; object-fit: cover; border-radius: 2px; display: block; transition: opacity 0.2s ease; }
+        .product-photo-link:hover .product-photo { opacity: 0.85; }
+        .product-video-frame, .product-video-file { width: 100%; aspect-ratio: 16 / 9; border-radius: 2px; margin-top: 10px; display: block; border: none; }
+        .shop-btn { display: inline-block; margin-top: 12px; background: #2c2c2c; color: #fff; padding: 8px 16px; text-decoration: none; border-radius: 2px; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; text-align: center; }
+        .shop-btn:hover { background: #aa8453; }
+        .affiliate-disclosure { font-size: 0.7rem; color: #999; margin-top: 6px; }
+
+        .mid-product-block { display: flex; align-items: center; gap: 16px; border: 1px solid #f4f0ea; border-radius: 4px; background: #fdfbf7; padding: 12px; margin: 30px 0; max-width: 100%; }
+        .mid-product-block .mp-photo-link { flex-shrink: 0; display: block; }
+        .mid-product-block .mp-photo { width: 90px; height: 90px; object-fit: cover; border-radius: 2px; display: block; }
+        .mid-product-block .mp-info { flex: 1; min-width: 0; }
+        .mid-product-block .mp-name { font-size: 0.95rem; color: #2c2c2c; margin-bottom: 6px; }
+        .mid-product-block .mp-shop-btn { display: inline-block; background: #2c2c2c; color: #fff; padding: 6px 14px; text-decoration: none; border-radius: 2px; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; }
+        .mid-product-block .mp-shop-btn:hover { background: #aa8453; }
+        .mid-product-block .mp-disclosure { font-size: 0.65rem; color: #999; margin-top: 6px; }
+        @media (max-width: 480px) {
+            .mid-product-block { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <a href="/" class="back-link">← Back to Gallery</a>
+        <h1>{{ .Title }}</h1>
+        <div class="meta">Published on {{ .Date.Format "January 2, 2006" }}{{ if .Params.author }} · By {{ .Params.author }}{{ end }}{{ if .Params.guest_post }} · <span style="background:#aa8453;color:#fff;padding:2px 8px;border-radius:10px;font-size:0.7rem;letter-spacing:0.5px;">GUEST POST</span>{{ end }}</div>
+
+        {{ if .Params.image }}
+        <img class="feat-img" src="{{ .Params.image }}" alt="{{ .Title }}">
+        {{ end }}
+
+        <div class="content">
+            {{ .Content }}
+        </div>
+
+        {{ if .Params.products }}
+        <div class="products">
+            <h2>Featured Products</h2>
+            <div class="products-grid">
+            {{ range .Params.products }}
+            <div class="product-card">
+                {{ if .product_name }}<h3>{{ .product_name }}</h3>{{ end }}
+
+                {{ if .photo }}
+                <a href="{{ .affiliate_link }}" target="_blank" rel="nofollow sponsored noopener" class="product-photo-link">
+                    <img class="product-photo" src="{{ .photo }}" alt="{{ .product_name }}">
+                </a>
+                <a class="save-btn" target="_blank" rel="noopener" href="https://www.pinterest.com/pin/create/button/?url={{ $.Permalink }}&media={{ .photo | absURL }}&description={{ .product_name }}">♥ Save</a>
+                {{ end }}
+
+                {{ if .video_file }}
+                <video class="product-video-file" controls src="{{ .video_file }}"></video>
+                {{ else if .video_url }}
+                {{ partial "product-video-embed.html" .video_url }}
+                {{ end }}
+
+                {{ if .affiliate_link }}
+                <a href="{{ .affiliate_link }}" target="_blank" rel="nofollow sponsored noopener" class="shop-btn">Shop this on Amazon →</a>
+                <div class="affiliate-disclosure">As an Amazon Associate, we earn from qualifying purchases.</div>
+                {{ end }}
+            </div>
+            {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    {{ partial "footer.html" . }}
+
+</body>
+</html>
