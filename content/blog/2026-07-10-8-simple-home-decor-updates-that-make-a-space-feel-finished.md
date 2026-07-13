@@ -22,6 +22,8 @@ A single overhead light does a room no favors — it flattens everything and mak
 
 This is the single most common decor mistake — a rug that's too small makes furniture look like it's floating in the middle of nowhere. As a rule of thumb, at least the front legs of your sofa and chairs should sit on the rug. It sounds like a small detail, but it's the difference between a room looking styled and looking like furniture was just placed wherever.
 
+{{< mid-product name="5x7 Washable Area Rug for Living Room" image="https://m.media-amazon.com/images/I/81YztU89iLL._AC_SL1500_.jpg" link="https://a.co/d/0hJVAH2E?tag=hunterpro0e-20" >}}
+
 **3. Add Something at Eye Level**
 
 Empty wall space above furniture is one of the most common "something feels off" culprits. It doesn't need to be art — a mirror, a shelf with a few objects, even a well-placed clock works. The goal is just to stop the eye from stopping at furniture height and give the room some vertical interest.
