@@ -4,7 +4,7 @@ date: 2026-07-16T16:00:00.000+05:00
 description: "Damage-free rental decorating ideas: peel-and-stick wallpaper,
   renter-friendly lighting, large rugs, removable hardware and more — make your
   apartment feel like home and keep your full deposit."
-image: /images/home.jpg
+image: /images/home-04.jpg
 categories:
   - Home Decor
 guest_post: false
