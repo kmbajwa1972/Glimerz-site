@@ -3,7 +3,7 @@ title: "How to Renovate a Newly Built House: A Practical Guide"
 date: 2026-07-15T15:43:00.000+05:00
 description: "New build renovation guide: what to upgrade first in a newly built
   house, common mistakes to avoid, and the exact work sequence that saves money"
-image: /images/home.jpg
+image: /images/home-03.jpg
 categories:
   - Home Decor
 guest_post: true
