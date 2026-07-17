@@ -1,25 +1,27 @@
 ---
 title: "Kitchen Lighting Done Right: The Three-Layer Approach Designers Swear By"
 date: 2026-07-17T14:30:00.000+05:00
-description: "Kitchen lighting guide: how to layer ambient, task, and accent light, choose pendants for your island, and pick the right bulb color temperature for a kitchen."
+description: "Kitchen lighting guide: how to layer ambient, task, and accent
+  light, choose pendants for your island, and pick the right bulb color
+  temperature for a kitchen."
 image: /images/kitchen-05.jpg
 categories:
   - Kitchen Accessories
 guest_post: false
 products:
-  - product_name: PASTE_PRODUCT_NAME
-    affiliate_link: PASTE_AMAZON_SHORT_LINK?tag=hunterpro0e-20
-    photo: PASTE_AMAZON_IMAGE_URL
-  - product_name: PASTE_PRODUCT_NAME
-    affiliate_link: PASTE_AMAZON_SHORT_LINK?tag=hunterpro0e-20
-    photo: PASTE_AMAZON_IMAGE_URL
+  - product_name: Modern LED flush-mount ceiling light.
+    affiliate_link: https://a.co/d/06ik7mOQ?tag=hunterpro0e-20
+    photo: https://m.media-amazon.com/images/I/7151ELM-JiL._AC_SL1500_.jpg
+  - product_name: LED strip light for above cabinets.
+    affiliate_link: https://a.co/d/07j0OrjJ?tag=hunterpro0e-20
+    photo: https://m.media-amazon.com/images/I/71n8zYUI7uL._AC_SL1500_.jpg
 mid_products:
-  - product_name: PASTE_PRODUCT_NAME
-    affiliate_link: PASTE_AMAZON_SHORT_LINK?tag=hunterpro0e-20
-    photo: PASTE_AMAZON_IMAGE_URL
-  - product_name: PASTE_PRODUCT_NAME
-    affiliate_link: PASTE_AMAZON_SHORT_LINK?tag=hunterpro0e-20
-    photo: PASTE_AMAZON_IMAGE_URL
+  - product_name: Pendant lights, set of 2–3
+    affiliate_link: https://a.co/d/08vz8ST4?tag=hunterpro0e-20
+    photo: https://m.media-amazon.com/images/I/61E+XnCEaTL._AC_SL1100_.jpg
+  - product_name: Smart LED bulbs multi-pack.
+    affiliate_link: https://a.co/d/00F8sqIE?tag=hunterpro0e-20
+    photo: https://m.media-amazon.com/images/I/610pDnVRosL._AC_SL1500_.jpg
 ---
 Most kitchens have a lighting problem, and most owners don't know it. The symptom is subtle: the room feels flat in the evening, you cast your own shadow over the chopping board, and no matter how nice the finishes are, photos of the kitchen never look as good as the real thing. The cause is almost always the same — a single ceiling light doing a job that was meant for three. Designers light kitchens in layers, and once you understand the system, you can fix almost any kitchen without an electrician. Here's how the three-layer approach works.
 
