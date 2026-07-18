@@ -1,0 +1,35 @@
+name: Supabase Keep-Alive Ping
+
+# Prevents the Glimerz Expert Opinion Supabase project (yayljmqelmsmcsuhxqdj)
+# from being auto-paused for inactivity on the free tier. Runs a harmless
+# read query against the expert_opinions table once a week.
+
+on:
+  schedule:
+    # Every Monday at 09:00 UTC
+    - cron: "0 9 * * 1"
+  workflow_dispatch: {} # lets you also trigger it manually from the Actions tab
+
+jobs:
+  ping-supabase:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase REST API
+        run: |
+          response=$(curl -s -o /tmp/response.json -w "%{http_code}" \
+            "${SUPABASE_URL}/rest/v1/expert_opinions?select=id&limit=1" \
+            -H "apikey: ${SUPABASE_ANON_KEY}" \
+            -H "Authorization: Bearer ${SUPABASE_ANON_KEY}")
+
+          echo "HTTP status: $response"
+          cat /tmp/response.json
+
+          if [ "$response" -ge 200 ] && [ "$response" -lt 300 ]; then
+            echo "✅ Supabase project pinged successfully — activity recorded."
+          else
+            echo "❌ Ping failed with status $response"
+            exit 1
+          fi
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
