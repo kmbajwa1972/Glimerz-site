@@ -6,7 +6,7 @@
  */
 (function () {
   const CHATBOT_FUNCTION_URL = "https://yayljmqelmsmcsuhxqdj.supabase.co/functions/v1/chatbot";
-  const CHATBOT_ANON_KEY = "YOUR_SUPABASE_ANON_KEY"; // same anon key used in the dashboard — safe to expose client-side
+  const CHATBOT_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlheWxqbXFlbG1zbWNzdWh4cWRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM3ODUyOTMsImV4cCI6MjA5OTM2MTI5M30.XITDKls3bKtsXVssJuGQvy8iE4gwl2VtDF1F3dbrDcs"; // same anon key used in the dashboard — safe to expose client-side
 
   const COLORS = {
     cream: "#fdfbf7",
