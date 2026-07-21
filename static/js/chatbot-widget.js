@@ -274,6 +274,7 @@
         headers: {
           "content-type": "application/json",
           "authorization": `Bearer ${CHATBOT_ANON_KEY}`,
+          "apikey": CHATBOT_ANON_KEY,
         },
         body: JSON.stringify({ message: text, history }),
       });
