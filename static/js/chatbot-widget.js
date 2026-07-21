@@ -6,6 +6,7 @@
  */
 (function () {
   const CHATBOT_FUNCTION_URL = "https://yayljmqelmsmcsuhxqdj.supabase.co/functions/v1/chatbot";
+  const CHATBOT_ANON_KEY = "YOUR_SUPABASE_ANON_KEY"; // same anon key used in the dashboard — safe to expose client-side
 
   const COLORS = {
     cream: "#fdfbf7",
@@ -270,7 +271,10 @@
     try {
       const resp = await fetch(CHATBOT_FUNCTION_URL, {
         method: "POST",
-        headers: { "content-type": "application/json" },
+        headers: {
+          "content-type": "application/json",
+          "authorization": `Bearer ${CHATBOT_ANON_KEY}`,
+        },
         body: JSON.stringify({ message: text, history }),
       });
       const data = await resp.json();
