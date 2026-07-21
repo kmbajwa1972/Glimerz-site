@@ -1,0 +1,324 @@
+// supabase/functions/publish-item/index.ts
+//
+// Glimerz AI Manager — publish function.
+//
+// Called by the dashboard the moment you click "Approve". Takes a
+// content_items.id, looks up the (possibly just-edited) row, and
+// actually publishes it:
+//   - blog_post        -> commits a new .md file to the GitHub repo
+//   - pinterest_pin     -> creates a real pin via the Pinterest API
+//   - facebook_post     -> posts to the Page's feed
+//   - instagram_post    -> creates + publishes an Instagram media container
+//
+// On success: content_items.status -> 'published', published_ref/published_at set.
+// On failure: content_items.status -> 'publish_failed', publish_error set.
+// Every attempt is logged to activity_log either way.
+//
+// Required secrets:
+//   SB_URL, SB_SERVICE_ROLE_KEY  — same as daily-agent
+//   GITHUB_TOKEN                 — a GitHub Personal Access Token with
+//                                  repo write access to kmbajwa1972/Glimerz-site
+//   GITHUB_REPO                  — "kmbajwa1972/Glimerz-site"
+//
+// Pinterest/Facebook credentials are read from the platform_tokens
+// table (service role only), not from env secrets, since they need to
+// be refreshed/rotated without redeploying the function.
+
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+const SB_URL = Deno.env.get("SB_URL")!;
+const SB_SERVICE_ROLE_KEY = Deno.env.get("SB_SERVICE_ROLE_KEY")!;
+const GITHUB_TOKEN = Deno.env.get("GITHUB_TOKEN")!;
+const GITHUB_REPO = Deno.env.get("GITHUB_REPO") ?? "kmbajwa1972/Glimerz-site";
+
+const supabase = createClient(SB_URL, SB_SERVICE_ROLE_KEY);
+
+interface ContentItem {
+  id: string;
+  item_type: string;
+  title: string | null;
+  body: string | null;
+  front_matter: Record<string, unknown> | null;
+  media_urls: string[] | null;
+  target_url: string | null;
+}
+
+async function log(itemId: string, action: string, details: Record<string, unknown> = {}, level: "info" | "warning" | "error" = "info") {
+  await supabase.from("activity_log").insert({ content_item_id: itemId, action, details, level });
+}
+
+// ---------------------------------------------------------------
+// Blog post -> commit to GitHub via the Contents API
+// ---------------------------------------------------------------
+async function publishBlogPost(item: ContentItem): Promise<string> {
+  const fm = item.front_matter ?? {};
+  const title = (fm.title as string) || item.title || "Untitled";
+  const dateIso = (fm.date as string) || new Date().toISOString();
+  const datePrefix = dateIso.slice(0, 10); // YYYY-MM-DD
+
+  const slug = title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+
+  const filename = `${datePrefix}-${slug}.md`;
+  const path = `content/blog/${filename}`;
+
+  const frontMatterYaml = [
+    "---",
+    `title: ${title}`,
+    `date: ${dateIso}`,
+    `description: ${(fm.description as string) || ""}`,
+    "categories:",
+    ...(((fm.categories as string[]) || []).map((c) => `  - ${c}`)),
+    `guest_post: ${fm.guest_post ?? false}`,
+    "---",
+  ].join("\n");
+
+  const fullContent = `${frontMatterYaml}\n${item.body ?? ""}\n`;
+  const base64Content = btoa(unescape(encodeURIComponent(fullContent)));
+
+  const resp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${path}`, {
+    method: "PUT",
+    headers: {
+      Authorization: `Bearer ${GITHUB_TOKEN}`,
+      "User-Agent": "glimerz-ai-manager",
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      message: `Create Blog Posts: ${title}`,
+      content: base64Content,
+    }),
+  });
+
+  if (!resp.ok) {
+    throw new Error(`GitHub commit failed: ${resp.status} ${await resp.text()}`);
+  }
+
+  return `https://glimerz.com/blog/${filename.replace(/\.md$/, "")}/`;
+}
+
+// ---------------------------------------------------------------
+// Pinterest -> create a real pin (refreshes the token first if needed)
+// ---------------------------------------------------------------
+async function getPinterestToken(): Promise<{ accessToken: string; boardId: string }> {
+  const { data: tok, error } = await supabase.from("platform_tokens").select("*").eq("platform", "pinterest").single();
+  if (error || !tok) throw new Error("No Pinterest token stored in platform_tokens.");
+
+  const boardId = (tok.config as { board_id?: string })?.board_id;
+  if (!boardId) throw new Error("No Pinterest board_id configured in platform_tokens.config.");
+
+  const isExpired = tok.expires_at && new Date(tok.expires_at).getTime() < Date.now() + 5 * 60 * 1000;
+  if (!isExpired) {
+    return { accessToken: tok.access_token, boardId };
+  }
+
+  if (!tok.refresh_token) throw new Error("Pinterest token expired and no refresh_token stored.");
+
+  // Refresh — requires app id/secret, read from separate secrets so the
+  // refresh flow can be updated without touching platform_tokens rows.
+  const appId = Deno.env.get("PINTEREST_APP_ID")!;
+  const appSecret = Deno.env.get("PINTEREST_APP_SECRET")!;
+  const basicAuth = btoa(`${appId}:${appSecret}`);
+
+  const refreshResp = await fetch("https://api.pinterest.com/v5/oauth/token", {
+    method: "POST",
+    headers: {
+      "content-type": "application/x-www-form-urlencoded",
+      Authorization: `Basic ${basicAuth}`,
+    },
+    body: new URLSearchParams({ grant_type: "refresh_token", refresh_token: tok.refresh_token }),
+  });
+  if (!refreshResp.ok) throw new Error(`Pinterest token refresh failed: ${await refreshResp.text()}`);
+  const refreshed = await refreshResp.json();
+
+  const newExpiresAt = new Date(Date.now() + refreshed.expires_in * 1000).toISOString();
+  await supabase
+    .from("platform_tokens")
+    .update({ access_token: refreshed.access_token, expires_at: newExpiresAt, updated_at: new Date().toISOString() })
+    .eq("platform", "pinterest");
+
+  return { accessToken: refreshed.access_token, boardId };
+}
+
+async function publishPinterestPin(item: ContentItem): Promise<string> {
+  const { accessToken, boardId } = await getPinterestToken();
+  const imageUrl = item.media_urls?.[0];
+  if (!imageUrl) throw new Error("No image URL available for this pin.");
+
+  const resp = await fetch("https://api.pinterest.com/v5/pins", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${accessToken}`, "content-type": "application/json" },
+    body: JSON.stringify({
+      board_id: boardId,
+      media_source: { source_type: "image_url", url: imageUrl },
+      link: item.target_url,
+      title: item.title,
+      description: item.body,
+    }),
+  });
+  if (!resp.ok) throw new Error(`Pinterest pin creation failed: ${resp.status} ${await resp.text()}`);
+  const data = await resp.json();
+  return data.id as string;
+}
+
+// ---------------------------------------------------------------
+// Facebook -> post to the Page feed
+// ---------------------------------------------------------------
+async function getFacebookConfig(): Promise<{ accessToken: string; pageId: string; igUserId?: string }> {
+  const { data: tok, error } = await supabase.from("platform_tokens").select("*").eq("platform", "facebook").single();
+  if (error || !tok) throw new Error("No Facebook token stored in platform_tokens.");
+  const cfg = tok.config as { page_id?: string; ig_user_id?: string };
+  if (!cfg?.page_id) throw new Error("No Facebook page_id configured in platform_tokens.config.");
+  return { accessToken: tok.access_token, pageId: cfg.page_id, igUserId: cfg.ig_user_id };
+}
+
+async function publishFacebookPost(item: ContentItem): Promise<string> {
+  const { accessToken, pageId } = await getFacebookConfig();
+
+  const resp = await fetch(`https://graph.facebook.com/v19.0/${pageId}/feed`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      message: item.body,
+      link: item.target_url,
+      access_token: accessToken,
+    }),
+  });
+  if (!resp.ok) throw new Error(`Facebook post failed: ${resp.status} ${await resp.text()}`);
+  const data = await resp.json();
+  return data.id as string;
+}
+
+// ---------------------------------------------------------------
+// Instagram -> two-step publish (create container, then publish it)
+// ---------------------------------------------------------------
+async function publishInstagramPost(item: ContentItem): Promise<string> {
+  const { accessToken, igUserId } = await getFacebookConfig();
+  if (!igUserId) throw new Error("No Instagram business account id configured in platform_tokens.config.");
+
+  const imageUrl = item.media_urls?.[0];
+  if (!imageUrl) throw new Error("No image URL available for this Instagram post.");
+
+  const createResp = await fetch(`https://graph.facebook.com/v19.0/${igUserId}/media`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      image_url: imageUrl,
+      caption: item.body,
+      access_token: accessToken,
+    }),
+  });
+  if (!createResp.ok) throw new Error(`Instagram media container failed: ${createResp.status} ${await createResp.text()}`);
+  const container = await createResp.json();
+
+  const publishResp = await fetch(`https://graph.facebook.com/v19.0/${igUserId}/media_publish`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      creation_id: container.id,
+      access_token: accessToken,
+    }),
+  });
+  if (!publishResp.ok) throw new Error(`Instagram publish failed: ${publishResp.status} ${await publishResp.text()}`);
+  const published = await publishResp.json();
+  return published.id as string;
+}
+
+// ---------------------------------------------------------------
+// CORS — required for browser-based calls (the dashboard). curl/
+// server-to-server calls don't need this, which is why our earlier
+// manual tests worked but the dashboard's fetch was silently blocked.
+// ---------------------------------------------------------------
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+};
+
+// ---------------------------------------------------------------
+// Main handler
+// ---------------------------------------------------------------
+Deno.serve(async (req) => {
+  // Browsers send a pre-flight OPTIONS request before the real POST —
+  // must answer it directly, before any other logic.
+  if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders });
+  }
+
+  let body: { id?: string };
+  try {
+    body = await req.json();
+  } catch {
+    return new Response(JSON.stringify({ error: "Invalid JSON body" }), {
+      status: 400,
+      headers: { ...corsHeaders, "content-type": "application/json" },
+    });
+  }
+
+  const id = body.id;
+  if (!id) {
+    return new Response(JSON.stringify({ error: "Missing id" }), {
+      status: 400,
+      headers: { ...corsHeaders, "content-type": "application/json" },
+    });
+  }
+
+  const { data: item, error: fetchError } = await supabase.from("content_items").select("*").eq("id", id).single();
+  if (fetchError || !item) {
+    return new Response(JSON.stringify({ error: "Item not found" }), {
+      status: 404,
+      headers: { ...corsHeaders, "content-type": "application/json" },
+    });
+  }
+
+  if (item.status !== "approved" && item.status !== "pending_review") {
+    return new Response(JSON.stringify({ error: `Item is already ${item.status}, refusing to publish again.` }), {
+      status: 409,
+      headers: { ...corsHeaders, "content-type": "application/json" },
+    });
+  }
+
+  try {
+    await log(id, "publish_started", { item_type: item.item_type });
+
+    let publishedRef: string;
+    switch (item.item_type) {
+      case "blog_post":
+        publishedRef = await publishBlogPost(item);
+        break;
+      case "pinterest_pin":
+        publishedRef = await publishPinterestPin(item);
+        break;
+      case "facebook_post":
+        publishedRef = await publishFacebookPost(item);
+        break;
+      case "instagram_post":
+        publishedRef = await publishInstagramPost(item);
+        break;
+      default:
+        throw new Error(`Unknown item_type: ${item.item_type}`);
+    }
+
+    await supabase
+      .from("content_items")
+      .update({ status: "published", published_at: new Date().toISOString(), published_ref: publishedRef })
+      .eq("id", id);
+
+    await log(id, "publish_succeeded", { published_ref: publishedRef });
+
+    return new Response(JSON.stringify({ success: true, published_ref: publishedRef }), {
+      headers: { ...corsHeaders, "content-type": "application/json" },
+    });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    await supabase.from("content_items").update({ status: "publish_failed", publish_error: message }).eq("id", id);
+    await log(id, "publish_failed", { error: message }, "error");
+
+    return new Response(JSON.stringify({ success: false, error: message }), {
+      status: 500,
+      headers: { ...corsHeaders, "content-type": "application/json" },
+    });
+  }
+});
