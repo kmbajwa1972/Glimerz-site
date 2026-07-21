@@ -1,0 +1,26 @@
+name: Glimerz Daily AI Agent
+
+# Runs the daily-agent Edge Function on a schedule, so it works the
+# review queue every day without anyone triggering it manually.
+#
+# Schedule below runs at 06:00 UTC daily (~11:00 AM in Pakistan, PKT
+# being UTC+5) — adjust the cron value if you'd prefer a different time.
+#
+# Required: a repository secret named SUPABASE_ANON_KEY, set to your
+# Supabase project's anon public key (Settings -> Secrets and variables
+# -> Actions -> New repository secret, in this GitHub repo).
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch: {} # lets you also trigger it manually from the Actions tab, for testing
+
+jobs:
+  run-daily-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call the daily-agent Edge Function
+        run: |
+          curl --fail -X POST "https://yayljmqelmsmcsuhxqdj.supabase.co/functions/v1/daily-agent" \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}" \
+            -H "Content-Type: application/json"
