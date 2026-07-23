@@ -320,12 +320,14 @@
 
   <nav class="tabs">
     <button class="tab-btn active" data-tab="pending">Pending review</button>
+    <button class="tab-btn" data-tab="failed">Failed</button>
     <button class="tab-btn" data-tab="rejected">Rejected</button>
     <button class="tab-btn" data-tab="log">Activity log</button>
   </nav>
 
   <main>
     <div id="pending-panel"></div>
+    <div id="failed-panel" style="display:none;"></div>
     <div id="rejected-panel" style="display:none;"></div>
     <div id="log-panel" style="display:none;"></div>
   </main>
@@ -408,8 +410,10 @@ document.querySelectorAll(".tab-btn").forEach((btn) => {
     btn.classList.add("active");
     const tab = btn.dataset.tab;
     document.getElementById("pending-panel").style.display = tab === "pending" ? "block" : "none";
+    document.getElementById("failed-panel").style.display = tab === "failed" ? "block" : "none";
     document.getElementById("rejected-panel").style.display = tab === "rejected" ? "block" : "none";
     document.getElementById("log-panel").style.display = tab === "log" ? "block" : "none";
+    if (tab === "failed") loadFailed();
     if (tab === "rejected") loadRejected();
     if (tab === "log") loadLog();
   });
@@ -559,7 +563,7 @@ async function approveItem(id, card) {
   refreshStatusLine();
 }
 
-async function rejectItem(id, card) {
+async function rejectItem(id, card, sourcePanelId) {
   const note = prompt("Optional note on why this is rejected (or leave blank):", "");
   const { error } = await sb.from("content_items").update({
     status: "rejected",
@@ -572,7 +576,15 @@ async function rejectItem(id, card) {
     return;
   }
   card.remove();
-  refreshStatusLine();
+
+  if (sourcePanelId === "failed-panel") {
+    const remaining = document.querySelectorAll("#failed-panel .item-card").length;
+    if (remaining === 0) {
+      document.getElementById("failed-panel").innerHTML = `<p class="empty-state">Nothing failed right now.</p>`;
+    }
+  } else {
+    refreshStatusLine();
+  }
 }
 
 function refreshStatusLine() {
@@ -581,6 +593,86 @@ function refreshStatusLine() {
     remaining === 0 ? "Nothing waiting on you right now" : `${remaining} item${remaining === 1 ? "" : "s"} waiting for review`;
   if (remaining === 0) {
     document.getElementById("pending-panel").innerHTML = `<p class="empty-state">No pending items. The next scheduled run will add more here.</p>`;
+  }
+}
+
+// ---------------------------------------------------------------
+// Failed panel
+// ---------------------------------------------------------------
+async function loadFailed() {
+  const panel = document.getElementById("failed-panel");
+  panel.innerHTML = `<p class="empty-state">Loading…</p>`;
+
+  const { data, error } = await sb
+    .from("content_items")
+    .select("*")
+    .eq("status", "publish_failed")
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    panel.innerHTML = `<p class="empty-state">Couldn't load failed items: ${escapeHtml(error.message)}</p>`;
+    return;
+  }
+
+  if (data.length === 0) {
+    panel.innerHTML = `<p class="empty-state">Nothing failed right now.</p>`;
+    return;
+  }
+
+  panel.innerHTML = "";
+  for (const item of data) {
+    panel.appendChild(renderFailedCard(item));
+  }
+}
+
+function renderFailedCard(item) {
+  const card = document.createElement("div");
+  card.className = `item-card type-${item.item_type}`;
+  card.dataset.id = item.id;
+
+  card.innerHTML = `
+    <div class="item-meta">
+      <span>${ITEM_TYPE_LABELS[item.item_type] || item.item_type}</span>
+      <span>${new Date(item.created_at).toLocaleString()}</span>
+    </div>
+    <div class="item-title-display" style="font-family:Georgia,serif; font-size:1.1rem; margin-bottom:6px;">${escapeHtml(item.title || "")}</div>
+    <div class="item-body-display" style="font-size:0.92rem; line-height:1.6; color:var(--muted); white-space:pre-wrap;">${escapeHtml(item.body || "")}</div>
+    <div style="margin-top:8px; font-size:0.8rem; color:var(--rust-deep);">Error: ${escapeHtml(item.publish_error || "Unknown error")}</div>
+    <div class="item-actions">
+      <button class="btn-approve">Retry</button>
+      <button class="btn-reject">Reject</button>
+      <span class="save-hint"></span>
+    </div>
+  `;
+
+  card.querySelector(".btn-approve").addEventListener("click", () => retryItem(item.id, card));
+  card.querySelector(".btn-reject").addEventListener("click", () => rejectItem(item.id, card, "failed-panel"));
+
+  return card;
+}
+
+async function retryItem(id, card) {
+  const retryBtn = card.querySelector(".btn-approve");
+  retryBtn.disabled = true;
+  retryBtn.textContent = "Retrying…";
+
+  const { data, error } = await sb.functions.invoke("publish-item", { body: { id } });
+
+  if (error || (data && data.success === false)) {
+    const message = (data && data.error) || error?.message || "Unknown error";
+    alert(`Retry failed again: ${message}\n\nStill sitting in Failed — try again later once the underlying issue (e.g. Pinterest access) is resolved.`);
+    retryBtn.disabled = false;
+    retryBtn.textContent = "Retry";
+    // Refresh the card's shown error to the latest one
+    loadFailed();
+    return;
+  }
+
+  retryBtn.textContent = "Published ✓";
+  card.remove();
+  const remaining = document.querySelectorAll("#failed-panel .item-card").length;
+  if (remaining === 0) {
+    document.getElementById("failed-panel").innerHTML = `<p class="empty-state">Nothing failed right now.</p>`;
   }
 }
 
