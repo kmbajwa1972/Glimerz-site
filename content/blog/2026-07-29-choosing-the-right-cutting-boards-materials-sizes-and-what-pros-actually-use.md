@@ -21,7 +21,7 @@ mid_products:
     affiliate_link: https://amzn.to/44WNIPT?tag=hunterpro0e-20
     photo: https://m.media-amazon.com/images/I/81v+bK+HrrL._AC_SL1500_.jpg
   - product_name: cutting board oil/conditioner.
-    affiliate_link: cutting board oil/conditioner?tag=hunterpro0e-20
+    affiliate_link: https://a.co/d/05vi3jTx?tag=hunterpro0e-20
     photo: https://m.media-amazon.com/images/I/51BWv0UlSWL._AC_SL1024_.jpg
 ---
 Of everything in a kitchen, the cutting board is the piece that touches the most food and gets the least thought. Most people own one flimsy board that came free with a knife set, and never think about it again — until it's warped, stained, or covered in knife scars that harbor bacteria no amount of scrubbing can reach. Professional kitchens, by contrast, treat cutting boards as serious equipment, with different boards for different jobs. Here's what actually matters when choosing one.
