@@ -1,3 +1,76 @@
+<div style="max-width:480px;margin:0 auto 20px;padding:1.5rem;border-radius:12px;background:#f7f5f2;text-align:center;font-family:'Georgia',serif;">
+  <h3 style="margin:0 0 0.5rem;font-size:1.15rem;color:#333;">Get new posts in your inbox</h3>
+  <p style="margin:0 0 1rem;font-size:0.9rem;color:#777;">
+    Home decor & kitchen inspiration, once a week. No spam, unsubscribe anytime.
+  </p>
+
+  <form id="glimerz-newsletter-form" style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;">
+    <input
+      type="email"
+      id="glimerz-newsletter-email"
+      placeholder="you@example.com"
+      required
+      style="flex:1;min-width:200px;padding:0.6rem 0.8rem;border:1px solid #ccc;border-radius:6px;font-size:0.95rem;"
+    />
+    <button
+      type="submit"
+      style="padding:0.6rem 1.2rem;background:#aa8453;color:#fff;border:none;border-radius:6px;font-size:0.95rem;cursor:pointer;"
+    >
+      Subscribe
+    </button>
+  </form>
+
+  <p id="glimerz-newsletter-message" style="margin-top:0.75rem;font-size:0.85rem;"></p>
+</div>
+
+<script>
+(function () {
+  const SUPABASE_URL = "https://yayljmqelmsmcsuhxqdj.supabase.co";
+  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlheWxqbXFlbG1zbWNzdWh4cWRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM3ODUyOTMsImV4cCI6MjA5OTM2MTI5M30.XITDKls3bKtsXVssJuGQvy8iE4gwl2VtDF1F3dbrDcs";
+
+  const form = document.getElementById("glimerz-newsletter-form");
+  const emailInput = document.getElementById("glimerz-newsletter-email");
+  const message = document.getElementById("glimerz-newsletter-message");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+    if (!email) return;
+
+    message.style.color = "#777";
+    message.textContent = "Submitting…";
+
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/newsletter_subscribers`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: SUPABASE_ANON_KEY,
+          Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+          Prefer: "return=minimal",
+        },
+        body: JSON.stringify({ email: email, source: "glimerz.com" }),
+      });
+
+      if (res.ok) {
+        message.style.color = "green";
+        message.textContent = "You're subscribed! Thanks for joining.";
+        emailInput.value = "";
+      } else if (res.status === 409) {
+        message.style.color = "#a86b00";
+        message.textContent = "You're already subscribed!";
+      } else {
+        message.style.color = "red";
+        message.textContent = "Something went wrong. Please try again.";
+      }
+    } catch (err) {
+      message.style.color = "red";
+      message.textContent = "Network error. Please try again.";
+    }
+  });
+})();
+</script>
+
 <footer style="text-align:center; padding:40px 20px; margin-top:40px; border-top:1px solid #f4f0ea; font-family:'Georgia',serif; font-size:0.85rem; color:#999;">
     <div style="margin-bottom:10px;">
         <a href="/discover/" style="color:#aa8453; text-decoration:none; margin:0 12px;">Discover</a>
