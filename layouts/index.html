@@ -3,124 +3,27 @@
 <head>
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-60HKERB91Z"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-60HKERB91Z");
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-60HKERB91Z");</script>
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-9496940667324349" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#171717">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#171717">
     <title>Glimerz | Aesthetic Home & Kitchen Ideas</title>
-    {{ partial "seo-meta.html" . }}
-    {{ partial "article-jsonld.html" . }}
+    {{ partial "seo-meta.html" . }}{{ partial "article-jsonld.html" . }}
     <style>
-        :root { --ink:#171717; --muted:#6f6a62; --cream:#f7f3ed; --paper:#fffdf9; --gold:#b88a52; --line:#e8e0d5; }
-        * { box-sizing:border-box; }
-        html { scroll-behavior:smooth; }
-        body { margin:0; color:var(--ink); background:var(--paper); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-        a { color:inherit; }
-        .topbar { background:var(--ink); color:#fff; text-align:center; padding:10px 16px; font-size:.76rem; letter-spacing:.13em; text-transform:uppercase; }
-        .nav { max-width:1180px; margin:auto; padding:22px 24px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
-        .brand { text-decoration:none; font-family:Georgia,serif; font-size:1.55rem; letter-spacing:.22em; font-weight:600; }
-        .navlinks { display:flex; gap:26px; align-items:center; font-size:.86rem; }
-        .navlinks a { text-decoration:none; color:#3f3b35; }
-        .navlinks a:hover { color:var(--gold); }
-        .nav-cta { padding:10px 16px; border:1px solid var(--ink); border-radius:999px; }
-        .hero { max-width:1180px; margin:0 auto; padding:28px 24px 74px; display:grid; grid-template-columns:1.05fr .95fr; gap:52px; align-items:center; }
-        .eyebrow { color:var(--gold); font-size:.76rem; letter-spacing:.18em; text-transform:uppercase; font-weight:700; }
-        h1 { font-family:Georgia,serif; font-weight:400; font-size:clamp(3rem,6vw,5.8rem); line-height:.98; letter-spacing:-.04em; margin:18px 0 24px; }
-        .hero-copy { color:var(--muted); font-family:Georgia,serif; font-size:1.18rem; line-height:1.75; max-width:600px; }
-        .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:30px; }
-        .btn { display:inline-flex; align-items:center; justify-content:center; padding:13px 20px; border-radius:999px; text-decoration:none; font-size:.84rem; font-weight:700; letter-spacing:.04em; }
-        .btn-dark { background:var(--ink); color:#fff; }
-        .btn-light { background:transparent; border:1px solid #cfc5b8; color:var(--ink); }
-        .hero-art { min-height:500px; border-radius:28px; overflow:hidden; position:relative; background:linear-gradient(145deg,#e9dfd1,#f8f5ef 48%,#d9c7b0); box-shadow:0 24px 70px rgba(44,34,24,.14); }
-        .hero-art img { width:100%; height:100%; min-height:500px; object-fit:cover; display:block; mix-blend-mode:multiply; opacity:.92; }
-        .hero-badge { position:absolute; left:24px; bottom:24px; padding:14px 16px; border-radius:16px; background:rgba(255,253,249,.9); backdrop-filter:blur(10px); font-size:.8rem; box-shadow:0 8px 30px rgba(0,0,0,.1); }
-        .section { max-width:1180px; margin:auto; padding:76px 24px; }
-        .section-head { display:flex; justify-content:space-between; gap:20px; align-items:end; margin-bottom:28px; }
-        .section h2 { font:400 clamp(2rem,4vw,3.1rem)/1.1 Georgia,serif; margin:8px 0 0; }
-        .section-intro { max-width:510px; color:var(--muted); line-height:1.7; }
-        .feature-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-        .feature { border:1px solid var(--line); background:#fff; border-radius:22px; overflow:hidden; text-decoration:none; transition:transform .2s ease,box-shadow .2s ease; }
-        .feature:hover { transform:translateY(-4px); box-shadow:0 18px 45px rgba(42,32,20,.09); }
-        .feature img { width:100%; height:220px; object-fit:cover; display:block; }
-        .feature-body { padding:22px; }
-        .feature-kicker { color:var(--gold); font-size:.72rem; letter-spacing:.13em; text-transform:uppercase; font-weight:700; }
-        .feature h3 { font:400 1.45rem/1.2 Georgia,serif; margin:10px 0; }
-        .feature p { color:var(--muted); line-height:1.6; margin:0; }
-        .split { background:var(--cream); }
-        .split-inner { max-width:1180px; margin:auto; padding:76px 24px; display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
-        .split-card { border-radius:28px; overflow:hidden; min-height:430px; }
-        .split-card img { width:100%; height:100%; object-fit:cover; display:block; }
-        .ai-panel { padding:38px; border-radius:28px; background:linear-gradient(145deg,#1b1b1b,#34302b); color:#fff; box-shadow:0 25px 65px rgba(0,0,0,.16); }
-        .ai-panel .eyebrow { color:#e4bf8b; }
-        .ai-panel h2 { font:400 clamp(2.2rem,4vw,3.6rem)/1.05 Georgia,serif; margin:15px 0 18px; }
-        .ai-panel p { color:#d8d2c9; line-height:1.75; }
-        .ai-panel .btn-light { border-color:#746d63; color:#fff; }
-        .post-wrap { max-width:1180px; margin:auto; padding:76px 24px; }
-        .posts { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-        .post { border-top:2px solid var(--ink); padding-top:18px; }
-        .post time { color:var(--gold); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; }
-        .post h3 { font:400 1.5rem/1.25 Georgia,serif; margin:10px 0; }
-        .post p { color:var(--muted); line-height:1.65; }
-        .post a { text-decoration:none; font-size:.84rem; font-weight:700; }
-        .closing { text-align:center; padding:80px 24px; background:#171717; color:#fff; }
-        .closing h2 { font:400 clamp(2.3rem,5vw,4.3rem)/1.05 Georgia,serif; margin:0 auto 18px; max-width:800px; }
-        .closing p { color:#c9c3bb; max-width:650px; margin:0 auto 28px; line-height:1.7; }
-        @media (max-width:800px) {
-            .navlinks a:not(.nav-cta) { display:none; }
-            .hero,.split-inner { grid-template-columns:1fr; }
-            .hero { padding-top:10px; }
-            .hero-art,.hero-art img { min-height:360px; }
-            .feature-grid,.posts { grid-template-columns:1fr; }
-            .section-head { display:block; }
-            .section-intro { margin-top:14px; }
-        }
+        :root{--ink:#171717;--muted:#6f6a62;--cream:#f7f3ed;--paper:#fffdf9;--gold:#b88a52;--line:#e8e0d5}
+        *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit}.topbar{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:.76rem;letter-spacing:.13em;text-transform:uppercase}.nav{max-width:1180px;margin:auto;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{text-decoration:none;font-family:Georgia,serif;font-size:1.55rem;letter-spacing:.22em;font-weight:600}.navlinks{display:flex;gap:26px;align-items:center;font-size:.86rem}.navlinks a{text-decoration:none;color:#3f3b35}.navlinks a:hover{color:var(--gold)}.nav-cta{padding:10px 16px;border:1px solid var(--ink);border-radius:999px}.hero{max-width:1180px;margin:0 auto;padding:28px 24px 74px;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}.eyebrow{color:var(--gold);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700}h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(3rem,6vw,5.8rem);line-height:.98;letter-spacing:-.04em;margin:18px 0 24px}.hero-copy{color:var(--muted);font-family:Georgia,serif;font-size:1.18rem;line-height:1.75;max-width:600px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:999px;text-decoration:none;font-size:.84rem;font-weight:700;letter-spacing:.04em}.btn-dark{background:var(--ink);color:#fff}.btn-light{background:transparent;border:1px solid #cfc5b8;color:var(--ink)}.hero-art{min-height:500px;border-radius:28px;overflow:hidden;position:relative;background:linear-gradient(145deg,#e9dfd1,#f8f5ef 48%,#d9c7b0);box-shadow:0 24px 70px rgba(44,34,24,.14)}.hero-art img{width:100%;height:100%;min-height:500px;object-fit:cover;display:block;mix-blend-mode:multiply;opacity:.92}.hero-badge{position:absolute;left:24px;bottom:24px;padding:14px 16px;border-radius:16px;background:rgba(255,253,249,.9);backdrop-filter:blur(10px);font-size:.8rem;box-shadow:0 8px 30px rgba(0,0,0,.1)}.section{max-width:1180px;margin:auto;padding:76px 24px}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}.section h2{font:400 clamp(2rem,4vw,3.1rem)/1.1 Georgia,serif;margin:8px 0 0}.section-intro{max-width:510px;color:var(--muted);line-height:1.7}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{border:1px solid var(--line);background:#fff;border-radius:22px;overflow:hidden;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}.feature:hover{transform:translateY(-4px);box-shadow:0 18px 45px rgba(42,32,20,.09)}.feature img{width:100%;height:220px;object-fit:cover;display:block}.feature-body{padding:22px}.feature-kicker{color:var(--gold);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;font-weight:700}.feature h3{font:400 1.45rem/1.2 Georgia,serif;margin:10px 0}.feature p{color:var(--muted);line-height:1.6;margin:0}.split{background:var(--cream)}.split-inner{max-width:1180px;margin:auto;padding:76px 24px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.split-card{border-radius:28px;overflow:hidden;min-height:430px}.split-card img{width:100%;height:100%;object-fit:cover;display:block}.ai-panel{padding:38px;border-radius:28px;background:linear-gradient(145deg,#1b1b1b,#34302b);color:#fff;box-shadow:0 25px 65px rgba(0,0,0,.16)}.ai-panel .eyebrow{color:#e4bf8b}.ai-panel h2{font:400 clamp(2.2rem,4vw,3.6rem)/1.05 Georgia,serif;margin:15px 0 18px}.ai-panel p{color:#d8d2c9;line-height:1.75}.ai-panel .btn-light{border-color:#746d63;color:#fff}.post-wrap{max-width:1180px;margin:auto;padding:76px 24px}.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.post{border-top:2px solid var(--ink);padding-top:18px}.post time{color:var(--gold);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}.post h3{font:400 1.5rem/1.25 Georgia,serif;margin:10px 0}.post p{color:var(--muted);line-height:1.65}.post a{text-decoration:none;font-size:.84rem;font-weight:700}.closing{text-align:center;padding:80px 24px;background:#171717;color:#fff}.closing h2{font:400 clamp(2.3rem,5vw,4.3rem)/1.05 Georgia,serif;margin:0 auto 18px;max-width:800px}.closing p{color:#c9c3bb;max-width:650px;margin:0 auto 28px;line-height:1.7}.closing .btn-light{background:#fff;color:#171717;border-color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.22)}.closing .btn-light:hover{background:#e4bf8b;border-color:#e4bf8b;color:#171717}.closing .actions{justify-content:center}@media(max-width:800px){.navlinks a:not(.nav-cta){display:none}.hero,.split-inner{grid-template-columns:1fr}.hero{padding-top:10px}.hero-art,.hero-art img{min-height:360px}.feature-grid,.posts{grid-template-columns:1fr}.section-head{display:block}.section-intro{margin-top:14px}.closing .btn-light{width:100%;max-width:260px}}
     </style>
 </head>
 <body>
-    <div class="topbar">Thoughtful ideas for beautiful everyday living</div>
-    <nav class="nav" aria-label="Main navigation">
-        <a class="brand" href="/">GLIMERZ</a>
-        <div class="navlinks">
-            <a href="/discover/">Home & Decor</a>
-            <a href="/discover/">Kitchen</a>
-            <a href="/about/">About</a>
-            <a class="nav-cta" href="https://app.glimerz.com?utm_source=homepage_nav">Try AI App</a>
-        </div>
-    </nav>
-    <main>
-        <section class="hero">
-            <div>
-                <div class="eyebrow">Home • Kitchen • Inspiration</div>
-                <h1>Make your space feel beautifully yours.</h1>
-                <p class="hero-copy">Glimerz brings together practical ideas, elegant inspiration and smart tools for creating spaces that look considered and feel like home.</p>
-                <div class="actions"><a class="btn btn-dark" href="/discover/">Explore Inspiration</a><a class="btn btn-light" href="https://app.glimerz.com?utm_source=homepage_hero">Open Glimerz AI</a></div>
-            </div>
-            <div class="hero-art"><img src="/images/home-03.jpg" alt="Elegant home interior inspiration" loading="eager"><div class="hero-badge">Curated ideas • Practical guides • Modern living</div></div>
-        </section>
-        <section class="section">
-            <div class="section-head"><div><div class="eyebrow">Explore</div><h2>Inspiration, without the overwhelm.</h2></div><p class="section-intro">Start with a room, a problem or a feeling. Glimerz helps you find ideas you can actually use.</p></div>
-            <div class="feature-grid">
-                <a class="feature" href="/discover/"><img src="/images/glimerz-home-thumb.jpg" alt="Home decor inspiration" loading="lazy"><div class="feature-body"><div class="feature-kicker">Home & Decor</div><h3>Rooms with warmth, character and intention.</h3><p>Simple updates, renovation guidance and styling ideas for a home that feels finished.</p></div></a>
-                <a class="feature" href="/discover/"><img src="/images/glimerz-kitchen-thumb.jpg" alt="Kitchen inspiration" loading="lazy"><div class="feature-body"><div class="feature-kicker">Kitchen</div><h3>Better kitchens, one smart detail at a time.</h3><p>Storage, organization, useful gadgets and design inspiration that make daily cooking easier.</p></div></a>
-                <a class="feature" href="https://app.glimerz.com?utm_source=homepage_feature"><img src="/images/home-04.jpg" alt="Glimerz AI room design" loading="lazy"><div class="feature-body"><div class="feature-kicker">Glimerz AI</div><h3>Imagine the room before you change it.</h3><p>Experiment with room ideas and explore the Glimerz AI experience.</p></div></a>
-            </div>
-        </section>
-        <section class="split"><div class="split-inner"><div class="split-card"><img src="/images/home-05.jpg" alt="Modern home styling inspiration" loading="lazy"></div><div class="ai-panel"><div class="eyebrow">A new way to plan</div><h2>Turn an idea into a room you can see.</h2><p>Use the Glimerz AI app to explore room redesign concepts and create visual inspiration before making real-world changes.</p><div class="actions"><a class="btn btn-light" href="https://app.glimerz.com?utm_source=homepage_ai_panel">Launch the AI App</a></div></div></div></section>
-        <section class="post-wrap">
-            <div class="section-head"><div><div class="eyebrow">From the journal</div><h2>Fresh ideas for real homes.</h2></div><a class="btn btn-light" href="/discover/">View all posts</a></div>
-            <div class="posts">{{ $posts := where .Site.RegularPages "Section" "blog" }}{{ range first 3 (sort $posts "Date" "desc") }}<article class="post"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time><h3>{{ .Title }}</h3><p>{{ .Description | default (.Summary | plainify) | truncate 150 }}</p><a href="{{ .RelPermalink }}">Read the guide →</a></article>{{ end }}</div>
-        </section>
-        <section class="closing"><div class="eyebrow">Welcome to Glimerz</div><h2>Beautiful spaces start with one good idea.</h2><p>Browse the latest inspiration, discover practical guides, or bring your next room idea into the Glimerz AI app.</p><div class="actions" style="justify-content:center"><a class="btn btn-light" href="/discover/">Explore Glimerz</a><a class="btn btn-light" href="https://app.glimerz.com?utm_source=homepage_footer">Try AI</a></div></section>
-    </main>
-    {{ partial "footer.html" . }}
-</body>
-</html>
+<div class="topbar">Thoughtful ideas for beautiful everyday living</div>
+<nav class="nav" aria-label="Main navigation"><a class="brand" href="/">GLIMERZ</a><div class="navlinks"><a href="/discover/">Home & Decor</a><a href="/discover/">Kitchen</a><a href="/about/">About</a><a class="nav-cta" href="https://app.glimerz.com?utm_source=homepage_nav">Try AI App</a></div></nav>
+<main>
+<section class="hero"><div><div class="eyebrow">Home • Kitchen • Inspiration</div><h1>Make your space feel beautifully yours.</h1><p class="hero-copy">Glimerz brings together practical ideas, elegant inspiration and smart tools for creating spaces that look considered and feel like home.</p><div class="actions"><a class="btn btn-dark" href="/discover/">Explore Inspiration</a><a class="btn btn-light" href="https://app.glimerz.com?utm_source=homepage_hero">Open Glimerz AI</a></div></div><div class="hero-art"><img src="/images/home-03.jpg" alt="Elegant home interior inspiration" loading="eager"><div class="hero-badge">Curated ideas • Practical guides • Modern living</div></div></section>
+<section class="section"><div class="section-head"><div><div class="eyebrow">Explore</div><h2>Inspiration, without the overwhelm.</h2></div><p class="section-intro">Start with a room, a problem or a feeling. Glimerz helps you find ideas you can actually use.</p></div><div class="feature-grid"><a class="feature" href="/discover/"><img src="/images/glimerz-home-thumb.jpg" alt="Home decor inspiration" loading="lazy"><div class="feature-body"><div class="feature-kicker">Home & Decor</div><h3>Rooms with warmth, character and intention.</h3><p>Simple updates, renovation guidance and styling ideas for a home that feels finished.</p></div></a><a class="feature" href="/discover/"><img src="/images/glimerz-kitchen-thumb.jpg" alt="Kitchen inspiration" loading="lazy"><div class="feature-body"><div class="feature-kicker">Kitchen</div><h3>Better kitchens, one smart detail at a time.</h3><p>Storage, organization, useful gadgets and design inspiration that make daily cooking easier.</p></div></a><a class="feature" href="https://app.glimerz.com?utm_source=homepage_feature"><img src="/images/home-04.jpg" alt="Glimerz AI room design" loading="lazy"><div class="feature-body"><div class="feature-kicker">Glimerz AI</div><h3>Imagine the room before you change it.</h3><p>Experiment with room ideas and explore the Glimerz AI experience.</p></div></a></div></section>
+<section class="split"><div class="split-inner"><div class="split-card"><img src="/images/home-05.jpg" alt="Modern home styling inspiration" loading="lazy"></div><div class="ai-panel"><div class="eyebrow">A new way to plan</div><h2>Turn an idea into a room you can see.</h2><p>Use the Glimerz AI app to explore room redesign concepts and create visual inspiration before making real-world changes.</p><div class="actions"><a class="btn btn-light" href="https://app.glimerz.com?utm_source=homepage_ai_panel">Launch the AI App</a></div></div></div></section>
+<section class="post-wrap"><div class="section-head"><div><div class="eyebrow">From the journal</div><h2>Fresh ideas for real homes.</h2></div><a class="btn btn-light" href="/discover/">View all posts</a></div><div class="posts">{{ $posts := where .Site.RegularPages "Section" "blog" }}{{ range first 3 (sort $posts "Date" "desc") }}<article class="post"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time><h3>{{ .Title }}</h3><p>{{ .Description | default (.Summary | plainify) | truncate 150 }}</p><a href="{{ .RelPermalink }}">Read the guide →</a></article>{{ end }}</div></section>
+<section class="closing"><div class="eyebrow">Welcome to Glimerz</div><h2>Beautiful spaces start with one good idea.</h2><p>Browse the latest inspiration, discover practical guides, or bring your next room idea into the Glimerz AI app.</p><div class="actions"><a class="btn btn-light" href="/discover/">Explore Glimerz</a><a class="btn btn-light" href="https://app.glimerz.com?utm_source=homepage_footer">Try AI</a></div></section>
+</main>
+{{ partial "footer.html" . }}
+</body></html>
