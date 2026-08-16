@@ -3,7 +3,7 @@ title: "Privacy Policy"
 layout: "static"
 description: "How Glimerz collects, uses, and protects your information."
 ---
-_Last updated: July 2026_
+_Last updated: August 2026_
 
 This Privacy Policy explains how Glimerz ("we," "us," or "our") collects, uses, and protects information when you visit glimerz.com (the "Site") or use our social media publishing integration ("the App").
 
@@ -11,9 +11,23 @@ This Privacy Policy explains how Glimerz ("we," "us," or "our") collects, uses, 
 
 We do not require you to create an account or submit personal information to read our content. If you contact us directly (for example, by email), we may collect your name, email address, and the contents of your message.
 
+If you subscribe to the Glimerz newsletter, we collect the email address you submit and the source associated with the subscription. We use that information to send the requested newsletter and manage subscriptions. You may unsubscribe or request deletion by contacting us.
+
 ## Cookies & Tracking
 
-Like most websites, we may use cookies and similar technologies to understand how visitors use the Site and to improve your browsing experience. You can disable cookies through your browser settings at any time.
+Like most websites, we use cookies and similar technologies to understand how visitors use the Site, measure traffic, improve our services, and support advertising.
+
+We use Google Analytics (GA4) to understand site usage, such as page views and general interaction patterns. Google may collect and process information such as device identifiers, IP-related information, and usage data according to Google's policies.
+
+We also use Google AdSense and related Google advertising technologies. Google and its partners may use cookies, web beacons, IP addresses, or similar identifiers to serve, measure, and personalize advertising where permitted. Third parties may place and read cookies on your browser, or use web beacons or IP addresses, as a result of ad serving on this Site.
+
+For information about how Google uses data when you use partner sites or apps, please review Google's published privacy information. You can manage available advertising and privacy choices through Google's settings and your browser settings.
+
+You can disable or restrict cookies through your browser settings. Some Site features may work differently when cookies or similar technologies are disabled.
+
+## Newsletter Data
+
+Newsletter subscriptions are processed through our third-party database service, Supabase. We use the submitted email address only to operate the Glimerz newsletter and related subscription functions. We do not sell newsletter subscriber email addresses.
 
 ## Third-Party Links
 
@@ -41,7 +55,9 @@ We do not access your personal messages, contacts, or any data unrelated to publ
 
 ## How We Use Information
 
-Any information you voluntarily provide (such as through our Contact page) is used solely to respond to your inquiry and is not sold or shared with third parties for marketing purposes. Information accessed through connected social media accounts is used solely as described above, to publish content on your behalf.
+Information you voluntarily provide, such as contact details or a newsletter email address, is used for the purpose for which it was provided and to operate the related Site service. Information accessed through connected social media accounts is used solely as described above, to publish content on your behalf.
+
+We do not sell personal information for advertising purposes.
 
 ## Your Rights
 
