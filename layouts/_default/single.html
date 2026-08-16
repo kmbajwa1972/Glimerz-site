@@ -57,12 +57,20 @@
         .mid-product-block .mp-shop-btn { display: inline-block; background: #2c2c2c; color: #fff; padding: 8px 16px; text-decoration: none; border-radius: 2px; font-size: 0.72rem; letter-spacing: 1px; text-transform: uppercase; }
         .mid-product-block .mp-shop-btn:hover { background: #aa8453; }
         .mid-product-block .mp-disclosure { font-size: 0.68rem; color: #999; margin-top: 8px; }
+        .category-back { display:inline-block; margin-top:10px; padding:8px 14px; border:1px solid #e7ddcf; border-radius:20px; color:#aa8453; text-decoration:none; font-size:.78rem; letter-spacing:.7px; text-transform:uppercase; }
+        .category-back:hover { background:#aa8453; color:#fff; }
         @media (max-width: 480px) { .mid-product-block { flex-direction: column; align-items: flex-start; } }
     </style>
 </head>
 <body>
     <div class="wrapper">
-        <a href="/" class="back-link">← Back to Gallery</a>
+        {{ $backURL := "/" }}
+        {{ $backLabel := "Back to Gallery" }}
+        {{ range .Params.categories }}
+            {{ if eq (lower .) "home decor" }}{{ $backURL = "/home-decor/" }}{{ $backLabel = "Back to Home & Decor" }}{{ end }}
+            {{ if eq (lower .) "kitchen accessories" }}{{ $backURL = "/kitchen/" }}{{ $backLabel = "Back to Kitchen" }}{{ end }}
+        {{ end }}
+        <a href="{{ $backURL }}" class="back-link">← {{ $backLabel }}</a>
         <h1>{{ .Title }}</h1>
         <div class="meta">Published on {{ .Date.Format "January 2, 2006" }}{{ if .Params.author }} · By {{ .Params.author }}{{ end }}{{ if .Params.guest_post }} · <span style="background:#aa8453;color:#fff;padding:2px 8px;border-radius:10px;font-size:0.7rem;letter-spacing:0.5px;">GUEST POST</span>{{ end }}</div>
         {{ if .Params.image }}<img class="feat-img" src="{{ .Params.image }}" alt="{{ .Title }}">{{ end }}
