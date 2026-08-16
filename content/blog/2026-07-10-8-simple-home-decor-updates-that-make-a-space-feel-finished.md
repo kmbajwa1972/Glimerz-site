@@ -1,8 +1,9 @@
 ---
 title: 8 Simple Home Decor Updates That Make a Space Feel Finished
 date: 2026-07-10T13:55:00.000-07:00
-description: 8 easy home decor updates — from layered lighting to the right rug size — that make any room feel pulled-together and intentional without a full renovation.
-keywords: home decor updates, home decor ideas, interior design tips, room makeover, layered lighting, area rug
+description: 8 easy home decor updates — from layered lighting to the right rug
+  size — that make any room feel pulled-together and intentional without a full
+  renovation.
 image: /images/kam-idris-_hqhx3lbn18-unsplash.jpg
 categories:
   - Home Decor
@@ -11,10 +12,13 @@ products:
   - affiliate_link: https://a.co/d/051sSPjc?tag=hunterpro0e-20
     photo: https://m.media-amazon.com/images/I/61fceMlXlPL._AC_SX522_.jpg
     product_name: 4-Pack Dimmable LED Under Cabinet Lights, 3 Color Temperatures
+keywords: home decor updates, home decor ideas, interior design tips, room
+  makeover, layered lighting, area rug
 mid_products:
   - affiliate_link: https://a.co/d/0hJVAH2E?tag=hunterpro0e-20
     photo: https://m.media-amazon.com/images/I/81YztU89iLL._AC_SL1500_.jpg
     product_name: 5x7 Washable Area Rug for Living Room
+ai_promo: room
 ---
  Most rooms don't feel unfinished because something's missing — they feel unfinished because of a handful of small, fixable things nobody thinks to check. You don't need a full redesign to fix that. A few targeted changes can make a space go from "fine" to actually feels considered. Here are eight worth starting with.
 
