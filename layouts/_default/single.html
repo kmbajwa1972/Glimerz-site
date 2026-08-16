@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-60HKERB91Z"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-60HKERB91Z");
-    </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9496940667324349" crossorigin="anonymous"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-60HKERB91Z");</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-9496940667324349" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,7 +41,6 @@
         .ai-promo-card h3 { margin: 0 0 8px; font-size: 1.3rem; font-weight: 400; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,0.3); position: relative; z-index: 1; }
         .ai-promo-card p { margin: 0 0 18px; font-size: 0.95rem; color: rgba(255,255,255,0.92); position: relative; z-index: 1; }
         .ai-promo-card .btn { display: inline-block; background: #fff; color: #764ba2; font-weight: bold; padding: 10px 24px; border-radius: 2px; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; box-shadow: 0 2px 10px rgba(0,0,0,0.25); position: relative; z-index: 1; }
-        .ai-promo-card .btn:hover { background: #f7f0ff; }
         @keyframes aiPromoGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
         @keyframes aiPromoSparkle { 0%, 100% { opacity: 0; transform: scale(0.5); } 50% { opacity: 1; transform: scale(1.2); } }
         .mid-product-block .mp-photo-link { flex-shrink: 0; display: block; }
@@ -57,8 +50,6 @@
         .mid-product-block .mp-shop-btn { display: inline-block; background: #2c2c2c; color: #fff; padding: 8px 16px; text-decoration: none; border-radius: 2px; font-size: 0.72rem; letter-spacing: 1px; text-transform: uppercase; }
         .mid-product-block .mp-shop-btn:hover { background: #aa8453; }
         .mid-product-block .mp-disclosure { font-size: 0.68rem; color: #999; margin-top: 8px; }
-        .category-back { display:inline-block; margin-top:10px; padding:8px 14px; border:1px solid #e7ddcf; border-radius:20px; color:#aa8453; text-decoration:none; font-size:.78rem; letter-spacing:.7px; text-transform:uppercase; }
-        .category-back:hover { background:#aa8453; color:#fff; }
         @media (max-width: 480px) { .mid-product-block { flex-direction: column; align-items: flex-start; } }
     </style>
 </head>
@@ -75,9 +66,10 @@
         <div class="meta">Published on {{ .Date.Format "January 2, 2006" }}{{ if .Params.author }} · By {{ .Params.author }}{{ end }}{{ if .Params.guest_post }} · <span style="background:#aa8453;color:#fff;padding:2px 8px;border-radius:10px;font-size:0.7rem;letter-spacing:0.5px;">GUEST POST</span>{{ end }}</div>
         {{ if .Params.image }}<img class="feat-img" src="{{ .Params.image }}" alt="{{ .Title }}">{{ end }}
         <div class="content">
-            {{ $midProducts := .Params.mid_products | default (slice) }}
+            {{ $midProducts := slice }}
+            {{ with .Params.mid_products }}{{ $midProducts = . }}{{ end }}
             {{ $aiPromo := .Params.ai_promo }}
-            {{ if or $midProducts $aiPromo }}
+            {{ if or (gt (len $midProducts) 0) $aiPromo }}
                 {{ $contentStr := printf "%s" .Content }}
                 {{ $paragraphs := split $contentStr "</p>" }}
                 {{ $total := len $paragraphs }}
@@ -90,16 +82,14 @@
                         {{ $pos := mul (add $bi 1) $step }}
                         {{ if eq (add $i 1) $pos }}
                         <div class="mid-product-block">
-                            {{ if $prod.photo }}
-                            <a href="{{ $prod.affiliate_link }}" target="_blank" rel="nofollow sponsored noopener" class="mp-photo-link"><img class="mp-photo" src="{{ $prod.photo }}" alt="{{ $prod.product_name }}"></a>
-                            {{ end }}
+                            {{ if $prod.photo }}<a href="{{ $prod.affiliate_link }}" target="_blank" rel="nofollow sponsored noopener" class="mp-photo-link"><img class="mp-photo" src="{{ $prod.photo }}" alt="{{ $prod.product_name }}"></a>{{ end }}
                             <div class="mp-info"><div class="mp-name">{{ $prod.product_name }}</div><a href="{{ $prod.affiliate_link }}" target="_blank" rel="nofollow sponsored noopener" class="mp-shop-btn">Shop on Amazon →</a><div class="mp-disclosure">As an Amazon Associate, we earn from qualifying purchases.</div></div>
                         </div>
                         {{ end }}
                     {{ end }}
                     {{ if and $aiPromo (eq (add $i 1) $aiPromoPos) }}
                     <div class="ai-promo-card">
-                        <span class="ai-promo-sparkle" style="top: 12%; left: 15%; font-size: 14px; animation-delay: 0s;">&#10022;</span><span class="ai-promo-sparkle" style="top: 22%; left: 82%; font-size: 12px; animation-delay: 0.4s;">&#10023;</span><span class="ai-promo-sparkle" style="top: 72%; left: 20%; font-size: 16px; animation-delay: 0.8s;">&#10022;</span><span class="ai-promo-sparkle" style="top: 65%; left: 85%; font-size: 13px; animation-delay: 1.2s;">&#10023;</span><span class="ai-promo-sparkle" style="top: 40%; left: 50%; font-size: 15px; animation-delay: 1.6s;">&#10024;</span>
+                        <span class="ai-promo-sparkle" style="top:12%;left:15%;font-size:14px;animation-delay:0s;">&#10022;</span><span class="ai-promo-sparkle" style="top:22%;left:82%;font-size:12px;animation-delay:.4s;">&#10023;</span><span class="ai-promo-sparkle" style="top:72%;left:20%;font-size:16px;animation-delay:.8s;">&#10022;</span><span class="ai-promo-sparkle" style="top:65%;left:85%;font-size:13px;animation-delay:1.2s;">&#10023;</span><span class="ai-promo-sparkle" style="top:40%;left:50%;font-size:15px;animation-delay:1.6s;">&#10024;</span>
                         {{ if eq $aiPromo "kitchen" }}<h3>&#10024; Remodel your kitchen with AI</h3><p>Upload a photo of your kitchen and see AI-generated redesigns in seconds.</p>{{ else }}<h3>&#10024; Redesign your room with AI</h3><p>Upload a photo of your room and see AI-generated redesigns in seconds.</p>{{ end }}
                         <a href="https://app.glimerz.com?utm_source=glimerz_blog&utm_medium=inline_promo" target="_blank" rel="noopener" class="btn">Try it Free</a>
                     </div>
