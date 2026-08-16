@@ -1,8 +1,8 @@
 ---
-title: "Home Decor Renovation Tips on a Budget"
+title: Home Decor Renovation Tips on a Budget
 date: 2026-07-11T13:42:00.000+05:00
-description: Smart, budget-friendly home decor renovation tips that transform your space without overspending — practical ideas for every room.
-keywords: home decor renovation, budget home improvements, affordable home decor, room renovation tips, home makeover ideas
+description: Smart, budget-friendly home decor renovation tips that transform
+  your space without overspending — practical ideas for every room.
 image: /images/home-renovation.jpg
 categories:
   - Home Decor
@@ -15,6 +15,9 @@ products:
   - affiliate_link: https://a.co/d/0aweRdlL?tag=hunterpro0e-20
     product_name: 2 Pack Pull-Out Storage Organizers, Under Sink Organizer and Storage.
     photo: https://m.media-amazon.com/images/I/81jfLYe1G-L._AC_SL1500_.jpg
+keywords: home decor renovation, budget home improvements, affordable home
+  decor, room renovation tips, home makeover ideas
+ai_promo: room
 ---
 **Home DecorImprovements: Renovation Tips That Won't Break the Bank**
 
