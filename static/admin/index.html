@@ -17,14 +17,19 @@
   </a>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
-    // Reveal the dashboard button once the user is actually inside the CMS.
-    // Two paths cover this: the "login" event (fires on a fresh login) and a
-    // hash check (catches restored/persisted sessions, where "login" never fires
-    // because the browser skips straight past the login screen).
+    // Decap CMS re-renders document.body with React on mount, which can wipe out
+    // any plain HTML sitting there beforehand - including our button. So instead
+    // of hoping the original element survives, we keep a reference to it and
+    // re-insert it into the live DOM at the moment we actually want to show it.
     var btn = document.getElementById("ai-dashboard-btn");
+    if (btn && btn.parentNode) btn.parentNode.removeChild(btn);
 
     function showDashboardBtn() {
-      if (btn) btn.style.display = "block";
+      if (!btn) return;
+      btn.style.display = "block";
+      if (!document.body.contains(btn)) {
+        document.body.appendChild(btn);
+      }
     }
 
     if (window.CMS && typeof window.CMS.registerEventListener === "function") {
@@ -37,9 +42,8 @@
       var pastLogin = /^#\/(collections|search|workflow)/.test(window.location.hash);
       if (pastLogin) {
         showDashboardBtn();
-        clearInterval(poll);
       }
-      if (checks > 40) clearInterval(poll); // stop after ~20 seconds either way
+      if (checks > 60) clearInterval(poll); // stop after ~30 seconds either way
     }, 500);
   </script>
 </body>
