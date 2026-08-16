@@ -27,7 +27,6 @@
         .content { font-size: 1.1rem; color: #3a3a3a; }
         .content a { color: #aa8453; font-weight: bold; text-decoration: underline; }
         .content a:hover { color: #2c2c2c; }
-
         .products { margin-top: 50px; border-top: 1px solid #f4f0ea; padding-top: 40px; }
         .products h2 { font-size: 1.3rem; font-weight: 400; letter-spacing: 1px; color: #aa8453; text-transform: uppercase; margin-bottom: 25px; }
         .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
@@ -42,7 +41,6 @@
         .shop-btn { display: inline-block; margin-top: 12px; background: #2c2c2c; color: #fff; padding: 8px 16px; text-decoration: none; border-radius: 2px; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; text-align: center; }
         .shop-btn:hover { background: #aa8453; }
         .affiliate-disclosure { font-size: 0.7rem; color: #999; margin-top: 6px; }
-
         .mid-product-block { display: flex; align-items: center; gap: 18px; border: 1px solid #f4f0ea; border-radius: 4px; background: #fdfbf7; padding: 20px; margin: 30px 0; max-width: 100%; min-height: 138px; box-sizing: border-box; }
         .ai-promo-card { position: relative; overflow: hidden; border-radius: 4px; border: none; background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #4facfe); background-size: 300% 300%; animation: aiPromoGradient 6s ease infinite; padding: 28px 24px; text-align: center; margin: 30px 0; }
         .ai-promo-sparkle { position: absolute; color: #fff; animation: aiPromoSparkle 1.8s ease-in-out infinite; pointer-events: none; }
@@ -59,24 +57,17 @@
         .mid-product-block .mp-shop-btn { display: inline-block; background: #2c2c2c; color: #fff; padding: 8px 16px; text-decoration: none; border-radius: 2px; font-size: 0.72rem; letter-spacing: 1px; text-transform: uppercase; }
         .mid-product-block .mp-shop-btn:hover { background: #aa8453; }
         .mid-product-block .mp-disclosure { font-size: 0.68rem; color: #999; margin-top: 8px; }
-        @media (max-width: 480px) {
-            .mid-product-block { flex-direction: column; align-items: flex-start; }
-        }
+        @media (max-width: 480px) { .mid-product-block { flex-direction: column; align-items: flex-start; } }
     </style>
 </head>
 <body>
-
     <div class="wrapper">
         <a href="/" class="back-link">← Back to Gallery</a>
         <h1>{{ .Title }}</h1>
         <div class="meta">Published on {{ .Date.Format "January 2, 2006" }}{{ if .Params.author }} · By {{ .Params.author }}{{ end }}{{ if .Params.guest_post }} · <span style="background:#aa8453;color:#fff;padding:2px 8px;border-radius:10px;font-size:0.7rem;letter-spacing:0.5px;">GUEST POST</span>{{ end }}</div>
-
-        {{ if .Params.image }}
-        <img class="feat-img" src="{{ .Params.image }}" alt="{{ .Title }}">
-        {{ end }}
-
+        {{ if .Params.image }}<img class="feat-img" src="{{ .Params.image }}" alt="{{ .Title }}">{{ end }}
         <div class="content">
-            {{ $midProducts := .Params.mid_products }}
+            {{ $midProducts := .Params.mid_products | default (slice) }}
             {{ $aiPromo := .Params.ai_promo }}
             {{ if or $midProducts $aiPromo }}
                 {{ $contentStr := printf "%s" .Content }}
@@ -92,73 +83,35 @@
                         {{ if eq (add $i 1) $pos }}
                         <div class="mid-product-block">
                             {{ if $prod.photo }}
-                            <a href="{{ $prod.affiliate_link }}" target="_blank" rel="nofollow sponsored noopener" class="mp-photo-link">
-                                <img class="mp-photo" src="{{ $prod.photo }}" alt="{{ $prod.product_name }}">
-                            </a>
+                            <a href="{{ $prod.affiliate_link }}" target="_blank" rel="nofollow sponsored noopener" class="mp-photo-link"><img class="mp-photo" src="{{ $prod.photo }}" alt="{{ $prod.product_name }}"></a>
                             {{ end }}
-                            <div class="mp-info">
-                                <div class="mp-name">{{ $prod.product_name }}</div>
-                                <a href="{{ $prod.affiliate_link }}" target="_blank" rel="nofollow sponsored noopener" class="mp-shop-btn">Shop on Amazon →</a>
-                                <div class="mp-disclosure">As an Amazon Associate, we earn from qualifying purchases.</div>
-                            </div>
+                            <div class="mp-info"><div class="mp-name">{{ $prod.product_name }}</div><a href="{{ $prod.affiliate_link }}" target="_blank" rel="nofollow sponsored noopener" class="mp-shop-btn">Shop on Amazon →</a><div class="mp-disclosure">As an Amazon Associate, we earn from qualifying purchases.</div></div>
                         </div>
                         {{ end }}
                     {{ end }}
                     {{ if and $aiPromo (eq (add $i 1) $aiPromoPos) }}
                     <div class="ai-promo-card">
-                        <span class="ai-promo-sparkle" style="top: 12%; left: 15%; font-size: 14px; animation-delay: 0s;">&#10022;</span>
-                        <span class="ai-promo-sparkle" style="top: 22%; left: 82%; font-size: 12px; animation-delay: 0.4s;">&#10023;</span>
-                        <span class="ai-promo-sparkle" style="top: 72%; left: 20%; font-size: 16px; animation-delay: 0.8s;">&#10022;</span>
-                        <span class="ai-promo-sparkle" style="top: 65%; left: 85%; font-size: 13px; animation-delay: 1.2s;">&#10023;</span>
-                        <span class="ai-promo-sparkle" style="top: 40%; left: 50%; font-size: 15px; animation-delay: 1.6s;">&#10024;</span>
-                        {{ if eq $aiPromo "kitchen" }}
-                        <h3>&#10024; Remodel your kitchen with AI</h3>
-                        <p>Upload a photo of your kitchen and see AI-generated redesigns in seconds.</p>
-                        {{ else }}
-                        <h3>&#10024; Redesign your room with AI</h3>
-                        <p>Upload a photo of your room and see AI-generated redesigns in seconds.</p>
-                        {{ end }}
+                        <span class="ai-promo-sparkle" style="top: 12%; left: 15%; font-size: 14px; animation-delay: 0s;">&#10022;</span><span class="ai-promo-sparkle" style="top: 22%; left: 82%; font-size: 12px; animation-delay: 0.4s;">&#10023;</span><span class="ai-promo-sparkle" style="top: 72%; left: 20%; font-size: 16px; animation-delay: 0.8s;">&#10022;</span><span class="ai-promo-sparkle" style="top: 65%; left: 85%; font-size: 13px; animation-delay: 1.2s;">&#10023;</span><span class="ai-promo-sparkle" style="top: 40%; left: 50%; font-size: 15px; animation-delay: 1.6s;">&#10024;</span>
+                        {{ if eq $aiPromo "kitchen" }}<h3>&#10024; Remodel your kitchen with AI</h3><p>Upload a photo of your kitchen and see AI-generated redesigns in seconds.</p>{{ else }}<h3>&#10024; Redesign your room with AI</h3><p>Upload a photo of your room and see AI-generated redesigns in seconds.</p>{{ end }}
                         <a href="https://app.glimerz.com?utm_source=glimerz_blog&utm_medium=inline_promo" target="_blank" rel="noopener" class="btn">Try it Free</a>
                     </div>
                     {{ end }}
                 {{ end }}
-            {{ else }}
-                {{ .Content }}
-            {{ end }}
+            {{ else }}{{ .Content }}{{ end }}
         </div>
-
         {{ if .Params.products }}
-        <div class="products">
-            <h2>Featured Products</h2>
-            <div class="products-grid">
+        <div class="products"><h2>Featured Products</h2><div class="products-grid">
             {{ range .Params.products }}
             <div class="product-card">
                 {{ if .product_name }}<h3>{{ .product_name }}</h3>{{ end }}
-
-                {{ if .photo }}
-                <a href="{{ .affiliate_link }}" target="_blank" rel="nofollow sponsored noopener" class="product-photo-link">
-                    <img class="product-photo" src="{{ .photo }}" alt="{{ .product_name }}">
-                </a>
-                <a class="save-btn" target="_blank" rel="noopener" href="https://www.pinterest.com/pin/create/button/?url={{ $.Permalink }}&media={{ .photo | absURL }}&description={{ .product_name }}">♥ Save</a>
-                {{ end }}
-
-                {{ if .video_file }}
-                <video class="product-video-file" controls src="{{ .video_file }}"></video>
-                {{ else if .video_url }}
-                {{ partial "product-video-embed.html" .video_url }}
-                {{ end }}
-
-                {{ if .affiliate_link }}
-                <a href="{{ .affiliate_link }}" target="_blank" rel="nofollow sponsored noopener" class="shop-btn">Shop this on Amazon →</a>
-                <div class="affiliate-disclosure">As an Amazon Associate, we earn from qualifying purchases.</div>
-                {{ end }}
+                {{ if .photo }}<a href="{{ .affiliate_link }}" target="_blank" rel="nofollow sponsored noopener" class="product-photo-link"><img class="product-photo" src="{{ .photo }}" alt="{{ .product_name }}"></a><a class="save-btn" target="_blank" rel="noopener" href="https://www.pinterest.com/pin/create/button/?url={{ $.Permalink }}&media={{ .photo | absURL }}&description={{ .product_name }}">♥ Save</a>{{ end }}
+                {{ if .video_file }}<video class="product-video-file" controls src="{{ .video_file }}"></video>{{ else if .video_url }}{{ partial "product-video-embed.html" .video_url }}{{ end }}
+                {{ if .affiliate_link }}<a href="{{ .affiliate_link }}" target="_blank" rel="nofollow sponsored noopener" class="shop-btn">Shop this on Amazon →</a><div class="affiliate-disclosure">As an Amazon Associate, we earn from qualifying purchases.</div>{{ end }}
             </div>
             {{ end }}
-            </div>
-        </div>
+        </div></div>
         {{ end }}
     </div>
     {{ partial "footer.html" . }}
-
 </body>
 </html>
