@@ -17,17 +17,30 @@
   </a>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
-    // Only reveal the dashboard button once Decap CMS confirms the user is actually logged in.
-    // Without this, the button was showing on the pre-login screen too.
-    if (window.CMS && typeof window.CMS.registerEventListener === "function") {
-      window.CMS.registerEventListener({
-        name: "login",
-        handler: function () {
-          var btn = document.getElementById("ai-dashboard-btn");
-          if (btn) btn.style.display = "block";
-        },
-      });
+    // Reveal the dashboard button once the user is actually inside the CMS.
+    // Two paths cover this: the "login" event (fires on a fresh login) and a
+    // hash check (catches restored/persisted sessions, where "login" never fires
+    // because the browser skips straight past the login screen).
+    var btn = document.getElementById("ai-dashboard-btn");
+
+    function showDashboardBtn() {
+      if (btn) btn.style.display = "block";
     }
+
+    if (window.CMS && typeof window.CMS.registerEventListener === "function") {
+      window.CMS.registerEventListener({ name: "login", handler: showDashboardBtn });
+    }
+
+    var checks = 0;
+    var poll = setInterval(function () {
+      checks++;
+      var pastLogin = /^#\/(collections|search|workflow)/.test(window.location.hash);
+      if (pastLogin) {
+        showDashboardBtn();
+        clearInterval(poll);
+      }
+      if (checks > 40) clearInterval(poll); // stop after ~20 seconds either way
+    }, 500);
   </script>
 </body>
 </html>
