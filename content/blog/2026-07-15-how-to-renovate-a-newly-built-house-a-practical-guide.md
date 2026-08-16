@@ -25,6 +25,7 @@ mid_products:
   - product_name: LED recessed downlight kit or dimmable LED bulbs (multi-pack)
     affiliate_link: https://a.co/d/07JVciWQ?tag=hunterpro0e-20
     photo: https://m.media-amazon.com/images/I/71ylar-+bZL._AC_SL1500_.jpg
+ai_promo: room
 ---
 Buying a newly built house sounds like the end of the journey, but for most homeowners it's actually the beginning. Builders hand over a shell that is structurally sound yet generic — plain walls, basic fittings, and a layout designed to suit everyone, which means it perfectly suits no one. Renovating a new build is very different from renovating an old property: you're not fixing decay, you're adding character, function, and personal comfort. Here's how to approach it the smart way.
 
