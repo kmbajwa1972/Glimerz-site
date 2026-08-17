@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Glimerz Admin Workspace</title>
+
+  <!-- Points to the config file sitting in this exact same folder -->
+  <link href="./config.yml" type="text/yaml" rel="cms-config-url" />
+  <link rel="stylesheet" href="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.css" />
+</head>
+<body>
+  <script>
+    // IMPORTANT: this runs BEFORE decap-cms.js loads below. Decap CMS wipes/replaces
+    // document.body when it mounts its React app, so any plain HTML element placed in
+    // the body gets destroyed before we can grab a reference to it. Fix: save the
+    // button's markup as a string now, before CMS has loaded, then build it fresh
+    // from that markup right after CMS finishes mounting.
+    window.__aiDashboardBtnHTML =
+      '<a href="/admin/dashboard/" ' +
+      'style="display:block; position:fixed; top:16px; left:50%; transform:translateX(-50%); ' +
+      'z-index:99999; background:#aa8453; color:#fff; padding:8px 20px; border-radius:4px; ' +
+      "font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size:0.85rem; " +
+      'text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,0.15);">' +
+      'AI Manager Dashboard &rarr;</a>';
+  </script>
+
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <script>
+    // Insert the button right away, always visible. No login/hash checks, no
+    // waiting on CMS events - just a plain link sitting on top of the CMS UI.
+    var wrapper = document.createElement("div");
+    wrapper.innerHTML = window.__aiDashboardBtnHTML;
+    document.body.appendChild(wrapper.firstElementChild);
+  </script>
+</body>
+</html>
