@@ -9,7 +9,7 @@
   "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
   "wordCount": {{ .WordCount }},
   "image": [{{ if .Params.image }}{{ .Params.image | absURL | jsonify }}{{ else }}{{ "images/logo.jpg" | absURL | jsonify }}{{ end }}],
-  "author": { "@type": "Organization", "name": "Glimerz", "url": "https://glimerz.com" },
+  "author": { "@type": "Person", "name": {{ if .Params.author }}{{ .Params.author | jsonify }}{{ else }}"Glimerz Editorial Team"{{ end }}, "url": "https://glimerz.com/about/" },
   "publisher": {
     "@type": "Organization",
     "name": "Glimerz",
@@ -28,13 +28,8 @@
   "@type": "WebSite",
   "name": "Glimerz",
   "url": "https://glimerz.com",
-  "description": "Curated home decor and kitchen accessories inspiration, reviews, and product picks.",
-  "publisher": { "@type": "Organization", "name": "Glimerz", "url": "https://glimerz.com" },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://glimerz.com/?s={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
+  "description": "Curated home decor and kitchen inspiration, practical guidance, and carefully selected product recommendations.",
+  "publisher": { "@type": "Organization", "name": "Glimerz", "url": "https://glimerz.com" }
 }
 </script>
 {{ end }}
