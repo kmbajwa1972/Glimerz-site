@@ -5,13 +5,14 @@
     <input type="email" id="glimerz-newsletter-email" placeholder="you@example.com" required style="flex:1;min-width:200px;padding:0.6rem 0.8rem;border:1px solid #ccc;border-radius:6px;font-size:0.95rem;" />
     <button type="submit" style="padding:0.6rem 1.2rem;background:#aa8453;color:#fff;border:none;border-radius:6px;font-size:0.95rem;cursor:pointer;">Subscribe</button>
   </form>
+  <p style="margin:0.7rem 0 0;font-size:0.78rem;color:#888;">By subscribing, you agree to our <a href="/privacy-policy/" style="color:#777;">Privacy Policy</a>.</p>
   <p id="glimerz-newsletter-message" style="margin-top:0.75rem;font-size:0.85rem;"></p>
 </div>
 
 <script>
 (function () {
   const SUPABASE_URL = "https://yayljmqelmsmcsuhxqdj.supabase.co";
-  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSI6InlheWxqbXFlbG1zbWNzdWh4cWRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM3ODUyOTMsImV4cCI6MjA5OTM2MTI5M30.XITDKls3bKtsXVssJuGQvy8iE4gwl2VtDF1F3dbrDcs";
+  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ5YXlsam1xZWxtc21jc3VoeHFkaiIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzgzNzg1MjkzLCJleHAiOjIwOTkzNjEyOTN9.XITDKls3bKtsXVssJuGQvy8iE4gwl2VtDF1F3dbrDcs";
   const form = document.getElementById("glimerz-newsletter-form");
   const emailInput = document.getElementById("glimerz-newsletter-email");
   const message = document.getElementById("glimerz-newsletter-message");
@@ -39,7 +40,7 @@
     <a href="/platform/" style="color:#aa8453;text-decoration:none;margin:0 12px;">Platform</a>
     <a href="/affiliate-disclosure/" style="color:#aa8453;text-decoration:none;margin:0 12px;">Affiliate Disclosure</a>
     <a href="/privacy-policy/" style="color:#aa8453;text-decoration:none;margin:0 12px;">Privacy Policy</a>
-    <a href="/terms-of-use/" style="color:#aa8453;text-decoration:none;margin:0 12px;">Terms of Use</a>
+    <a href="/terms-of-service/" style="color:#aa8453;text-decoration:none;margin:0 12px;">Terms of Service</a>
     <a href="/contact/" style="color:#aa8453;text-decoration:none;margin:0 12px;">Contact</a>
     <a href="/write-for-us/" style="color:#aa8453;text-decoration:none;margin:0 12px;">Write for Us</a>
   </div>

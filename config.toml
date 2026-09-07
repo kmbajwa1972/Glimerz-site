@@ -2,3 +2,4 @@ baseURL = "https://glimerz.com"
 locale = "en-us"
 title = "Glimerz | Aesthetic Home & Kitchen Ideas"
 staticDir = ["static"]
+enableRobotsTXT = true
