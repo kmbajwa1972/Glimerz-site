@@ -1,32 +1,51 @@
 ---
 title: "Write for Us"
 layout: "static"
-description: "Contribute a guest post to Glimerz — our home decor and kitchen accessories blog."
+description: "Contribute a useful, original home decor or kitchen article to Glimerz."
 ---
-Glimerz welcomes guest contributions from writers, brands, and fellow home & kitchen enthusiasts. If you have something genuinely useful to share with our readers, we'd love to hear from you.
+Glimerz welcomes thoughtful contributions from writers, designers, and home & kitchen enthusiasts who have genuinely useful information to share with our readers.
 
 ## What We're Looking For
 
-- Original content focused on **home decor** or **kitchen accessories** — styling tips, product roundups, organization ideas, buying guides, and similar topics
-- Well-written, practical, and genuinely useful to someone furnishing or organizing their home
-- Not previously published elsewhere
+We consider original articles focused on **home decor** or **kitchen topics**, including:
 
-## Sponsored & Paid Placements
+- Practical decorating and styling guidance
+- Room planning and organization ideas
+- Kitchen storage and workflow solutions
+- Thoughtful buying guides and product comparisons
+- Renovation planning and lessons learned
+- Useful ideas that help readers make better decisions for their own homes
 
-We also work with brands and writers on paid placements. If you'd like your content or product featured on Glimerz, reach out and we can discuss details. All sponsored or guest content is clearly labeled as such when published — we believe in transparency with our readers.
+Submissions should be specific, useful, and written for people—not primarily for search engines or links. We prefer articles that include practical details, clear reasoning, measurements, examples, or firsthand experience where appropriate.
+
+## Originality and Editorial Review
+
+Submissions must be original and not previously published elsewhere. Every submission is reviewed by the Glimerz editorial team before publication. Acceptance is not guaranteed, and we may edit accepted material for clarity, accuracy, structure, and relevance.
+
+We do not publish automatically generated filler, spun or lightly rewritten material, copied content, or articles created primarily to place links.
+
+## Links and Product Mentions
+
+Links should be genuinely useful to the reader and directly relevant to the article. We do not accept excessive, irrelevant, or promotional link placement.
+
+Product recommendations may be included when they support the article's subject and provide practical value. Affiliate relationships and any sponsored relationship will be disclosed where applicable.
 
 ## What We Don't Accept
 
-- Content unrelated to home decor or kitchen accessories
-- Excessive or irrelevant linking
-- Low-effort or AI-generated filler content
+- Content unrelated to home decor or kitchen topics
+- Previously published or copied material
+- Excessive promotional language or irrelevant links
+- Articles written primarily to promote a website, service, or product
+- Low-effort or generic filler content
+- Content that makes unsupported safety, health, financial, or technical claims
 
 ## How to Submit
 
-Every submission is reviewed by our team before anything goes live — nothing is published automatically. To pitch a topic or send a draft, email us at [help.glimerz@gmail.com](mailto:help.glimerz@gmail.com) with:
+To pitch a topic or send a draft, email **help.glimerz@gmail.com** with:
 
 - A short pitch or your draft
-- Any images you'd like included
-- A one-line author bio
+- A brief explanation of why the topic is useful to Glimerz readers
+- Any original images you'd like considered for inclusion
+- A one-line author bio and relevant experience, if applicable
 
-We'll get back to you within a few business days.
+We'll review the submission and respond when we can. Please do not send the same pitch repeatedly while it is under review.
