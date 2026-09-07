@@ -13,7 +13,7 @@
     <div class="gl-article-grid">
       {{ range $articles.ByDate.Reverse }}
         <a class="gl-article-card" href="{{ .RelPermalink }}">
-          {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">{{ end }}
+          {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Title }} — {{ .Title }}" loading="lazy">{{ end }}
           <div class="gl-article-card-body">
             <div class="gl-meta">{{ .Date.Format "Jan 2, 2006" }}</div>
             <h3>{{ .Title }}</h3>
