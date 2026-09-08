@@ -31,7 +31,9 @@ Make a simple floor plan on paper. Mark the door swing, then draw the major furn
 
 As a practical starting point, aim for a comfortable walking path of roughly 30–36 inches where the room allows it. Tighter clearances may be workable in a genuinely compact apartment, but avoid placing furniture where people have to turn sideways every time they pass. For frequently used drawers and cabinet doors, allow enough room for them to open without blocking the main route.
 
-**Think in Zones, Not Full-Size Rooms** A studio apartment does not need miniature versions of a living room, office, dining room, and bedroom. Instead, give each activity a defined zone. For example, a 300–400 square-foot studio might use one wall for sleeping, a compact sofa opposite it for lounging, and a narrow desk near a window for work. A rug can visually define the seating area, while a pendant or task lamp identifies the work zone after dark. The zones feel separate without requiring walls that consume valuable floor area.
+**Think in Zones, Not Full-Size Rooms** A studio apartment does not need miniature versions of a living room, office, dining room, and bedroom. Instead, give each activity a defined zone.
+
+For example, a 300–400 square-foot studio might use one wall for sleeping, a compact sofa opposite it for lounging, and a narrow desk near a window for work. A rug can visually define the seating area, while a pendant or task lamp identifies the work zone after dark. The zones feel separate without requiring walls that consume valuable floor area.
 
 The same approach works in a small bedroom. If the room also needs to function as a workspace, position the desk where it does not interfere with the bed's circulation. A shallow wall-mounted desk can be useful when a full-depth office desk would make the room feel blocked.
 
@@ -41,31 +43,35 @@ A dining table may be only 30 inches deep, but chairs need additional room behin
 
 Use a simple furniture test before purchasing: measure the proposed footprint with painter's tape on the floor. Put the tape around the sofa, bed, table, or desk and walk through the room normally. Open imaginary drawers. Pull out an imaginary chair. If the taped layout already feels awkward, the real furniture will not solve the problem.
 
-For small rooms, pieces with visible legs, slim profiles, or open space underneath can sometimes feel lighter than bulky furniture extending all the way to the floor. This is a visual choice, not a rule: storage needs may justify a more substantial piece. **Use Mirrors Strategically, Not Everywhere** Mirrors can make a compact room feel brighter and visually deeper because they reflect whatever is in front of them. But placement matters more than simply adding a mirror.
+For small rooms, pieces with visible legs, slim profiles, or open space underneath can sometimes feel lighter than bulky furniture extending all the way to the floor. This is a visual choice, not a rule: storage needs may justify a more substantial piece. **Use Mirrors Strategically, Not Everywhere**
 
-A large mirror opposite or near a window can reflect daylight and a pleasant view. A mirror facing a cluttered storage area will simply reflect the clutter. Before hanging one, stand where the mirror will go and look at the reflection from normal sitting and standing positions.
+Mirrors can make a compact room feel brighter and visually deeper because they reflect whatever is in front of them. But placement matters more than simply adding a mirror. A large mirror opposite or near a window can reflect daylight and a pleasant view. A mirror facing a cluttered storage area will simply reflect the clutter. Before hanging one, stand where the mirror will go and look at the reflection from normal sitting and standing positions.
 
 Scale matters too. A tiny mirror above a large sofa can look disconnected, while a larger floor mirror may become a useful full-length dressing mirror as well as a decorative element. In a narrow entry, a tall mirror can be especially practical because it combines a final outfit check with a strong vertical element.
 
-Avoid the claim that a mirror literally doubles a room's size. It does not change the floor area. Its value is visual: it can increase reflected light and create the impression of additional depth. **Make Every Large Piece Earn Its Footprint** In a compact home, multi-purpose furniture is useful when the second function is something you actually need.
+Avoid the claim that a mirror literally doubles a room's size. It does not change the floor area. Its value is visual: it can increase reflected light and create the impression of additional depth.
 
-A storage ottoman can act as seating, a footrest, and hidden storage. A drop-leaf table can serve as a daily workspace and become a dining surface when needed. A bed with drawers can reduce the need for a separate dresser. A narrow console can provide a landing place for keys while also concealing networking equipment or small household items.
+**Make Every Large Piece Earn Its Footprint** In a compact home, multi-purpose furniture is useful when the second function is something you actually need. A storage ottoman can act as seating, a footrest, and hidden storage. A drop-leaf table can serve as a daily workspace and become a dining surface when needed. A bed with drawers can reduce the need for a separate dresser. A narrow console can provide a landing place for keys while also concealing networking equipment or small household items.
 
-But multifunction should not become an excuse to buy complicated furniture. If a transforming table takes five minutes to assemble every time you need it, you may stop using it. Choose the simplest solution that solves a real problem. **Go Vertical, but Keep It Visually Controlled**
+But multifunction should not become an excuse to buy complicated furniture. If a transforming table takes five minutes to assemble every time you need it, you may stop using it. Choose the simplest solution that solves a real problem.
 
-When floor area is limited, vertical storage can reclaim useful space. Tall bookcases, floating shelves, wall hooks, pegboards, and wall-mounted cabinets move storage upward instead of outward. However, an entire wall covered with open shelving can make a small room look busier. Use closed storage for visually messy items and reserve open shelves for books and a limited number of objects you actually want to see.
+**Go Vertical, but Keep It Visually Controlled** When floor area is limited, vertical storage can reclaim useful space. Tall bookcases, floating shelves, wall hooks, pegboards, and wall-mounted cabinets move storage upward instead of outward. However, an entire wall covered with open shelving can make a small room look busier. Use closed storage for visually messy items and reserve open shelves for books and a limited number of objects you actually want to see.
 
 If installing shelves above a desk or sofa, check the manufacturer's weight limits and use appropriate hardware for the wall type. In rentals, confirm what kinds of holes or anchors the lease allows before drilling. **Curtains: Use the Window as a Vertical Opportunity** Curtains can change the apparent proportions of a room, but the installation needs to suit the actual window and wall.
 
-A rod placed somewhat above the window frame and extended beyond its sides can allow the fabric to stack beside the glass when open. This can expose more of the window and avoid covering the glass unnecessarily. Full-length panels also draw attention upward. Measure from the intended rod position to the floor before buying panels. A curtain that is several inches too short can create an accidental horizontal line; a panel that is dramatically too long may require puddling or hemming. In a small room, simple floor-skimming panels are usually easier to maintain.
+A rod placed somewhat above the window frame and extended beyond its sides can allow the fabric to stack beside the glass when open. This can expose more of the window and avoid covering the glass unnecessarily. Full-length panels also draw attention upward.
+
+Measure from the intended rod position to the floor before buying panels. A curtain that is several inches too short can create an accidental horizontal line; a panel that is dramatically too long may require puddling or hemming. In a small room, simple floor-skimming panels are usually easier to maintain.
 
 If a rental does not permit drilling, a tension rod can be useful where the window and frame support that installation. Check the rod's load rating and avoid assuming every tension system is suitable for heavy curtains. **Keep the Color Strategy Simple, Not Bland**
 
-A compact room does not have to be white. The useful principle is continuity. When walls, larger furniture, and major textiles are closely related in tone, the eye can move around the room without encountering as many hard visual breaks. Choose one main neutral or dominant color, one secondary color, and one or two smaller accent colors. Repeat those accents in different materials rather than introducing a new color with every object.
+A compact room does not have to be white. The useful principle is continuity. When walls, larger furniture, and major textiles are closely related in tone, the eye can move around the room without encountering as many hard visual breaks.
 
-For example, a warm cream wall, medium wood furniture, muted green textiles, and a small amount of black hardware can create contrast without making the room feel fragmented. The same strategy works with cooler grays, pale blues, natural wood, and a darker accent. This is a guideline rather than a formula. A small room can successfully use dark or saturated colors when the overall composition is deliberate.
+Choose one main neutral or dominant color, one secondary color, and one or two smaller accent colors. Repeat those accents in different materials rather than introducing a new color with every object. For example, a warm cream wall, medium wood furniture, muted green textiles, and a small amount of black hardware can create contrast without making the room feel fragmented. The same strategy works with cooler grays, pale blues, natural wood, and a darker accent.
 
-**Lighting Is Part of the Floor Plan** Small rooms often have one ceiling fixture and several dark corners. Instead of relying on that single source, plan lighting around the zones you created. A desk needs useful task lighting. A reading chair benefits from a nearby floor or table lamp. A sofa area may need softer ambient light. Under-cabinet or wall lighting can help in a compact kitchen where counter space is limited.
+This is a guideline rather than a formula. A small room can successfully use dark or saturated colors when the overall composition is deliberate. **Lighting Is Part of the Floor Plan** Small rooms often have one ceiling fixture and several dark corners. Instead of relying on that single source, plan lighting around the zones you created.
+
+A desk needs useful task lighting. A reading chair benefits from a nearby floor or table lamp. A sofa area may need softer ambient light. Under-cabinet or wall lighting can help in a compact kitchen where counter space is limited.
 
 Rather than placing lamps randomly, ask what you do in each part of the room after sunset. The answer tells you where the useful light belongs. Warm light can create a comfortable evening atmosphere, while a task area may need a different light level or color temperature depending on the work being done. There is no universal bulb setting that makes everyone more productive or every room look better, so test the actual space and choose according to function and preference.
 
@@ -83,11 +89,13 @@ The result is not necessarily a room with fewer objects. It is a room where the 
 
 **Problem: The apartment is rented.**  Prioritize movable furniture, freestanding storage, removable decor, and reversible lighting solutions. Check the lease before drilling, painting, replacing fixtures, or making other alterations. **Common Small-Space Decorating Mistakes** **Buying furniture before measuring.** A product's listed dimensions are only useful when compared with your actual floor plan.
 
-**Choosing many tiny pieces.** Several small tables and storage units can consume more visual and physical space than one appropriately sized piece. **Blocking natural light.** Tall furniture placed directly in front of a window can make the room darker and reduce one of its most valuable resources. **Ignoring doors and drawers.** Furniture that technically fits may be unusable if doors cannot open fully.
+**Choosing many tiny pieces.** Several small tables and storage units can consume more visual and physical space than one appropriately sized piece. **Blocking natural light.** Tall furniture placed directly in front of a window can make the room darker and reduce one of its most valuable resources.
 
-**Using open storage for everything.** Visible objects quickly become visual noise in a compact room. Mix open display with concealed storage. **Overusing mirrors.** One well-positioned large mirror can be more useful than several small decorative mirrors placed without considering what they reflect.
+**Ignoring doors and drawers.** Furniture that technically fits may be unusable if doors cannot open fully. **Using open storage for everything.** Visible objects quickly become visual noise in a compact room. Mix open display with concealed storage.
 
-**Choosing miniature furniture just because the room is small.** A compact room still needs furniture that is comfortable and functional. The goal is appropriate scale, not making everything as tiny as possible. **A Practical Small-Space Shopping Checklist** Before purchasing a major item, write down:
+**Overusing mirrors.** One well-positioned large mirror can be more useful than several small decorative mirrors placed without considering what they reflect. **Choosing miniature furniture just because the room is small.** A compact room still needs furniture that is comfortable and functional. The goal is appropriate scale, not making everything as tiny as possible.
+
+**A Practical Small-Space Shopping Checklist** Before purchasing a major item, write down:
 
 - The maximum width, depth, and height available.
 - The walking clearance that must remain open.
@@ -98,7 +106,9 @@ The result is not necessarily a room with fewer objects. It is a room where the 
 - Whether the installation is allowed if you rent.
 - Whether the item solves an existing problem or simply adds another object.
 
-For decorative purchases, use the same discipline. Measure the wall before buying art or a mirror, check the available floor area before buying a plant stand, and compare the dimensions of storage baskets with the shelves or cabinets where they will live. **A Simple Order for Decorating a Compact Room** If you are starting from an empty room, work in this order:
+For decorative purchases, use the same discipline. Measure the wall before buying art or a mirror, check the available floor area before buying a plant stand, and compare the dimensions of storage baskets with the shelves or cabinets where they will live. **A Simple Order for Decorating a Compact Room**
+
+If you are starting from an empty room, work in this order:
 
 1. Measure the room and identify fixed features.
 2. Decide the activities and zones the room must support.

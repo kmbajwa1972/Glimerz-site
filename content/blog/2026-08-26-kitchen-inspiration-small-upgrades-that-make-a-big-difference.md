@@ -42,7 +42,9 @@ Rank each problem by **frequency, frustration, and cost to fix**. A small change
 
 ## 1. Improve the Light at the Preparation Surface
 
-Kitchen lighting should be judged where work happens, not only from the center of the room. Stand at your main preparation counter and look for shadows caused by your body, upper cabinets, or overhead fixtures. Under-cabinet lighting can help illuminate the surface directly below the cabinets. Puck lights are one option; linear LED fixtures are another. Choose according to the length of the counter, mounting method, power source, controls, and the manufacturer's specifications.
+Kitchen lighting should be judged where work happens, not only from the center of the room. Stand at your main preparation counter and look for shadows caused by your body, upper cabinets, or overhead fixtures.
+
+Under-cabinet lighting can help illuminate the surface directly below the cabinets. Puck lights are one option; linear LED fixtures are another. Choose according to the length of the counter, mounting method, power source, controls, and the manufacturer's specifications.
 
 Before installing anything, test the proposed light position with temporary lighting if possible. A fixture that looks bright on paper may still leave a dark section of counter. If a new hardwired fixture is required, use an appropriately qualified professional where local electrical rules call for it. Plug-in or battery-powered options can be simpler for a small refresh.
 
@@ -64,7 +66,9 @@ Pantry organization can improve both appearance and everyday inventory control. 
 
 Clear containers and bins can help when original packaging is difficult to stack or see. But do not transfer every food into a container automatically. Keep products in packaging when it is more practical, and follow any storage directions supplied by the manufacturer.
 
-If you use containers, choose sizes that match the quantities you normally buy. Label the contents clearly. For frequently used dry goods, a container that lets you see how much remains can make grocery planning easier. Measure shelves before buying bins. A container that fits the shelf but prevents the pantry door from closing is not an upgrade.
+If you use containers, choose sizes that match the quantities you normally buy. Label the contents clearly. For frequently used dry goods, a container that lets you see how much remains can make grocery planning easier.
+
+Measure shelves before buying bins. A container that fits the shelf but prevents the pantry door from closing is not an upgrade.
 
 ## 5. Rework the Spice Storage
 
@@ -160,6 +164,8 @@ Before purchasing an upgrade, ask:
 
 Small kitchen upgrades work best when they solve specific problems. Better light can make preparation easier, a properly measured organizer can make a drawer usable, visible pantry storage can simplify inventory, and new hardware can refresh cabinets without replacing them.
 
-The key is to resist the temptation to buy everything at once. Audit the kitchen, identify the most frequent friction point, measure before purchasing, and make one change. Live with it long enough to see whether it actually helps. A kitchen does not need a dramatic renovation to feel better. Often, the most worthwhile inspiration comes from noticing what makes your own kitchen difficult to use and making one thoughtful improvement at a time.
+The key is to resist the temptation to buy everything at once. Audit the kitchen, identify the most frequent friction point, measure before purchasing, and make one change. Live with it long enough to see whether it actually helps.
+
+A kitchen does not need a dramatic renovation to feel better. Often, the most worthwhile inspiration comes from noticing what makes your own kitchen difficult to use and making one thoughtful improvement at a time.
 
 **Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the upgrade decisions discussed above and do not determine our editorial recommendations.

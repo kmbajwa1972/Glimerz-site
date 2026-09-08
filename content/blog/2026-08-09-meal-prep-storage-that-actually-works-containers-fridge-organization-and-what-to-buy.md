@@ -26,7 +26,9 @@ Meal prep is only useful when the food remains easy to identify, store, reheat, 
 
 A good system does not require a matching collection of expensive containers. It needs the right sizes, materials that suit the way you use them, a predictable place for prepared food, and a simple labeling routine. This guide shows how to build that system without filling your cabinets with containers you rarely use.
 
-**1. Start With How You Actually Meal Prep** Before buying containers, write down what you normally prepare. Do you portion five complete lunches? Cook a large batch of rice and vegetables and assemble meals later? Freeze individual dinners? Prepare salads, snacks, sauces, or overnight breakfasts?
+**1. Start With How You Actually Meal Prep**
+
+Before buying containers, write down what you normally prepare. Do you portion five complete lunches? Cook a large batch of rice and vegetables and assemble meals later? Freeze individual dinners? Prepare salads, snacks, sauces, or overnight breakfasts?
 
 The answers determine your storage needs. If you portion complete meals immediately, several matching medium containers are useful. If you cook components separately, a combination of medium and larger containers gives you more flexibility. If freezing is central to your routine, freezer-safe containers or bags deserve more attention than decorative refrigerator organizers.
 
@@ -41,9 +43,9 @@ Neither glass nor plastic is automatically the best choice for every meal-prep j
 | Silicone bags | Flexible and space-efficient | Can be less convenient for stacking | Snacks, freezer portions |
 | Stainless steel | Durable and lightweight | Not suitable for microwave reheating | Cold storage and transport |
 
-Check the manufacturer's instructions before putting any container in a microwave, oven, dishwasher, or freezer. “Food storage” does not automatically mean “safe for every temperature.” Lids often have different limitations from the container itself. For many households, a mixed system is the most practical: glass for meals that stay at home and plastic or another lightweight option for food that travels.
+Check the manufacturer's instructions before putting any container in a microwave, oven, dishwasher, or freezer. “Food storage” does not automatically mean “safe for every temperature.” Lids often have different limitations from the container itself.
 
-**3. Buy Containers in Useful Sizes** One size rarely works well for an entire meal-prep routine. Instead, think in terms of jobs:
+For many households, a mixed system is the most practical: glass for meals that stay at home and plastic or another lightweight option for food that travels. **3. Buy Containers in Useful Sizes** One size rarely works well for an entire meal-prep routine. Instead, think in terms of jobs:
 
 - **Small:** sauces, snacks, chopped toppings, small sides.
 - **Medium:** individual meals, salads, breakfasts, or lunch portions.
@@ -52,13 +54,17 @@ Check the manufacturer's instructions before putting any container in a microwav
 
 The exact capacity should follow your portions rather than a generic recommendation. If your normal lunch nearly fills a particular container, that is more useful information than a label saying it is a “meal prep size.” Before buying, measure the refrigerator shelf and the cabinet where the containers will be stored. A container that is excellent on the counter can become frustrating if it cannot stack inside your fridge or fit through the cabinet opening.
 
-**4. Use Matching Containers for the Jobs That Repeat** Matching containers are valuable for more than appearance. Similar footprints make stacking predictable, lids are easier to identify, and the refrigerator becomes easier to organize. You do not need every container to match. Standardize the sizes you use most often and keep specialty shapes for specific foods. For example, five identical lunch containers may be more useful than a large assortment of ten unrelated shapes.
+**4. Use Matching Containers for the Jobs That Repeat** Matching containers are valuable for more than appearance. Similar footprints make stacking predictable, lids are easier to identify, and the refrigerator becomes easier to organize.
 
-When comparing sets, check whether lids are interchangeable and whether replacement lids are available. A container system becomes less useful when one broken lid makes an otherwise good base impossible to use. **5. When Divided Containers Are Worth It** Compartment containers are useful when separation improves the meal. They can keep a crisp vegetable or fruit portion away from a sauce, or separate components that you prefer to combine only when eating.
+You do not need every container to match. Standardize the sizes you use most often and keep specialty shapes for specific foods. For example, five identical lunch containers may be more useful than a large assortment of ten unrelated shapes.
 
-They are less useful for soups, stews, casseroles, curries, or meals that are intentionally mixed. In those cases, a normal container uses cabinet space more efficiently and is usually easier to clean. Before buying a large divided set, test the idea with one or two containers. If you routinely ignore the compartments, switch back to simple single-section storage.
+When comparing sets, check whether lids are interchangeable and whether replacement lids are available. A container system becomes less useful when one broken lid makes an otherwise good base impossible to use. **5. When Divided Containers Are Worth It**
 
-**6. Organize the Refrigerator by Eating Order** A meal-prep fridge should be organized around what you need to find, not simply around what looks neat. Create a clearly visible zone for prepared meals. Put foods that will be eaten soon where they are easy to see, while longer-term storage can occupy less convenient space according to your household's food-safety and storage practices.
+Compartment containers are useful when separation improves the meal. They can keep a crisp vegetable or fruit portion away from a sauce, or separate components that you prefer to combine only when eating. They are less useful for soups, stews, casseroles, curries, or meals that are intentionally mixed. In those cases, a normal container uses cabinet space more efficiently and is usually easier to clean.
+
+Before buying a large divided set, test the idea with one or two containers. If you routinely ignore the compartments, switch back to simple single-section storage. **6. Organize the Refrigerator by Eating Order**
+
+A meal-prep fridge should be organized around what you need to find, not simply around what looks neat. Create a clearly visible zone for prepared meals. Put foods that will be eaten soon where they are easy to see, while longer-term storage can occupy less convenient space according to your household's food-safety and storage practices.
 
 Use shallow bins for small items such as sauces or snack components if they tend to disappear behind taller containers. Avoid packing the refrigerator so tightly that cold air cannot circulate effectively or that you cannot see what is stored behind the first row. The most useful test is simple: open the refrigerator and see whether you can identify tomorrow's lunch without moving six containers.
 
@@ -82,7 +88,9 @@ Imagine preparing five weekday lunches for one person. Instead of buying a huge 
 
 If lunches are transported daily, choose a lightweight format for those five meals. If they stay at home, glass may be more convenient. If two meals will be frozen, make sure those two containers are explicitly freezer-safe and sized appropriately for expansion.
 
-This creates a small system with a clear job for every piece. If the household later needs more capacity, add containers based on the actual shortage rather than buying a second complete collection. **12. What to Buy First** A sensible buying order is:
+This creates a small system with a clear job for every piece. If the household later needs more capacity, add containers based on the actual shortage rather than buying a second complete collection. **12. What to Buy First**
+
+A sensible buying order is:
 
 1. The main medium containers that match your normal meal portions.
 2. A few small containers for sauces, snacks, or toppings.

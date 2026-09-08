@@ -70,7 +70,9 @@ Painter's tape can also help. Mark the footprint of a proposed sofa, dining tabl
 
 Modern decorating does not mean every piece must have a minimalist appearance. The more useful question is whether the furniture has the right scale and function for the room. For a small living room, a compact sofa with usable circulation may be better than a deep sectional that technically fits but blocks the main path. In a bedroom, the bed should leave enough room to open drawers and move around it comfortably.
 
-Also consider what each piece needs to do. A storage ottoman can provide seating, a footrest, and concealed storage. A narrow console can provide a landing place near an entrance without consuming the depth of a full cabinet. Buy for the problem you are solving, not simply because a product looks good in a showroom.
+Also consider what each piece needs to do. A storage ottoman can provide seating, a footrest, and concealed storage. A narrow console can provide a landing place near an entrance without consuming the depth of a full cabinet.
+
+Buy for the problem you are solving, not simply because a product looks good in a showroom.
 
 ## 6. Treat Lighting as Part of the Layout
 
@@ -95,7 +97,9 @@ This gives the eye different surfaces to read without turning every shelf and ta
 
 ## 8. Use Storage as Part of the Design
 
-A stylish room can still feel uncomfortable if everyday objects have nowhere to go. Storage should therefore be planned alongside decoration rather than added after clutter appears. Use closed storage for items that create visual noise and open storage for objects worth displaying. Baskets can group small items while keeping an open shelf visually organized. In an entryway, a small tray can contain keys and other daily essentials instead of allowing them to spread across a console.
+A stylish room can still feel uncomfortable if everyday objects have nowhere to go. Storage should therefore be planned alongside decoration rather than added after clutter appears.
+
+Use closed storage for items that create visual noise and open storage for objects worth displaying. Baskets can group small items while keeping an open shelf visually organized. In an entryway, a small tray can contain keys and other daily essentials instead of allowing them to spread across a console.
 
 A useful test is simple: **What objects normally end up on the floor, dining table, sofa, or kitchen counter?** Give those objects a specific home before buying more decorative storage.
 
@@ -181,6 +185,8 @@ If several answers are no, solve those issues before buying more accessories.
 
 ## The Takeaway
 
-A stylish home does not come from filling every room with fashionable objects. It comes from making a sequence of connected decisions: understand what you already own, define the look you want, establish a flexible palette, solve furniture scale and circulation, layer lighting, add useful texture and storage, and finish with personal details. Work room by room, but make decisions with the whole home in mind. That approach gives you a space that feels coordinated without becoming repetitive—and it also makes it much easier to spend your decorating budget where it genuinely improves everyday life.
+A stylish home does not come from filling every room with fashionable objects. It comes from making a sequence of connected decisions: understand what you already own, define the look you want, establish a flexible palette, solve furniture scale and circulation, layer lighting, add useful texture and storage, and finish with personal details.
+
+Work room by room, but make decisions with the whole home in mind. That approach gives you a space that feels coordinated without becoming repetitive—and it also makes it much easier to spend your decorating budget where it genuinely improves everyday life.
 
 **Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the decorating decisions discussed above and do not determine our editorial recommendations.

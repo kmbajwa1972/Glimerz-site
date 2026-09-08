@@ -21,7 +21,9 @@ mid_products:
     affiliate_link: https://a.co/d/03QOYf5e?tag=hunterpro0e-20
     photo: https://m.media-amazon.com/images/I/81-SLM8yNTL._AC_SL1500_.jpg
 ---
-A healthy lawn can change how a yard feels. It gives children a place to play, creates a softer setting for outdoor seating, frames planting beds, and makes the space look cared for without requiring an elaborate landscape design. There is also a less obvious benefit: a yard that is pleasant to use gives you another reason to spend time outside. Research on green spaces and outdoor activity suggests that access to vegetation can support mood and well-being, but the effect should not be reduced to a promise that a particular lawn will lower stress or improve mental health. Your enjoyment will depend on the whole setting, including shade, temperature, privacy, noise, and whether the yard is actually comfortable to use.
+A healthy lawn can change how a yard feels. It gives children a place to play, creates a softer setting for outdoor seating, frames planting beds, and makes the space look cared for without requiring an elaborate landscape design.
+
+There is also a less obvious benefit: a yard that is pleasant to use gives you another reason to spend time outside. Research on green spaces and outdoor activity suggests that access to vegetation can support mood and well-being, but the effect should not be reduced to a promise that a particular lawn will lower stress or improve mental health. Your enjoyment will depend on the whole setting, including shade, temperature, privacy, noise, and whether the yard is actually comfortable to use.
 
 For homeowners, that leads to a more useful question than “How do I make my grass perfectly green?” The better question is: **How do I keep the lawn healthy enough to support the way I use my yard?** This guide focuses on that practical goal.
 
@@ -113,9 +115,9 @@ Imagine a small backyard with a healthy central lawn but three recurring problem
 
 **Step 2: Fix the watering pattern.** Place containers across the lawn and test the sprinkler. Adjust its position until coverage is more consistent. **Step 3: Change the high-traffic strip.** If people regularly walk beside the patio, consider a narrow stepping path or edging solution instead of repeatedly reseeding it.
 
-**Step 4: Rethink the shaded area.** If the tree canopy prevents sufficient light, choose a shade-appropriate landscape treatment rather than expecting the same turf performance as the sunny lawn. **Step 5: Repair only the areas that need it.** Prepare the soil, apply suitable seed, and follow the seed instructions for establishment. **Step 6: Adjust mowing.** Set the mower to the recommended height for the grass and avoid removing too much blade at once.
+**Step 4: Rethink the shaded area.** If the tree canopy prevents sufficient light, choose a shade-appropriate landscape treatment rather than expecting the same turf performance as the sunny lawn. **Step 5: Repair only the areas that need it.** Prepare the soil, apply suitable seed, and follow the seed instructions for establishment.
 
-This approach costs less than automatically buying enough products to treat the entire yard, and it addresses the reasons the lawn became patchy in the first place.
+**Step 6: Adjust mowing.** Set the mower to the recommended height for the grass and avoid removing too much blade at once. This approach costs less than automatically buying enough products to treat the entire yard, and it addresses the reasons the lawn became patchy in the first place.
 
 ## A Simple Seasonal Lawn Checklist
 

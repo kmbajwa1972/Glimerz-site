@@ -67,7 +67,9 @@ This keeps the renovation focused instead of turning every surface into a projec
 
 A room can contain attractive furniture and still feel unfinished if the lighting is weak or one-dimensional. Instead of relying entirely on a central ceiling fixture, think in layers: **General lighting** provides overall illumination. **Task lighting** helps with activities such as reading, cooking, or working.
 
-**Accent lighting** highlights artwork, shelving, architectural features, or a decorative corner. Before buying another lamp, identify where the room is actually too dark. Then choose the light source for that location. For a budget renovation, replacing an outdated shade, adding a floor or table lamp, or improving a poorly lit work area can be more useful than buying several decorative accessories.
+**Accent lighting** highlights artwork, shelving, architectural features, or a decorative corner. Before buying another lamp, identify where the room is actually too dark. Then choose the light source for that location.
+
+For a budget renovation, replacing an outdated shade, adding a floor or table lamp, or improving a poorly lit work area can be more useful than buying several decorative accessories.
 
 ## 5. Make Storage Part of the Renovation
 
@@ -86,11 +88,15 @@ If the furniture is structurally sound and the layout works, replacing every lar
 - bedding
 - slipcovers where appropriate
 
-Use these pieces to introduce a controlled color or texture change. Before purchasing a rug, measure the seating area and decide how much of the furniture should sit on it. Before replacing curtains, measure both the window and the available wall space. Buying textiles according to the room's actual dimensions is much more effective than choosing them solely from a product photograph.
+Use these pieces to introduce a controlled color or texture change. Before purchasing a rug, measure the seating area and decide how much of the furniture should sit on it. Before replacing curtains, measure both the window and the available wall space.
+
+Buying textiles according to the room's actual dimensions is much more effective than choosing them solely from a product photograph.
 
 ## 7. Update Hardware Where Hands and Eyes Notice It
 
-Small hardware changes can be worthwhile when the existing pieces are dated, damaged, or inconsistent. Cabinet pulls, drawer handles, knobs, and selected bathroom hardware can change the visual character of a room without replacing the underlying furniture. Before buying replacements, measure the existing hardware carefully. For cabinet pulls, record the distance between the mounting holes rather than relying only on the overall length. Also check screw length and mounting requirements.
+Small hardware changes can be worthwhile when the existing pieces are dated, damaged, or inconsistent. Cabinet pulls, drawer handles, knobs, and selected bathroom hardware can change the visual character of a room without replacing the underlying furniture.
+
+Before buying replacements, measure the existing hardware carefully. For cabinet pulls, record the distance between the mounting holes rather than relying only on the overall length. Also check screw length and mounting requirements.
 
 This is a small detail, but ordering the wrong size can turn an inexpensive upgrade into an unnecessary return or repair.
 
@@ -147,9 +153,9 @@ One well-chosen improvement can have more impact than ten small purchases.
 
 Suppose you have a modest $500 budget for a living-room refresh and the furniture is still usable. Instead of buying a new sofa, you could prioritize the room like this: **$150 — lighting:** one quality floor lamp and a suitable bulb or shade upgrade. **$120 — rug contribution:** choose a correctly sized rug or put the money toward the best rug you can afford after measuring the seating area.
 
-**$80 — paint and preparation:** paint plus filler, rollers, brushes, and preparation supplies. **$75 — textiles:** a small number of coordinated cushion covers or a throw. **$50 — storage:** baskets or another solution for a specific clutter problem. **$25 — finishing detail:** one piece of artwork, greenery, or another meaningful accent.
+**$80 — paint and preparation:** paint plus filler, rollers, brushes, and preparation supplies. **$75 — textiles:** a small number of coordinated cushion covers or a throw. **$50 — storage:** baskets or another solution for a specific clutter problem.
 
-The exact prices will vary, but the principle is important: **spend the largest share where the room has its biggest problem.**
+**$25 — finishing detail:** one piece of artwork, greenery, or another meaningful accent. The exact prices will vary, but the principle is important: **spend the largest share where the room has its biggest problem.**
 
 ## A Room-by-Room Priority Guide
 

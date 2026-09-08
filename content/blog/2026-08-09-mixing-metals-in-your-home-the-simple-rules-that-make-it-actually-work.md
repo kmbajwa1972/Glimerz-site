@@ -47,9 +47,11 @@ This inventory prevents a common mistake: choosing a new finish as though the ro
 
 ## Understand the Difference Between Color and Finish
 
-Two pieces can both be called "gold" and still look noticeably different. One may be yellow and glossy, another muted and brushed. Likewise, black metal can be matte, satin, or highly reflective. When comparing finishes, look at three things: **Temperature:** Does the finish read warm, cool, or relatively neutral?
+Two pieces can both be called "gold" and still look noticeably different. One may be yellow and glossy, another muted and brushed. Likewise, black metal can be matte, satin, or highly reflective.
 
-**Reflectivity:** Is it polished and reflective, brushed and softer, or matte? **Color depth:** Is the finish pale, yellow-gold, brown-bronze, bright silver, or dark charcoal? This is why photographs on a shopping page should not be the only test. If possible, compare physical samples or finish cards in the actual room's lighting.
+When comparing finishes, look at three things: **Temperature:** Does the finish read warm, cool, or relatively neutral? **Reflectivity:** Is it polished and reflective, brushed and softer, or matte? **Color depth:** Is the finish pale, yellow-gold, brown-bronze, bright silver, or dark charcoal?
+
+This is why photographs on a shopping page should not be the only test. If possible, compare physical samples or finish cards in the actual room's lighting.
 
 ## Choose a Dominant Metal — But Don't Obsess Over 60-30-10
 
@@ -86,7 +88,9 @@ The repetition does not have to be exact. It simply needs to be noticeable enoug
 
 ## Give Permanent Fixtures More Weight
 
-Not every metal deserves equal attention. A refrigerator or plumbing fixture that you are keeping for years should influence the palette more than a small decorative tray that can be replaced next month. This is particularly important in kitchens. If the major appliances are stainless steel, do not assume every new item must match them. But do consider whether the stainless finish is visually prominent enough to become part of your overall scheme.
+Not every metal deserves equal attention. A refrigerator or plumbing fixture that you are keeping for years should influence the palette more than a small decorative tray that can be replaced next month.
+
+This is particularly important in kitchens. If the major appliances are stainless steel, do not assume every new item must match them. But do consider whether the stainless finish is visually prominent enough to become part of your overall scheme.
 
 A useful priority order is: **Permanent fixtures → large lighting → major hardware → mirrors/furniture → small accessories.** Choose the palette from the top of that list downward rather than starting with the easiest accessory to replace.
 
@@ -100,9 +104,9 @@ The result is not a mathematical 60-30-10 distribution. It is a room where the e
 
 ## Test the Combination Before Replacing Everything
 
-If you are changing several fixtures, buy or borrow one sample first. Place it beside the existing faucet, light fixture, cabinet finish, wood tone, and wall color. Look at it in morning daylight and under the room's evening lighting. Then take a phone photograph from the normal doorway or seating position. A close-up comparison can make two finishes seem incompatible when they actually work at room distance, while the opposite can also happen.
+If you are changing several fixtures, buy or borrow one sample first. Place it beside the existing faucet, light fixture, cabinet finish, wood tone, and wall color. Look at it in morning daylight and under the room's evening lighting.
 
-If the sample looks wrong, changing one cabinet pull is much cheaper than discovering the problem after replacing twenty handles and a faucet.
+Then take a phone photograph from the normal doorway or seating position. A close-up comparison can make two finishes seem incompatible when they actually work at room distance, while the opposite can also happen. If the sample looks wrong, changing one cabinet pull is much cheaper than discovering the problem after replacing twenty handles and a faucet.
 
 ## Mixing Metals Room by Room
 
@@ -158,4 +162,6 @@ If you cannot answer questions four and five, the purchase probably needs more t
 
 Successful mixed-metal decorating is less about following a perfect formula and more about creating relationships that are easy to read. Start with the finishes that are already fixed, choose a dominant metal, introduce contrast deliberately, and repeat each important finish enough that it feels connected to the room.
 
-Two metals are often enough. Three can work when each has a clear role. The strongest result usually comes from deciding where a finish belongs before you buy it, rather than trying to make unrelated pieces cooperate afterward. **Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the decorating decisions discussed above and do not determine our editorial recommendations.
+Two metals are often enough. Three can work when each has a clear role. The strongest result usually comes from deciding where a finish belongs before you buy it, rather than trying to make unrelated pieces cooperate afterward.
+
+**Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the decorating decisions discussed above and do not determine our editorial recommendations.

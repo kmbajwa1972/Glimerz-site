@@ -52,11 +52,11 @@ If the machine has a hinged lid, removable reservoir, or rear water tank, check 
 
 ## Measure the Counter Space
 
-A useful coffee station needs more than the machine's footprint. Leave working room for the steps that happen around it. As a starting exercise, measure: **Width:** the total counter section available. **Depth:** the distance from the front edge of the counter to the wall or backsplash.
+A useful coffee station needs more than the machine's footprint. Leave working room for the steps that happen around it. As a starting exercise, measure: **Width:** the total counter section available.
 
-**Height:** the clearance above the machine, especially if a lid or reservoir opens upward. **Landing space:** a clear area where you can place a mug, carafe, or small ingredients during preparation. Do not treat these as universal appliance dimensions. Use the measurements of your actual machine and compare them with the manufacturer's clearance requirements.
+**Depth:** the distance from the front edge of the counter to the wall or backsplash. **Height:** the clearance above the machine, especially if a lid or reservoir opens upward. **Landing space:** a clear area where you can place a mug, carafe, or small ingredients during preparation.
 
-A tray can make the station look organized, but it should not be so large that it consumes the landing space needed to operate the equipment.
+Do not treat these as universal appliance dimensions. Use the measurements of your actual machine and compare them with the manufacturer's clearance requirements. A tray can make the station look organized, but it should not be so large that it consumes the landing space needed to operate the equipment.
 
 ## Four Coffee Station Layouts
 
@@ -70,7 +70,9 @@ Keep the machine on the counter and use a wall shelf above it for mugs, filters,
 
 ### 3. Cabinet Station
 
-Dedicate one cabinet shelf or appliance garage to coffee equipment. Keep the items used every day together and bring the machine forward when needed. **Best for:** kitchens where a clear countertop is more important than display. Make sure the appliance has the ventilation and operating clearance specified by its manufacturer, and do not close an enclosed cabinet around an operating appliance unless it is designed for that use.
+Dedicate one cabinet shelf or appliance garage to coffee equipment. Keep the items used every day together and bring the machine forward when needed. **Best for:** kitchens where a clear countertop is more important than display.
+
+Make sure the appliance has the ventilation and operating clearance specified by its manufacturer, and do not close an enclosed cabinet around an operating appliance unless it is designed for that use.
 
 ### 4. Mobile Cart Station
 
@@ -131,11 +133,15 @@ This keeps the coffee corner functional without inventing a one-size-fits-all ma
 
 ## Style the Station After the Function Works
 
-Once the equipment and storage are settled, add one or two decorative elements. A small plant, framed print, ceramic object, or coordinated tray can provide personality without taking over the work surface. Use the rest of the kitchen as your reference. If the room already contains black hardware and warm wood, repeating one of those materials may connect the station naturally. You do not need a collection of coffee-themed signs to make the area look intentional.
+Once the equipment and storage are settled, add one or two decorative elements. A small plant, framed print, ceramic object, or coordinated tray can provide personality without taking over the work surface.
+
+Use the rest of the kitchen as your reference. If the room already contains black hardware and warm wood, repeating one of those materials may connect the station naturally. You do not need a collection of coffee-themed signs to make the area look intentional.
 
 ## Worked Example: A 36-Inch Counter Section
 
-Imagine a 36-inch-wide counter section beside a refrigerator. The household uses a compact drip coffee maker every morning, stores beans in a canister, and wants four mugs available. Start by measuring the machine's actual width and depth. Suppose the machine occupies about 10 inches of width and 12 inches of depth. That leaves approximately 26 inches of width before considering the landing area and any required appliance clearance.
+Imagine a 36-inch-wide counter section beside a refrigerator. The household uses a compact drip coffee maker every morning, stores beans in a canister, and wants four mugs available.
+
+Start by measuring the machine's actual width and depth. Suppose the machine occupies about 10 inches of width and 12 inches of depth. That leaves approximately 26 inches of width before considering the landing area and any required appliance clearance.
 
 A sensible arrangement could be:
 
@@ -195,6 +201,8 @@ Before buying anything, check:
 
 ## The Takeaway
 
-A good coffee station is a small piece of kitchen design, but it should be planned like a work zone rather than a display shelf. Start with your routine, measure the available counter, check appliance clearances, choose only the equipment you actually use, and create storage around the items that repeatedly cause clutter. Once the functional decisions are right, styling becomes easy. A tray, a useful container, a few accessible mugs, and one or two personal details can turn an ordinary kitchen corner into a coffee station that looks intentional because it is genuinely useful.
+A good coffee station is a small piece of kitchen design, but it should be planned like a work zone rather than a display shelf. Start with your routine, measure the available counter, check appliance clearances, choose only the equipment you actually use, and create storage around the items that repeatedly cause clutter.
+
+Once the functional decisions are right, styling becomes easy. A tray, a useful container, a few accessible mugs, and one or two personal details can turn an ordinary kitchen corner into a coffee station that looks intentional because it is genuinely useful.
 
 **Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the coffee-station decisions discussed above and do not determine our editorial recommendations.

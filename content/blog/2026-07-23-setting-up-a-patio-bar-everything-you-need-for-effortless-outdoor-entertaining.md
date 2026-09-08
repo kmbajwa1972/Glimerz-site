@@ -25,7 +25,9 @@ A patio bar works best when it solves a real outdoor-living problem rather than 
 
 ## Start by measuring the patio
 
-Before buying a bar, measure the area you intend to use and mark the footprint on the ground with painter's tape. Include the space needed for people to stand behind or beside the bar, open doors or lids, and walk between the bar and seating. A compact bar may work well on a narrow patio, while a larger cabinet-style station can make a small space feel crowded. As a starting point, keep roughly 30–36 inches of clear walking space along the main circulation route. If stools are part of the plan, measure the occupied stool area as well as the bar itself rather than treating the countertop dimensions as the whole footprint.
+Before buying a bar, measure the area you intend to use and mark the footprint on the ground with painter's tape. Include the space needed for people to stand behind or beside the bar, open doors or lids, and walk between the bar and seating.
+
+A compact bar may work well on a narrow patio, while a larger cabinet-style station can make a small space feel crowded. As a starting point, keep roughly 30–36 inches of clear walking space along the main circulation route. If stools are part of the plan, measure the occupied stool area as well as the bar itself rather than treating the countertop dimensions as the whole footprint.
 
 Also check the surface. A rolling cart behaves differently on smooth concrete than on uneven pavers, and a tall bar should sit on a stable, reasonably level base.
 
@@ -57,7 +59,9 @@ A rolling ice chest is useful for this reason: the cold-storage area can travel 
 
 ## Give the host a real work surface
 
-A bar should have enough counter area to hold the items being used at the same time. That might include a tray, glasses, a bottle opener, napkins, garnishes, and a small waste container. Do not fill every inch with decorations. A useful rule is to leave a meaningful portion of the counter open for serving and preparation. If a bar is 48 inches wide, for example, you might reserve about half the surface for active use and use the remaining area for only a few permanent items.
+A bar should have enough counter area to hold the items being used at the same time. That might include a tray, glasses, a bottle opener, napkins, garnishes, and a small waste container.
+
+Do not fill every inch with decorations. A useful rule is to leave a meaningful portion of the counter open for serving and preparation. If a bar is 48 inches wide, for example, you might reserve about half the surface for active use and use the remaining area for only a few permanent items.
 
 If you plan to mix drinks, also check whether the counter is deep enough for your glassware and equipment. A shallow decorative ledge is not a substitute for a functional prep surface.
 
@@ -114,7 +118,9 @@ A larger space can support a substantial bar plus separate seating and dining zo
 
 ## A worked example: planning a 12 × 16-foot patio
 
-Suppose the patio is 12 × 16 feet and the main door is on one short side. Instead of placing the bar immediately in front of the door, reserve that area for circulation. A compact 4-foot-wide bar can go along one long wall, leaving the center for seating. Place a rolling cooler beside the bar during larger gatherings. Keep approximately 3 feet of the main route clear, then arrange chairs and a small table on the opposite side. String lights can define the seating perimeter while a dedicated outdoor light provides visibility at the bar.
+Suppose the patio is 12 × 16 feet and the main door is on one short side. Instead of placing the bar immediately in front of the door, reserve that area for circulation. A compact 4-foot-wide bar can go along one long wall, leaving the center for seating.
+
+Place a rolling cooler beside the bar during larger gatherings. Keep approximately 3 feet of the main route clear, then arrange chairs and a small table on the opposite side. String lights can define the seating perimeter while a dedicated outdoor light provides visibility at the bar.
 
 The important part is not the exact furniture dimensions; it is the separation of the service zone from the main walking route.
 

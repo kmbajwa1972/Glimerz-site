@@ -157,7 +157,9 @@ For shower drains, replacement can be more involved than changing a decorative c
 
 ## Water Conditions Matter
 
-Hard water can leave mineral deposits on faucets and showerheads. The most attractive finish is not useful if its maintenance requirements are incompatible with your cleaning routine. Before buying a fitting, read the manufacturer's cleaning instructions. Some finishes may require gentler products than others. Avoid assuming that an abrasive cleaner is safe simply because the surface is described as durable.
+Hard water can leave mineral deposits on faucets and showerheads. The most attractive finish is not useful if its maintenance requirements are incompatible with your cleaning routine.
+
+Before buying a fitting, read the manufacturer's cleaning instructions. Some finishes may require gentler products than others. Avoid assuming that an abrasive cleaner is safe simply because the surface is described as durable.
 
 A shower filter is also not a universal solution for every water-quality concern. If you are considering one, identify the actual water issue first and check what the product is designed to address rather than buying it solely because it is marketed as a bathroom upgrade.
 
@@ -226,7 +228,9 @@ Before ordering:
 
 ## The Takeaway
 
-A bathroom can look more polished without replacing every visible surface. The strongest upgrades are usually the ones that solve a real functional problem while also creating visual consistency. Measure the existing bathroom first. Choose fittings that are compatible with the sink, shower, walls, and plumbing. Decide on a finish plan, check maintenance requirements, and install only what the room actually needs.
+A bathroom can look more polished without replacing every visible surface. The strongest upgrades are usually the ones that solve a real functional problem while also creating visual consistency.
+
+Measure the existing bathroom first. Choose fittings that are compatible with the sink, shower, walls, and plumbing. Decide on a finish plan, check maintenance requirements, and install only what the room actually needs.
 
 When the practical details are right, the decorative effect follows naturally. A well-fitted faucet, useful showerhead, correctly positioned towel hardware, and coordinated finish can make an ordinary bathroom feel much more intentional without turning a small refresh into a needless renovation.
 

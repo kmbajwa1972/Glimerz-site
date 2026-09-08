@@ -49,7 +49,9 @@ For an existing kitchen, compare three practical approaches:
 | Larger room with several dark areas | Multiple ceiling fixtures | Spacing, ceiling structure and electrician requirements |
 | Existing fixture is adequate but feels harsh | Add task and accent layers | Dimming compatibility and bulb temperature |
 
-Do not choose a fixture by wattage alone. LED products vary in light output, beam distribution, color rendering, and dimming compatibility. Check the manufacturer's specifications and make sure the fixture is suitable for the existing electrical setup. If replacing a hard-wired ceiling fixture, turn off power at the appropriate breaker and follow the manufacturer's installation instructions. If you are not qualified to work on household wiring, use an electrician rather than treating a fixture swap as a guaranteed DIY job.
+Do not choose a fixture by wattage alone. LED products vary in light output, beam distribution, color rendering, and dimming compatibility. Check the manufacturer's specifications and make sure the fixture is suitable for the existing electrical setup.
+
+If replacing a hard-wired ceiling fixture, turn off power at the appropriate breaker and follow the manufacturer's installation instructions. If you are not qualified to work on household wiring, use an electrician rather than treating a fixture swap as a guaranteed DIY job.
 
 ## Layer 2: Task Lighting for the Work Zones
 
@@ -98,7 +100,9 @@ If you are replacing several bulbs, buy one sample first. Test it at night with 
 
 ## Dimmers and Smart Bulbs: Make the Same Room More Flexible
 
-A kitchen often needs different light levels throughout the day. Full task lighting makes sense while chopping and cooking. A lower level may be more comfortable during dinner or conversation. If your existing wiring supports a compatible dimmer, dimming can make the lighting system more flexible. However, not every LED bulb or fixture works with every dimmer, so check compatibility before buying.
+A kitchen often needs different light levels throughout the day. Full task lighting makes sense while chopping and cooking. A lower level may be more comfortable during dinner or conversation.
+
+If your existing wiring supports a compatible dimmer, dimming can make the lighting system more flexible. However, not every LED bulb or fixture works with every dimmer, so check compatibility before buying.
 
 Smart bulbs can provide another option for compatible lamps and fixtures. They can be useful when you want separate scenes such as “cooking,” “dinner,” and “late evening.” They are not a substitute for properly positioned task lighting, though; changing brightness cannot correct a work surface that is illuminated from the wrong direction.
 

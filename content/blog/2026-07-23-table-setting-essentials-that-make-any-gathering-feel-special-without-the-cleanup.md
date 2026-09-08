@@ -26,7 +26,9 @@ A memorable table does not require formal china or a complicated centerpiece. A 
 
 ## Start with the number of guests
 
-Count the places before choosing accessories. For a four-person dinner, four complete place settings are enough; for a larger gathering, decide whether everyone will sit at once or whether the meal will be served buffet-style. Then measure the table. As a comfortable starting point, allow roughly 24 inches of table width per seated guest. A 72-inch rectangular table, for example, can accommodate three places along each long side when the chairs and table design allow it, but the actual comfortable capacity depends on the table's width, leg placement, and the size of the chairs.
+Count the places before choosing accessories. For a four-person dinner, four complete place settings are enough; for a larger gathering, decide whether everyone will sit at once or whether the meal will be served buffet-style.
+
+Then measure the table. As a comfortable starting point, allow roughly 24 inches of table width per seated guest. A 72-inch rectangular table, for example, can accommodate three places along each long side when the chairs and table design allow it, but the actual comfortable capacity depends on the table's width, leg placement, and the size of the chairs.
 
 If you are using a centerpiece, keep it narrow enough that guests can see across the table. A beautiful arrangement that blocks conversation is not a successful setting.
 
@@ -45,7 +47,9 @@ Add a salad plate, bread plate, or additional utensils only when the meal actual
 
 ## Choose glassware for the occasion
 
-Glassware is one of the easiest ways to make a table feel intentional. If breakage is a concern, reusable unbreakable stemware can provide a more formal silhouette without requiring delicate crystal. Choose the glasses based on the drinks actually being served. A water glass is useful for almost every meal; wine glasses make sense when wine is being served. For a casual gathering, adding several types of unused glasses can make the setting look busy rather than refined.
+Glassware is one of the easiest ways to make a table feel intentional. If breakage is a concern, reusable unbreakable stemware can provide a more formal silhouette without requiring delicate crystal.
+
+Choose the glasses based on the drinks actually being served. A water glass is useful for almost every meal; wine glasses make sense when wine is being served. For a casual gathering, adding several types of unused glasses can make the setting look busy rather than refined.
 
 Also check dishwasher and care instructions before buying a new set. A piece that looks good but requires extensive hand washing may work against the article's central goal of easier cleanup.
 
@@ -95,7 +99,9 @@ For a buffet meal, put plates and napkins at the beginning of the serving line, 
 
 ## Make cleanup part of the design
 
-The easiest cleanup starts before the first guest arrives. Put a small waste or recycling solution somewhere accessible, clear space near the sink or dishwasher, and decide where serving dishes will go after the meal. Use dishwasher-safe items where practical. Stack compatible plates and bowls rather than creating several unstable piles. If using a tablecloth or fabric napkins, check their care instructions before the event so a stain does not become a surprise later.
+The easiest cleanup starts before the first guest arrives. Put a small waste or recycling solution somewhere accessible, clear space near the sink or dishwasher, and decide where serving dishes will go after the meal.
+
+Use dishwasher-safe items where practical. Stack compatible plates and bowls rather than creating several unstable piles. If using a tablecloth or fabric napkins, check their care instructions before the event so a stain does not become a surprise later.
 
 For outdoor gatherings, consider using durable drinkware and wipe-clean placemats so food and drink spills can be dealt with quickly.
 

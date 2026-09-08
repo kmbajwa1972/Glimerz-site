@@ -59,25 +59,33 @@ If two appliances perform overlapping jobs and one is rarely used, consider stor
 
 Once the equipment is chosen, divide the station into simple zones. The appliance zone holds the machine and the accessories needed to operate it. The beverage zone holds coffee, tea, sweeteners, and other daily additions. The mug zone provides cups and a place for a spoon or stirrer.
 
-A tray is especially useful for the small items. It gives the station a defined boundary and makes cleaning easier because several loose objects can be moved together. It also allows a coffee setup to live on a narrow counter without looking scattered. Do not fill every empty inch. Leaving a little clear counter space beside the main appliance gives you somewhere to set down a mug, scoop coffee, or work with a kettle.
+A tray is especially useful for the small items. It gives the station a defined boundary and makes cleaning easier because several loose objects can be moved together. It also allows a coffee setup to live on a narrow counter without looking scattered.
 
-**5. Store Coffee and Tea for Easy Access** Storage should balance appearance with practical use. Uniform canisters can make the station look organized, but the container should also be appropriate for the ingredient and easy to clean. Keep the products you use every day at hand and move backup supplies elsewhere. For tea, a small divided organizer can make several varieties easier to identify. For coffee beans or grounds, choose a container that is easy to open with one hand if you are usually preparing coffee while doing other tasks.
+Do not fill every empty inch. Leaving a little clear counter space beside the main appliance gives you somewhere to set down a mug, scoop coffee, or work with a kettle. **5. Store Coffee and Tea for Easy Access**
 
-Labeling is helpful when several similar containers are used. It is especially useful for different teas, decaffeinated coffee, or backup supplies that would otherwise be opened unnecessarily. **6. Choose Mug Storage Based on the Space** Mugs do not automatically need to sit on the counter. If you have a little vertical space, a shelf or mug rack can keep cups accessible while protecting the working surface below.
+Storage should balance appearance with practical use. Uniform canisters can make the station look organized, but the container should also be appropriate for the ingredient and easy to clean.
 
-Before installing or buying a rack, measure the mug height and handle width. Check that the lowest mug or shelf will not interfere with the appliance, backsplash, or cabinet doors. For a rental or a kitchen where drilling is undesirable, a freestanding rack or small shelf can provide the same function without permanent changes.
+Keep the products you use every day at hand and move backup supplies elsewhere. For tea, a small divided organizer can make several varieties easier to identify. For coffee beans or grounds, choose a container that is easy to open with one hand if you are usually preparing coffee while doing other tasks.
 
-Display only the mugs that are genuinely in rotation. A small selection often looks more intentional and is easier to keep clean than an entire collection packed into one visible area. **7. Use Vertical Space Carefully** When the countertop is limited, look upward. A tiered rack, shelf, or mug holder can add storage without increasing the station's footprint.
+Labeling is helpful when several similar containers are used. It is especially useful for different teas, decaffeinated coffee, or backup supplies that would otherwise be opened unnecessarily. **6. Choose Mug Storage Based on the Space**
 
-However, vertical storage should not make the station difficult to use. Check the shelf depth, mounting method, load rating, and the distance between shelves. Keep heavier items low and make sure frequently handled mugs can be removed without knocking into the appliance below.
+Mugs do not automatically need to sit on the counter. If you have a little vertical space, a shelf or mug rack can keep cups accessible while protecting the working surface below. Before installing or buying a rack, measure the mug height and handle width. Check that the lowest mug or shelf will not interfere with the appliance, backsplash, or cabinet doors. For a rental or a kitchen where drilling is undesirable, a freestanding rack or small shelf can provide the same function without permanent changes.
+
+Display only the mugs that are genuinely in rotation. A small selection often looks more intentional and is easier to keep clean than an entire collection packed into one visible area. **7. Use Vertical Space Carefully**
+
+When the countertop is limited, look upward. A tiered rack, shelf, or mug holder can add storage without increasing the station's footprint. However, vertical storage should not make the station difficult to use. Check the shelf depth, mounting method, load rating, and the distance between shelves. Keep heavier items low and make sure frequently handled mugs can be removed without knocking into the appliance below.
 
 For an open shelf, place practical items toward the center of the station and decorative pieces toward the edges or upper level. This keeps the storage useful rather than turning the shelf into a display that cannot be touched easily. **8. When a Bar Cart Is the Better Answer**
 
-A rolling cart makes sense when there is no suitable permanent counter area or when you want the station to serve more than one room. A cart can hold the machine on its main surface, with mugs and dry supplies on lower shelves. Measure the cart's top before buying it and compare that area with the appliance footprint. Then check the route the cart will travel. A cart that technically fits beside the kitchen counter is not useful if it cannot clear a doorway, island corner, or dining chair.
+A rolling cart makes sense when there is no suitable permanent counter area or when you want the station to serve more than one room. A cart can hold the machine on its main surface, with mugs and dry supplies on lower shelves.
+
+Measure the cart's top before buying it and compare that area with the appliance footprint. Then check the route the cart will travel. A cart that technically fits beside the kitchen counter is not useful if it cannot clear a doorway, island corner, or dining chair.
 
 Locking casters are useful on a smooth floor because they keep the station from moving while you operate the appliance. Keep the cart away from direct heat and make sure cords do not become a trip hazard when the cart is moved. **9. Add Style Without Sacrificing Function**
 
-Once the practical layout works, add one or two visual elements. A serving tray can define the station, a small plant can soften the area, and a simple framed print or attractive canister can add personality. Keep the decorative layer proportional to the station. If the counter is only 24 inches wide, a large arrangement can consume the space needed for the kettle and mug. In a larger setup, repeat one material or finish—such as wood, ceramic, glass, or metal—so the different objects feel connected.
+Once the practical layout works, add one or two visual elements. A serving tray can define the station, a small plant can soften the area, and a simple framed print or attractive canister can add personality.
+
+Keep the decorative layer proportional to the station. If the counter is only 24 inches wide, a large arrangement can consume the space needed for the kettle and mug. In a larger setup, repeat one material or finish—such as wood, ceramic, glass, or metal—so the different objects feel connected.
 
 The goal is not to copy a coffee shop. A useful home station should reflect the people using it. **10. Three Layouts That Work in Different Kitchens** **Compact counter station:** Use a tray approximately the width of the available equipment, place the coffee or tea appliance at the back, and keep mugs and daily supplies in one small vertical organizer. This works when counter space is limited.
 

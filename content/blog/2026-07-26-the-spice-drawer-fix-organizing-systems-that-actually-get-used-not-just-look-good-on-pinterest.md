@@ -105,7 +105,9 @@ Alphabetical order is easy to understand, but it is not always the fastest syste
 
 ## A worked example: a 24-inch spice drawer
 
-Imagine a drawer with approximately 24 inches of usable width, 18 inches of usable depth, and 3 inches of clear height. Instead of filling it with every spice in the kitchen, keep the 12–15 containers used most often there. Arrange the jars so their labels can be read from above. Put the most frequently used group closest to the drawer handle, and keep occasional spices toward the rear. Store backups elsewhere in a clearly labeled bin.
+Imagine a drawer with approximately 24 inches of usable width, 18 inches of usable depth, and 3 inches of clear height. Instead of filling it with every spice in the kitchen, keep the 12–15 containers used most often there.
+
+Arrange the jars so their labels can be read from above. Put the most frequently used group closest to the drawer handle, and keep occasional spices toward the rear. Store backups elsewhere in a clearly labeled bin.
 
 The result is a smaller collection that is easier to scan and quicker to maintain. If the drawer still feels crowded, remove the least-used items rather than buying a larger organizer immediately.
 

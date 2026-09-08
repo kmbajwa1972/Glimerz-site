@@ -52,17 +52,19 @@ You do not necessarily need three separate fixtures. A ceiling light and a well-
 
 ## 2. Natural Materials Add Flexibility
 
-Wood, cotton, linen, wool, jute, rattan, ceramic, and stone can work across many decorating styles. Their value is not that they are permanently fashionable; it is that they can often be combined with different colors and furniture shapes. For example, a neutral woven rug can remain useful if a blue sofa is replaced by a green one. A wooden side table can move from a modern room to a more traditional setting. A ceramic vase can change character simply by moving to another shelf.
+Wood, cotton, linen, wool, jute, rattan, ceramic, and stone can work across many decorating styles. Their value is not that they are permanently fashionable; it is that they can often be combined with different colors and furniture shapes.
+
+For example, a neutral woven rug can remain useful if a blue sofa is replaced by a green one. A wooden side table can move from a modern room to a more traditional setting. A ceramic vase can change character simply by moving to another shelf.
 
 The important qualification is quality and maintenance. Natural materials vary considerably, and some require more care than synthetic alternatives. **Why it lasts:** adaptable materials can remain useful while the surrounding style changes.
 
 ## 3. Buy Flexible Textiles Instead of Replacing Large Furniture
 
-Textiles are one of the easiest ways to refresh a room without changing its basic layout. A practical hierarchy is: **Large investment:** sofa, bed frame, dining table. **Medium investment:** rug, curtains, bedding. **Easy-to-change layer:** pillow covers, throws, small decorative textiles.
+Textiles are one of the easiest ways to refresh a room without changing its basic layout. A practical hierarchy is: **Large investment:** sofa, bed frame, dining table. **Medium investment:** rug, curtains, bedding.
 
-When your taste changes, update the smaller layer first. A different pillow cover can change the color relationship of a sofa without requiring a new sofa. Before buying, check fabric care instructions, durability, and whether the textile works with the people, pets, and cleaning routine in your household.
+**Easy-to-change layer:** pillow covers, throws, small decorative textiles. When your taste changes, update the smaller layer first. A different pillow cover can change the color relationship of a sofa without requiring a new sofa.
 
-**Why it lasts:** the system can evolve without requiring a full-room replacement.
+Before buying, check fabric care instructions, durability, and whether the textile works with the people, pets, and cleaning routine in your household. **Why it lasts:** the system can evolve without requiring a full-room replacement.
 
 ## 4. Small Decorative Groupings Work When They Have a Job
 
@@ -73,7 +75,9 @@ A vignette can be a useful way to organize several small objects, but the groupi
 - One piece of artwork or a mirror above
 - One decorative object
 
-A shelf might combine books, one plant, and a ceramic object while leaving visible space between groups. The exact number of objects does not matter. What matters is whether the composition has a clear visual hierarchy and remains easy to clean. **Why it lasts:** the arrangement can be edited as your needs and tastes change.
+A shelf might combine books, one plant, and a ceramic object while leaving visible space between groups. The exact number of objects does not matter. What matters is whether the composition has a clear visual hierarchy and remains easy to clean.
+
+**Why it lasts:** the arrangement can be edited as your needs and tastes change.
 
 ## 5. Choose Furniture for Use Before Appearance
 
@@ -94,7 +98,9 @@ For frequently used circulation, roughly **30–36 inches** is a useful planning
 
 Permanent finishes deserve more scrutiny than accessories because they are harder and more expensive to replace. If you are choosing paint, flooring, large rugs, cabinetry, or major furniture, ask whether the choice can work with at least two future decorating directions.
 
-This does not mean every permanent surface should be beige. A bold wall color or patterned tile can be excellent when it is intentional. The key is understanding that a dramatic permanent choice has a different replacement cost from a dramatic cushion cover. **Why it lasts:** adaptable backgrounds give you more freedom to experiment with temporary layers.
+This does not mean every permanent surface should be beige. A bold wall color or patterned tile can be excellent when it is intentional. The key is understanding that a dramatic permanent choice has a different replacement cost from a dramatic cushion cover.
+
+**Why it lasts:** adaptable backgrounds give you more freedom to experiment with temporary layers.
 
 ## 7. Use Repetition Instead of Matching Everything
 
@@ -116,11 +122,11 @@ You can still edit them. A personal item that has meaning and fits the room dese
 
 ## 10. Separate the Trend From the Principle
 
-This is the most useful habit when browsing inspiration. Instead of copying an image literally, identify what makes the room work. **Trend:** a particular color dominates every room. **Underlying principle:** the home uses a controlled palette.
+This is the most useful habit when browsing inspiration. Instead of copying an image literally, identify what makes the room work. **Trend:** a particular color dominates every room.
 
-**Trend:** a specific curved furniture shape appears everywhere. **Underlying principle:** the room balances hard architectural lines with softer forms. **Trend:** one particular natural material becomes fashionable. **Underlying principle:** contrasting materials prevent a room from feeling visually flat.
+**Underlying principle:** the home uses a controlled palette. **Trend:** a specific curved furniture shape appears everywhere. **Underlying principle:** the room balances hard architectural lines with softer forms.
 
-Once you identify the principle, you can choose a version that suits your own home.
+**Trend:** one particular natural material becomes fashionable. **Underlying principle:** contrasting materials prevent a room from feeling visually flat. Once you identify the principle, you can choose a version that suits your own home.
 
 ## Three Worked Decisions
 

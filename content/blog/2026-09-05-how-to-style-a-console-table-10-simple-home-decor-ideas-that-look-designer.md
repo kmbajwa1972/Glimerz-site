@@ -54,7 +54,9 @@ For decorative styling, try a tray with one or two objects rather than filling e
 
 A table lamp gives the console a vertical element while adding illumination at a lower level than the ceiling fixture. Place it toward one side rather than automatically centering it. The opposite side can then carry a taller vase, plant, artwork, or another object with comparable visual weight.
 
-Check the lamp's footprint before buying. On a 12-inch-deep console, a large lamp base can consume most of the useful surface. Also check the switch location and whether the cord can reach an outlet without crossing the main walking area. For a decorative corner, warm-white lighting can create a comfortable evening atmosphere. If the console is also used for tasks such as sorting mail, choose brightness based on the actual activity rather than appearance alone.
+Check the lamp's footprint before buying. On a 12-inch-deep console, a large lamp base can consume most of the useful surface. Also check the switch location and whether the cord can reach an outlet without crossing the main walking area.
+
+For a decorative corner, warm-white lighting can create a comfortable evening atmosphere. If the console is also used for tasks such as sorting mail, choose brightness based on the actual activity rather than appearance alone.
 
 ## 4. Build the Arrangement With Different Heights
 
@@ -121,9 +123,9 @@ For artwork, check the center of the composition from the main viewing position.
 
 ### Example 1: Small Entryway
 
-**Space:** 48-inch-wide wall with a shallow console. Use one compact lamp, a small tray, and one vase. Above the console, choose a mirror or artwork that is noticeably narrower than the wall but substantial enough to relate to the furniture. Keep the surface mostly open so keys and mail do not immediately turn into visual clutter.
+**Space:** 48-inch-wide wall with a shallow console. Use one compact lamp, a small tray, and one vase. Above the console, choose a mirror or artwork that is noticeably narrower than the wall but substantial enough to relate to the furniture.
 
-**Priority:** function first, decoration second.
+Keep the surface mostly open so keys and mail do not immediately turn into visual clutter. **Priority:** function first, decoration second.
 
 ### Example 2: 72-Inch Living-Room Console
 
@@ -133,9 +135,9 @@ Use a lamp on the left, a tray with two small objects near the center, and a med
 
 ### Example 3: Console Behind a Sofa
 
-Start with the sofa width and the usable console surface. If the furniture is visually formal, two matching lamps can create symmetry. If the room is more relaxed, use one lamp and a tall object to create asymmetry. Keep accessories stable and compact enough that they do not interfere with people sitting down or moving around the sofa.
+Start with the sofa width and the usable console surface. If the furniture is visually formal, two matching lamps can create symmetry. If the room is more relaxed, use one lamp and a tall object to create asymmetry.
 
-**Priority:** proportion, stability, and the relationship between sofa and console.
+Keep accessories stable and compact enough that they do not interfere with people sitting down or moving around the sofa. **Priority:** proportion, stability, and the relationship between sofa and console.
 
 ## What to Put on a Console — and What to Skip
 
@@ -179,7 +181,9 @@ If you need a starting point, try: **One focal point + one light source + one ta
 
 ## Final Thoughts
 
-A designer-looking console is not created by filling the surface with expensive accessories. It comes from making a few decisions in the right order. Measure the furniture and surrounding space first. Establish the focal point. Add useful light if the location calls for it. Build height with one or two larger elements, use a tray to organize smaller objects, and introduce texture through materials rather than endless accessories.
+A designer-looking console is not created by filling the surface with expensive accessories. It comes from making a few decisions in the right order.
+
+Measure the furniture and surrounding space first. Establish the focal point. Add useful light if the location calls for it. Build height with one or two larger elements, use a tray to organize smaller objects, and introduce texture through materials rather than endless accessories.
 
 Then stop and look at the arrangement from across the room. If it feels crowded, remove something. If it feels disconnected, repeat one element from the surrounding room. If it looks good but does not function in daily life, change the arrangement.
 

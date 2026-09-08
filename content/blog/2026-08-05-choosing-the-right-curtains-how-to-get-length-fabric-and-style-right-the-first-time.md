@@ -40,7 +40,9 @@ Measure twice. Curtain mistakes are unusually frustrating because a few inches c
 
 For full-height curtains, the three most useful floor treatments are **just touching the floor, slightly hovering above it, or intentionally pooling**. A floor-skimming curtain is a good general choice because it looks neat without requiring the fabric to sit on the floor. A very small clearance can also work where cleaning is a concern. A puddled treatment uses extra fabric on purpose and is better suited to spaces where the curtains will not be constantly opened, vacuumed around, or exposed to children and pets.
 
-Avoid choosing a length simply because it is the closest standard size. If the ready-made panel is too long, check whether it can be hemmed cleanly. If it is too short, buying a longer panel is usually easier than trying to disguise the missing length. For kitchens and other windows where a full-length treatment is impractical, sill-length or cafe-style curtains can be appropriate. The important distinction is that a shorter curtain should look intentional rather than like a floor-length curtain was purchased in the wrong size.
+Avoid choosing a length simply because it is the closest standard size. If the ready-made panel is too long, check whether it can be hemmed cleanly. If it is too short, buying a longer panel is usually easier than trying to disguise the missing length.
+
+For kitchens and other windows where a full-length treatment is impractical, sill-length or cafe-style curtains can be appropriate. The important distinction is that a shorter curtain should look intentional rather than like a floor-length curtain was purchased in the wrong size.
 
 ## Curtain Width: Calculate the Fabric You Actually Need
 

@@ -41,7 +41,9 @@ This immediately narrows the choices. A board should solve a task, not simply lo
 
 A quality hardwood board is a strong choice for general kitchen preparation because it is stable, comfortable to work on, and can be maintained for years with appropriate care. Maple, walnut, and cherry are common hardwood choices, although the exact performance depends on construction and manufacturer specifications.
 
-Wood is not maintenance-free. It generally needs hand washing, prompt drying, and periodic conditioning according to the manufacturer's instructions. It should not be left soaking in a sink or treated as though it were dishwasher-safe. There are also different constructions to consider. **Edge-grain** boards are made from strips arranged so the long grain forms the cutting surface. **End-grain** boards orient the ends of the wood fibers toward the surface and are often thicker and more expensive.
+Wood is not maintenance-free. It generally needs hand washing, prompt drying, and periodic conditioning according to the manufacturer's instructions. It should not be left soaking in a sink or treated as though it were dishwasher-safe.
+
+There are also different constructions to consider. **Edge-grain** boards are made from strips arranged so the long grain forms the cutting surface. **End-grain** boards orient the ends of the wood fibers toward the surface and are often thicker and more expensive.
 
 Do not buy end-grain simply because it is described as the professional option. If you have limited storage or do not want regular maintenance, a quality plastic board may be the more practical purchase.
 
@@ -93,7 +95,9 @@ Keeping the boards visually distinct can reduce mix-ups. If you use color-coded 
 
 ## What professional kitchens teach home cooks
 
-Commercial kitchens often use task separation because speed, cleaning, and food safety have to work together. The useful lesson for a home cook is not that you need restaurant-sized equipment. It is that each tool should have a clear job. A home version might therefore be:
+Commercial kitchens often use task separation because speed, cleaning, and food safety have to work together. The useful lesson for a home cook is not that you need restaurant-sized equipment. It is that each tool should have a clear job.
+
+A home version might therefore be:
 
 - One large, stable board for everyday produce and general prep.
 - One separate board for raw proteins.

@@ -80,7 +80,9 @@ A round mirror can also work particularly well above a rectangular console becau
 
 ## Gallery Wall Spacing: Make the Gaps Deliberate
 
-Gallery walls look intentional when the spacing is consistent. A practical starting point is **2–3 inches between frames**. Larger pieces may tolerate slightly larger gaps, while small frames can look disconnected if the spaces become too wide. Before hanging:
+Gallery walls look intentional when the spacing is consistent. A practical starting point is **2–3 inches between frames**. Larger pieces may tolerate slightly larger gaps, while small frames can look disconnected if the spaces become too wide.
+
+Before hanging:
 
 1. Measure every frame, including its actual outside dimensions.
 2. Arrange the pieces on the floor.
@@ -185,6 +187,8 @@ Then tape the proposed outline on the wall and live with it for a few minutes be
 
 ## Final Thought: Proportion First, Personal Taste Second
 
-There is no single “correct” piece of wall art. A family photograph, vintage poster, abstract painting, textile, mirror, or handmade object can all work when the scale and placement make sense for the room. The most useful approach is to separate the decisions. First solve the physical problem—size, height, spacing, hardware, and lighting. Then choose the artwork you genuinely enjoy.
+There is no single “correct” piece of wall art. A family photograph, vintage poster, abstract painting, textile, mirror, or handmade object can all work when the scale and placement make sense for the room.
 
-When the proportions are right, you have much more freedom with style. Instead of buying art and trying to make the room accommodate it, measure the space first and choose something that belongs there. *Affiliate disclosure: Some product links in this article are affiliate links. If you purchase through them, Glimerz may earn a commission at no additional cost to you.*
+The most useful approach is to separate the decisions. First solve the physical problem—size, height, spacing, hardware, and lighting. Then choose the artwork you genuinely enjoy. When the proportions are right, you have much more freedom with style. Instead of buying art and trying to make the room accommodate it, measure the space first and choose something that belongs there.
+
+*Affiliate disclosure: Some product links in this article are affiliate links. If you purchase through them, Glimerz may earn a commission at no additional cost to you.*
