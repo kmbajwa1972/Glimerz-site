@@ -27,9 +27,7 @@ A better approach is to give each lighting job its own layer. **Ambient light** 
 
 ## Start With a Five-Minute Lighting Audit
 
-Before buying bulbs or fixtures, stand in the kitchen after dark and switch on the lights you normally use. Then work through the room as if you were preparing dinner.
-
-Look for five things:
+Before buying bulbs or fixtures, stand in the kitchen after dark and switch on the lights you normally use. Then work through the room as if you were preparing dinner. Look for five things:
 
 1. **Worktop shadows:** Stand at the main preparation counter. Does your head or upper body block the light? If yes, the problem is probably light position rather than simply insufficient brightness.
 2. **Dark edges:** Look at corners, tall cabinets, and the floor near the perimeter. If these areas disappear visually, your general lighting may be too concentrated in the center.
@@ -51,15 +49,11 @@ For an existing kitchen, compare three practical approaches:
 | Larger room with several dark areas | Multiple ceiling fixtures | Spacing, ceiling structure and electrician requirements |
 | Existing fixture is adequate but feels harsh | Add task and accent layers | Dimming compatibility and bulb temperature |
 
-Do not choose a fixture by wattage alone. LED products vary in light output, beam distribution, color rendering, and dimming compatibility. Check the manufacturer's specifications and make sure the fixture is suitable for the existing electrical setup.
-
-If replacing a hard-wired ceiling fixture, turn off power at the appropriate breaker and follow the manufacturer's installation instructions. If you are not qualified to work on household wiring, use an electrician rather than treating a fixture swap as a guaranteed DIY job.
+Do not choose a fixture by wattage alone. LED products vary in light output, beam distribution, color rendering, and dimming compatibility. Check the manufacturer's specifications and make sure the fixture is suitable for the existing electrical setup. If replacing a hard-wired ceiling fixture, turn off power at the appropriate breaker and follow the manufacturer's installation instructions. If you are not qualified to work on household wiring, use an electrician rather than treating a fixture swap as a guaranteed DIY job.
 
 ## Layer 2: Task Lighting for the Work Zones
 
-Task lighting is usually the most useful improvement because kitchen work happens at the counter, sink, stove, and island—not in the middle of the room.
-
-Walk through your main work areas one at a time. For each area, ask: **Where is the light coming from when I am standing here?**
+Task lighting is usually the most useful improvement because kitchen work happens at the counter, sink, stove, and island—not in the middle of the room. Walk through your main work areas one at a time. For each area, ask: **Where is the light coming from when I am standing here?**
 
 Under-cabinet lighting is particularly useful along counters beneath wall cabinets. The best position depends on the fixture design, but the goal is to illuminate the work surface rather than shine directly into your eyes. A continuous strip or a series of evenly spaced fixtures can reduce the bright-and-dark pattern created by a single small puck light.
 
@@ -84,29 +78,19 @@ For a 72-inch cabinet run, measure the usable mounting area first. A 72-inch str
 
 ## Layer 3: Accent Lighting for Evening Atmosphere
 
-Accent lighting is the least necessary for food preparation, but it can make a large difference after the kitchen becomes a social space rather than a work area.
+Accent lighting is the least necessary for food preparation, but it can make a large difference after the kitchen becomes a social space rather than a work area. Useful locations include the top of cabinets, inside suitable glass-front cabinetry, beneath an island overhang, or on a small open shelf. The light should support the room rather than become the focal point itself.
 
-Useful locations include the top of cabinets, inside suitable glass-front cabinetry, beneath an island overhang, or on a small open shelf. The light should support the room rather than become the focal point itself.
-
-Above-cabinet lighting works particularly well when the cabinet-to-ceiling gap allows the light source to remain hidden from normal sightlines. Measure that gap before buying anything and make sure the chosen product has a safe place for its power supply.
-
-The aim is not maximum brightness. Accent lighting generally works best when it is softer than the main working lights.
+Above-cabinet lighting works particularly well when the cabinet-to-ceiling gap allows the light source to remain hidden from normal sightlines. Measure that gap before buying anything and make sure the chosen product has a safe place for its power supply. The aim is not maximum brightness. Accent lighting generally works best when it is softer than the main working lights.
 
 ## Pendant Lights: Measure the Island Before You Shop
 
-Pendants are both functional fixtures and visual elements, so size and placement matter.
+Pendants are both functional fixtures and visual elements, so size and placement matter. For a kitchen island or table, a useful starting point is to keep the bottom of the pendant approximately **75–90 cm (30–36 inches)** above the surface. Treat this as a starting range, not a universal rule. Ceiling height, pendant size, sightlines, and the height of the people using the room can change the final position.
 
-For a kitchen island or table, a useful starting point is to keep the bottom of the pendant approximately **75–90 cm (30–36 inches)** above the surface. Treat this as a starting range, not a universal rule. Ceiling height, pendant size, sightlines, and the height of the people using the room can change the final position.
-
-Before drilling or installing a ceiling fixture, mark the proposed locations temporarily. From the normal standing and sitting positions, check whether the pendants obstruct sightlines or feel too low.
-
-For a long island, two or three smaller pendants can distribute light more evenly than one fixture, but spacing should follow the actual island dimensions. A 60-inch island and a 96-inch island should not use the same spacing simply because both are described as “standard islands.”
+Before drilling or installing a ceiling fixture, mark the proposed locations temporarily. From the normal standing and sitting positions, check whether the pendants obstruct sightlines or feel too low. For a long island, two or three smaller pendants can distribute light more evenly than one fixture, but spacing should follow the actual island dimensions. A 60-inch island and a 96-inch island should not use the same spacing simply because both are described as “standard islands.”
 
 ## Color Temperature: Choose for the Whole Kitchen
 
-Color temperature is measured in Kelvin (K). Lower numbers generally appear warmer, while higher numbers appear cooler.
-
-A practical home-kitchen range is often around **2700K–4000K**, depending on the room, finishes, daylight, and personal preference. Around 2700K can create a warm evening feel; around 3000K is a common middle ground; higher temperatures can appear crisper and may suit some task-focused spaces.
+Color temperature is measured in Kelvin (K). Lower numbers generally appear warmer, while higher numbers appear cooler. A practical home-kitchen range is often around **2700K–4000K**, depending on the room, finishes, daylight, and personal preference. Around 2700K can create a warm evening feel; around 3000K is a common middle ground; higher temperatures can appear crisper and may suit some task-focused spaces.
 
 There is no single temperature that is correct for every kitchen. Instead, look at the surfaces you already have. Very warm light can change the appearance of white cabinets or cool-toned countertops, while mixing noticeably different temperatures can make adjacent areas look disconnected.
 
@@ -114,31 +98,19 @@ If you are replacing several bulbs, buy one sample first. Test it at night with 
 
 ## Dimmers and Smart Bulbs: Make the Same Room More Flexible
 
-A kitchen often needs different light levels throughout the day. Full task lighting makes sense while chopping and cooking. A lower level may be more comfortable during dinner or conversation.
-
-If your existing wiring supports a compatible dimmer, dimming can make the lighting system more flexible. However, not every LED bulb or fixture works with every dimmer, so check compatibility before buying.
+A kitchen often needs different light levels throughout the day. Full task lighting makes sense while chopping and cooking. A lower level may be more comfortable during dinner or conversation. If your existing wiring supports a compatible dimmer, dimming can make the lighting system more flexible. However, not every LED bulb or fixture works with every dimmer, so check compatibility before buying.
 
 Smart bulbs can provide another option for compatible lamps and fixtures. They can be useful when you want separate scenes such as “cooking,” “dinner,” and “late evening.” They are not a substitute for properly positioned task lighting, though; changing brightness cannot correct a work surface that is illuminated from the wrong direction.
 
 ## Three Upgrade Paths
 
-You do not need to renovate the entire lighting system in one weekend.
+You do not need to renovate the entire lighting system in one weekend. **Budget refresh:** Replace outdated bulbs with compatible LEDs, standardize the color temperature, and add one well-positioned task light where the worst shadow occurs. **Mid-level refresh:** Improve the main ceiling fixture, add under-cabinet task lighting, and put the main layer on a compatible dimmer if practical.
 
-**Budget refresh:** Replace outdated bulbs with compatible LEDs, standardize the color temperature, and add one well-positioned task light where the worst shadow occurs.
-
-**Mid-level refresh:** Improve the main ceiling fixture, add under-cabinet task lighting, and put the main layer on a compatible dimmer if practical.
-
-**Full layered plan:** Use distributed ambient lighting, dedicated task lighting at the major work zones, pendant lighting where appropriate, and a subtle accent layer for evenings.
-
-The right choice depends on the existing wiring, ceiling, cabinet layout, budget, and whether you own or rent the property.
+**Full layered plan:** Use distributed ambient lighting, dedicated task lighting at the major work zones, pendant lighting where appropriate, and a subtle accent layer for evenings. The right choice depends on the existing wiring, ceiling, cabinet layout, budget, and whether you own or rent the property.
 
 ## A Worked Example: 10 × 12-Foot Kitchen
 
-Imagine a 10 × 12-foot kitchen with one ceiling fixture, a 72-inch counter beneath upper cabinets, a sink on a side wall, and a small island.
-
-The audit shows three problems: the preparation counter is shadowed, the sink is dim, and the room feels too bright after dinner.
-
-A sensible sequence would be:
+Imagine a 10 × 12-foot kitchen with one ceiling fixture, a 72-inch counter beneath upper cabinets, a sink on a side wall, and a small island. The audit shows three problems: the preparation counter is shadowed, the sink is dim, and the room feels too bright after dinner. A sensible sequence would be:
 
 1. Keep or replace the central fixture depending on whether it provides acceptable general coverage.
 2. Install a correctly sized under-cabinet task light over the 72-inch preparation run.
@@ -151,9 +123,7 @@ This solves specific problems instead of simply adding more total light.
 
 ## When a Lighting Upgrade Needs a Professional
 
-Use an electrician for work involving new wiring, moving electrical boxes, adding hard-wired fixtures, modifying circuits, or anything you are not qualified to perform safely. For rented homes, check the lease and obtain the required permission before altering electrical fixtures.
-
-Also pay attention to moisture and heat. Fixtures and strips placed near sinks, cooktops, ovens, or other demanding locations should be rated and installed according to the manufacturer's instructions.
+Use an electrician for work involving new wiring, moving electrical boxes, adding hard-wired fixtures, modifying circuits, or anything you are not qualified to perform safely. For rented homes, check the lease and obtain the required permission before altering electrical fixtures. Also pay attention to moisture and heat. Fixtures and strips placed near sinks, cooktops, ovens, or other demanding locations should be rated and installed according to the manufacturer's instructions.
 
 ## Final Kitchen Lighting Checklist
 
