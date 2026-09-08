@@ -2,7 +2,7 @@ name: Supabase Keep-Alive Ping
 
 # Prevents the Glimerz Expert Opinion Supabase project (yayljmqelmsmcsuhxqdj)
 # from being auto-paused for inactivity on the free tier. Runs a harmless
-# read query against the expert_opinions table once a week.
+# read request against the PostgREST API once a week.
 
 on:
   schedule:
@@ -17,7 +17,7 @@ jobs:
       - name: Ping Supabase REST API
         run: |
           response=$(curl -s -o /tmp/response.json -w "%{http_code}" \
-            "${SUPABASE_URL}/rest/v1/expert_opinions?select=id&limit=1" \
+            "${SUPABASE_URL}/rest/v1/" \
             -H "apikey: ${SUPABASE_ANON_KEY}" \
             -H "Authorization: Bearer ${SUPABASE_ANON_KEY}")
 
