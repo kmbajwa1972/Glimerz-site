@@ -89,7 +89,11 @@ Think about the food you actually prepare rather than treating a groove as a man
 
 ## A two-board system covers most kitchens
 
-For a straightforward setup, consider assigning jobs instead of buying several identical boards. **Board 1: everyday preparation.** Use a stable wood or bamboo board for vegetables, herbs, bread, and other foods that fit your normal workflow. **Board 2: raw proteins.** Use a separate board that is appropriate for raw meat, poultry, or seafood and can be cleaned according to the manufacturer's instructions.
+For a straightforward setup, consider assigning jobs instead of buying several identical boards.
+
+**Board 1: everyday preparation.** Use a stable wood or bamboo board for vegetables, herbs, bread, and other foods that fit your normal workflow.
+
+**Board 2: raw proteins.** Use a separate board that is appropriate for raw meat, poultry, or seafood and can be cleaned according to the manufacturer's instructions.
 
 Keeping the boards visually distinct can reduce mix-ups. If you use color-coded boards, choose a simple system that everyone in the household can remember. For households that prepare large amounts of food, a third smaller board can be useful for quick tasks or serving. Add boards because they solve a real workflow problem, not simply because a set contains six sizes.
 
@@ -107,9 +111,15 @@ The exact material and color system can vary. What matters is that the boards ar
 
 ## Cleaning and care by material
 
-Care should always follow the manufacturer's instructions, but these general habits are useful: **Wood:** Wash by hand, avoid prolonged soaking, dry thoroughly, and condition with a food-safe product when the surface becomes dry according to the board manufacturer's guidance. **Bamboo:** Hand-wash and dry thoroughly unless the manufacturer specifically states otherwise. Avoid prolonged soaking.
+Care should always follow the manufacturer's instructions, but these general habits are useful:
 
-**Plastic:** If dishwasher-safe, use the dishwasher when appropriate, particularly after raw-food preparation. Inspect regularly for deep grooves or damage. **Any material:** Clean the board after each use and prevent raw-food juices from contacting ready-to-eat foods, clean utensils, or finished dishes.
+**Wood:** Wash by hand, avoid prolonged soaking, dry thoroughly, and condition with a food-safe product when the surface becomes dry according to the board manufacturer's guidance.
+
+**Bamboo:** Hand-wash and dry thoroughly unless the manufacturer specifically states otherwise. Avoid prolonged soaking.
+
+**Plastic:** If dishwasher-safe, use the dishwasher when appropriate, particularly after raw-food preparation. Inspect regularly for deep grooves or damage.
+
+**Any material:** Clean the board after each use and prevent raw-food juices from contacting ready-to-eat foods, clean utensils, or finished dishes.
 
 If a board develops cracks, significant warping, loose sections, or deep damage, replacing it is usually more sensible than trying to restore a compromised cutting surface.
 

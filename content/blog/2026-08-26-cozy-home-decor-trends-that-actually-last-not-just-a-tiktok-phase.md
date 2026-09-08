@@ -56,15 +56,23 @@ Wood, cotton, linen, wool, jute, rattan, ceramic, and stone can work across many
 
 For example, a neutral woven rug can remain useful if a blue sofa is replaced by a green one. A wooden side table can move from a modern room to a more traditional setting. A ceramic vase can change character simply by moving to another shelf.
 
-The important qualification is quality and maintenance. Natural materials vary considerably, and some require more care than synthetic alternatives. **Why it lasts:** adaptable materials can remain useful while the surrounding style changes.
+The important qualification is quality and maintenance. Natural materials vary considerably, and some require more care than synthetic alternatives.
+
+**Why it lasts:** adaptable materials can remain useful while the surrounding style changes.
 
 ## 3. Buy Flexible Textiles Instead of Replacing Large Furniture
 
-Textiles are one of the easiest ways to refresh a room without changing its basic layout. A practical hierarchy is: **Large investment:** sofa, bed frame, dining table. **Medium investment:** rug, curtains, bedding.
+Textiles are one of the easiest ways to refresh a room without changing its basic layout. A practical hierarchy is:
 
-**Easy-to-change layer:** pillow covers, throws, small decorative textiles. When your taste changes, update the smaller layer first. A different pillow cover can change the color relationship of a sofa without requiring a new sofa.
+**Large investment:** sofa, bed frame, dining table.
 
-Before buying, check fabric care instructions, durability, and whether the textile works with the people, pets, and cleaning routine in your household. **Why it lasts:** the system can evolve without requiring a full-room replacement.
+**Medium investment:** rug, curtains, bedding.
+
+**Easy-to-change layer:** pillow covers, throws, small decorative textiles.
+
+When your taste changes, update the smaller layer first. A different pillow cover can change the color relationship of a sofa without requiring a new sofa. Before buying, check fabric care instructions, durability, and whether the textile works with the people, pets, and cleaning routine in your household.
+
+**Why it lasts:** the system can evolve without requiring a full-room replacement.
 
 ## 4. Small Decorative Groupings Work When They Have a Job
 
@@ -106,27 +114,43 @@ This does not mean every permanent surface should be beige. A bold wall color or
 
 A home feels connected when selected shapes, colors, materials, or finishes appear more than once. For example, a warm wood tone might appear in the living-room table and bedroom nightstand. A black metal finish might repeat in a lamp, picture frame, and cabinet hardware.
 
-This is different from buying an entire matching furniture set. Repetition creates a relationship while still allowing individual pieces to differ. **Why it lasts:** repeated elements can connect rooms even when individual accessories are replaced.
+This is different from buying an entire matching furniture set. Repetition creates a relationship while still allowing individual pieces to differ.
+
+**Why it lasts:** repeated elements can connect rooms even when individual accessories are replaced.
 
 ## 8. Make Storage Part of the Design
 
 Open surfaces are difficult to keep attractive when there is nowhere to put everyday objects. Durable decorating therefore includes storage decisions. Use closed storage for items that are frequently used but visually distracting. Use open shelving for objects you actually want to see.
 
-In a small room, a shallow cabinet may be more valuable than another decorative table. In an entryway, hooks and a defined landing zone can prevent coats, bags, and keys from spreading into the living space. **Why it lasts:** storage solves an everyday problem regardless of the current trend.
+In a small room, a shallow cabinet may be more valuable than another decorative table. In an entryway, hooks and a defined landing zone can prevent coats, bags, and keys from spreading into the living space.
+
+**Why it lasts:** storage solves an everyday problem regardless of the current trend.
 
 ## 9. Personal Details Outlast Generic Styling
 
 A room becomes easier to live with when some of its objects have a reason for being there. Display a photograph, artwork from a meaningful place, a collection you genuinely enjoy, a book you use, or an object with family significance. These details do not need to match a particular online aesthetic.
 
-You can still edit them. A personal item that has meaning and fits the room deserves more consideration than a decorative object purchased solely to fill an empty shelf. **Why it lasts:** personal relevance does not depend on the trend cycle.
+You can still edit them. A personal item that has meaning and fits the room deserves more consideration than a decorative object purchased solely to fill an empty shelf.
+
+**Why it lasts:** personal relevance does not depend on the trend cycle.
 
 ## 10. Separate the Trend From the Principle
 
-This is the most useful habit when browsing inspiration. Instead of copying an image literally, identify what makes the room work. **Trend:** a particular color dominates every room.
+This is the most useful habit when browsing inspiration. Instead of copying an image literally, identify what makes the room work.
 
-**Underlying principle:** the home uses a controlled palette. **Trend:** a specific curved furniture shape appears everywhere. **Underlying principle:** the room balances hard architectural lines with softer forms.
+**Trend:** a particular color dominates every room.
 
-**Trend:** one particular natural material becomes fashionable. **Underlying principle:** contrasting materials prevent a room from feeling visually flat. Once you identify the principle, you can choose a version that suits your own home.
+**Underlying principle:** the home uses a controlled palette.
+
+**Trend:** a specific curved furniture shape appears everywhere.
+
+**Underlying principle:** the room balances hard architectural lines with softer forms.
+
+**Trend:** one particular natural material becomes fashionable.
+
+**Underlying principle:** contrasting materials prevent a room from feeling visually flat.
+
+Once you identify the principle, you can choose a version that suits your own home.
 
 ## Three Worked Decisions
 
@@ -158,9 +182,17 @@ This is not a rule about quality. It is a rule about **replacement cost and flex
 
 ## Common Mistakes With Decor Trends
 
-**Buying a complete room at once.** You lose the chance to discover what actually works in your home. **Confusing popularity with quality.** A viral item can still be poorly suited to your room. **Making a permanent change to follow a temporary idea.** Test strong colors and styles in removable layers first when possible.
+**Buying a complete room at once.** You lose the chance to discover what actually works in your home.
 
-**Ignoring maintenance.** A beautiful material that requires more care than you can provide will quickly become frustrating. **Buying matching sets.** Coordination does not require every piece to come from the same collection. **Changing functional pieces because the accessories changed.** Try updating the flexible layer first.
+**Confusing popularity with quality.** A viral item can still be poorly suited to your room.
+
+**Making a permanent change to follow a temporary idea.** Test strong colors and styles in removable layers first when possible.
+
+**Ignoring maintenance.** A beautiful material that requires more care than you can provide will quickly become frustrating.
+
+**Buying matching sets.** Coordination does not require every piece to come from the same collection.
+
+**Changing functional pieces because the accessories changed.** Try updating the flexible layer first.
 
 **Adding decor without removing anything.** Every new object increases visual and physical maintenance.
 

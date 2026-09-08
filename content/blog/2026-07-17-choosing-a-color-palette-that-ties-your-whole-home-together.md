@@ -35,7 +35,9 @@ Then identify their general color temperature. Warm woods, cream surfaces, beige
 
 Undertones matter more than the broad color name. Two paints can both be called white while one looks creamy and the other looks slightly blue. The same is true of grey, beige, green, and even black.
 
-A useful test is to hold a paint or fabric sample beside the fixed finish in daylight. If the combination looks noticeably cleaner together than it does under artificial light, test it again in the evening before committing. **Practical rule:** choose colors that cooperate with the largest fixed surfaces first. Do not choose a wall color in isolation and then try to make the rest of the room fit around it.
+A useful test is to hold a paint or fabric sample beside the fixed finish in daylight. If the combination looks noticeably cleaner together than it does under artificial light, test it again in the evening before committing.
+
+**Practical rule:** choose colors that cooperate with the largest fixed surfaces first. Do not choose a wall color in isolation and then try to make the rest of the room fit around it.
 
 ## Choose an Anchor Neutral
 

@@ -49,7 +49,13 @@ This inventory prevents a common mistake: choosing a new finish as though the ro
 
 Two pieces can both be called "gold" and still look noticeably different. One may be yellow and glossy, another muted and brushed. Likewise, black metal can be matte, satin, or highly reflective.
 
-When comparing finishes, look at three things: **Temperature:** Does the finish read warm, cool, or relatively neutral? **Reflectivity:** Is it polished and reflective, brushed and softer, or matte? **Color depth:** Is the finish pale, yellow-gold, brown-bronze, bright silver, or dark charcoal?
+When comparing finishes, look at three things:
+
+**Temperature:** Does the finish read warm, cool, or relatively neutral?
+
+**Reflectivity:** Is it polished and reflective, brushed and softer, or matte?
+
+**Color depth:** Is the finish pale, yellow-gold, brown-bronze, bright silver, or dark charcoal?
 
 This is why photographs on a shopping page should not be the only test. If possible, compare physical samples or finish cards in the actual room's lighting.
 
@@ -138,9 +144,17 @@ When two finishes are extremely similar, ask whether you can make their relation
 
 ## Common Mistakes to Avoid
 
-**Adding a new metal every time you buy something.** A mixed-metal room still needs a limited visual vocabulary. **Ignoring existing appliances.** Stainless steel and other permanent finishes count even if you did not choose them as part of the decorating plan. **Using a rigid percentage formula.** 60-30-10 is a useful mental model, not a measurement requirement.
+**Adding a new metal every time you buy something.** A mixed-metal room still needs a limited visual vocabulary.
 
-**Mixing finishes that are almost the same.** If two pieces look like they were intended to match, differences in sheen or undertone can be distracting. **Putting every finish in every zone.** Repetition is easier to read when finishes have a reason for appearing together. **Changing expensive fixtures too quickly.** Test a lower-cost item first. You may discover that a new lamp, mirror, or hardware set gives you enough contrast without replacing plumbing.
+**Ignoring existing appliances.** Stainless steel and other permanent finishes count even if you did not choose them as part of the decorating plan.
+
+**Using a rigid percentage formula.** 60-30-10 is a useful mental model, not a measurement requirement.
+
+**Mixing finishes that are almost the same.** If two pieces look like they were intended to match, differences in sheen or undertone can be distracting.
+
+**Putting every finish in every zone.** Repetition is easier to read when finishes have a reason for appearing together.
+
+**Changing expensive fixtures too quickly.** Test a lower-cost item first. You may discover that a new lamp, mirror, or hardware set gives you enough contrast without replacing plumbing.
 
 **Ignoring sheen.** A polished brass surface and a heavily brushed brass surface can behave very differently under direct lighting.
 

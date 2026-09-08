@@ -108,11 +108,17 @@ Vary height rather than filling every surface. One floor plant, one shelf plant,
 
 Instead of buying plants first, assign them according to conditions. Put a suitable larger plant in the living room where there is enough light and floor space. Use a narrower snake plant or ZZ plant in the bedroom if the light is moderate or lower. Grow a small herb collection in the bright kitchen window if you actually use herbs. Do not force a living plant into the windowless bathroom; use artificial greenery there or rotate a suitable plant only if its light requirements can be met elsewhere.
 
-This approach produces a more successful collection because each plant has a job and a location that suits it. The apartment does not need a plant in every corner to feel green. **Troubleshooting: What the Plant May Be Telling You** **Leaves turning yellow.** There are several possible causes, including watering problems, poor drainage, natural aging of older leaves, or insufficient light. Check the soil and roots rather than assuming the answer is always "more water."
+This approach produces a more successful collection because each plant has a job and a location that suits it. The apartment does not need a plant in every corner to feel green. **Troubleshooting: What the Plant May Be Telling You**
 
-**Long, stretched growth.** The plant may not be receiving enough usable light. Move it gradually toward a brighter suitable location rather than placing a shade-tolerant plant immediately into harsh direct sun. **Brown, crispy edges.** Dry air, inconsistent watering, strong direct light, fertilizer buildup, or other stresses can contribute. Check the plant's growing conditions before changing several variables at once.
+**Leaves turning yellow.** There are several possible causes, including watering problems, poor drainage, natural aging of older leaves, or insufficient light. Check the soil and roots rather than assuming the answer is always "more water."
 
-**Soft or rotting stems.** Excess moisture and poor drainage can be warning signs. Check the root zone and container rather than continuing to water on schedule. **Pests appearing.** Isolate an affected plant from others and inspect leaves, stems, and the growing medium. Identify the pest before choosing a treatment, and follow the product directions carefully.
+**Long, stretched growth.** The plant may not be receiving enough usable light. Move it gradually toward a brighter suitable location rather than placing a shade-tolerant plant immediately into harsh direct sun.
+
+**Brown, crispy edges.** Dry air, inconsistent watering, strong direct light, fertilizer buildup, or other stresses can contribute. Check the plant's growing conditions before changing several variables at once.
+
+**Soft or rotting stems.** Excess moisture and poor drainage can be warning signs. Check the root zone and container rather than continuing to water on schedule.
+
+**Pests appearing.** Isolate an affected plant from others and inspect leaves, stems, and the growing medium. Identify the pest before choosing a treatment, and follow the product directions carefully.
 
 Changing one variable at a time makes troubleshooting easier. If you move a plant, change the watering schedule, repot it, and add fertilizer simultaneously, you will have difficulty determining which change helped or hurt. **Before You Buy: A Five-Minute Plant Checklist**
 

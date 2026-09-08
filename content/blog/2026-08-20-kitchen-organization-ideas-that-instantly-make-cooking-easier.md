@@ -44,9 +44,17 @@ This audit gives you a better starting point than buying organizers first.
 
 ## 2. Organize Around Cooking Zones
 
-A practical kitchen can be divided into informal zones based on what happens there. **Prep zone:** cutting boards, knives, mixing bowls, measuring tools, and frequently used oils or seasonings. **Cooking zone:** pots, pans, cooking utensils, trivets, and heat-safe tools near the stove.
+A practical kitchen can be divided into informal zones based on what happens there.
 
-**Cleanup zone:** dish soap, dishwasher supplies, towels, trash/recycling access, and cleaning tools near the sink. **Serving zone:** everyday plates, bowls, glasses, and serving pieces close to the dishwasher or eating area. **Breakfast/coffee zone:** mugs, coffee or tea supplies, and the equipment used every morning.
+**Prep zone:** cutting boards, knives, mixing bowls, measuring tools, and frequently used oils or seasonings.
+
+**Cooking zone:** pots, pans, cooking utensils, trivets, and heat-safe tools near the stove.
+
+**Cleanup zone:** dish soap, dishwasher supplies, towels, trash/recycling access, and cleaning tools near the sink.
+
+**Serving zone:** everyday plates, bowls, glasses, and serving pieces close to the dishwasher or eating area.
+
+**Breakfast/coffee zone:** mugs, coffee or tea supplies, and the equipment used every morning.
 
 The zones do not have to be perfectly separated. The goal is to reduce unnecessary movement during common tasks. If you cook most meals at the stove, for example, storing your most-used spatula across the kitchen simply because “all utensils belong in one drawer” may be less practical than keeping a small group near the cooking area.
 
@@ -142,9 +150,15 @@ If one cabinet has tall unused space, add a riser for lighter plates or bowls. I
 
 ## What to Buy First
 
-If the kitchen needs organization but the budget is limited, prioritize changes in this order: **1. Use existing storage better.** Declutter and regroup items before buying anything. **2. Solve one frustrating storage problem.** A shelf riser, drawer organizer, or suitable bin can be enough.
+If the kitchen needs organization but the budget is limited, prioritize changes in this order:
 
-**3. Improve visibility.** Labels, clear containers, or better drawer grouping may help more than additional capacity. **4. Reclaim difficult space.** Consider under-sink or door storage only after measuring carefully.
+**1. Use existing storage better.** Declutter and regroup items before buying anything.
+
+**2. Solve one frustrating storage problem.** A shelf riser, drawer organizer, or suitable bin can be enough.
+
+**3. Improve visibility.** Labels, clear containers, or better drawer grouping may help more than additional capacity.
+
+**4. Reclaim difficult space.** Consider under-sink or door storage only after measuring carefully.
 
 **5. Add decorative organization last.** Matching containers and display pieces should support the system rather than become the system.
 
@@ -183,4 +197,6 @@ Kitchen organization works when it reduces decisions and unnecessary movement. S
 
 Measure before buying. Keep the clearest counter area available for food preparation. Give drawers and cabinets specific jobs, but do not over-engineer the system. Use organizers only when they make an item easier to see, reach, or return.
 
-The goal is not a kitchen that looks permanently staged. It is a kitchen that still feels easy to use after a busy meal, because everything important has a sensible place. **Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the organization problems discussed above and do not determine our editorial recommendations.
+The goal is not a kitchen that looks permanently staged. It is a kitchen that still feels easy to use after a busy meal, because everything important has a sensible place.
+
+**Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the organization problems discussed above and do not determine our editorial recommendations.

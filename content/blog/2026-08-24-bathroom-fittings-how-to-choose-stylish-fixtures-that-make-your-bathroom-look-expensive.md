@@ -202,11 +202,23 @@ The result is a coordinated refresh achieved through a small number of deliberat
 
 ## Common Bathroom-Fitting Mistakes
 
-**Buying by appearance alone.** A beautiful fitting that does not fit the existing connection is not a good purchase. **Ignoring measurements.** Faucet reach, cabinet-hole spacing, wall width, and shower connections all matter. **Assuming every finish is equally easy to maintain.** Cleaning instructions vary by product and finish.
+**Buying by appearance alone.** A beautiful fitting that does not fit the existing connection is not a good purchase.
 
-**Replacing a showerhead to solve low pressure.** The problem may be upstream of the showerhead. **Installing towel hardware wherever there is empty wall.** Convenience and clearance matter more than filling the wall. **Mixing several finishes without a plan.** Multiple finishes can work, but they should look intentional.
+**Ignoring measurements.** Faucet reach, cabinet-hole spacing, wall width, and shower connections all matter.
 
-**Ignoring the drain.** Faucet and drain components may need to be compatible. **Treating plumbing work as a decoration project.** Concealed plumbing, waterproofing, and shower-valve changes can require specialized work. **Buying a shower filter without identifying the problem.** Know what the product is designed to address before purchasing it.
+**Assuming every finish is equally easy to maintain.** Cleaning instructions vary by product and finish.
+
+**Replacing a showerhead to solve low pressure.** The problem may be upstream of the showerhead.
+
+**Installing towel hardware wherever there is empty wall.** Convenience and clearance matter more than filling the wall.
+
+**Mixing several finishes without a plan.** Multiple finishes can work, but they should look intentional.
+
+**Ignoring the drain.** Faucet and drain components may need to be compatible.
+
+**Treating plumbing work as a decoration project.** Concealed plumbing, waterproofing, and shower-valve changes can require specialized work.
+
+**Buying a shower filter without identifying the problem.** Know what the product is designed to address before purchasing it.
 
 ## Bathroom Fittings Shopping Checklist
 

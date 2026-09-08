@@ -120,17 +120,31 @@ If the room contains several fixed finishes that cannot be changed, use those as
 
 ## A Worked Example: Refreshing a 10 × 12 Kitchen
 
-Imagine a 10 × 12-foot kitchen with good cabinets and countertops but three problems: the main prep area is dim, the utensil drawer is difficult to use, and the pantry has poor visibility. Instead of replacing the cabinets, start with the friction points. **First:** add suitable under-cabinet lighting after testing the placement and power method.
+Imagine a 10 × 12-foot kitchen with good cabinets and countertops but three problems: the main prep area is dim, the utensil drawer is difficult to use, and the pantry has poor visibility. Instead of replacing the cabinets, start with the friction points.
 
-**Second:** remove the utensil drawer contents, measure the drawer, and install an organizer sized to the actual interior. **Third:** group pantry contents by use and add a small number of appropriately sized clear containers or bins where they improve visibility. **Fourth:** if the cabinet hardware is worn, measure the existing hole spacing and replace it with a coordinated finish.
+**First:** add suitable under-cabinet lighting after testing the placement and power method.
+
+**Second:** remove the utensil drawer contents, measure the drawer, and install an organizer sized to the actual interior.
+
+**Third:** group pantry contents by use and add a small number of appropriately sized clear containers or bins where they improve visibility.
+
+**Fourth:** if the cabinet hardware is worn, measure the existing hole spacing and replace it with a coordinated finish.
 
 The kitchen may look fresher after these changes, but more importantly, three daily problems have been addressed without changing the layout.
 
 ## What to Do First on a Limited Budget
 
-If you have only enough money for one or two upgrades, prioritize by the number of times you will benefit from them. **Daily problem:** solve the lighting, storage, or workflow issue you encounter every day. **Frequent problem:** improve the drawer, pantry, or cabinet that repeatedly slows you down.
+If you have only enough money for one or two upgrades, prioritize by the number of times you will benefit from them.
 
-**Visual problem:** update hardware or another visible detail when the functional issues are already under control. **Optional convenience:** buy an appliance attachment or specialty accessory only after confirming that you will use it regularly. This order keeps a small refresh from becoming an unplanned collection of kitchen products.
+**Daily problem:** solve the lighting, storage, or workflow issue you encounter every day.
+
+**Frequent problem:** improve the drawer, pantry, or cabinet that repeatedly slows you down.
+
+**Visual problem:** update hardware or another visible detail when the functional issues are already under control.
+
+**Optional convenience:** buy an appliance attachment or specialty accessory only after confirming that you will use it regularly.
+
+This order keeps a small refresh from becoming an unplanned collection of kitchen products.
 
 ## Common Small-Upgrade Mistakes
 

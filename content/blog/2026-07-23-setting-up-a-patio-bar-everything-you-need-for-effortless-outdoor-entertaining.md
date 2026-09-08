@@ -141,15 +141,27 @@ Avoid storing anything that can spoil, attract pests, or be damaged by temperatu
 
 ## Three upgrades, in the right order
 
-If the budget is limited, improve the patio bar in this sequence: **First: function.** Buy or build the service surface and solve cold storage. **Second: convenience.** Add storage, a tray, waste/recycling, and a mobile cooler if the layout benefits from one. **Third: atmosphere.** Add lighting, textiles, plants, or decorative pieces after the workflow works.
+If the budget is limited, improve the patio bar in this sequence:
+
+**First: function.** Buy or build the service surface and solve cold storage.
+
+**Second: convenience.** Add storage, a tray, waste/recycling, and a mobile cooler if the layout benefits from one.
+
+**Third: atmosphere.** Add lighting, textiles, plants, or decorative pieces after the workflow works.
 
 This order prevents spending most of the budget on decorative details while the host is still carrying everything from the kitchen.
 
 ## Common patio-bar mistakes
 
-**Making the bar too large.** A bar that consumes the circulation path reduces the usefulness of the entire patio. **Ignoring the refill route.** Measure the path between the kitchen, cooler, bar, and seating. A beautiful station in an inconvenient location will create more work.
+**Making the bar too large.** A bar that consumes the circulation path reduces the usefulness of the entire patio.
 
-**Using indoor furniture outdoors.** Sun, rain, and humidity can damage materials not designed for exterior conditions. **Overdecorating the counter.** Keep working space available for trays, glasses, and serving. **Leaving cushions and supplies exposed.** Weather-resistant does not mean maintenance-free.
+**Ignoring the refill route.** Measure the path between the kitchen, cooler, bar, and seating. A beautiful station in an inconvenient location will create more work.
+
+**Using indoor furniture outdoors.** Sun, rain, and humidity can damage materials not designed for exterior conditions.
+
+**Overdecorating the counter.** Keep working space available for trays, glasses, and serving.
+
+**Leaving cushions and supplies exposed.** Weather-resistant does not mean maintenance-free.
 
 **Adding lighting without checking outdoor ratings.** Follow the product's installation and electrical-use requirements.
 

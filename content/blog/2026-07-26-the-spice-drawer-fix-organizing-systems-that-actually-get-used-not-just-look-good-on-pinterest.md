@@ -99,9 +99,15 @@ For mixed-height bottles, place taller containers toward the back and shorter on
 
 ## Organize by cooking behavior, not just alphabetically
 
-Alphabetical order is easy to understand, but it is not always the fastest system for cooking. A better arrangement may be based on frequency and cuisine. For example: **Front row:** salt, black pepper, garlic powder, paprika, cumin, or your actual everyday rotation.
+Alphabetical order is easy to understand, but it is not always the fastest system for cooking. A better arrangement may be based on frequency and cuisine. For example:
 
-**Second group:** herbs and spices you use regularly but less often. **Separate area:** baking spices, specialty blends, and backup containers. There is no universal "correct" category. If you make curries several times a week, your curry spices deserve the most accessible space. If you bake more often, cinnamon, nutmeg, and vanilla-related ingredients may deserve their own easy-access group.
+**Front row:** salt, black pepper, garlic powder, paprika, cumin, or your actual everyday rotation.
+
+**Second group:** herbs and spices you use regularly but less often.
+
+**Separate area:** baking spices, specialty blends, and backup containers.
+
+There is no universal "correct" category. If you make curries several times a week, your curry spices deserve the most accessible space. If you bake more often, cinnamon, nutmeg, and vanilla-related ingredients may deserve their own easy-access group.
 
 ## A worked example: a 24-inch spice drawer
 
@@ -125,9 +131,17 @@ If the answer to several questions is no, change the layout. The best organizer 
 
 ## Common spice-storage mistakes
 
-**Buying the organizer first.** Measure the drawer or cabinet and audit the collection before purchasing anything. **Keeping every spice in the prime location.** Reserve the easiest-access space for ingredients you genuinely use often. **Decanting everything immediately.** Transfer only when the new container makes storage or use easier.
+**Buying the organizer first.** Measure the drawer or cabinet and audit the collection before purchasing anything.
 
-**Using tiny labels.** A label that requires picking up the jar defeats quick identification. **Ignoring heat and moisture.** Keep spices away from unnecessary heat, steam, and direct sunlight. **Overfilling an organizer.** A full system is not efficient if neighboring jars have to be moved to reach one ingredient.
+**Keeping every spice in the prime location.** Reserve the easiest-access space for ingredients you genuinely use often.
+
+**Decanting everything immediately.** Transfer only when the new container makes storage or use easier.
+
+**Using tiny labels.** A label that requires picking up the jar defeats quick identification.
+
+**Ignoring heat and moisture.** Keep spices away from unnecessary heat, steam, and direct sunlight.
+
+**Overfilling an organizer.** A full system is not efficient if neighboring jars have to be moved to reach one ingredient.
 
 **Mixing backups with daily stock.** Separate inventory from the working collection so you can see what you actually have.
 

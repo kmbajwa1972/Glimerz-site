@@ -80,17 +80,29 @@ Keep the remaining surfaces quieter. This is particularly effective in small kit
 
 **12. Make Small Kitchens Feel Deliberate** A small kitchen does not need to imitate a large one. Instead, make every visible and functional element earn its place. Use vertical storage where appropriate, keep counter appliances limited to those used frequently, and choose a consistent visual language for hardware, containers, and open shelving. If possible, keep the sightline from the kitchen entrance relatively calm so the room feels organized when viewed as a whole.
 
-A narrow 8-foot counter, for example, may work better with one clear preparation section, one appliance zone, and well-organized cabinets than with decorative objects spread across the entire surface. **13. Three Design Directions to Test** **Warm modern:** Pair simple cabinetry with one warm wood element, restrained hardware, layered lighting, and a small amount of greenery. Keep the palette controlled so the wood becomes an accent rather than a theme.
+A narrow 8-foot counter, for example, may work better with one clear preparation section, one appliance zone, and well-organized cabinets than with decorative objects spread across the entire surface. **13. Three Design Directions to Test**
 
-**Clean classic:** Use a quiet cabinet color, simple hardware, durable-looking surfaces, and traditional shapes in small accessories. Add personality through artwork or ceramics that can be changed later. **Color-led kitchen:** Choose one stronger color for cabinetry, backsplash, or a movable element and let the remaining finishes support it. Test the color in morning and evening light before committing.
+**Warm modern:** Pair simple cabinetry with one warm wood element, restrained hardware, layered lighting, and a small amount of greenery. Keep the palette controlled so the wood becomes an accent rather than a theme.
+
+**Clean classic:** Use a quiet cabinet color, simple hardware, durable-looking surfaces, and traditional shapes in small accessories. Add personality through artwork or ceramics that can be changed later.
+
+**Color-led kitchen:** Choose one stronger color for cabinetry, backsplash, or a movable element and let the remaining finishes support it. Test the color in morning and evening light before committing.
 
 These are starting directions, not rules. Mix elements only after identifying what you want the room to feel like and which existing finishes cannot be changed. **14. A Practical Refresh Plan for a Limited Budget**
 
-You do not need to renovate the whole kitchen at once. A sensible sequence is: **Stage 1 — Remove friction:** declutter counters, reorganize the refrigerator, group cabinet contents, and improve the main preparation area. **Stage 2 — Improve light:** replace unsuitable bulbs or add task lighting where shadows make food preparation difficult.
+You do not need to renovate the whole kitchen at once. A sensible sequence is:
 
-**Stage 3 — Refresh visible details:** update cabinet hardware, a suitable runner, selected containers, or a small amount of coordinated decor. **Stage 4 — Make one larger change:** if the budget allows, choose the feature with the greatest practical or visual impact, such as a backsplash, faucet, countertop section, or lighting fixture.
+**Stage 1 — Remove friction:** declutter counters, reorganize the refrigerator, group cabinet contents, and improve the main preparation area.
 
-**Stage 5 — Stop and reassess:** live with the changes before buying more. The gaps that remain are more useful than the ones you imagined before the refresh. **Common Kitchen Design Mistakes**
+**Stage 2 — Improve light:** replace unsuitable bulbs or add task lighting where shadows make food preparation difficult.
+
+**Stage 3 — Refresh visible details:** update cabinet hardware, a suitable runner, selected containers, or a small amount of coordinated decor.
+
+**Stage 4 — Make one larger change:** if the budget allows, choose the feature with the greatest practical or visual impact, such as a backsplash, faucet, countertop section, or lighting fixture.
+
+**Stage 5 — Stop and reassess:** live with the changes before buying more. The gaps that remain are more useful than the ones you imagined before the refresh.
+
+**Common Kitchen Design Mistakes**
 
 - Choosing a layout from a photograph without measuring the room.
 - Sacrificing the main preparation surface for decorative storage.

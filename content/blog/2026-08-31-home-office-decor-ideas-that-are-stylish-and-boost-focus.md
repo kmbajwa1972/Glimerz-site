@@ -125,11 +125,19 @@ Curtains can soften a room and control glare, but leave enough clearance for the
 
 ## A Worked Example: 9 × 10 Foot Home Office
 
-Imagine a 9 × 10 foot room with a window on the shorter wall and a door near one corner. **First:** place a 60-inch-wide desk on a wall perpendicular to the window so the screen is less exposed to direct daylight reflections. **Second:** tape the desk footprint before buying it and check the chair's pushed-back position. Confirm that the main doorway path remains comfortable.
+Imagine a 9 × 10 foot room with a window on the shorter wall and a door near one corner.
 
-**Third:** reserve one section of the desk for the monitor and another for writing. If two monitors are required, move the lamp and other accessories off the main working zone. **Fourth:** use a narrow storage cabinet or wall shelving where it does not interfere with the door swing.
+**First:** place a 60-inch-wide desk on a wall perpendicular to the window so the screen is less exposed to direct daylight reflections.
 
-**Fifth:** add a floor lamp, one piece of artwork, and a plant suited to the available light. Stop there initially. Live with the room before adding more decoration. This sequence prevents a common mistake: filling the office with attractive objects before discovering that the furniture arrangement does not work.
+**Second:** tape the desk footprint before buying it and check the chair's pushed-back position. Confirm that the main doorway path remains comfortable.
+
+**Third:** reserve one section of the desk for the monitor and another for writing. If two monitors are required, move the lamp and other accessories off the main working zone.
+
+**Fourth:** use a narrow storage cabinet or wall shelving where it does not interfere with the door swing.
+
+**Fifth:** add a floor lamp, one piece of artwork, and a plant suited to the available light. Stop there initially. Live with the room before adding more decoration.
+
+This sequence prevents a common mistake: filling the office with attractive objects before discovering that the furniture arrangement does not work.
 
 ## Choosing Between Common Workspace Upgrades
 
@@ -145,11 +153,21 @@ The products featured with this article are examples of these categories, not ma
 
 ## Common Home Office Decorating Mistakes
 
-**Choosing the desk before measuring the room.** A beautiful desk can consume the circulation space you actually need. **Buying a chair for appearance alone.** A chair should be evaluated for fit and adjustment, not just color. **Putting the monitor wherever it looks symmetrical.** Center it around your normal seating position and primary screen.
+**Choosing the desk before measuring the room.** A beautiful desk can consume the circulation space you actually need.
 
-**Using one bright ceiling fixture for everything.** Add task or ambient lighting where the work actually happens. **Filling every shelf.** Empty space can make useful items easier to find and maintain. **Ignoring cable access.** Equipment eventually needs unplugging, cleaning, or replacement.
+**Buying a chair for appearance alone.** A chair should be evaluated for fit and adjustment, not just color.
 
-**Assuming a certain color or bulb temperature guarantees focus.** Treat these as environmental preferences and test them in your own room. **Buying a standing setup without checking ergonomics.** Height adjustment is useful only when the keyboard, screen, and working position can also be set appropriately.
+**Putting the monitor wherever it looks symmetrical.** Center it around your normal seating position and primary screen.
+
+**Using one bright ceiling fixture for everything.** Add task or ambient lighting where the work actually happens.
+
+**Filling every shelf.** Empty space can make useful items easier to find and maintain.
+
+**Ignoring cable access.** Equipment eventually needs unplugging, cleaning, or replacement.
+
+**Assuming a certain color or bulb temperature guarantees focus.** Treat these as environmental preferences and test them in your own room.
+
+**Buying a standing setup without checking ergonomics.** Height adjustment is useful only when the keyboard, screen, and working position can also be set appropriately.
 
 ## Home Office Setup Checklist
 

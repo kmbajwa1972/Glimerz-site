@@ -181,9 +181,17 @@ Create a landing spot for keys and everyday items. A slim freestanding console, 
 
 ## 12. A Practical $300 Rental Makeover
 
-A renter with a $300 decorating budget does not need to renovate every room. For example: **$100 — lighting:** one floor lamp or two useful table/task lamps. **$80 — textile layer:** a cushion update, throw, curtains, or contribution toward a correctly sized rug.
+A renter with a $300 decorating budget does not need to renovate every room. For example:
 
-**$50 — storage:** baskets or organizers for a specific recurring clutter problem. **$40 — artwork:** one meaningful print or second-hand framed piece. **$30 — finishing layer:** a plant, vase, books, or another personal object.
+**$100 — lighting:** one floor lamp or two useful table/task lamps.
+
+**$80 — textile layer:** a cushion update, throw, curtains, or contribution toward a correctly sized rug.
+
+**$50 — storage:** baskets or organizers for a specific recurring clutter problem.
+
+**$40 — artwork:** one meaningful print or second-hand framed piece.
+
+**$30 — finishing layer:** a plant, vase, books, or another personal object.
 
 The exact prices will vary by location and what you already own. The important part is the allocation: spend most of the money on changes you can see and use every day rather than scattering the budget across dozens of small objects.
 

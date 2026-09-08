@@ -99,7 +99,13 @@ You do not need every object to match. Repeating a color, material, or finish ac
 
 ## A simple three-zone styling method
 
-Instead of trying to copy a photographed shelf exactly, divide each shelf run into three visual zones: **Functional zone:** the items you reach for several times a week. **Supporting zone:** a smaller stack, bowl, glass, or serving piece that balances the main group. **Accent zone:** one decorative or less frequently used item.
+Instead of trying to copy a photographed shelf exactly, divide each shelf run into three visual zones:
+
+**Functional zone:** the items you reach for several times a week.
+
+**Supporting zone:** a smaller stack, bowl, glass, or serving piece that balances the main group.
+
+**Accent zone:** one decorative or less frequently used item.
 
 Leave genuine empty space between groups. Negative space is not wasted storage; it makes the items you have easier to see and remove.
 
@@ -131,9 +137,13 @@ The result provides the visual character of open shelving without forcing the ho
 
 ## Four common open-shelf mistakes
 
-**1. Removing too much closed storage.** The kitchen becomes attractive but less functional. **2. Filling every inch.** More objects do not necessarily make a shelf look more finished.
+**1. Removing too much closed storage.** The kitchen becomes attractive but less functional.
 
-**3. Ignoring the mounting surface.** A beautiful shelf is not useful if the fixing method is unsuitable for the wall or load. **4. Styling for photographs instead of daily life.** If every morning starts with moving decorative objects to reach the coffee mugs, the arrangement needs editing.
+**2. Filling every inch.** More objects do not necessarily make a shelf look more finished.
+
+**3. Ignoring the mounting surface.** A beautiful shelf is not useful if the fixing method is unsuitable for the wall or load.
+
+**4. Styling for photographs instead of daily life.** If every morning starts with moving decorative objects to reach the coffee mugs, the arrangement needs editing.
 
 ## A better decision test
 

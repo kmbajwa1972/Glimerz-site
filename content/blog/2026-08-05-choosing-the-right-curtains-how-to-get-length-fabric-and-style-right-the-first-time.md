@@ -130,11 +130,21 @@ Finally, check where the curtains will stack when open. If the 72-inch rod leave
 
 ## Common Curtain Mistakes to Avoid
 
-**Buying before measuring.** Standard sizes are convenient, but your window and rod determine the finished result. **Measuring only the glass.** The curtain treatment often covers more area than the glass itself. **Ignoring panel width.** Two panels can still be too narrow if the total fabric width is insufficient.
+**Buying before measuring.** Standard sizes are convenient, but your window and rod determine the finished result.
 
-**Choosing fabric from a screen alone.** Color, opacity, texture, and sheen can look different in daylight and artificial light. **Forgetting the hem.** If a ready-made panel is longer than needed, account for the finished hem before judging the size. **Using blackout curtains where you do not want darkness.** A room that needs daylight may be better served by sheers or light-filtering fabric.
+**Measuring only the glass.** The curtain treatment often covers more area than the glass itself.
 
-**Ignoring maintenance.** Check the care label before choosing a fabric for a kitchen, pet-heavy room, or high-touch space. **Choosing decorative hardware that cannot support the curtains.** Appearance comes second to safe, stable installation.
+**Ignoring panel width.** Two panels can still be too narrow if the total fabric width is insufficient.
+
+**Choosing fabric from a screen alone.** Color, opacity, texture, and sheen can look different in daylight and artificial light.
+
+**Forgetting the hem.** If a ready-made panel is longer than needed, account for the finished hem before judging the size.
+
+**Using blackout curtains where you do not want darkness.** A room that needs daylight may be better served by sheers or light-filtering fabric.
+
+**Ignoring maintenance.** Check the care label before choosing a fabric for a kitchen, pet-heavy room, or high-touch space.
+
+**Choosing decorative hardware that cannot support the curtains.** Appearance comes second to safe, stable installation.
 
 ## Curtain Shopping Checklist
 

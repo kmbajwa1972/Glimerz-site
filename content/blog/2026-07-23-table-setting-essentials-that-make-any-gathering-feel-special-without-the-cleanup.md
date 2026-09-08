@@ -127,17 +127,31 @@ For an easier cleanup, use dishwasher-safe dinnerware and reusable stemware. Kee
 
 ## What to buy first
 
-If you are building a table-setting collection from scratch, buy in this order: **1. Everyday dinnerware:** Enough plates and bowls for your normal household plus the number of guests you regularly host. **2. Versatile glassware:** A durable style that works for water and the drinks you actually serve.
+If you are building a table-setting collection from scratch, buy in this order:
 
-**3. Napkins and placemats:** Choose easy-care materials that suit your table and cleaning routine. **4. One serving piece:** A tray or platter with enough capacity to be genuinely useful.
+**1. Everyday dinnerware:** Enough plates and bowls for your normal household plus the number of guests you regularly host.
 
-**5. Decorative details:** Napkin rings, candles, seasonal accents, or flowers can come last. This order prevents decorative purchases from taking priority over the pieces that make the meal function.
+**2. Versatile glassware:** A durable style that works for water and the drinks you actually serve.
+
+**3. Napkins and placemats:** Choose easy-care materials that suit your table and cleaning routine.
+
+**4. One serving piece:** A tray or platter with enough capacity to be genuinely useful.
+
+**5. Decorative details:** Napkin rings, candles, seasonal accents, or flowers can come last.
+
+This order prevents decorative purchases from taking priority over the pieces that make the meal function.
 
 ## Common mistakes to avoid
 
-**Overcrowding every place setting.** Put out only what the menu requires. **Using a centerpiece that blocks conversation.** Check sightlines from a seated position before guests arrive. **Choosing accessories without measuring.** Check placemat size, plate diameter, and available table width together.
+**Overcrowding every place setting.** Put out only what the menu requires.
 
-**Buying fragile pieces for a high-use table.** Match durability to the way the items will actually be used. **Treating disposable items as automatically easier.** They may reduce laundry, but they also create waste. Choose based on the occasion and your priorities.
+**Using a centerpiece that blocks conversation.** Check sightlines from a seated position before guests arrive.
+
+**Choosing accessories without measuring.** Check placemat size, plate diameter, and available table width together.
+
+**Buying fragile pieces for a high-use table.** Match durability to the way the items will actually be used.
+
+**Treating disposable items as automatically easier.** They may reduce laundry, but they also create waste. Choose based on the occasion and your priorities.
 
 **Ignoring cleanup space.** A beautiful table is less enjoyable when there is nowhere to put used dishes afterward.
 

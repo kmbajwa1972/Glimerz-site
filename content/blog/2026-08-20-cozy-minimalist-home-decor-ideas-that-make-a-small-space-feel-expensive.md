@@ -71,7 +71,13 @@ Furniture with visible legs can help preserve sightlines beneath the piece, but 
 
 ## 4. Create a Lighting Plan With Layers
 
-Instead of relying entirely on one ceiling fixture, divide lighting into jobs: **General light:** provides overall illumination. **Task light:** helps with reading, working, dressing, or another specific activity. **Accent light:** highlights artwork, a plant, shelving, or another feature.
+Instead of relying entirely on one ceiling fixture, divide lighting into jobs:
+
+**General light:** provides overall illumination.
+
+**Task light:** helps with reading, working, dressing, or another specific activity.
+
+**Accent light:** highlights artwork, a plant, shelving, or another feature.
 
 You may not need three separate fixtures. A ceiling light plus a floor lamp can be enough in a small room if their positions cover different needs. Warm-white light in the **2700K–3000K** range is a reasonable starting point for a cozy residential atmosphere. The best temperature depends on the fixture, room colors, natural light, and personal preference, so test bulbs in the actual room before replacing everything.
 
@@ -169,11 +175,21 @@ If the room lacks adequate storage, seating, or lighting, spend the larger budge
 
 ## Common Mistakes That Undermine Cozy Minimalism
 
-**Buying small furniture simply because the room is small.** Several undersized pieces can create more visual clutter than one appropriately scaled piece. **Using an all-neutral palette without enough contrast.** Neutrals still need differences in value, texture, shape, or material. **Filling every shelf.** Storage needs and decoration are not the same thing.
+**Buying small furniture simply because the room is small.** Several undersized pieces can create more visual clutter than one appropriately scaled piece.
 
-**Using a tiny rug to save money.** A rug that does not connect the furniture can make the arrangement feel fragmented. **Adding too many “luxury” accessories.** A room can become cluttered while trying to look sophisticated. **Replacing furniture before measuring.** The existing piece may work better after rearranging the room.
+**Using an all-neutral palette without enough contrast.** Neutrals still need differences in value, texture, shape, or material.
 
-**Choosing plants for appearance alone.** Light and mature size matter. **Treating warm lighting as an absolute rule.** Test the actual bulb and fixture in the room.
+**Filling every shelf.** Storage needs and decoration are not the same thing.
+
+**Using a tiny rug to save money.** A rug that does not connect the furniture can make the arrangement feel fragmented.
+
+**Adding too many “luxury” accessories.** A room can become cluttered while trying to look sophisticated.
+
+**Replacing furniture before measuring.** The existing piece may work better after rearranging the room.
+
+**Choosing plants for appearance alone.** Light and mature size matter.
+
+**Treating warm lighting as an absolute rule.** Test the actual bulb and fixture in the room.
 
 ## A Simple Cozy-Minimalist Checklist
 

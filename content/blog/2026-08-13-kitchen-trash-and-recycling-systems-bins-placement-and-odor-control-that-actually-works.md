@@ -95,7 +95,11 @@ Trash bins eventually need cleaning, so inspect the design from a maintenance pe
 
 Check the lid, hinge, pedal area, and liner-retention mechanism because these parts can collect crumbs and spills. If a bin has a removable odor filter, note how the filter is replaced and whether the manufacturer specifies a replacement schedule. The best trash system is one you can clean without dismantling half the kitchen.
 
-**11. Three Setups for Different Kitchens** **Compact kitchen:** Use one appropriately sized step bin near the preparation zone and a slim recycling container in a nearby cabinet or utility area if local recycling volume allows it. **Family kitchen:** Use a larger primary bin or a pull-out system with separate waste streams. Give recycling enough capacity that it does not overflow before collection day.
+**11. Three Setups for Different Kitchens**
+
+**Compact kitchen:** Use one appropriately sized step bin near the preparation zone and a slim recycling container in a nearby cabinet or utility area if local recycling volume allows it.
+
+**Family kitchen:** Use a larger primary bin or a pull-out system with separate waste streams. Give recycling enough capacity that it does not overflow before collection day.
 
 **Renovated kitchen:** Consider an integrated pull-out with separate containers for trash and recycling, provided the cabinet measurements and installation requirements work. If compost collection is available, a third compartment can be considered only when the household produces enough food scraps to justify it.
 

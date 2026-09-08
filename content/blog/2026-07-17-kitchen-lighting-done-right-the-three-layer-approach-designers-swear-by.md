@@ -108,9 +108,15 @@ Smart bulbs can provide another option for compatible lamps and fixtures. They c
 
 ## Three Upgrade Paths
 
-You do not need to renovate the entire lighting system in one weekend. **Budget refresh:** Replace outdated bulbs with compatible LEDs, standardize the color temperature, and add one well-positioned task light where the worst shadow occurs. **Mid-level refresh:** Improve the main ceiling fixture, add under-cabinet task lighting, and put the main layer on a compatible dimmer if practical.
+You do not need to renovate the entire lighting system in one weekend.
 
-**Full layered plan:** Use distributed ambient lighting, dedicated task lighting at the major work zones, pendant lighting where appropriate, and a subtle accent layer for evenings. The right choice depends on the existing wiring, ceiling, cabinet layout, budget, and whether you own or rent the property.
+**Budget refresh:** Replace outdated bulbs with compatible LEDs, standardize the color temperature, and add one well-positioned task light where the worst shadow occurs.
+
+**Mid-level refresh:** Improve the main ceiling fixture, add under-cabinet task lighting, and put the main layer on a compatible dimmer if practical.
+
+**Full layered plan:** Use distributed ambient lighting, dedicated task lighting at the major work zones, pendant lighting where appropriate, and a subtle accent layer for evenings.
+
+The right choice depends on the existing wiring, ceiling, cabinet layout, budget, and whether you own or rent the property.
 
 ## A Worked Example: 10 × 12-Foot Kitchen
 

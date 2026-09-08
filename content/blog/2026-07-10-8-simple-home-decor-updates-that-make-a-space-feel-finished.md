@@ -110,13 +110,23 @@ If the answer is no to all four, the item may be a candidate for storage or remo
 
 ## A Simple Room-Finishing Checklist
 
-Before buying new decor, walk through the room in this order: **1. Lighting:** Do I have useful light at more than one height? **2. Furniture and rug:** Does the rug relate to the furniture footprint?
+Before buying new decor, walk through the room in this order:
 
-**3. Walls:** Is the visual weight above the major furniture balanced? **4. Texture:** Are there enough differences in material and surface?
+**1. Lighting:** Do I have useful light at more than one height?
 
-**5. Repetition:** Do colors, finishes, shapes, or materials appear elsewhere in the room? **6. Greenery:** Would an organic shape improve an empty or overly hard area?
+**2. Furniture and rug:** Does the rug relate to the furniture footprint?
 
-**7. Hardware:** Are visible handles and fixtures consistent and in good condition? **8. Editing:** Is anything present simply because there was an empty surface to fill?
+**3. Walls:** Is the visual weight above the major furniture balanced?
+
+**4. Texture:** Are there enough differences in material and surface?
+
+**5. Repetition:** Do colors, finishes, shapes, or materials appear elsewhere in the room?
+
+**6. Greenery:** Would an organic shape improve an empty or overly hard area?
+
+**7. Hardware:** Are visible handles and fixtures consistent and in good condition?
+
+**8. Editing:** Is anything present simply because there was an empty surface to fill?
 
 This sequence is useful because it starts with the fundamentals. There is little value in buying decorative accessories when the room's lighting, rug scale, or furniture arrangement is still working against the overall design.
 
@@ -128,4 +138,6 @@ Start with lighting. Check the rug and furniture relationship. Give important wa
 
 The result should not look perfectly matched or staged. A successful room still has personality and signs of everyday life. It simply feels as though the major decisions belong together.
 
-And before buying another decorative item, remember the simplest finishing update of all: sometimes the room needs **less**, not more. *Disclaimer: Glimerz is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed for sites to earn advertising fees by advertising and linking to Amazon.com. When you click certain product links in this post and make a qualifying purchase, we may earn a small commission at no additional cost to you. We only recommend products we believe add genuine value to our readers.*
+And before buying another decorative item, remember the simplest finishing update of all: sometimes the room needs **less**, not more.
+
+*Disclaimer: Glimerz is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed for sites to earn advertising fees by advertising and linking to Amazon.com. When you click certain product links in this post and make a qualifying purchase, we may earn a small commission at no additional cost to you. We only recommend products we believe add genuine value to our readers.*

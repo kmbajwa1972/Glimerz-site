@@ -31,7 +31,13 @@ One important caveat: paint technology and product labels vary by manufacturer. 
 
 Paint sheen describes the reflectiveness of the dried coating. In general, flatter finishes reflect less light and tend to make surface imperfections less noticeable. Higher-sheen finishes reflect more light and are often easier to wipe clean, but that extra reflection can emphasize dents, uneven patches, sanding marks, or textured surfaces.
 
-Think of the decision as a trade-off rather than a ranking: **Lower sheen:** softer appearance and better visual camouflage of minor surface variation. **Higher sheen:** stronger reflection and, depending on the product, greater resistance to cleaning and everyday wear. The exact balance depends on the paint formulation, so do not assume that every satin or every matte product performs identically.
+Think of the decision as a trade-off rather than a ranking:
+
+**Lower sheen:** softer appearance and better visual camouflage of minor surface variation.
+
+**Higher sheen:** stronger reflection and, depending on the product, greater resistance to cleaning and everyday wear.
+
+The exact balance depends on the paint formulation, so do not assume that every satin or every matte product performs identically.
 
 ## Matte and Flat: Best When Appearance and Wall Condition Matter Most
 
@@ -131,9 +137,13 @@ A finish that looks perfect in the store can behave differently when a window cr
 
 ## Worked Example: Choosing a Finish for a Family Room
 
-Suppose a 14 × 18-foot family room has painted drywall, two children using the room daily, and a wall with a few visible old patches. You have three realistic options: **Option A: Matte.** The patches are less visually prominent, but you need to confirm the product's cleaning performance because the room receives frequent contact.
+Suppose a 14 × 18-foot family room has painted drywall, two children using the room daily, and a wall with a few visible old patches. You have three realistic options:
 
-**Option B: Eggshell.** This provides a moderate sheen and may be a good compromise if the wall is prepared reasonably well and the selected product has suitable cleaning performance. **Option C: Satin.** It may offer stronger cleaning performance, depending on the product, but the existing patches could become more visible under the room's side lighting.
+**Option A: Matte.** The patches are less visually prominent, but you need to confirm the product's cleaning performance because the room receives frequent contact.
+
+**Option B: Eggshell.** This provides a moderate sheen and may be a good compromise if the wall is prepared reasonably well and the selected product has suitable cleaning performance.
+
+**Option C: Satin.** It may offer stronger cleaning performance, depending on the product, but the existing patches could become more visible under the room's side lighting.
 
 In this situation, the decision is not simply "children's room = satin." The wall condition, lighting, cleaning requirements, and specific paint formulation all matter. Repairing the worst patches could make satin practical; choosing a high-quality washable eggshell could be the better balance if you want a softer appearance.
 
@@ -159,9 +169,17 @@ Choose the finish independently for each room based on traffic, moisture exposur
 
 ## Mistakes That Cost More Than They Should
 
-**Choosing sheen before checking the wall.** A reflective finish cannot hide poor preparation. **Assuming every brand uses the same terminology.** Read the product specifications rather than comparing only the word "satin" or "matte." **Using a high-sheen wall finish everywhere for easy cleaning.** More reflection is not automatically better for large wall surfaces.
+**Choosing sheen before checking the wall.** A reflective finish cannot hide poor preparation.
 
-**Treating bathroom paint as a replacement for ventilation.** Moisture management still matters. **Skipping the test patch.** Color and sheen both need to be evaluated under your home's actual lighting. **Buying gallons before deciding.** A small tester is much cheaper than discovering that the finish is wrong after painting an entire room.
+**Assuming every brand uses the same terminology.** Read the product specifications rather than comparing only the word "satin" or "matte."
+
+**Using a high-sheen wall finish everywhere for easy cleaning.** More reflection is not automatically better for large wall surfaces.
+
+**Treating bathroom paint as a replacement for ventilation.** Moisture management still matters.
+
+**Skipping the test patch.** Color and sheen both need to be evaluated under your home's actual lighting.
+
+**Buying gallons before deciding.** A small tester is much cheaper than discovering that the finish is wrong after painting an entire room.
 
 ## Paint Finish Shopping Checklist
 

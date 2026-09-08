@@ -100,11 +100,15 @@ Use the cart for categories that benefit from being moved as a group: pantry sup
 
 ## 7. Organize the Countertop by Frequency of Use
 
-A small kitchen can feel crowded even when the cabinets are well organized because too many daily-use items remain on the counter. Instead of trying to remove everything, divide countertop items into three groups: **Daily:** appliances or tools used almost every day can stay accessible if there is room.
+A small kitchen can feel crowded even when the cabinets are well organized because too many daily-use items remain on the counter. Instead of trying to remove everything, divide countertop items into three groups:
 
-**Weekly:** keep these within easy reach but preferably in a cabinet, drawer, or cart. **Occasional:** store these away from the main preparation area. This approach is more realistic than a rule that says the counter must always be empty. A coffee maker that is used every morning has a different storage requirement from a waffle maker used twice a year.
+**Daily:** appliances or tools used almost every day can stay accessible if there is room.
 
-For small counters, also protect a clear preparation zone. Being able to put down a cutting board or mixing bowl is often more valuable than displaying another accessory.
+**Weekly:** keep these within easy reach but preferably in a cabinet, drawer, or cart.
+
+**Occasional:** store these away from the main preparation area.
+
+This approach is more realistic than a rule that says the counter must always be empty. A coffee maker that is used every morning has a different storage requirement from a waffle maker used twice a year. For small counters, also protect a clear preparation zone. Being able to put down a cutting board or mixing bowl is often more valuable than displaying another accessory.
 
 ## 8. Use Vertical Dividers for Trays and Boards
 

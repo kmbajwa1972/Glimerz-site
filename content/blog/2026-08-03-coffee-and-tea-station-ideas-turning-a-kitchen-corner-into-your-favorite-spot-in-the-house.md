@@ -87,9 +87,13 @@ Once the practical layout works, add one or two visual elements. A serving tray 
 
 Keep the decorative layer proportional to the station. If the counter is only 24 inches wide, a large arrangement can consume the space needed for the kettle and mug. In a larger setup, repeat one material or finish—such as wood, ceramic, glass, or metal—so the different objects feel connected.
 
-The goal is not to copy a coffee shop. A useful home station should reflect the people using it. **10. Three Layouts That Work in Different Kitchens** **Compact counter station:** Use a tray approximately the width of the available equipment, place the coffee or tea appliance at the back, and keep mugs and daily supplies in one small vertical organizer. This works when counter space is limited.
+The goal is not to copy a coffee shop. A useful home station should reflect the people using it. **10. Three Layouts That Work in Different Kitchens**
 
-**Dedicated counter corner:** Use a wider section of counter for the appliance, a separate tray for beverage additions, and a shelf above for mugs. This creates a clear visual zone without requiring a separate piece of furniture. **Mobile station:** Use a narrow rolling cart when counter space is unavailable or the station needs to move. Keep the heaviest appliance on the lowest suitable stable surface and reserve the upper surface for the equipment used during preparation.
+**Compact counter station:** Use a tray approximately the width of the available equipment, place the coffee or tea appliance at the back, and keep mugs and daily supplies in one small vertical organizer. This works when counter space is limited.
+
+**Dedicated counter corner:** Use a wider section of counter for the appliance, a separate tray for beverage additions, and a shelf above for mugs. This creates a clear visual zone without requiring a separate piece of furniture.
+
+**Mobile station:** Use a narrow rolling cart when counter space is unavailable or the station needs to move. Keep the heaviest appliance on the lowest suitable stable surface and reserve the upper surface for the equipment used during preparation.
 
 **A Worked Example: A 36-Inch Counter** Imagine a 36-inch-wide counter section with cabinets above it. A coffee maker is 10 inches wide and 12 inches deep. Instead of filling the entire counter with accessories, place the machine toward one side, leaving several inches of clear working space beside it. Use a compact tray for sweeteners and a spoon, then move mugs onto a shelf above.
 

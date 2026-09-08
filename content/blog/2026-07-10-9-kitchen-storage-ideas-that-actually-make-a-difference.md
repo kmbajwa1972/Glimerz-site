@@ -35,7 +35,9 @@ Use drawer dividers for items that are:
 - relatively flat or short enough to fit comfortably
 - easier to retrieve when separated
 
-Do not force tall bottles, large appliances, or bulky cookware into a utensil drawer simply because there is empty space. **Practical tip:** Group utensils according to how you actually use them. A "baking" section or "everyday cooking" section may be more useful than arranging everything by object type.
+Do not force tall bottles, large appliances, or bulky cookware into a utensil drawer simply because there is empty space.
+
+**Practical tip:** Group utensils according to how you actually use them. A "baking" section or "everyday cooking" section may be more useful than arranging everything by object type.
 
 ## 2. Stackable Containers for Pantry Staples
 
@@ -136,9 +138,17 @@ This table is intentionally simple: **solve the actual bottleneck first.**
 
 ## A 10-Minute Kitchen Storage Audit
 
-Before ordering anything, open every drawer and cabinet and identify the three spaces that cause the most frustration. For each one, write down: **What is the problem?** For example, "small utensils get mixed together." **What is stored there?** List the actual items rather than estimating.
+Before ordering anything, open every drawer and cabinet and identify the three spaces that cause the most frustration. For each one, write down:
 
-**How often are they used?** Everyday items should generally be easier to reach than occasional items. **What space is available?** Measure width, depth, height, and obstructions. **What would make retrieval easier?** The answer might be an organizer, but it might also be moving the items to a different cabinet.
+**What is the problem?** For example, "small utensils get mixed together."
+
+**What is stored there?** List the actual items rather than estimating.
+
+**How often are they used?** Everyday items should generally be easier to reach than occasional items.
+
+**What space is available?** Measure width, depth, height, and obstructions.
+
+**What would make retrieval easier?** The answer might be an organizer, but it might also be moving the items to a different cabinet.
 
 That final question prevents unnecessary purchases. Sometimes the best storage improvement costs nothing.
 
@@ -178,9 +188,15 @@ Sometimes moving cookware, grouping pantry staples differently, or removing rare
 
 ## What to Buy First on a Limited Budget
 
-If your budget is small, start with the storage problem that affects you every day. **Low-cost improvement:** drawer dividers, shelf risers, or a carefully selected basket. **Medium-cost improvement:** containers, a lazy Susan, or a cabinet-door organizer where measurements support it.
+If your budget is small, start with the storage problem that affects you every day.
 
-**Larger improvement:** pull-out pantry shelves or a professionally installed storage system when the cabinet layout justifies the expense. Do not buy nine solutions simply because the article contains nine ideas. One organizer that solves a daily frustration is more valuable than a collection of products that creates new clutter.
+**Low-cost improvement:** drawer dividers, shelf risers, or a carefully selected basket.
+
+**Medium-cost improvement:** containers, a lazy Susan, or a cabinet-door organizer where measurements support it.
+
+**Larger improvement:** pull-out pantry shelves or a professionally installed storage system when the cabinet layout justifies the expense.
+
+Do not buy nine solutions simply because the article contains nine ideas. One organizer that solves a daily frustration is more valuable than a collection of products that creates new clutter.
 
 ## Kitchen Storage Checklist
 

@@ -30,7 +30,13 @@ Before buying anything, spend 15 minutes looking at the kitchen from the doorway
 
 ## Start With a Kitchen Refresh Audit
 
-Make three lists: **Keep:** finishes, appliances, cabinets, or accessories that still look good and function well. **Improve:** areas that work but could be better, such as a dark countertop, worn cabinet hardware, or an empty wall. **Replace:** items that are damaged, incompatible, leaking, unsafe, or too worn to justify cosmetic treatment.
+Make three lists:
+
+**Keep:** finishes, appliances, cabinets, or accessories that still look good and function well.
+
+**Improve:** areas that work but could be better, such as a dark countertop, worn cabinet hardware, or an empty wall.
+
+**Replace:** items that are damaged, incompatible, leaking, unsafe, or too worn to justify cosmetic treatment.
 
 This distinction is important. Paint and accessories can improve appearance, but they should not be used to disguise a plumbing leak, damaged electrical work, loose cabinetry, or a deteriorating countertop. Once the functional issues are addressed, choose **one or two visual directions**—for example warm wood and brushed metal, or white surfaces with green accents. A limited direction helps the new pieces look intentional rather than accumulated.
 
@@ -148,9 +154,19 @@ Install or set up the lighting if the product and installation method are approp
 
 ## How to Prioritize Your Budget
 
-A useful order is: **First: safety and repairs.** Fix leaks, damaged outlets, loose hardware, broken hinges, and other functional problems. **Second: lighting and workflow.** Improve the places where poor lighting or awkward organization affects daily use. **Third: high-visibility fixtures.** Consider a faucet or other prominent hardware when the existing item is compatible with the planned upgrade.
+A useful order is:
 
-**Fourth: surfaces.** Refresh the backsplash, paint suitable areas, or update other visible surfaces when preparation and material compatibility are understood. **Fifth: styling.** Add shelves, textiles, plants, trays, artwork, or accessories after the functional improvements are complete. This order prevents a common mistake: spending the entire budget on decorative items while the kitchen's most important problems remain unchanged.
+**First: safety and repairs.** Fix leaks, damaged outlets, loose hardware, broken hinges, and other functional problems.
+
+**Second: lighting and workflow.** Improve the places where poor lighting or awkward organization affects daily use.
+
+**Third: high-visibility fixtures.** Consider a faucet or other prominent hardware when the existing item is compatible with the planned upgrade.
+
+**Fourth: surfaces.** Refresh the backsplash, paint suitable areas, or update other visible surfaces when preparation and material compatibility are understood.
+
+**Fifth: styling.** Add shelves, textiles, plants, trays, artwork, or accessories after the functional improvements are complete.
+
+This order prevents a common mistake: spending the entire budget on decorative items while the kitchen's most important problems remain unchanged.
 
 ## Three Refresh Styles to Consider
 
@@ -168,11 +184,17 @@ Keep the permanent finishes relatively calm and introduce one stronger color thr
 
 ## Mistakes That Make a Kitchen Refresh Look More Expensive Than It Is
 
-**Changing too many finishes at once:** A new faucet, bold backsplash, colorful appliances, open shelving, and several competing metals can make a small kitchen visually busy. **Ignoring existing finishes:** New accessories should work with the cabinets, countertop, flooring, and appliances already in the room.
+**Changing too many finishes at once:** A new faucet, bold backsplash, colorful appliances, open shelving, and several competing metals can make a small kitchen visually busy.
 
-**Buying before measuring:** Faucets, shelves, lighting, and storage products all have physical constraints. Measure first. **Styling every surface:** A kitchen needs clear work areas. Empty space is part of good design.
+**Ignoring existing finishes:** New accessories should work with the cabinets, countertop, flooring, and appliances already in the room.
 
-**Using temporary products without checking limitations:** Peel-and-stick materials and adhesive accessories vary in their suitability for heat, moisture, cleaning, and different wall surfaces. **Treating appearance as a substitute for maintenance:** Deep cleaning, replacing damaged caulk, tightening loose hardware, and correcting small functional problems can make an existing kitchen look better before any decorative purchase.
+**Buying before measuring:** Faucets, shelves, lighting, and storage products all have physical constraints. Measure first.
+
+**Styling every surface:** A kitchen needs clear work areas. Empty space is part of good design.
+
+**Using temporary products without checking limitations:** Peel-and-stick materials and adhesive accessories vary in their suitability for heat, moisture, cleaning, and different wall surfaces.
+
+**Treating appearance as a substitute for maintenance:** Deep cleaning, replacing damaged caulk, tightening loose hardware, and correcting small functional problems can make an existing kitchen look better before any decorative purchase.
 
 ## A Simple Kitchen Refresh Checklist
 

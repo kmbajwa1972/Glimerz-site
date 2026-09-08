@@ -111,13 +111,21 @@ If your yard is mainly viewed from inside, pay attention to the sightline from t
 
 ## A Practical Example: Repairing a Patchy 500-Square-Foot Lawn
 
-Imagine a small backyard with a healthy central lawn but three recurring problems: a bare strip beside the patio, a thin area beneath a tree, and uneven watering from a single sprinkler. Instead of treating the whole lawn, start with the causes. **Step 1: Check the soil and grass.** Identify the existing turf and determine whether the bare areas have compacted soil or another obvious problem.
+Imagine a small backyard with a healthy central lawn but three recurring problems: a bare strip beside the patio, a thin area beneath a tree, and uneven watering from a single sprinkler. Instead of treating the whole lawn, start with the causes.
 
-**Step 2: Fix the watering pattern.** Place containers across the lawn and test the sprinkler. Adjust its position until coverage is more consistent. **Step 3: Change the high-traffic strip.** If people regularly walk beside the patio, consider a narrow stepping path or edging solution instead of repeatedly reseeding it.
+**Step 1: Check the soil and grass.** Identify the existing turf and determine whether the bare areas have compacted soil or another obvious problem.
 
-**Step 4: Rethink the shaded area.** If the tree canopy prevents sufficient light, choose a shade-appropriate landscape treatment rather than expecting the same turf performance as the sunny lawn. **Step 5: Repair only the areas that need it.** Prepare the soil, apply suitable seed, and follow the seed instructions for establishment.
+**Step 2: Fix the watering pattern.** Place containers across the lawn and test the sprinkler. Adjust its position until coverage is more consistent.
 
-**Step 6: Adjust mowing.** Set the mower to the recommended height for the grass and avoid removing too much blade at once. This approach costs less than automatically buying enough products to treat the entire yard, and it addresses the reasons the lawn became patchy in the first place.
+**Step 3: Change the high-traffic strip.** If people regularly walk beside the patio, consider a narrow stepping path or edging solution instead of repeatedly reseeding it.
+
+**Step 4: Rethink the shaded area.** If the tree canopy prevents sufficient light, choose a shade-appropriate landscape treatment rather than expecting the same turf performance as the sunny lawn.
+
+**Step 5: Repair only the areas that need it.** Prepare the soil, apply suitable seed, and follow the seed instructions for establishment.
+
+**Step 6: Adjust mowing.** Set the mower to the recommended height for the grass and avoid removing too much blade at once.
+
+This approach costs less than automatically buying enough products to treat the entire yard, and it addresses the reasons the lawn became patchy in the first place.
 
 ## A Simple Seasonal Lawn Checklist
 

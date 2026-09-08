@@ -97,11 +97,21 @@ If the bookshelf holds paperwork, electronics, or cables, use baskets or closed 
 
 If the shelves sit in a dark corner, lighting can make the arrangement easier to see. Small LED shelf lights, rechargeable lights, or a nearby floor lamp can work depending on the bookcase design. Position lighting so it illuminates the shelves without creating harsh glare on framed photographs or television screens. Follow the manufacturer's installation instructions and keep electrical components away from water and anything that could overheat.
 
-Lighting should support the room rather than turn the bookcase into a stage set. A subtle glow is often enough. **Common Bookshelf Styling Mistakes** **Filling every shelf equally.** Equal density can make a large bookcase look mechanically arranged. Vary the density while preserving useful storage.
+Lighting should support the room rather than turn the bookcase into a stage set. A subtle glow is often enough. **Common Bookshelf Styling Mistakes**
 
-**Buying accessories before assessing the books.** The books already determine much of the shelf's color, texture, and visual weight. **Using too many tiny objects.** Small accessories can disappear individually but become visual noise when repeated across every shelf. **Ignoring scale.** A tiny object on a huge shelf can look accidental, while an oversized object can make the compartment feel cramped.
+**Filling every shelf equally.** Equal density can make a large bookcase look mechanically arranged. Vary the density while preserving useful storage.
 
-**Forcing every shelf to match.** Repetition helps, but identical compositions can make the whole unit feel staged. **Prioritizing styling over access.** If you cannot remove a book without rearranging three objects, the display needs editing. **Overwatering shelf plants.** Protect wood and books from water and choose plants based on the actual light available.
+**Buying accessories before assessing the books.** The books already determine much of the shelf's color, texture, and visual weight.
+
+**Using too many tiny objects.** Small accessories can disappear individually but become visual noise when repeated across every shelf.
+
+**Ignoring scale.** A tiny object on a huge shelf can look accidental, while an oversized object can make the compartment feel cramped.
+
+**Forcing every shelf to match.** Repetition helps, but identical compositions can make the whole unit feel staged.
+
+**Prioritizing styling over access.** If you cannot remove a book without rearranging three objects, the display needs editing.
+
+**Overwatering shelf plants.** Protect wood and books from water and choose plants based on the actual light available.
 
 **A 10-Minute Bookshelf Reset** When your shelf starts looking cluttered, you do not need to redesign it from scratch.
 

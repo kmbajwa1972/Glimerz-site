@@ -33,7 +33,13 @@ Walk through the house with a notebook or your phone and record what is actually
 - curtains or rugs that are the wrong size
 - surfaces that are difficult to keep clean
 
-Then divide the list into three groups: **Fix now:** problems that affect daily use, safety, maintenance, or a clearly damaged surface. **Improve next:** changes that will make the room more functional or cohesive. **Cosmetic later:** accessories and decorative purchases that are nice to have but do not solve an important problem.
+Then divide the list into three groups:
+
+**Fix now:** problems that affect daily use, safety, maintenance, or a clearly damaged surface.
+
+**Improve next:** changes that will make the room more functional or cohesive.
+
+**Cosmetic later:** accessories and decorative purchases that are nice to have but do not solve an important problem.
 
 This simple ranking prevents one of the most common budget mistakes: spending the available money on decoration before addressing the room's basic function.
 
@@ -65,11 +71,15 @@ This keeps the renovation focused instead of turning every surface into a projec
 
 ## 4. Improve Lighting Before Buying More Decor
 
-A room can contain attractive furniture and still feel unfinished if the lighting is weak or one-dimensional. Instead of relying entirely on a central ceiling fixture, think in layers: **General lighting** provides overall illumination. **Task lighting** helps with activities such as reading, cooking, or working.
+A room can contain attractive furniture and still feel unfinished if the lighting is weak or one-dimensional. Instead of relying entirely on a central ceiling fixture, think in layers:
 
-**Accent lighting** highlights artwork, shelving, architectural features, or a decorative corner. Before buying another lamp, identify where the room is actually too dark. Then choose the light source for that location.
+**General lighting** provides overall illumination.
 
-For a budget renovation, replacing an outdated shade, adding a floor or table lamp, or improving a poorly lit work area can be more useful than buying several decorative accessories.
+**Task lighting** helps with activities such as reading, cooking, or working.
+
+**Accent lighting** highlights artwork, shelving, architectural features, or a decorative corner.
+
+Before buying another lamp, identify where the room is actually too dark. Then choose the light source for that location. For a budget renovation, replacing an outdated shade, adding a floor or table lamp, or improving a poorly lit work area can be more useful than buying several decorative accessories.
 
 ## 5. Make Storage Part of the Renovation
 
@@ -151,11 +161,21 @@ One well-chosen improvement can have more impact than ten small purchases.
 
 ## A Practical $500 Room Refresh Example
 
-Suppose you have a modest $500 budget for a living-room refresh and the furniture is still usable. Instead of buying a new sofa, you could prioritize the room like this: **$150 — lighting:** one quality floor lamp and a suitable bulb or shade upgrade. **$120 — rug contribution:** choose a correctly sized rug or put the money toward the best rug you can afford after measuring the seating area.
+Suppose you have a modest $500 budget for a living-room refresh and the furniture is still usable. Instead of buying a new sofa, you could prioritize the room like this:
 
-**$80 — paint and preparation:** paint plus filler, rollers, brushes, and preparation supplies. **$75 — textiles:** a small number of coordinated cushion covers or a throw. **$50 — storage:** baskets or another solution for a specific clutter problem.
+**$150 — lighting:** one quality floor lamp and a suitable bulb or shade upgrade.
 
-**$25 — finishing detail:** one piece of artwork, greenery, or another meaningful accent. The exact prices will vary, but the principle is important: **spend the largest share where the room has its biggest problem.**
+**$120 — rug contribution:** choose a correctly sized rug or put the money toward the best rug you can afford after measuring the seating area.
+
+**$80 — paint and preparation:** paint plus filler, rollers, brushes, and preparation supplies.
+
+**$75 — textiles:** a small number of coordinated cushion covers or a throw.
+
+**$50 — storage:** baskets or another solution for a specific clutter problem.
+
+**$25 — finishing detail:** one piece of artwork, greenery, or another meaningful accent.
+
+The exact prices will vary, but the principle is important: **spend the largest share where the room has its biggest problem.**
 
 ## A Room-by-Room Priority Guide
 

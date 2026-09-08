@@ -76,7 +76,9 @@ Buy for the problem you are solving, not simply because a product looks good in 
 
 ## 6. Treat Lighting as Part of the Layout
 
-One ceiling fixture rarely needs to do every lighting job in a room. Think in layers based on activities. **Ambient lighting** provides general illumination. **Task lighting** helps with specific activities such as reading, cooking, working, or applying makeup. **Accent lighting** can draw attention to artwork, shelving, or architectural details.
+One ceiling fixture rarely needs to do every lighting job in a room. Think in layers based on activities.
+
+**Ambient lighting** provides general illumination. **Task lighting** helps with specific activities such as reading, cooking, working, or applying makeup. **Accent lighting** can draw attention to artwork, shelving, or architectural details.
 
 Before buying lamps, identify where people actually sit and work. A reading chair may need a nearby floor or table lamp. A desk needs light positioned so it does not create distracting shadows on the work surface. A console may benefit from a smaller lamp that also provides a visual anchor.
 
@@ -123,11 +125,21 @@ Do not feel pressure to finish every wall immediately. Living in the space for a
 
 ## A Worked Example: Refreshing a 1,200-Square-Foot Home
 
-Imagine a three-bedroom home with warm medium-tone flooring, white walls, a gray sofa, stainless kitchen appliances, and existing black light fixtures. The owner wants a more modern and comfortable look without replacing the major furniture. **Step 1: Keep the fixed elements.** The flooring, appliances, sofa, and major fixtures remain.
+Imagine a three-bedroom home with warm medium-tone flooring, white walls, a gray sofa, stainless kitchen appliances, and existing black light fixtures. The owner wants a more modern and comfortable look without replacing the major furniture.
 
-**Step 2: Choose the visual language.** Warm neutral + natural wood + black accents + muted green. **Step 3: Connect the rooms.** Use black in selected frames and lamps, repeat natural wood through small furniture or trays, and introduce muted green through artwork, cushions, and suitable plants. **Step 4: Fix the living-room layout.** Keep a clear route from the entrance toward the main hallway and position the seating around the room's focal point rather than pushing every piece against a wall automatically.
+**Step 1: Keep the fixed elements.** The flooring, appliances, sofa, and major fixtures remain.
 
-**Step 5: Layer lighting.** Keep the ceiling fixture, then add a floor lamp beside the reading seat and a table lamp on the console or side table. **Step 6: Edit the accessories.** Use one substantial decorative grouping on the coffee table rather than covering the entire surface. **Step 7: Repeat the system.** Carry the same black, wood, and muted-green relationships into the bedroom and entryway in smaller amounts.
+**Step 2: Choose the visual language.** Warm neutral + natural wood + black accents + muted green.
+
+**Step 3: Connect the rooms.** Use black in selected frames and lamps, repeat natural wood through small furniture or trays, and introduce muted green through artwork, cushions, and suitable plants.
+
+**Step 4: Fix the living-room layout.** Keep a clear route from the entrance toward the main hallway and position the seating around the room's focal point rather than pushing every piece against a wall automatically.
+
+**Step 5: Layer lighting.** Keep the ceiling fixture, then add a floor lamp beside the reading seat and a table lamp on the console or side table.
+
+**Step 6: Edit the accessories.** Use one substantial decorative grouping on the coffee table rather than covering the entire surface.
+
+**Step 7: Repeat the system.** Carry the same black, wood, and muted-green relationships into the bedroom and entryway in smaller amounts.
 
 The important point is that the home becomes coordinated without buying a complete new furniture set.
 
@@ -161,9 +173,17 @@ This order keeps the project focused on the parts of the home you interact with 
 
 ## Common Whole-Home Decorating Mistakes
 
-**Buying everything at once.** A full-house shopping spree makes it difficult to notice what is actually missing. **Starting with accessories.** Small objects cannot compensate for poor furniture scale or inadequate lighting. **Choosing colors without checking fixed finishes.** Flooring, countertops, cabinets, and upholstery influence how new colors appear.
+**Buying everything at once.** A full-house shopping spree makes it difficult to notice what is actually missing.
 
-**Making every room identical.** Coordination is different from repetition without variation. **Ignoring storage.** Clutter can undermine an otherwise well-designed room. **Using trends as the entire design plan.** A trend can be one ingredient; it should not determine every permanent purchase.
+**Starting with accessories.** Small objects cannot compensate for poor furniture scale or inadequate lighting.
+
+**Choosing colors without checking fixed finishes.** Flooring, countertops, cabinets, and upholstery influence how new colors appear.
+
+**Making every room identical.** Coordination is different from repetition without variation.
+
+**Ignoring storage.** Clutter can undermine an otherwise well-designed room.
+
+**Using trends as the entire design plan.** A trend can be one ingredient; it should not determine every permanent purchase.
 
 **Filling every empty wall.** Negative space is useful. Some walls can remain intentionally quiet.
 

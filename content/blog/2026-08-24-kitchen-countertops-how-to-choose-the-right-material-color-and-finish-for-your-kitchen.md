@@ -113,9 +113,17 @@ A well-selected laminate can look intentional when its color, edge detail, backs
 
 ## Choose the Color From the Whole Palette
 
-Instead of choosing “white,” “gray,” or “black” in isolation, identify the kitchen's undertone and contrast level. **Light + warm:** cream, beige, warm white, and soft stone patterns can reinforce the welcoming character. **Light + cool:** crisp white, cool gray, and restrained stone patterns may support a cleaner contemporary look.
+Instead of choosing “white,” “gray,” or “black” in isolation, identify the kitchen's undertone and contrast level.
 
-**Dark cabinetry:** a lighter countertop can provide contrast, while a darker surface creates a more enveloping, dramatic room. **Natural wood cabinetry:** warm neutrals can coordinate easily, while a cooler stone can provide deliberate contrast. Bring cabinet, backsplash, flooring, and paint samples together. A countertop that looks neutral on a white showroom wall can look noticeably warmer or cooler beside your actual cabinets.
+**Light + warm:** cream, beige, warm white, and soft stone patterns can reinforce the welcoming character.
+
+**Light + cool:** crisp white, cool gray, and restrained stone patterns may support a cleaner contemporary look.
+
+**Dark cabinetry:** a lighter countertop can provide contrast, while a darker surface creates a more enveloping, dramatic room.
+
+**Natural wood cabinetry:** warm neutrals can coordinate easily, while a cooler stone can provide deliberate contrast.
+
+Bring cabinet, backsplash, flooring, and paint samples together. A countertop that looks neutral on a white showroom wall can look noticeably warmer or cooler beside your actual cabinets.
 
 ## Always Test Samples in Your Kitchen
 
@@ -130,9 +138,15 @@ If possible, use a larger sample or view the actual slab. A small sample can hid
 
 ## Choose the Finish as Carefully as the Color
 
-The finish changes reflection, texture, and sometimes how visible marks appear. **Polished:** more reflective and often visually crisp. It can emphasize color and pattern. **Honed/matte:** less reflective and generally softer in appearance. It can suit relaxed contemporary or traditional kitchens.
+The finish changes reflection, texture, and sometimes how visible marks appear.
 
-**Textured or leathered:** adds tactile character where the material offers that option, but the texture may affect cleaning and maintenance. The same color can look substantially different in different finishes, so compare finish and color together rather than choosing them separately.
+**Polished:** more reflective and often visually crisp. It can emphasize color and pattern.
+
+**Honed/matte:** less reflective and generally softer in appearance. It can suit relaxed contemporary or traditional kitchens.
+
+**Textured or leathered:** adds tactile character where the material offers that option, but the texture may affect cleaning and maintenance.
+
+The same color can look substantially different in different finishes, so compare finish and color together rather than choosing them separately.
 
 ## Coordinate the Countertop With the Backsplash
 

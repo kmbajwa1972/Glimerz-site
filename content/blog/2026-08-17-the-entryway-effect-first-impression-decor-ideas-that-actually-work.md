@@ -146,21 +146,41 @@ The important point is the empty space. The console does not need to fill the wa
 
 ## What to Prioritize in a Small Entryway
 
-If your budget or space is limited, use this order: **1. Clear circulation:** solve the walkway problem first. **2. Landing zone:** give keys, mail, and bags a home.
+If your budget or space is limited, use this order:
 
-**3. Outerwear storage:** install only as much as the household needs. **4. Lighting:** improve visibility and atmosphere.
+**1. Clear circulation:** solve the walkway problem first.
 
-**5. Rug:** choose one that fits the door clearance and cleaning demands. **6. Mirror or artwork:** add proportion and personality.
+**2. Landing zone:** give keys, mail, and bags a home.
 
-**7. Decorative extras:** add these only after the practical problems are solved. This order also prevents a common mistake: spending the entire budget on a beautiful console while still having nowhere to put shoes or coats.
+**3. Outerwear storage:** install only as much as the household needs.
+
+**4. Lighting:** improve visibility and atmosphere.
+
+**5. Rug:** choose one that fits the door clearance and cleaning demands.
+
+**6. Mirror or artwork:** add proportion and personality.
+
+**7. Decorative extras:** add these only after the practical problems are solved.
+
+This order also prevents a common mistake: spending the entire budget on a beautiful console while still having nowhere to put shoes or coats.
 
 ## Common Entryway Mistakes
 
-**Buying furniture before measuring.** A console that looks narrow online can still make a passage uncomfortable. **Ignoring door swing.** Always test the door with the proposed rug or furniture footprint. **Overloading hooks.** More storage capacity is not automatically better if everything remains visible and tangled.
+**Buying furniture before measuring.** A console that looks narrow online can still make a passage uncomfortable.
 
-**Using a thick rug in a tight doorway.** Check the clearance before ordering. **Installing a mirror at an arbitrary size.** Relate its width to the furniture and wall rather than choosing solely by appearance. **Adding too many decorative objects.** The entry already contains bags, shoes, coats, and keys; decoration should leave room for those real-life items.
+**Ignoring door swing.** Always test the door with the proposed rug or furniture footprint.
 
-**Using scent as the main design feature.** Fragrance is optional and personal. If used, keep it subtle and avoid assuming every guest will enjoy the same scent. **Treating the entryway as a showroom.** A useful entrance will look lived-in at times. The goal is controlled clutter, not a space that cannot handle daily life.
+**Overloading hooks.** More storage capacity is not automatically better if everything remains visible and tangled.
+
+**Using a thick rug in a tight doorway.** Check the clearance before ordering.
+
+**Installing a mirror at an arbitrary size.** Relate its width to the furniture and wall rather than choosing solely by appearance.
+
+**Adding too many decorative objects.** The entry already contains bags, shoes, coats, and keys; decoration should leave room for those real-life items.
+
+**Using scent as the main design feature.** Fragrance is optional and personal. If used, keep it subtle and avoid assuming every guest will enjoy the same scent.
+
+**Treating the entryway as a showroom.** A useful entrance will look lived-in at times. The goal is controlled clutter, not a space that cannot handle daily life.
 
 ## Entryway Shopping Checklist
 
@@ -188,4 +208,6 @@ A well-designed entryway does not need a large budget or a long list of accessor
 
 Measure first, test furniture footprints with tape, protect the door swing, and decide where shoes, coats, bags, keys, and mail will go before choosing decorative pieces. Once those decisions are made, a console, mirror, rug, plant, or small artwork can add personality without turning the entrance into another clutter zone.
 
-The best entryway is not the one that looks untouched. It is the one that makes coming home, leaving the house, and resetting the space at the end of the day a little easier. **Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the entryway decisions discussed above and do not determine our editorial recommendations.
+The best entryway is not the one that looks untouched. It is the one that makes coming home, leaving the house, and resetting the space at the end of the day a little easier.
+
+**Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the entryway decisions discussed above and do not determine our editorial recommendations.

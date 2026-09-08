@@ -176,9 +176,15 @@ Always test samples on the actual wall. Observe them in daylight and under the r
 
 ## 10. Upgrade Lighting in Layers
 
-Builder lighting is often adequate for basic illumination but not necessarily ideal for every activity or evening atmosphere. Think about three functions: **Ambient lighting** provides general illumination. **Task lighting** puts useful light where an activity takes place, such as a kitchen worktop, desk, reading chair, or bathroom vanity.
+Builder lighting is often adequate for basic illumination but not necessarily ideal for every activity or evening atmosphere. Think about three functions:
 
-**Accent lighting** can emphasize artwork, shelving, architectural features, or a particular corner. Dimmers can be useful where compatible with the lighting system, but check bulb, fixture, switch, and electrical compatibility before installation. A simple lighting plan is more useful than buying attractive fixtures one by one. Mark where light is needed first, then choose fixtures that suit those positions.
+**Ambient lighting** provides general illumination.
+
+**Task lighting** puts useful light where an activity takes place, such as a kitchen worktop, desk, reading chair, or bathroom vanity.
+
+**Accent lighting** can emphasize artwork, shelving, architectural features, or a particular corner.
+
+Dimmers can be useful where compatible with the lighting system, but check bulb, fixture, switch, and electrical compatibility before installation. A simple lighting plan is more useful than buying attractive fixtures one by one. Mark where light is needed first, then choose fixtures that suit those positions.
 
 ## 11. Do the Outside After the House's Basic Problems Are Solved
 

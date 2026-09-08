@@ -123,9 +123,11 @@ For artwork, check the center of the composition from the main viewing position.
 
 ### Example 1: Small Entryway
 
-**Space:** 48-inch-wide wall with a shallow console. Use one compact lamp, a small tray, and one vase. Above the console, choose a mirror or artwork that is noticeably narrower than the wall but substantial enough to relate to the furniture.
+**Space:** 48-inch-wide wall with a shallow console.
 
-Keep the surface mostly open so keys and mail do not immediately turn into visual clutter. **Priority:** function first, decoration second.
+Use one compact lamp, a small tray, and one vase. Above the console, choose a mirror or artwork that is noticeably narrower than the wall but substantial enough to relate to the furniture. Keep the surface mostly open so keys and mail do not immediately turn into visual clutter.
+
+**Priority:** function first, decoration second.
 
 ### Example 2: 72-Inch Living-Room Console
 
@@ -137,7 +139,9 @@ Use a lamp on the left, a tray with two small objects near the center, and a med
 
 Start with the sofa width and the usable console surface. If the furniture is visually formal, two matching lamps can create symmetry. If the room is more relaxed, use one lamp and a tall object to create asymmetry.
 
-Keep accessories stable and compact enough that they do not interfere with people sitting down or moving around the sofa. **Priority:** proportion, stability, and the relationship between sofa and console.
+Keep accessories stable and compact enough that they do not interfere with people sitting down or moving around the sofa.
+
+**Priority:** proportion, stability, and the relationship between sofa and console.
 
 ## What to Put on a Console — and What to Skip
 
@@ -158,11 +162,23 @@ If you need a starting point, try: **One focal point + one light source + one ta
 
 ## Common Console Styling Mistakes
 
-**Using a focal point that is too small.** It can make a wide console look disconnected from the wall above it. **Filling the entire tabletop.** More accessories do not automatically create a richer composition. **Ignoring console depth.** Large lamps and vases can quickly consume a shallow surface.
+**Using a focal point that is too small.** It can make a wide console look disconnected from the wall above it.
 
-**Using identical heights.** A flat row lacks visual hierarchy. **Adding too many colors.** If the room already has several strong colors, use material contrast instead. **Copying a symmetrical arrangement into an asymmetrical room.** Let the architecture and furniture guide the composition.
+**Filling the entire tabletop.** More accessories do not automatically create a richer composition.
 
-**Ignoring everyday clutter.** An entryway console needs a realistic place for keys, mail, and other objects. **Choosing greenery without considering light or maintenance.** Decorative appeal does not replace the plant's actual requirements. **Forgetting the walkway.** Never let styling reduce a practical circulation route unnecessarily.
+**Ignoring console depth.** Large lamps and vases can quickly consume a shallow surface.
+
+**Using identical heights.** A flat row lacks visual hierarchy.
+
+**Adding too many colors.** If the room already has several strong colors, use material contrast instead.
+
+**Copying a symmetrical arrangement into an asymmetrical room.** Let the architecture and furniture guide the composition.
+
+**Ignoring everyday clutter.** An entryway console needs a realistic place for keys, mail, and other objects.
+
+**Choosing greenery without considering light or maintenance.** Decorative appeal does not replace the plant's actual requirements.
+
+**Forgetting the walkway.** Never let styling reduce a practical circulation route unnecessarily.
 
 ## Console Table Styling Checklist
 
@@ -187,4 +203,6 @@ Measure the furniture and surrounding space first. Establish the focal point. Ad
 
 Then stop and look at the arrangement from across the room. If it feels crowded, remove something. If it feels disconnected, repeat one element from the surrounding room. If it looks good but does not function in daily life, change the arrangement.
 
-The best console styling is attractive enough to feel intentional and practical enough to survive ordinary life. **Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the styling and organization ideas discussed above and do not determine our editorial recommendations.
+The best console styling is attractive enough to feel intentional and practical enough to survive ordinary life.
+
+**Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the styling and organization ideas discussed above and do not determine our editorial recommendations.

@@ -88,7 +88,13 @@ Only after the larger layers are working should you add smaller tactile details 
 
 ## Use a Simple Three-Layer Texture Framework
 
-For most rooms, a useful starting point is to think about three levels: **Base texture:** the floor, walls, major furniture, or large rug. **Middle texture:** curtains, upholstery, bedding, larger cushions, and throws. **Fine texture:** baskets, ceramics, books, plants, small accessories, and artwork frames.
+For most rooms, a useful starting point is to think about three levels:
+
+**Base texture:** the floor, walls, major furniture, or large rug.
+
+**Middle texture:** curtains, upholstery, bedding, larger cushions, and throws.
+
+**Fine texture:** baskets, ceramics, books, plants, small accessories, and artwork frames.
 
 The proportions do not need to be exact. The framework simply prevents you from filling every available surface with small decorative objects while ignoring the major surfaces of the room.
 
@@ -149,11 +155,19 @@ Use texture carefully. A woven rug, fabric chair, wood accessory, and soft curta
 
 Consider a 12-by-14-foot living room with a beige sofa, smooth painted walls, wood-look flooring, simple blinds, and a small coffee table. The room does not need new furniture. Start with the largest missing layer.
 
-**Step 1 — Add the rug.** Choose a rug large enough for the seating arrangement. A low- or medium-texture woven rug introduces contrast with the hard floor. **Step 2 — Improve the windows.** Replace the visually flat blinds with simple textured curtain panels if the room needs softness and the installation is practical.
+**Step 1 — Add the rug.** Choose a rug large enough for the seating arrangement. A low- or medium-texture woven rug introduces contrast with the hard floor.
 
-**Step 3 — Layer the sofa.** Use two or three cushion covers with different surface qualities—perhaps a smooth cover, a nubby boucle, and a subtle woven fabric. Keep their colors within the existing palette. **Step 4 — Add one throw.** Place a chunky knit or similarly tactile throw over one side of the sofa rather than covering the entire piece.
+**Step 2 — Improve the windows.** Replace the visually flat blinds with simple textured curtain panels if the room needs softness and the installation is practical.
 
-**Step 5 — Add one natural material.** A woven basket beside the sofa can provide storage while repeating the rug's material language. **Step 6 — Stop and evaluate.** If the room now feels balanced, do not add more objects simply because empty space remains. The important change is not any single product. It is the progression from hard and smooth surfaces to a controlled mix of hard, soft, woven, and tactile materials.
+**Step 3 — Layer the sofa.** Use two or three cushion covers with different surface qualities—perhaps a smooth cover, a nubby boucle, and a subtle woven fabric. Keep their colors within the existing palette.
+
+**Step 4 — Add one throw.** Place a chunky knit or similarly tactile throw over one side of the sofa rather than covering the entire piece.
+
+**Step 5 — Add one natural material.** A woven basket beside the sofa can provide storage while repeating the rug's material language.
+
+**Step 6 — Stop and evaluate.** If the room now feels balanced, do not add more objects simply because empty space remains.
+
+The important change is not any single product. It is the progression from hard and smooth surfaces to a controlled mix of hard, soft, woven, and tactile materials.
 
 ## Common Texture-Layering Mistakes
 
@@ -183,9 +197,15 @@ Buying a blanket, four cushions, a rug, and curtains does not automatically crea
 
 ## A Budget-Friendly Way to Add Texture
 
-You do not have to replace the room in one shopping trip. **Low budget:** Start with cushion covers, one throw, a basket, or a simple textile runner. **Medium budget:** Add a correctly sized rug or replace flat curtains with more substantial panels.
+You do not have to replace the room in one shopping trip.
 
-**Larger refresh:** Consider upholstery, a different headboard, wood furniture, or a more substantial floor covering. When choosing between purchases, prioritize the item that changes the largest problematic surface. One correctly sized rug can often contribute more to the room than several small accessories.
+**Low budget:** Start with cushion covers, one throw, a basket, or a simple textile runner.
+
+**Medium budget:** Add a correctly sized rug or replace flat curtains with more substantial panels.
+
+**Larger refresh:** Consider upholstery, a different headboard, wood furniture, or a more substantial floor covering.
+
+When choosing between purchases, prioritize the item that changes the largest problematic surface. One correctly sized rug can often contribute more to the room than several small accessories.
 
 ## Texture Shopping Checklist
 

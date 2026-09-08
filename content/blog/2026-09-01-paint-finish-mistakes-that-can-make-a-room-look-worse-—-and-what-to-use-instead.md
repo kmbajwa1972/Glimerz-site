@@ -62,13 +62,17 @@ Instead of choosing one finish for the entire kitchen, separate the surfaces by 
 | Trim and doors | Contact, cleaning, and desired visual contrast |
 | Ceiling | Low contact; moisture and product suitability matter |
 
-Eggshell or satin may be a practical starting point for many kitchen walls, but the correct choice depends on the actual paint product and the surface. **Better approach:** match the finish to the surface instead of applying a “kitchen = semi-gloss” rule.
+Eggshell or satin may be a practical starting point for many kitchen walls, but the correct choice depends on the actual paint product and the surface.
+
+**Better approach:** match the finish to the surface instead of applying a “kitchen = semi-gloss” rule.
 
 ## Mistake 3: Using Basic Flat Paint to Hide Every Imperfection
 
 Flat paint can be visually forgiving, which makes it tempting when a wall is less than perfect. But hiding texture is only one requirement. A hallway, entryway, family room, or child's room may need more frequent cleaning than a low-contact bedroom. A basic flat product may not be the best choice for that workload.
 
-This does not mean matte finishes are unsuitable for busy rooms. Some modern products are specifically formulated to offer a low-sheen appearance with improved washability. **Better approach:** distinguish between the appearance of the finish and the performance claims of the specific product.
+This does not mean matte finishes are unsuitable for busy rooms. Some modern products are specifically formulated to offer a low-sheen appearance with improved washability.
+
+**Better approach:** distinguish between the appearance of the finish and the performance claims of the specific product.
 
 ## Mistake 4: Ignoring How Light Hits the Wall
 
@@ -82,7 +86,9 @@ Before committing, look at your sample in:
 - The view from the doorway
 - The view from the opposite side of the room
 
-If the wall is large, place the sample where the finished paint will actually be seen. A tiny card cannot show you how an entire wall behaves under changing light. **Better approach:** judge both color and sheen in the real room.
+If the wall is large, place the sample where the finished paint will actually be seen. A tiny card cannot show you how an entire wall behaves under changing light.
+
+**Better approach:** judge both color and sheen in the real room.
 
 ## Mistake 5: Assuming the Shiniest Finish Is the Most Practical
 
@@ -245,4 +251,6 @@ The most expensive paint mistake is often not choosing matte instead of satin or
 
 Start with preparation. Then consider traffic, cleaning, lighting, wall condition, appearance, and the specific product's instructions. A lower sheen can be an excellent choice when you want a quiet surface, while a more reflective finish can make sense where durability and cleanability are important.
 
-The best finish is not the one that sounds most premium. It is the one that fits the surface, the room, and the way you actually live in it. **Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the painting and preparation tasks discussed above and do not determine our editorial recommendations.
+The best finish is not the one that sounds most premium. It is the one that fits the surface, the room, and the way you actually live in it.
+
+**Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the painting and preparation tasks discussed above and do not determine our editorial recommendations.

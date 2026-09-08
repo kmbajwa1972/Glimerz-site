@@ -95,9 +95,15 @@ The family can add specialty serving pieces later if a real need appears. This a
 
 ## 7. How to choose materials without overbuying
 
-There is no single material that is best for every kitchen. Consider how each piece will be used. **Everyday dinnerware:** prioritize durability, easy cleaning, and a shape that stacks well.
+There is no single material that is best for every kitchen. Consider how each piece will be used.
 
-**Mixing bowls:** consider stability, weight, nesting, and whether you need microwave- or dishwasher-compatible materials. **Serving pieces:** prioritize the size, shape, and storage footprint before decorative details. **Storage jars:** focus on lid quality, opening size, cleanability, and a reliable fit.
+**Everyday dinnerware:** prioritize durability, easy cleaning, and a shape that stacks well.
+
+**Mixing bowls:** consider stability, weight, nesting, and whether you need microwave- or dishwasher-compatible materials.
+
+**Serving pieces:** prioritize the size, shape, and storage footprint before decorative details.
+
+**Storage jars:** focus on lid quality, opening size, cleanability, and a reliable fit.
 
 Always check the manufacturer's care instructions rather than assuming that a material is automatically dishwasher-, oven-, or microwave-safe.
 
@@ -121,9 +127,17 @@ That last step is the most useful. If you cannot identify a sensible storage loc
 
 ## A practical buying order
 
-If your crockery collection is incomplete and your budget is limited, buy in this order: **First:** everyday dinnerware that replaces damaged or insufficient pieces. **Second:** a useful nesting bowl set if your current prep bowls are awkward to store or too limited for regular cooking. **Third:** one versatile serving platter if you host or regularly serve food family-style.
+If your crockery collection is incomplete and your budget is limited, buy in this order:
 
-**Fourth:** storage jars for the dry ingredients you use most often. Specialty pieces can wait until you encounter a specific problem they solve.
+**First:** everyday dinnerware that replaces damaged or insufficient pieces.
+
+**Second:** a useful nesting bowl set if your current prep bowls are awkward to store or too limited for regular cooking.
+
+**Third:** one versatile serving platter if you host or regularly serve food family-style.
+
+**Fourth:** storage jars for the dry ingredients you use most often.
+
+Specialty pieces can wait until you encounter a specific problem they solve.
 
 ## Final thought: enough is better than excess
 

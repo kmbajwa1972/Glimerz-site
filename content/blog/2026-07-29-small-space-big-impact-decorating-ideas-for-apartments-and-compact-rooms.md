@@ -81,19 +81,35 @@ Next, define the seating zone with a rug whose size allows at least the front le
 
 Place a large mirror where it can reflect the window or another attractive part of the room. Add a slim task lamp near the work zone rather than a second large piece of furniture. Finally, use a few wall-mounted storage elements instead of filling the remaining floor space with cabinets.
 
-The result is not necessarily a room with fewer objects. It is a room where the objects have clearly defined jobs and the main walking path remains open. **Small-Space Solutions by Problem** **Problem: There is no room for a home office.**  Try a wall-mounted or drop-leaf desk, a narrow writing surface, or a desk that can close when work is finished. Keep the chair size and storage needs in mind; a tiny desktop is not useful if paperwork has nowhere to go.
+The result is not necessarily a room with fewer objects. It is a room where the objects have clearly defined jobs and the main walking path remains open. **Small-Space Solutions by Problem**
 
-**Problem: The entry becomes a dumping ground.**  Use a small wall-mounted hook rail, a shallow shelf, or a narrow console with a dedicated place for keys and everyday items. Keep the floor clear near the door. **Problem: The bedroom has no dresser space.**  Use under-bed storage, a tall narrow wardrobe, or drawer storage that fits beneath existing furniture. Avoid buying containers before measuring the actual available height.
+**Problem: There is no room for a home office.**  Try a wall-mounted or drop-leaf desk, a narrow writing surface, or a desk that can close when work is finished. Keep the chair size and storage needs in mind; a tiny desktop is not useful if paperwork has nowhere to go.
 
-**Problem: The room feels dark.**  Check whether furniture is blocking the window, use curtains that can open fully, clean the glass, and add lighting to the darker zones. A mirror can help reflect existing light, but it should not replace adequate lighting. **Problem: Everything looks crowded.**  Remove one category of rarely used items before buying another storage unit. More storage is not always the answer; sometimes the room needs fewer things.
+**Problem: The entry becomes a dumping ground.**  Use a small wall-mounted hook rail, a shallow shelf, or a narrow console with a dedicated place for keys and everyday items. Keep the floor clear near the door.
 
-**Problem: The apartment is rented.**  Prioritize movable furniture, freestanding storage, removable decor, and reversible lighting solutions. Check the lease before drilling, painting, replacing fixtures, or making other alterations. **Common Small-Space Decorating Mistakes** **Buying furniture before measuring.** A product's listed dimensions are only useful when compared with your actual floor plan.
+**Problem: The bedroom has no dresser space.**  Use under-bed storage, a tall narrow wardrobe, or drawer storage that fits beneath existing furniture. Avoid buying containers before measuring the actual available height.
 
-**Choosing many tiny pieces.** Several small tables and storage units can consume more visual and physical space than one appropriately sized piece. **Blocking natural light.** Tall furniture placed directly in front of a window can make the room darker and reduce one of its most valuable resources.
+**Problem: The room feels dark.**  Check whether furniture is blocking the window, use curtains that can open fully, clean the glass, and add lighting to the darker zones. A mirror can help reflect existing light, but it should not replace adequate lighting.
 
-**Ignoring doors and drawers.** Furniture that technically fits may be unusable if doors cannot open fully. **Using open storage for everything.** Visible objects quickly become visual noise in a compact room. Mix open display with concealed storage.
+**Problem: Everything looks crowded.**  Remove one category of rarely used items before buying another storage unit. More storage is not always the answer; sometimes the room needs fewer things.
 
-**Overusing mirrors.** One well-positioned large mirror can be more useful than several small decorative mirrors placed without considering what they reflect. **Choosing miniature furniture just because the room is small.** A compact room still needs furniture that is comfortable and functional. The goal is appropriate scale, not making everything as tiny as possible.
+**Problem: The apartment is rented.**  Prioritize movable furniture, freestanding storage, removable decor, and reversible lighting solutions. Check the lease before drilling, painting, replacing fixtures, or making other alterations.
+
+**Common Small-Space Decorating Mistakes**
+
+**Buying furniture before measuring.** A product's listed dimensions are only useful when compared with your actual floor plan.
+
+**Choosing many tiny pieces.** Several small tables and storage units can consume more visual and physical space than one appropriately sized piece.
+
+**Blocking natural light.** Tall furniture placed directly in front of a window can make the room darker and reduce one of its most valuable resources.
+
+**Ignoring doors and drawers.** Furniture that technically fits may be unusable if doors cannot open fully.
+
+**Using open storage for everything.** Visible objects quickly become visual noise in a compact room. Mix open display with concealed storage.
+
+**Overusing mirrors.** One well-positioned large mirror can be more useful than several small decorative mirrors placed without considering what they reflect.
+
+**Choosing miniature furniture just because the room is small.** A compact room still needs furniture that is comfortable and functional. The goal is appropriate scale, not making everything as tiny as possible.
 
 **A Practical Small-Space Shopping Checklist** Before purchasing a major item, write down:
 

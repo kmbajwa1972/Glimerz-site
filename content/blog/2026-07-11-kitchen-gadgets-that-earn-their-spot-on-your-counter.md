@@ -53,7 +53,9 @@ A vegetable chopper can be useful if you frequently prepare onions, peppers, cuc
 
 Look at the size of the cutting chamber, the number and type of cutting blades, how the pieces are collected, and how the parts are cleaned. A container can be convenient because chopped ingredients are collected immediately, but it also adds another part to wash. For any blade-based gadget, treat the cutting components as sharp kitchen equipment. Follow the manufacturer's handling and cleaning instructions rather than assuming the parts are safe to handle like ordinary plastic utensils.
 
-**A good fit:** someone who prepares chopped vegetables several times a week. **Probably unnecessary:** someone whose typical meal requires only a small amount of chopping.
+**A good fit:** someone who prepares chopped vegetables several times a week.
+
+**Probably unnecessary:** someone whose typical meal requires only a small amount of chopping.
 
 ## 3. Digital Kitchen Scales: Small Footprint, Broad Use
 

@@ -52,9 +52,15 @@ If the machine has a hinged lid, removable reservoir, or rear water tank, check 
 
 ## Measure the Counter Space
 
-A useful coffee station needs more than the machine's footprint. Leave working room for the steps that happen around it. As a starting exercise, measure: **Width:** the total counter section available.
+A useful coffee station needs more than the machine's footprint. Leave working room for the steps that happen around it. As a starting exercise, measure:
 
-**Depth:** the distance from the front edge of the counter to the wall or backsplash. **Height:** the clearance above the machine, especially if a lid or reservoir opens upward. **Landing space:** a clear area where you can place a mug, carafe, or small ingredients during preparation.
+**Width:** the total counter section available.
+
+**Depth:** the distance from the front edge of the counter to the wall or backsplash.
+
+**Height:** the clearance above the machine, especially if a lid or reservoir opens upward.
+
+**Landing space:** a clear area where you can place a mug, carafe, or small ingredients during preparation.
 
 Do not treat these as universal appliance dimensions. Use the measurements of your actual machine and compare them with the manufacturer's clearance requirements. A tray can make the station look organized, but it should not be so large that it consumes the landing space needed to operate the equipment.
 
@@ -62,21 +68,33 @@ Do not treat these as universal appliance dimensions. Use the measurements of yo
 
 ### 1. Counter-Corner Station
 
-Place the machine toward the back of a counter corner, with the tray and daily ingredients beside it. This is the simplest option when you already have a free outlet and enough depth. **Best for:** regular drip machines, compact espresso setups, and households that want the station visible.
+Place the machine toward the back of a counter corner, with the tray and daily ingredients beside it. This is the simplest option when you already have a free outlet and enough depth.
+
+**Best for:** regular drip machines, compact espresso setups, and households that want the station visible.
 
 ### 2. Shelf-and-Counter Station
 
-Keep the machine on the counter and use a wall shelf above it for mugs, filters, or sealed containers. **Best for:** kitchens where counter width is limited but wall space is available. Before installing a shelf, verify the mounting method, wall construction, load rating, and clearance above the appliance.
+Keep the machine on the counter and use a wall shelf above it for mugs, filters, or sealed containers.
+
+**Best for:** kitchens where counter width is limited but wall space is available.
+
+Before installing a shelf, verify the mounting method, wall construction, load rating, and clearance above the appliance.
 
 ### 3. Cabinet Station
 
-Dedicate one cabinet shelf or appliance garage to coffee equipment. Keep the items used every day together and bring the machine forward when needed. **Best for:** kitchens where a clear countertop is more important than display.
+Dedicate one cabinet shelf or appliance garage to coffee equipment. Keep the items used every day together and bring the machine forward when needed.
+
+**Best for:** kitchens where a clear countertop is more important than display.
 
 Make sure the appliance has the ventilation and operating clearance specified by its manufacturer, and do not close an enclosed cabinet around an operating appliance unless it is designed for that use.
 
 ### 4. Mobile Cart Station
 
-A small cart can hold the coffee equipment and supplies and can be moved when the kitchen needs more preparation space. **Best for:** renters, small kitchens, or homes where the coffee routine is separated from the main counter. Choose a cart that is stable enough for the equipment and has a top surface large enough for safe use.
+A small cart can hold the coffee equipment and supplies and can be moved when the kitchen needs more preparation space.
+
+**Best for:** renters, small kitchens, or homes where the coffee routine is separated from the main counter.
+
+Choose a cart that is stable enough for the equipment and has a top surface large enough for safe use.
 
 ## Decide What Is Essential and What Is Optional
 
@@ -127,7 +145,13 @@ Sugar, sweeteners, stirrers, tea bags, or syrups can be grouped in a small caddy
 
 The station should have a simple place for the cleaning items required by your equipment. Keep a cloth nearby for spills, but follow the appliance manufacturer's cleaning and descaling schedule rather than using a generic timetable. Descaling frequency can depend on the machine, water hardness, and manufacturer's recommendations. Some equipment may require specific cleaning products or procedures.
 
-A practical routine is: **After use:** deal with obvious spills and empty or rinse components as required. **Weekly or as needed:** wipe the surrounding area and inspect the machine for buildup. **At the manufacturer's interval:** perform deeper cleaning or descaling according to the instructions.
+A practical routine is:
+
+**After use:** deal with obvious spills and empty or rinse components as required.
+
+**Weekly or as needed:** wipe the surrounding area and inspect the machine for buildup.
+
+**At the manufacturer's interval:** perform deeper cleaning or descaling according to the instructions.
 
 This keeps the coffee corner functional without inventing a one-size-fits-all maintenance schedule.
 
@@ -175,9 +199,17 @@ Only after the routine works should you consider a dedicated shelf, cart, upgrad
 
 ## Common Coffee Station Mistakes
 
-**Choosing the station by appearance first.** An attractive location that is inconvenient will eventually become unused storage. **Ignoring appliance clearances.** Check the manufacturer's dimensions and operating requirements, including space above and behind the machine. **Using every inch of counter space.** Leave a landing area for mugs, carafes, and preparation.
+**Choosing the station by appearance first.** An attractive location that is inconvenient will eventually become unused storage.
 
-**Displaying equipment used once a month.** Store occasional tools nearby and keep the daily zone focused. **Installing shelves without checking the wall.** Confirm mounting method, load capacity, and the location of electrical services before drilling. **Following a fixed descaling schedule.** Maintenance depends on the machine, water, and manufacturer instructions.
+**Ignoring appliance clearances.** Check the manufacturer's dimensions and operating requirements, including space above and behind the machine.
+
+**Using every inch of counter space.** Leave a landing area for mugs, carafes, and preparation.
+
+**Displaying equipment used once a month.** Store occasional tools nearby and keep the daily zone focused.
+
+**Installing shelves without checking the wall.** Confirm mounting method, load capacity, and the location of electrical services before drilling.
+
+**Following a fixed descaling schedule.** Maintenance depends on the machine, water, and manufacturer instructions.
 
 **Buying accessories before measuring.** Measure the counter and machine first; then buy organizers that actually fit.
 
