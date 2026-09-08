@@ -14,10 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: Normalize Markdown article paragraphs
         run: |
+          git checkout 7f8728f8ffcd27d54d025bac4f2d2a6ba0a20e75 -- content/blog
           python - <<'PY'
           from pathlib import Path
           import re
@@ -25,7 +26,6 @@ jobs:
           BLOG = Path('content/blog')
 
           def sentence_count(text):
-              # Conservative count for editorial prose; headings/lists are excluded by caller.
               return len(re.findall(r'[.!?](?:["\u2019\u201d\)\]]*)?(?=\s|$)', text))
 
           def is_structural(block):
@@ -44,13 +44,11 @@ jobs:
                   return True
               if s.startswith('!['):
                   return True
-              # Keep obvious callout/label blocks independent.
               if re.match(r'^\*\*[^*]+\*\*\s*:', s):
                   return True
               return False
 
           def normalize_body(body, title):
-              # Remove a duplicate H1 when the Hugo template already renders the front-matter title.
               lines = body.splitlines()
               while lines and not lines[0].strip():
                   lines.pop(0)
@@ -69,14 +67,11 @@ jobs:
                   if not block:
                       i += 1
                       continue
-
                   if is_structural(block):
                       out.append(block)
                       i += 1
                       continue
 
-                  # Join short prose paragraphs with the immediately following prose block.
-                  # This targets sentence-as-paragraph fragmentation without collapsing genuine sections.
                   current = block
                   while i + 1 < len(blocks):
                       nxt = blocks[i + 1].strip()
@@ -87,18 +82,22 @@ jobs:
                       next_sent = sentence_count(nxt)
                       next_len = len(nxt)
 
+                      # Human-style editorial paragraphs: normally 2–5 sentences.
+                      # Merge short continuation paragraphs, but stop before creating a wall of text.
                       should_join = (
                           cur_sent <= 1
-                          or cur_len < 260
-                          or (cur_sent == 2 and cur_len < 420 and next_sent <= 2 and next_len < 420)
+                          or cur_len < 180
+                          or (cur_sent == 2 and cur_len < 300 and next_sent <= 2 and next_len < 300)
                       )
                       if not should_join:
+                          break
+                      if cur_sent + next_sent > 5:
+                          break
+                      if cur_len + next_len + 1 > 560:
                           break
 
                       current = current + ' ' + nxt
                       i += 1
-                      if sentence_count(current) >= 4 or len(current) >= 650:
-                          break
 
                   out.append(current)
                   i += 1
@@ -108,13 +107,12 @@ jobs:
           changed = []
           for path in sorted(BLOG.glob('*.md')):
               text = path.read_text(encoding='utf-8')
-              if '\n---\n' not in text:
-                  continue
-              end = text.find('\n---\n', 4)
+              marker = '\n---\n'
+              end = text.find(marker, 4)
               if end == -1:
                   continue
-              front = text[:end + 5]
-              body = text[end + 5:]
+              front = text[:end + len(marker)]
+              body = text[end + len(marker):]
               m = re.search(r'^title:\s*["\']?(.+?)["\']?\s*$', front, re.M)
               title = m.group(1).strip().strip('"\'') if m else ''
               new_body = normalize_body(body, title)
