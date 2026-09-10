@@ -41,7 +41,7 @@ Product recommendations may be included when they support the article's subject 
 
 ## How to Submit
 
-**Editorial Submissions & Guest Pitches:** Send your topic pitch or draft to <a href="https://mail.google.com/mail/?view=cm&fs=1&to=help.glimerz@gmail.com" target="_blank" rel="noopener noreferrer"><strong>help.glimerz@gmail.com</strong></a>.
+**Editorial Submissions & Guest Pitches:** Send your topic pitch or draft to <a href="mailto:help.glimerz@gmail.com"><strong>help.glimerz@gmail.com</strong></a>.
 
 **Technical Help:** For account or site issues, contact <a href="mailto:support@glimerz.com"><strong>support@glimerz.com</strong></a>.
 
