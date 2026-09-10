@@ -5,6 +5,10 @@ description: "Glimerz is a curated home decor and kitchen inspiration publicatio
 ---
 Glimerz is an independent home decor and kitchen inspiration publication. We share practical ideas, styling guidance, organization tips, buying guidance, and carefully selected product recommendations to help readers create spaces that feel useful, comfortable, and personal.
 
+## Meet the Founder
+
+Glimerz was founded by **Khalid Mehmood Bajwa**, who wanted to create a useful, thoughtful place for everyday home and kitchen ideas. He oversees the direction of Glimerz and the editorial standards behind the content published on the site.
+
 ## Our Editorial Approach
 
 Every post is reviewed before publication. We use research and, where appropriate, AI-assisted tools to support drafting or research, but articles are not published solely by an automated system. A human editor reviews the final material for usefulness, accuracy, clarity, originality, and relevance to our readers.
