@@ -41,11 +41,13 @@ Product recommendations may be included when they support the article's subject 
 
 ## How to Submit
 
-To pitch a topic or send a draft, email **help.glimerz@gmail.com** with:
+To pitch a topic or send a draft, email <a href="https://mail.google.com/mail/?view=cm&fs=1&to=help.glimerz@gmail.com" target="_blank" rel="noopener noreferrer"><strong>help.glimerz@gmail.com</strong></a> with:
 
 - A short pitch or your draft
 - A brief explanation of why the topic is useful to Glimerz readers
 - Any original images you'd like considered for inclusion
 - A one-line author bio and relevant experience, if applicable
+
+If Gmail is not your preferred email service, you can also copy the address into your email app.
 
 We'll review the submission and respond when we can. Please do not send the same pitch repeatedly while it is under review.
