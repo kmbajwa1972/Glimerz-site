@@ -9,7 +9,7 @@ categories:
 guest_post: false
 products:
   - product_name: Umbra Prisma Picture Frame.
-    affiliate_link: Umbra Prisma Picture Frame?tag=hunterpro0e-20
+    affiliate_link: https://link.amazon/A0hO0Xbwr?tag=hunterpro0e-20
     photo: https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/619vDsvASzL._AC_SL1500_.jpg
   - product_name: Mkono Macrame Plant Hanger Indoor 35 Inch Hanging Planter Basket
     affiliate_link: https://link.amazon/B0aMyosHn?tag=hunterpro0e-20
