@@ -5,6 +5,7 @@ description: Choosing the right area rug size can completely change how a room
   feels. Learn how to choose rug sizes for living rooms, bedrooms, dining areas,
   entryways, and kitchens with practical decorating tips and PureCozy ideas.
 image: /images/home-24.png
+hero_link: https://www.amazon.com/dp/B0GWMM2LG3?th=1&tag=hunterpro0e-20
 categories:
   - Home Decor
 guest_post: false
