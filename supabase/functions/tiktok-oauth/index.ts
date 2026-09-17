@@ -42,11 +42,20 @@ function html(title: string, body: string, status = 200) { return new Response(`
 Deno.serve(async (req) => {
   const url = new URL(req.url);
 
-  // TEMPORARY DIAGNOSTIC: exposes only a short prefix, length, and SHA-256 fingerprint.
-  // Remove this route after the credential mismatch is resolved.
+  // TEMPORARY DIAGNOSTICS. Remove after troubleshooting.
   if (url.pathname.endsWith("/debug-key") || url.pathname.endsWith("/debug-key/")) {
     if (!CLIENT_KEY) return Response.json({ client_key: "missing" }, { status: 500, headers: { "cache-control": "no-store" } });
     return Response.json(await clientKeyFingerprint(), { headers: { "cache-control": "no-store" } });
+  }
+  if (url.pathname.endsWith("/debug-oauth") || url.pathname.endsWith("/debug-oauth/")) {
+    const key = await clientKeyFingerprint();
+    return Response.json({
+      client_key: key,
+      response_type: "code",
+      scope: SCOPES,
+      redirect_uri: REDIRECT_URI,
+      authorize_endpoint: "https://www.tiktok.com/v2/auth/authorize/"
+    }, { headers: { "cache-control": "no-store" } });
   }
 
   if (url.pathname.endsWith("/authorize") || url.pathname.endsWith("/authorize/")) {
