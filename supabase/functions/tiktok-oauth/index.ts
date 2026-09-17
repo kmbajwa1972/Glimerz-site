@@ -32,10 +32,23 @@ async function verifyState(state: string) {
   let diff = 0; for (let i = 0; i < actual.length; i++) diff |= actual[i] ^ expected[i];
   return diff === 0;
 }
-function html(title: string, body: string, status = 200) { return new Response(`<!doctype html><meta charset="utf-8"><title>${title}</title><style>body{font-family:Arial;max-width:720px;margin:60px auto;padding:20px}code{word-break:break-all}</style><h1>${title}</h1><p>${body}</p>`, { status, headers: { "content-type": "text/html; charset=utf-8" } }); }
+async function clientKeyFingerprint() {
+  const digest = new Uint8Array(await crypto.subtle.digest("SHA-256", enc.encode(CLIENT_KEY)));
+  const hex = Array.from(digest, b => b.toString(16).padStart(2, "0")).join("");
+  return { prefix: CLIENT_KEY ? `${CLIENT_KEY.slice(0, 4)}...` : "missing", length: CLIENT_KEY.length, sha256_8: hex.slice(0, 8) };
+}
+function html(title: string, body: string, status = 200) { return new Response(`<!doctype html><meta charset="utf-8"><title>${title}</title><style>body{font-family:Arial;max-width:720px;margin:60px auto;padding:20px}code{word-break:break-all}</style><h1>${title}</h1><p>${body}</p>`, { status, headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" } }); }
 
 Deno.serve(async (req) => {
   const url = new URL(req.url);
+
+  // TEMPORARY DIAGNOSTIC: exposes only a short prefix, length, and SHA-256 fingerprint.
+  // Remove this route after the credential mismatch is resolved.
+  if (url.pathname.endsWith("/debug-key") || url.pathname.endsWith("/debug-key/")) {
+    if (!CLIENT_KEY) return Response.json({ client_key: "missing" }, { status: 500, headers: { "cache-control": "no-store" } });
+    return Response.json(await clientKeyFingerprint(), { headers: { "cache-control": "no-store" } });
+  }
+
   if (url.pathname.endsWith("/authorize") || url.pathname.endsWith("/authorize/")) {
     if (!STATE_SECRET || !CLIENT_KEY || !CLIENT_SECRET) return html("TikTok OAuth not configured", "Required TikTok secrets are missing.", 500);
     const state = await makeState();
