@@ -22,6 +22,8 @@ def parse_frontmatter(raw):
         mm=re.search(rf"^{key}:\s*(.+?)(?=\n[A-Za-z_][A-Za-z0-9_-]*:|\n[A-Za-z_][A-Za-z0-9_-]*:\s|$)",block,re.M|re.S)
         if mm:
             out[key]=re.sub(r"\s+"," ",mm.group(1).strip()).strip('"')
+    photos=re.findall(r"^\s+photo:\s*(https?://[^\s]+)",block,re.M)
+    out["product_photos"]=photos[:6]
     return out, body
 
 def clean_text(s):
@@ -68,19 +70,31 @@ def make_slide(path,image,headline,sub="",number=None,hero=False):
         d.rectangle((0,1120,W,H),fill=BG)
         y=1215
     else:
-        d.rounded_rectangle((65,120,180,235),radius=24,fill=ACCENT)
+        if image:
+            img=image.convert("RGB")
+            scale=max(W/img.width,860/img.height)
+            img=img.resize((int(img.width*scale),int(img.height*scale)),Image.Resampling.LANCZOS)
+            left=max(0,(img.width-W)//2); top=max(0,(img.height-860)//2)
+            img=img.crop((left,top,left+W,top+860))
+            canvas.paste(img,(0,0))
+            d=ImageDraw.Draw(canvas)
+            d.rectangle((0,860,W,H),fill=BG)
+            y=1010
+        else:
+            d.rounded_rectangle((65,120,180,235),radius=24,fill=ACCENT)
+            y=470
         if number is not None:
+            d.rounded_rectangle((65,120,180,235),radius=24,fill=ACCENT)
             d.text((91,142),f"{number:02d}",font=font(42,True),fill=(255,255,255))
-        d.text((70,330),"GLIMERZ",font=font(28,True),fill=ACCENT)
-        y=470
+        d.text((70,y-80 if image else 330),"GLIMERZ",font=font(28,True),fill=ACCENT)
     for line in textwrap.wrap(headline,width=25)[:5]:
-        d.text((70,y),line,font=font(66 if hero else 64,True),fill=TEXT)
-        y+=78
+        d.text((70,y),line,font=font(66 if hero else 58,True),fill=TEXT)
+        y+=72
     if sub:
-        y=min(y+28,1710)
-        for line in textwrap.wrap(sub,width=48)[:5]:
-            d.text((70,y),line,font=font(30),fill=MUTED)
-            y+=42
+        y=min(y+24,1710)
+        for line in textwrap.wrap(sub,width=48)[:4]:
+            d.text((70,y),line,font=font(28),fill=MUTED)
+            y+=38
     d.text((70,1838),"GLIMERZ  •  HOME & KITCHEN",font=font(25,True),fill=ACCENT)
     canvas.save(path,quality=95)
 
@@ -104,9 +118,20 @@ def main():
     image=None
     image_url=fm.get("image")
     if image_url:
-        if image_url.startswith("/"):
+        if image_url.startswith("/images/"):
+            image_url=f"https://raw.githubusercontent.com/{args.repo}/main/static{image_url}"
+        elif image_url.startswith("/"):
             image_url="https://glimerz.com"+image_url
         p=out/"hero.jpg"; fetch(image_url,p); image=Image.open(p)
+
+    visual_images=[]
+    if image:
+        visual_images.append(image.copy())
+    for n,url in enumerate(fm.get("product_photos",[]),start=1):
+        try:
+            p=out/f"product-{n}.jpg"; fetch(url,p); visual_images.append(Image.open(p))
+        except Exception as e:
+            print(f"Product image skipped: {url} ({e})")
 
     sections=extract_sections(body)
     if not sections:
@@ -120,7 +145,8 @@ def main():
 
     for idx,(heading,summary) in enumerate(sections,start=2):
         f=out/f"slide-{idx:02d}.png"
-        make_slide(f,None,heading,summary,number=idx-1,hero=False)
+        visual=visual_images[(idx-2) % len(visual_images)] if visual_images else None
+        make_slide(f,visual,heading,summary,number=idx-1,hero=False)
         slides.append(f)
 
     f=out/f"slide-{len(slides)+1:02d}.png"
