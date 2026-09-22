@@ -48,7 +48,7 @@ def make_slide(path,image,headline,sub=None,number=None):
         pic=fit_cover(image).resize((W,1200),Image.Resampling.LANCZOS)
         canvas.paste(pic,(0,0))
         shade=Image.new("RGBA",(W,1200),(0,0,0,35))
-        canvas=Image.alpha_composite(canvas.convert("RGBA"),shade).convert("RGB")
+        canvas.paste(shade,(0,0),shade)
     d=ImageDraw.Draw(canvas); d.rectangle((0,1200,W,H),fill=BG)
     if number:d.text((70,1270),f"{number:02d}",font=font(42,True),fill=ACCENT)
     y=1350 if number else 1280
