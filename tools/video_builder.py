@@ -115,23 +115,38 @@ def main():
     title=fm.get("title",args.slug.replace("-"," ").title())
     desc=fm.get("description","")
 
-    image=None
-    image_url=fm.get("image")
-    if image_url:
-        if image_url.startswith("/images/"):
-            image_url=f"https://raw.githubusercontent.com/{args.repo}/main/static{image_url}"
-        elif image_url.startswith("/"):
-            image_url="https://glimerz.com"+image_url
-        p=out/"hero.jpg"; fetch(image_url,p); image=Image.open(p)
+    # Use Glimerz-hosted static images for reliable video rendering.
+    # We intentionally do not depend on Amazon/external product image URLs.
+    is_kitchen = bool(re.search(r"kitchen|cook|knife|utensil|appliance|gadget", (title + " " + args.slug).lower()))
+    if is_kitchen:
+        static_names = [
+            "kitchen-21.png", "kitchen-22.png", "kitchen-24.png",
+            "kitchen-15.jpg", "kitchen-16.jpg", "kitchen-17.jpg"
+        ]
+    else:
+        static_names = [
+            "home-21.png", "home-22.png", "home-23.png", "home-24.png",
+            "home-15.jpg", "home-16.jpg"
+        ]
 
-    visual_images=[]
-    if image:
-        visual_images.append(image.copy())
-    for n,url in enumerate(fm.get("product_photos",[]),start=1):
+    static_images=[]
+    for n,name in enumerate(static_names, start=1):
         try:
-            p=out/f"product-{n}.jpg"; fetch(url,p); visual_images.append(Image.open(p))
+            p=out/f"static-{n}-{name}"
+            fetch(f"https://raw.githubusercontent.com/{args.repo}/main/static/images/{name}", p)
+            static_images.append(Image.open(p).convert("RGB"))
+            print(f"Static image loaded: {name}")
         except Exception as e:
-            print(f"Product image skipped: {url} ({e})")
+            print(f"Static image skipped: {name} ({e})")
+
+    if not static_images:
+        raise RuntimeError("No Glimerz static images could be loaded")
+
+    # First image is used for the title slide; all content slides use the
+    # remaining static images in sequence. This guarantees visible imagery.
+    image = static_images[0]
+    visual_images = static_images
+    image_url = f"https://raw.githubusercontent.com/{args.repo}/main/static/images/{static_names[0]}"
 
     sections=extract_sections(body)
     if not sections:
