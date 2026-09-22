@@ -90,6 +90,9 @@ def main():
     ap.add_argument("--repo",default="kmbajwa1972/Glimerz-site")
     ap.add_argument("--out",default="build/video")
     args=ap.parse_args()
+    args.slug=re.sub(r"^\\s*slug\\s*:\\s*", "", args.slug, flags=re.I).strip().strip("\\\"").strip("\\'")
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", args.slug):
+        raise ValueError(f"Invalid slug: {args.slug!r}")
     out=Path(args.out); out.mkdir(parents=True,exist_ok=True)
 
     raw_url=f"https://raw.githubusercontent.com/{args.repo}/main/content/blog/{args.slug}.md"
