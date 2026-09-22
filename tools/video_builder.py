@@ -20,7 +20,8 @@ def parse_frontmatter(raw):
     return out
 
 def extract_points(raw):
-    body=raw.split("\n---\n",1)[-1] if "\n---\n" in raw else raw
+    m=re.match(r"^---\n[\s\S]*?\n---\n([\s\S]*)$",raw)
+    body=m.group(1) if m else raw
     lines=[x.strip() for x in body.splitlines() if x.strip()]
     points=[]
     for line in lines:
@@ -82,10 +83,10 @@ def main():
         filters.append(f"[{i}:v]scale={W}:{H},format=yuv420p,setpts=PTS-STARTPTS[v{i}]")
     prev="[v0]"
     for i in range(1,len(slides)):
-        outv=f"[x{i}]"; filters.append(f"{prev}[v{i}]xfade=transition=fade:duration=0.35:offset={i*4-0.35}{outv}"); prev=outv
+        outv=f"[x{i}]"; filters.append(f"{prev}[v{i}]xfade=transition=fade:duration=0.35:offset={i*3.65:.2f}{outv}"); prev=outv
     mp4=out/f"{args.slug}.mp4"
     subprocess.run(["ffmpeg","-y",*inputs,"-filter_complex",";".join(filters),"-map",prev,"-r","30","-c:v","libx264","-preset","veryfast","-crf","23","-movflags","+faststart",str(mp4)],check=True)
-    manifest={"title":title,"description":desc,"slug":args.slug,"video":str(mp4),"duration_seconds":len(slides)*4-0.35*(len(slides)-1),"source_image":image_url,"slides":len(slides)}
+    manifest={"title":title,"description":desc,"slug":args.slug,"video":str(mp4),"duration_seconds":len(slides)*4-0.35*(len(slides)-1),"source_image":image_url,"slides":len(slides),"points":points}
     (out/"manifest.json").write_text(json.dumps(manifest,indent=2)); print(json.dumps(manifest))
 
 if __name__=="__main__":main()
