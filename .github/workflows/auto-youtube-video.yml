@@ -1,0 +1,128 @@
+name: Glimerz Automatic YouTube Builder
+
+on:
+  push:
+    paths:
+      - "content/blog/*.md"
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Optional blog slug. Leave empty to use the newest blog."
+        required: false
+        default: ""
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Select one blog
+        id: select
+        env:
+          MANUAL_SLUG: ${{ inputs.slug }}
+          BEFORE: ${{ github.event.before }}
+          SHA: ${{ github.sha }}
+        run: |
+          set -e
+          if [ -n "$MANUAL_SLUG" ]; then
+            echo "slug=$MANUAL_SLUG" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          changed=$(git diff --name-only "$BEFORE" "$SHA" -- 'content/blog/*.md' | head -n 1 || true)
+          if [ -n "$changed" ]; then
+            slug=$(basename "$changed" .md)
+          else
+            slug=$(ls -1t content/blog/*.md | head -n 1 | xargs -n1 basename | sed 's/\.md$//')
+          fi
+          echo "slug=$slug" >> "$GITHUB_OUTPUT"
+
+      - name: Check whether this blog already has a YouTube item
+        id: check
+        env:
+          SUPABASE_URL: https://yayljmqelmsmcsuhxqdj.supabase.co
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SLUG: ${{ steps.select.outputs.slug }}
+        run: |
+          python3 - <<'PY'
+          import os, urllib.parse, urllib.request
+          base=os.environ["SUPABASE_URL"]
+          key=os.environ["SUPABASE_SERVICE_ROLE_KEY"]
+          slug=os.environ["SLUG"]
+          target=f"https://glimerz.com/blog/{slug}/"
+          params=urllib.parse.urlencode({
+            "select":"id,status,published_ref",
+            "item_type":"eq.youtube_video",
+            "target_url":f"eq.{target}",
+            "limit":"1"
+          })
+          req=urllib.request.Request(f"{base}/rest/v1/content_items?{params}",
+            headers={"apikey":key,"Authorization":f"Bearer {key}"})
+          with urllib.request.urlopen(req) as r:
+            data=r.read().decode()
+          exists=data not in ("[]","")
+          with open(os.environ["GITHUB_OUTPUT"],"a") as out:
+            out.write(f"exists={'true' if exists else 'false'}\n")
+          print(data)
+          PY
+
+      - name: Install video tools
+        if: steps.check.outputs.exists != 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg python3-pil
+
+      - name: Build one YouTube Short
+        if: steps.check.outputs.exists != 'true'
+        run: python3 tools/video_builder.py --slug "${{ steps.select.outputs.slug }}"
+
+      - name: Upload video to Supabase Storage
+        if: steps.check.outputs.exists != 'true'
+        env:
+          SUPABASE_URL: https://yayljmqelmsmcsuhxqdj.supabase.co
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SLUG: ${{ steps.select.outputs.slug }}
+        run: |
+          curl --fail --retry 3 -X POST "$SUPABASE_URL/storage/v1/object/youtube-videos/$SLUG.mp4"             -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY"             -H "apikey: $SUPABASE_SERVICE_ROLE_KEY"             -H "Content-Type: video/mp4"             --data-binary "@build/video/$SLUG.mp4"
+
+      - name: Create exactly one YouTube review item
+        if: steps.check.outputs.exists != 'true'
+        env:
+          SUPABASE_URL: https://yayljmqelmsmcsuhxqdj.supabase.co
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SLUG: ${{ steps.select.outputs.slug }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.error
+          slug=os.environ["SLUG"]; base=os.environ["SUPABASE_URL"]; key=os.environ["SUPABASE_SERVICE_ROLE_KEY"]
+          manifest=json.load(open("build/video/manifest.json"))
+          url=f"{base}/storage/v1/object/public/youtube-videos/{slug}.mp4"
+          payload=json.dumps({
+            "item_type":"youtube_video",
+            "status":"pending_review",
+            "title":manifest["title"],
+            "body":manifest["description"],
+            "target_url":f"https://glimerz.com/blog/{slug}/",
+            "media_urls":[url],
+            "created_by":"video-builder"
+          }).encode()
+          req=urllib.request.Request(f"{base}/rest/v1/content_items",data=payload,method="POST",
+            headers={"apikey":key,"Authorization":f"Bearer {key}","Content-Type":"application/json","Prefer":"return=representation"})
+          try:
+            with urllib.request.urlopen(req) as r: print(r.read().decode())
+          except urllib.error.HTTPError as e:
+            if e.code == 409:
+              print("Duplicate prevented; no second YouTube item created.")
+            else:
+              raise
+          PY
+
+      - name: Skip duplicate
+        if: steps.check.outputs.exists == 'true'
+        run: echo "YouTube item already exists for this blog. Nothing created."
