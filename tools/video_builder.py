@@ -12,18 +12,29 @@ def fetch(url,path):
         Path(path).write_bytes(r.read())
 
 def parse_frontmatter(raw):
-    m=re.match(r"^---\n([\\s\\S]*?)\n---\n",raw)
+    m=re.match(r"^---\\n(.*?)\\n---\\n",raw,re.S)
     if not m:
         return {}, raw
     block=m.group(1)
     body=raw[m.end():]
     out={}
-    for key in ("title","description","image"):
-        mm=re.search(rf"^{key}:\s*(.+?)(?=\n[A-Za-z_][A-Za-z0-9_-]*:|\n[A-Za-z_][A-Za-z0-9_-]*:\s|$)",block,re.M|re.S)
-        if mm:
-            out[key]=re.sub(r"\s+"," ",mm.group(1).strip()).strip('"')
-    photos=re.findall(r"^\s+photo:\s*(https?://[^\s]+)",block,re.M)
-    out["product_photos"]=photos[:6]
+    lines=block.splitlines()
+    current=None
+    for line in lines:
+        if re.match(r"^[A-Za-z_][A-Za-z0-9_-]*:", line):
+            key,val=line.split(":",1)
+            key=key.strip(); val=val.strip()
+            current=key
+            if val:
+                out[key]=val.strip('"').strip("'")
+            else:
+                out[key]=""
+        elif current and line.startswith((" ","\\t")):
+            # Preserve simple multiline YAML values such as description.
+            continuation=re.sub(r"\\s+"," ",line.strip())
+            if continuation:
+                out[current]=(out.get(current,"")+" "+continuation).strip()
+    out["product_photos"]=re.findall(r"photo:\\s*(https?://[^\\s]+)",block)
     return out, body
 
 def clean_text(s):
@@ -124,10 +135,11 @@ def main():
             "kitchen-15.jpg", "kitchen-16.jpg", "kitchen-17.jpg"
         ]
     else:
-        static_names = [
-            "home-21.png", "home-22.png", "home-23.png", "home-24.png",
-            "home-15.jpg", "home-16.jpg"
-        ]
+        # Prefer the article's own Glimerz hero image when it is a local static asset.
+        local_hero = fm.get("image", "")
+        hero_name = Path(local_hero).name if local_hero.startswith("/images/") else "home-24.png"
+        home_pool = [hero_name, "home-21.png", "home-22.png", "home-23.png", "home-24.png", "home-15.jpg", "home-16.jpg"]
+        static_names = list(dict.fromkeys(home_pool))
 
     static_images=[]
     for n,name in enumerate(static_names, start=1):
