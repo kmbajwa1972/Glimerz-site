@@ -1,92 +1,157 @@
 #!/usr/bin/env python3
-import argparse, json, os, re, subprocess, textwrap, urllib.request
+import argparse, json, re, subprocess, textwrap, urllib.request
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont
 
 W,H=1080,1920
 BG=(247,244,239); TEXT=(32,32,32); MUTED=(105,100,94); ACCENT=(55,80,62)
 
 def fetch(url,path):
-    req=urllib.request.Request(url,headers={"User-Agent":"Glimerz-Video-Builder/1.0"})
-    with urllib.request.urlopen(req,timeout=30) as r: Path(path).write_bytes(r.read())
+    req=urllib.request.Request(url,headers={"User-Agent":"Glimerz-Video-Builder/1.1"})
+    with urllib.request.urlopen(req,timeout=30) as r:
+        Path(path).write_bytes(r.read())
 
 def parse_frontmatter(raw):
-    m=re.match(r"^---\n([\s\S]*?)\n---",raw)
-    if not m:return {}
-    b=m.group(1); out={}
-    for key in ["title","description","image"]:
-        mm=re.search(rf"^{key}:\s*(.+?)(?=\n\w+:|\n\w[\w-]*:\s|$)",b,re.M|re.S)
-        if mm: out[key]=re.sub(r"\s+"," ",mm.group(1).strip()).strip('"')
-    return out
+    m=re.match(r"^---\n([\\s\\S]*?)\n---\n",raw)
+    if not m:
+        return {}, raw
+    block=m.group(1)
+    body=raw[m.end():]
+    out={}
+    for key in ("title","description","image"):
+        mm=re.search(rf"^{key}:\s*(.+?)(?=\n[A-Za-z_][A-Za-z0-9_-]*:|\n[A-Za-z_][A-Za-z0-9_-]*:\s|$)",block,re.M|re.S)
+        if mm:
+            out[key]=re.sub(r"\s+"," ",mm.group(1).strip()).strip('"')
+    return out, body
 
-def extract_points(raw):
-    m=re.match(r"^---\n[\s\S]*?\n---\n([\s\S]*)$",raw)
-    body=m.group(1) if m else raw
-    lines=[x.strip() for x in body.splitlines() if x.strip()]
-    points=[]
-    for line in lines:
-        if line.startswith("## "): points.append(line[3:].strip())
-        elif re.match(r"^\*\*[^*]+\*\*\s*$",line): points.append(re.sub(r"[*]","",line).strip())
-    if len(points)<4:
-        for p in re.split(r"\n\s*\n",body):
-            p=re.sub(r"[*_#]","",p).strip()
-            if len(p)>70: points.append(re.split(r"(?<=[.!?])\s+",p)[0][:150])
-            if len(points)>=5: break
-    return points[:5]
+def clean_text(s):
+    s=re.sub(r"\[([^\]]+)\]\([^\)]+\)",r"\1",s)
+    s=re.sub(r"[*_#]","",s)
+    return re.sub(r"\s+"," ",s).strip()
+
+def extract_sections(body):
+    matches=list(re.finditer(r"^##\s+(.+?)\s*$",body,re.M))
+    sections=[]
+    for i,m in enumerate(matches):
+        heading=clean_text(m.group(1))
+        start=m.end()
+        end=matches[i+1].start() if i+1<len(matches) else len(body)
+        chunk=body[start:end]
+        paras=[clean_text(p) for p in re.split(r"\n\s*\n",chunk) if clean_text(p)]
+        summary=re.split(r"(?<=[.!?])\s+",paras[0])[0] if paras else ""
+        if heading and heading.lower()!="disclosure":
+            sections.append((heading,summary[:210]))
+    return sections
 
 def font(size,bold=False):
-    return ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",size)
+    return ImageFont.truetype(
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold
+        else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",size)
 
-def fit_cover(img):
-    img=img.convert("RGB"); scale=max(W/img.width,H/img.height)
-    img=img.resize((int(img.width*scale),int(img.height*scale)),Image.Resampling.LANCZOS)
-    l=(img.width-W)//2; t=(img.height-H)//2
-    return img.crop((l,t,l+W,t+H))
-
-def make_slide(path,image,headline,sub=None,number=None):
+def make_background(image,hero):
     canvas=Image.new("RGB",(W,H),BG)
-    if image:
-        pic=fit_cover(image).resize((W,1200),Image.Resampling.LANCZOS)
-        canvas.paste(pic,(0,0))
-        shade=Image.new("RGBA",(W,1200),(0,0,0,35))
+    if image and hero:
+        img=image.convert("RGB")
+        scale=max(W/img.width,1200/img.height)
+        img=img.resize((int(img.width*scale),int(img.height*scale)),Image.Resampling.LANCZOS)
+        left=max(0,(img.width-W)//2); top=max(0,(img.height-1200)//2)
+        img=img.crop((left,top,left+W,1200))
+        canvas.paste(img,(0,0))
+        shade=Image.new("RGBA",(W,1200),(0,0,0,55))
         canvas.paste(shade,(0,0),shade)
-    d=ImageDraw.Draw(canvas); d.rectangle((0,1200,W,H),fill=BG)
-    if number:d.text((70,1270),f"{number:02d}",font=font(42,True),fill=ACCENT)
-    y=1350 if number else 1280
-    for line in textwrap.wrap(headline,width=25)[:4]:
-        d.text((70,y),line,font=font(70,True),fill=TEXT); y+=82
+    return canvas
+
+def make_slide(path,image,headline,sub="",number=None,hero=False):
+    canvas=make_background(image,hero)
+    d=ImageDraw.Draw(canvas)
+    if hero:
+        d.rectangle((0,1120,W,H),fill=BG)
+        y=1215
+    else:
+        d.rounded_rectangle((65,120,180,235),radius=24,fill=ACCENT)
+        if number is not None:
+            d.text((91,142),f"{number:02d}",font=font(42,True),fill=(255,255,255))
+        d.text((70,330),"GLIMERZ",font=font(28,True),fill=ACCENT)
+        y=470
+    for line in textwrap.wrap(headline,width=25)[:5]:
+        d.text((70,y),line,font=font(66 if hero else 64,True),fill=TEXT)
+        y+=78
     if sub:
-        y=min(y+25,1740)
-        for line in textwrap.wrap(sub,width=48)[:4]:
-            d.text((70,y),line,font=font(31),fill=MUTED); y+=42
-    d.text((70,1840),"GLIMERZ  •  HOME & KITCHEN",font=font(25,True),fill=ACCENT)
+        y=min(y+28,1710)
+        for line in textwrap.wrap(sub,width=48)[:5]:
+            d.text((70,y),line,font=font(30),fill=MUTED)
+            y+=42
+    d.text((70,1838),"GLIMERZ  •  HOME & KITCHEN",font=font(25,True),fill=ACCENT)
     canvas.save(path,quality=95)
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument("--slug",required=True); ap.add_argument("--repo",default="kmbajwa1972/Glimerz-site"); ap.add_argument("--out",default="build/video")
-    args=ap.parse_args(); out=Path(args.out); out.mkdir(parents=True,exist_ok=True)
+    ap=argparse.ArgumentParser()
+    ap.add_argument("--slug",required=True)
+    ap.add_argument("--repo",default="kmbajwa1972/Glimerz-site")
+    ap.add_argument("--out",default="build/video")
+    args=ap.parse_args()
+    out=Path(args.out); out.mkdir(parents=True,exist_ok=True)
+
     raw_url=f"https://raw.githubusercontent.com/{args.repo}/main/content/blog/{args.slug}.md"
-    raw=urllib.request.urlopen(raw_url,timeout=30).read().decode("utf-8"); fm=parse_frontmatter(raw)
-    title=fm.get("title",args.slug.replace("-"," ").title()); desc=fm.get("description","")
-    image=None; image_url=fm.get("image")
+    raw=urllib.request.urlopen(raw_url,timeout=30).read().decode("utf-8")
+    fm,body=parse_frontmatter(raw)
+    title=fm.get("title",args.slug.replace("-"," ").title())
+    desc=fm.get("description","")
+
+    image=None
+    image_url=fm.get("image")
     if image_url:
-        if image_url.startswith("/"): image_url="https://glimerz.com"+image_url
+        if image_url.startswith("/"):
+            image_url="https://glimerz.com"+image_url
         p=out/"hero.jpg"; fetch(image_url,p); image=Image.open(p)
-    points=extract_points(raw); slides=[]
-    f=out/"slide-01.png"; make_slide(f,image,title,"Practical ideas from the full Glimerz article."); slides.append(f)
-    for i,p in enumerate(points[:4],start=2):
-        f=out/f"slide-{i:02d}.png"; make_slide(f,image,p,desc if i==2 else "See the full Glimerz article for practical details and examples.",i-1); slides.append(f)
-    f=out/f"slide-{len(slides)+1:02d}.png"; make_slide(f,image,"Read the full guide on Glimerz",title[:120],len(slides)); slides.append(f)
+
+    sections=extract_sections(body)
+    if not sections:
+        raise RuntimeError("No article sections were found")
+    sections=sections[:6]
+
+    slides=[]
+    f=out/"slide-01.png"
+    make_slide(f,image,title,"A practical Glimerz guide to choosing the right rug size.",hero=True)
+    slides.append(f)
+
+    for idx,(heading,summary) in enumerate(sections,start=2):
+        f=out/f"slide-{idx:02d}.png"
+        make_slide(f,None,heading,summary,number=idx-1,hero=False)
+        slides.append(f)
+
+    f=out/f"slide-{len(slides)+1:02d}.png"
+    make_slide(f,None,"Read the full guide on Glimerz",
+               "Measure your room, consider your furniture, and choose the rug size that fits your space.",
+               number=len(slides),hero=False)
+    slides.append(f)
+
     inputs=[]; filters=[]
     for i,s in enumerate(slides):
         inputs += ["-loop","1","-t","4","-i",str(s)]
         filters.append(f"[{i}:v]scale={W}:{H},format=yuv420p,setpts=PTS-STARTPTS[v{i}]")
-    prev="[v0]"
-    for i in range(1,len(slides)):
-        outv=f"[x{i}]"; filters.append(f"{prev}[v{i}]xfade=transition=fade:duration=0.35:offset={i*3.65:.2f}{outv}"); prev=outv
-    mp4=out/f"{args.slug}.mp4"
-    subprocess.run(["ffmpeg","-y",*inputs,"-filter_complex",";".join(filters),"-map",prev,"-r","30","-c:v","libx264","-preset","veryfast","-crf","23","-movflags","+faststart",str(mp4)],check=True)
-    manifest={"title":title,"description":desc,"slug":args.slug,"video":str(mp4),"duration_seconds":len(slides)*4-0.35*(len(slides)-1),"source_image":image_url,"slides":len(slides),"points":points}
-    (out/"manifest.json").write_text(json.dumps(manifest,indent=2)); print(json.dumps(manifest))
 
-if __name__=="__main__":main()
+    prev="[v0]"; elapsed=4.0
+    for i in range(1,len(slides)):
+        outv=f"[x{i}]"; offset=elapsed-0.35
+        filters.append(f"{prev}[v{i}]xfade=transition=fade:duration=0.35:offset={offset:.2f}{outv}")
+        prev=outv; elapsed+=3.65
+
+    mp4=out/f"{args.slug}.mp4"
+    subprocess.run([
+        "ffmpeg","-y",*inputs,"-filter_complex",";".join(filters),
+        "-map",prev,"-r","30","-c:v","libx264","-preset","veryfast","-crf","23",
+        "-pix_fmt","yuv420p","-movflags","+faststart",str(mp4)
+    ],check=True)
+
+    manifest={
+        "title":title,"description":desc,"slug":args.slug,"video":str(mp4),
+        "duration_seconds":round(len(slides)*4-0.35*(len(slides)-1),2),
+        "source_image":image_url,"slides":len(slides),
+        "sections":[h for h,_ in sections]
+    }
+    (out/"manifest.json").write_text(json.dumps(manifest,indent=2))
+    print(json.dumps(manifest))
+
+if __name__=="__main__":
+    main()
