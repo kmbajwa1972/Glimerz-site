@@ -1,0 +1,65 @@
+name: Glimerz YouTube Video Builder
+
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Blog slug without .md"
+        required: true
+        type: string
+      publish:
+        description: "Upload video and create youtube_video item"
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install video tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg python3-pil
+      - name: Build 9:16 MP4
+        run: python3 tools/video_builder.py --slug "\${{ inputs.slug }}"
+      - name: Upload video to Supabase Storage
+        if: \${{ inputs.publish }}
+        env:
+          SUPABASE_URL: https://yayljmqelmsmcsuhxqdj.supabase.co
+          SUPABASE_SERVICE_ROLE_KEY: \${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SLUG: \${{ inputs.slug }}
+        run: |
+          test -n "$SUPABASE_SERVICE_ROLE_KEY"
+          curl --fail --retry 3 \
+            -X POST "$SUPABASE_URL/storage/v1/object/youtube-videos/$SLUG.mp4" \
+            -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" \
+            -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" \
+            -H "Content-Type: video/mp4" \
+            --data-binary "@build/video/$SLUG.mp4"
+      - name: Create YouTube content item
+        if: \${{ inputs.publish }}
+        env:
+          SUPABASE_URL: https://yayljmqelmsmcsuhxqdj.supabase.co
+          SUPABASE_SERVICE_ROLE_KEY: \${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SLUG: \${{ inputs.slug }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          slug=os.environ["SLUG"]; base=os.environ["SUPABASE_URL"]; key=os.environ["SUPABASE_SERVICE_ROLE_KEY"]
+          manifest=json.load(open("build/video/manifest.json"))
+          url=f"{base}/storage/v1/object/public/youtube-videos/{slug}.mp4"
+          payload=json.dumps({"item_type":"youtube_video","status":"pending_review","title":manifest["title"],"body":manifest["description"],"target_url":f"https://glimerz.com/blog/{slug}/","media_urls":[url],"created_by":"video-builder"}).encode()
+          req=urllib.request.Request(f"{base}/rest/v1/content_items",data=payload,method="POST",headers={"apikey":key,"Authorization":f"Bearer {key}","Content-Type":"application/json","Prefer":"return=representation"})
+          with urllib.request.urlopen(req) as r: print(r.read().decode())
+          PY
+      - name: Save video as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: glimerz-youtube-video-\${{ inputs.slug }}
+          path: build/video/\${{ inputs.slug }}.mp4
+          retention-days: 7
