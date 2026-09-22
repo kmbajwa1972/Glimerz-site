@@ -26,27 +26,22 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg python3-pil
       - name: Build 9:16 MP4
-        run: python3 tools/video_builder.py --slug "\${{ inputs.slug }}"
+        run: python3 tools/video_builder.py --slug "${{ inputs.slug }}"
       - name: Upload video to Supabase Storage
-        if: \${{ inputs.publish }}
+        if: ${{ inputs.publish }}
         env:
           SUPABASE_URL: https://yayljmqelmsmcsuhxqdj.supabase.co
-          SUPABASE_SERVICE_ROLE_KEY: \${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          SLUG: \${{ inputs.slug }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SLUG: ${{ inputs.slug }}
         run: |
           test -n "$SUPABASE_SERVICE_ROLE_KEY"
-          curl --fail --retry 3 \
-            -X POST "$SUPABASE_URL/storage/v1/object/youtube-videos/$SLUG.mp4" \
-            -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" \
-            -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" \
-            -H "Content-Type: video/mp4" \
-            --data-binary "@build/video/$SLUG.mp4"
+          curl --fail --retry 3 -X POST "$SUPABASE_URL/storage/v1/object/youtube-videos/$SLUG.mp4" -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" -H "Content-Type: video/mp4" --data-binary "@build/video/$SLUG.mp4"
       - name: Create YouTube content item
-        if: \${{ inputs.publish }}
+        if: ${{ inputs.publish }}
         env:
           SUPABASE_URL: https://yayljmqelmsmcsuhxqdj.supabase.co
-          SUPABASE_SERVICE_ROLE_KEY: \${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          SLUG: \${{ inputs.slug }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SLUG: ${{ inputs.slug }}
         run: |
           python3 - <<'PY'
           import json, os, urllib.request
@@ -60,6 +55,6 @@ jobs:
       - name: Save video as workflow artifact
         uses: actions/upload-artifact@v4
         with:
-          name: glimerz-youtube-video-\${{ inputs.slug }}
-          path: build/video/\${{ inputs.slug }}.mp4
+          name: glimerz-youtube-video-${{ inputs.slug }}
+          path: build/video/${{ inputs.slug }}.mp4
           retention-days: 7
