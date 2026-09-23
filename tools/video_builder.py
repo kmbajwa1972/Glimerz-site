@@ -9,7 +9,7 @@ FAL_VIDEO_MODEL = "fal-ai/wan-i2v"
 FAL_TTS_MODEL = "fal-ai/elevenlabs/tts/eleven-v3"
 FAL_MUSIC_MODEL = "fal-ai/stable-audio-25/text-to-audio"
 
-def fal_request(model, payload, timeout=300):
+def fal_request(model, payload, timeout=900):
     key = os.environ.get("FAL_KEY", "").strip()
     if not key:
         raise RuntimeError("FAL_KEY GitHub secret is required for the fal.ai YouTube builder")
@@ -214,7 +214,7 @@ def main():
 
     f=out/f"slide-{len(slides)+1:02d}.png"
     make_slide(f,None,"Read the full guide on Glimerz",
-               "Measure your room, consider your furniture, and choose the rug size that fits your space.",
+               "See the complete mixing bowls and utensils guide on Glimerz.",
                number=len(slides),hero=False)
     slides.append(f)
 
@@ -279,7 +279,7 @@ def main():
         "-i",str(voice_file),
         "-stream_loop","-1","-i",str(music_file),
         "-filter_complex",
-        "[0:v]scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2,setsar=1[hero];"
+        "[0:v]trim=duration=5,setpts=PTS-STARTPTS,scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2,setsar=1[hero];"
         "[1:v]scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2,setsar=1[slides];"
         "[hero][slides]concat=n=2:v=1:a=0[visual];"
         "[3:a]volume=0.24[music];[2:a]volume=1.65[voice];"
