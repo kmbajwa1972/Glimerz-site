@@ -269,7 +269,7 @@ def main():
     mp4=out/f"{args.slug}.mp4"
     subprocess.run([
         "ffmpeg","-y",
-        "-stream_loop","-1","-i",str(hero_video),
+        "-i",str(hero_video),
         "-i",str(slides_mp4),
         "-i",str(voice_file),
         "-stream_loop","-1","-i",str(music_file),
@@ -287,7 +287,7 @@ def main():
 
     manifest={
         "title":title,"description":desc,"slug":args.slug,"video":str(mp4),
-        "duration_seconds":round(len(slides)*4-0.35*(len(slides)-1),2),
+        "duration_seconds":round(5 + len(slides)*5-0.35*(len(slides)-1),2),
         "source_image":image_url,"slides":len(slides),"audio":{"voiceover":"fal.ai xAI TTS","music":"fal.ai Stable Audio 2.5"},"fal_video_model":FAL_VIDEO_MODEL,"voice_model":FAL_TTS_MODEL,"music_model":FAL_MUSIC_MODEL,
         "sections":[h for h,_ in sections],"voiceover_script":voice_script
     }
