@@ -41,7 +41,7 @@ def fetch(url,path):
         Path(path).write_bytes(r.read())
 
 def parse_frontmatter(raw):
-    m=re.match(r"^---\\n(.*?)\\n---\\n",raw,re.S)
+    m=re.match(r"^---\n(.*?)\n---\n",raw,re.S)
     if not m:
         return {}, raw
     block=m.group(1)
@@ -58,12 +58,12 @@ def parse_frontmatter(raw):
                 out[key]=val.strip('"').strip("'")
             else:
                 out[key]=""
-        elif current and line.startswith((" ","\\t")):
+        elif current and line.startswith((" ","\t")):
             # Preserve simple multiline YAML values such as description.
-            continuation=re.sub(r"\\s+"," ",line.strip())
+            continuation=re.sub(r"\s+"," ",line.strip())
             if continuation:
                 out[current]=(out.get(current,"")+" "+continuation).strip()
-    out["product_photos"]=re.findall(r"photo:\\s*(https?://[^\\s]+)",block)
+    out["product_photos"]=re.findall(r"photo:\s*(https?://[^\s]+)",block)
     return out, body
 
 def clean_text(s):
@@ -166,7 +166,8 @@ def main():
         # assets contain baked-in editorial text, which gets cropped in 9:16.
         # Keep those out of the video source pool.
         static_names = [
-            "kitchen-15.jpg", "kitchen-16.jpg", "kitchen-17.jpg"
+            "kitchen-15.jpg", "kitchen-16.jpg", "kitchen-17.jpg",
+            "kitchen-18.jpg", "kitchen-19.jpg"
         ]
     else:
         # Prefer the article's own Glimerz hero image when it is a local static asset.
@@ -201,7 +202,8 @@ def main():
 
     slides=[]
     f=out/"slide-01.png"
-    make_slide(f,image,title,"A practical Glimerz guide to choosing the right mixing bowls and utensils.",hero=True)
+    hero_subtitle = clean_text(desc)[:190] if desc else "A practical Glimerz guide for everyday kitchen choices."
+    make_slide(f,image,title,hero_subtitle,hero=True)
     slides.append(f)
 
     for idx,(heading,summary) in enumerate(sections,start=2):
