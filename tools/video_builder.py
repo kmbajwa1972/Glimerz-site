@@ -215,14 +215,14 @@ def main():
 
     inputs=[]; filters=[]
     for i,s in enumerate(slides):
-        inputs += ["-loop","1","-t","4","-i",str(s)]
+        inputs += ["-loop","1","-t","5","-i",str(s)]
         filters.append(f"[{i}:v]scale={W}:{H},format=yuv420p,setpts=PTS-STARTPTS[v{i}]")
 
-    prev="[v0]"; elapsed=4.0
+    prev="[v0]"; elapsed=5.0
     for i in range(1,len(slides)):
         outv=f"[x{i}]"; offset=elapsed-0.35
         filters.append(f"{prev}[v{i}]xfade=transition=fade:duration=0.35:offset={offset:.2f}{outv}")
-        prev=outv; elapsed+=3.65
+        prev=outv; elapsed+=4.65
 
     slides_mp4=out/f"{args.slug}-slides.mp4"
     subprocess.run([
@@ -246,9 +246,9 @@ def main():
     download_url(fal_video["video"]["url"], hero_video)
 
     voice_parts = [f"Today on Glimerz: {title}."]
-    for heading, summary in sections[:5]:
+    for heading, summary in sections[:4]:
         voice_parts.append(f"{heading}. {summary}")
-    voice_script = clean_text(" ".join(voice_parts))[:3500]
+    voice_script = clean_text(" ".join(voice_parts))[:750]
     tts = fal_request(FAL_TTS_MODEL, {"text": voice_script, "voice": "ara", "language": "en"})
     voice_file = out/"voiceover.mp3"
     download_url(tts["audio"]["url"], voice_file)
