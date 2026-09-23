@@ -146,6 +146,8 @@ def main():
     ap.add_argument("--slug",required=True)
     ap.add_argument("--repo",default="kmbajwa1972/Glimerz-site")
     ap.add_argument("--out",default="build/video")
+    ap.add_argument("--preflight",action="store_true",
+                    help="Validate the article and its attached images without calling fal.ai or building a video")
     args=ap.parse_args()
     args.slug=re.sub(r"^\\s*slug\\s*:\\s*", "", args.slug, flags=re.I).strip().strip("\\\"").strip("\\'")
     if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", args.slug):
@@ -189,6 +191,23 @@ def main():
     if not sections:
         raise RuntimeError("No article sections were found")
     sections=sections[:6]
+
+    if args.preflight:
+        print("PREFLIGHT: PASS")
+        print(f"Article slug: {args.slug}")
+        print(f"Article title: {clean_text(title)}")
+        print(f"Article description: {clean_text(desc)}")
+        print(f"Article image sources: {len(image_sources)}")
+        for label, url in image_sources:
+            print(f"  - {label}: {url}")
+        print(f"Images successfully loaded: {len(static_images)}")
+        for (label, _), image_obj in zip(image_sources, static_images):
+            print(f"  - {label}: {image_obj.width}x{image_obj.height}")
+        print(f"Sections selected: {len(sections)}")
+        for heading, _ in sections:
+            print(f"  - {heading}")
+        print("Paid fal.ai calls: 0")
+        return
 
     slides=[]
     f=out/"slide-01.png"
