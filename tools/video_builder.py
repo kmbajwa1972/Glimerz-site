@@ -6,7 +6,6 @@ from PIL import Image, ImageDraw, ImageFont
 W,H=1080,1920
 FAL_QUEUE_BASE = "https://queue.fal.run"
 FAL_TTS_MODEL = "fal-ai/elevenlabs/tts/eleven-v3"
-FAL_MUSIC_MODEL = "fal-ai/stable-audio-25/text-to-audio"
 
 def fal_request(model, payload, timeout=900):
     key = os.environ.get("FAL_KEY", "").strip()
@@ -242,22 +241,32 @@ def main():
     for heading, summary in sections[:4]:
         voice_parts.append(f"{heading}. {summary}")
     voice_script = clean_text(" ".join(voice_parts))[:750]
-    tts = fal_request(FAL_TTS_MODEL, {"text": voice_script, "voice": "Aria", "stability": 0.45, "similarity_boost": 0.8, "style": 0.25, "speed": 0.98, "language_code": "en", "apply_text_normalization": "auto", "output_format": "mp3_44100_128"})
+    # Use fal.ai only for the natural ElevenLabs voice. Keep the music local so
+    # video builds do not wait on a second generative queue or spend extra credits.
+    tts = fal_request(FAL_TTS_MODEL, {"text": voice_script, "voice": "Aria", "stability": 0.45, "similarity_boost": 0.8, "style": 0.25, "speed": 0.98, "language_code": "en", "apply_text_normalization": "auto", "output_format": "mp3_44100_128"}, timeout=180)
     voice_file = out/"voiceover.mp3"
     download_url(tts["audio"]["url"], voice_file)
 
-    music = fal_request(FAL_MUSIC_MODEL, {
-        "prompt": "Warm modern lifestyle instrumental for a home and kitchen YouTube video, soft acoustic guitar, light piano, subtle brushed percussion, relaxed upscale mood, no vocals, no spoken words, clean background music.",
-        "seconds_total": 45,
-        "num_inference_steps": 8,
-        "guidance_scale": 1,
-    })
-    music_value = music.get("audio")
-    music_url = music_value.get("url") if isinstance(music_value, dict) else music_value
-    if not music_url:
-        raise RuntimeError(f"fal.ai Stable Audio returned no audio URL: {music}")
+    # Generate a lightweight royalty-free ambient bed locally with FFmpeg.
+    # It is intentionally subtle so the ElevenLabs narration remains clear.
     music_file = out/"music.wav"
-    download_url(music_url, music_file)
+    music_seconds = max(45, int(round(len(slides) * 5)))
+    fade_out_start = max(1, music_seconds - 3)
+    subprocess.run([
+        "ffmpeg", "-y",
+        "-f", "lavfi", "-i",
+        f"sine=frequency=261.63:sample_rate=44100:duration={music_seconds}",
+        "-f", "lavfi", "-i",
+        f"sine=frequency=329.63:sample_rate=44100:duration={music_seconds}",
+        "-f", "lavfi", "-i",
+        f"sine=frequency=392.00:sample_rate=44100:duration={music_seconds}",
+        "-filter_complex",
+        f"[0:a]volume=0.12,afade=t=in:st=0:d=2,afade=t=out:st={fade_out_start}:d=3[a0];"
+        f"[1:a]volume=0.09,afade=t=in:st=0:d=2,afade=t=out:st={fade_out_start}:d=3[a1];"
+        f"[2:a]volume=0.07,afade=t=in:st=0:d=2,afade=t=out:st={fade_out_start}:d=3[a2];"
+        "[a0][a1][a2]amix=inputs=3:duration=longest:normalize=0,lowpass=f=1800,volume=1.6",
+        "-c:a", "pcm_s16le", str(music_file)
+    ], check=True)
 
     mp4=out/f"{args.slug}.mp4"
     subprocess.run([
@@ -266,7 +275,7 @@ def main():
         "-i",str(voice_file),
         "-stream_loop","-1","-i",str(music_file),
         "-filter_complex",
-        "[2:a]volume=0.24[music];[1:a]volume=1.65[voice];"
+        "[2:a]volume=0.32[music];[1:a]volume=1.65[voice];"
         "[voice][music]amix=inputs=2:duration=first:dropout_transition=2,loudnorm=I=-14:TP=-1.5:LRA=11[a]",
         "-map","0:v","-map","[a]",
         "-c:v","libx264","-preset","veryfast","-crf","22","-r","30",
@@ -277,7 +286,7 @@ def main():
     manifest={
         "title":title,"description":desc,"slug":args.slug,"video":str(mp4),
         "duration_seconds":round(len(slides)*5-0.35*(len(slides)-1),2),
-        "source_image":image_url,"slides":len(slides),"audio":{"voiceover":"fal.ai ElevenLabs Eleven v3","music":"fal.ai Stable Audio 2.5"},"voice_model":FAL_TTS_MODEL,"music_model":FAL_MUSIC_MODEL,
+        "source_image":image_url,"slides":len(slides),"audio":{"voiceover":"fal.ai ElevenLabs Eleven v3","music":"local FFmpeg ambient bed"},"voice_model":FAL_TTS_MODEL,
         "sections":[h for h,_ in sections],"voiceover_script":voice_script
     }
     (out/"manifest.json").write_text(json.dumps(manifest,indent=2))
