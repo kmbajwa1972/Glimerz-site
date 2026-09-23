@@ -1,9 +1,40 @@
 #!/usr/bin/env python3
-import argparse, json, re, subprocess, textwrap, urllib.request
+import argparse, json, os, re, subprocess, textwrap, time, urllib.request
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 W,H=1080,1920
+FAL_QUEUE_BASE = "https://queue.fal.run"
+FAL_VIDEO_MODEL = "fal-ai/wan-i2v"
+FAL_TTS_MODEL = "xai/tts/v1"
+FAL_MUSIC_MODEL = "fal-ai/stable-audio-25/text-to-audio"
+
+def fal_request(model, payload, timeout=300):
+    key = os.environ.get("FAL_KEY", "").strip()
+    if not key:
+        raise RuntimeError("FAL_KEY GitHub secret is required for the fal.ai YouTube builder")
+    req = urllib.request.Request(f"{FAL_QUEUE_BASE}/{model}", data=json.dumps(payload).encode(), method="POST",
+        headers={"Authorization": f"Key {key}", "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        submitted = json.loads(r.read().decode())
+    started = time.time()
+    while time.time() - started < timeout:
+        sreq = urllib.request.Request(submitted["status_url"], headers={"Authorization": f"Key {key}"})
+        with urllib.request.urlopen(sreq, timeout=60) as r:
+            status = json.loads(r.read().decode())
+        if status.get("status") == "COMPLETED":
+            rreq = urllib.request.Request(submitted["response_url"], headers={"Authorization": f"Key {key}"})
+            with urllib.request.urlopen(rreq, timeout=60) as r:
+                return json.loads(r.read().decode())
+        if status.get("status") not in ("IN_QUEUE", "IN_PROGRESS"):
+            raise RuntimeError(f"fal.ai job failed: {status}")
+        time.sleep(3)
+    raise RuntimeError(f"fal.ai job timed out: {model}")
+
+def download_url(url, path):
+    req = urllib.request.Request(url, headers={"User-Agent": "Glimerz-Video-Builder/2.0"})
+    with urllib.request.urlopen(req, timeout=120) as r:
+        Path(path).write_bytes(r.read())
 BG=(247,244,239); TEXT=(32,32,32); MUTED=(105,100,94); ACCENT=(55,80,62)
 
 def fetch(url,path):
@@ -193,18 +224,72 @@ def main():
         filters.append(f"{prev}[v{i}]xfade=transition=fade:duration=0.35:offset={offset:.2f}{outv}")
         prev=outv; elapsed+=3.65
 
-    mp4=out/f"{args.slug}.mp4"
+    slides_mp4=out/f"{args.slug}-slides.mp4"
     subprocess.run([
         "ffmpeg","-y",*inputs,"-filter_complex",";".join(filters),
         "-map",prev,"-r","30","-c:v","libx264","-preset","veryfast","-crf","23",
-        "-pix_fmt","yuv420p","-movflags","+faststart",str(mp4)
+        "-pix_fmt","yuv420p","-movflags","+faststart",str(slides_mp4)
+    ],check=True)
+
+    # fal.ai: animate the hero image once per article, then add AI voiceover and original music.
+    # One video generation keeps fal.ai usage controlled while making the opening scene dynamic.
+    fal_video = fal_request(FAL_VIDEO_MODEL, {
+        "prompt": f"Tasteful vertical lifestyle video for a Glimerz home and kitchen article titled '{title}'. Gentle natural camera movement, subtle parallax, realistic lighting, premium editorial look. No text, captions, logos or invented objects.",
+        "image_url": image_url,
+        "resolution": "480p",
+        "num_frames": 81,
+        "frames_per_second": 16,
+        "aspect_ratio": "9:16",
+        "enable_prompt_expansion": True,
+    })
+    hero_video = out/"fal-hero.mp4"
+    download_url(fal_video["video"]["url"], hero_video)
+
+    voice_parts = [f"Today on Glimerz: {title}."]
+    for heading, summary in sections[:5]:
+        voice_parts.append(f"{heading}. {summary}")
+    voice_script = clean_text(" ".join(voice_parts))[:3500]
+    tts = fal_request(FAL_TTS_MODEL, {"text": voice_script, "voice": "ara", "language": "en"})
+    voice_file = out/"voiceover.mp3"
+    download_url(tts["audio"]["url"], voice_file)
+
+    music = fal_request(FAL_MUSIC_MODEL, {
+        "prompt": "Warm modern lifestyle instrumental for a home and kitchen YouTube video, soft acoustic guitar, light piano, subtle brushed percussion, relaxed upscale mood, no vocals, no spoken words, clean background music.",
+        "seconds_total": 45,
+        "num_inference_steps": 8,
+        "guidance_scale": 1,
+    })
+    music_value = music.get("audio")
+    music_url = music_value.get("url") if isinstance(music_value, dict) else music_value
+    if not music_url:
+        raise RuntimeError(f"fal.ai Stable Audio returned no audio URL: {music}")
+    music_file = out/"music.wav"
+    download_url(music_url, music_file)
+
+    mp4=out/f"{args.slug}.mp4"
+    subprocess.run([
+        "ffmpeg","-y",
+        "-stream_loop","-1","-i",str(hero_video),
+        "-i",str(slides_mp4),
+        "-i",str(voice_file),
+        "-stream_loop","-1","-i",str(music_file),
+        "-filter_complex",
+        "[0:v]scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2,setsar=1[hero];"
+        "[1:v]scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2,setsar=1[slides];"
+        "[hero][slides]concat=n=2:v=1:a=0[visual];"
+        "[3:a]volume=0.12[music];[2:a]volume=1.0[voice];"
+        "[voice][music]amix=inputs=2:duration=first:dropout_transition=2[a]",
+        "-map","[visual]","-map","[a]",
+        "-c:v","libx264","-preset","veryfast","-crf","22","-r","30",
+        "-pix_fmt","yuv420p","-c:a","aac","-b:a","192k","-shortest",
+        "-movflags","+faststart",str(mp4)
     ],check=True)
 
     manifest={
         "title":title,"description":desc,"slug":args.slug,"video":str(mp4),
         "duration_seconds":round(len(slides)*4-0.35*(len(slides)-1),2),
-        "source_image":image_url,"slides":len(slides),
-        "sections":[h for h,_ in sections]
+        "source_image":image_url,"slides":len(slides),"audio":{"voiceover":"fal.ai xAI TTS","music":"fal.ai Stable Audio 2.5"},"fal_video_model":FAL_VIDEO_MODEL,"voice_model":FAL_TTS_MODEL,"music_model":FAL_MUSIC_MODEL,
+        "sections":[h for h,_ in sections],"voiceover_script":voice_script
     }
     (out/"manifest.json").write_text(json.dumps(manifest,indent=2))
     print(json.dumps(manifest))
