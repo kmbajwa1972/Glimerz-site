@@ -25,8 +25,12 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg python3-pil
-      - name: Build 9:16 MP4
-        run: python3 tools/video_builder.py --slug "${{ inputs.slug }}"
+      - name: Build 9:16 MP4 with fal.ai video, voiceover and music
+        env:
+          FAL_KEY: ${{ secrets.FAL_KEY }}
+        run: |
+          test -n "$FAL_KEY"
+          python3 tools/video_builder.py --slug "${{ inputs.slug }}"
       - name: Upload video to Supabase Storage
         if: ${{ inputs.publish }}
         env:
