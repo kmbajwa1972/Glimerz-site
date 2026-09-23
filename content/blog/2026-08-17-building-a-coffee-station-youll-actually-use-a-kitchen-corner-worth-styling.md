@@ -71,7 +71,7 @@ A small cart can hold the coffee equipment and supplies while giving you the fle
 
 The coffee itself deserves as much attention as the shelf, tray, or machine. One reason a home coffee station becomes more enjoyable is that everything needed for the morning cup is in one place, including coffee that matches your personal taste.
 
-For a lighter profile, **[Lifeboost Light Roast Low Acid Ground Coffee](https://link.amazon/B02ILJZBD?tag=hunterpro0e-20)** is one option to consider. They describes it as certified organic, single-origin, low-acid coffee and currently lists the 12-ounce bag. For a bolder coffee routine, **[Lifeboost Dark Roast Low Acid Coffee Beans](https://link.amazon/B0987rnSM?tag=hunterpro0e-20)** provide a whole-bean option, with the 12-ounce bag.
+For a lighter profile, **[Lifeboost Light Roast Low Acid Ground Coffee](https://link.amazon/B02ILJZBD?tag=hunterpro0e-20)** is one option to consider. The brand describes it as certified organic, single-origin, low-acid coffee and currently lists the 12-ounce bag. For a bolder coffee routine, **[Lifeboost Dark Roast Low Acid Coffee Beans](https://link.amazon/B0987rnSM?tag=hunterpro0e-20)** provide a whole-bean option, with the 12-ounce bag.
 
 If you want a middle ground between a regular coffee routine and reduced caffeine, Lifeboost Half Caff Medium Roast Low Acid Coffee Beans are another option, giving households another choice without requiring a large collection of different coffees.
 
@@ -183,4 +183,4 @@ Then think about the coffee itself. Whether you prefer a lighter roast, a darker
 
 Once the functional decisions are right, styling becomes easy. A tray, a useful container, a few accessible mugs, good coffee, and one or two personal details can turn an ordinary kitchen corner into a coffee station that looks intentional because it is genuinely useful.
 
-***Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the coffee-station decisions discussed above. This article is part of an Amazon affiliate campaign and contains required affiliate disclosures.*
+**\*Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the coffee-station decisions discussed above. This article is part of an Amazon affiliate campaign and contains required affiliate disclosures.*
