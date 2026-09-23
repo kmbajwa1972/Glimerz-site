@@ -114,11 +114,14 @@ def make_slide(path,image,headline,sub="",number=None,hero=False):
     else:
         if image:
             img=image.convert("RGB")
-            scale=max(W/img.width,860/img.height)
-            img=img.resize((int(img.width*scale),int(img.height*scale)),Image.Resampling.LANCZOS)
-            left=max(0,(img.width-W)//2); top=max(0,(img.height-860)//2)
-            img=img.crop((left,top,left+W,top+860))
-            canvas.paste(img,(0,0))
+            # Preserve the complete source photo instead of aggressively
+            # cropping its sides. Fit it inside the visual panel and use the
+            # Glimerz background around it when aspect ratios differ.
+            panel_w, panel_h = W, 860
+            scale=min(panel_w/img.width, panel_h/img.height)
+            fitted=img.resize((int(img.width*scale),int(img.height*scale)),Image.Resampling.LANCZOS)
+            x=(panel_w-fitted.width)//2; y_img=(panel_h-fitted.height)//2
+            canvas.paste(fitted,(x,y_img))
             d=ImageDraw.Draw(canvas)
             d.rectangle((0,860,W,H),fill=BG)
             y=1010
@@ -161,8 +164,10 @@ def main():
     # We intentionally do not depend on Amazon/external product image URLs.
     is_kitchen = bool(re.search(r"kitchen|cook|knife|utensil|appliance|gadget", (title + " " + args.slug).lower()))
     if is_kitchen:
+        # Use clean kitchen photography for video slides. Several older kitchen
+        # assets contain baked-in editorial text, which gets cropped in 9:16.
+        # Keep those out of the video source pool.
         static_names = [
-            "kitchen-21.png", "kitchen-22.png", "kitchen-24.png",
             "kitchen-15.jpg", "kitchen-16.jpg", "kitchen-17.jpg"
         ]
     else:
@@ -198,7 +203,7 @@ def main():
 
     slides=[]
     f=out/"slide-01.png"
-    make_slide(f,image,title,"A practical Glimerz guide to choosing the right rug size.",hero=True)
+    make_slide(f,image,title,"A practical Glimerz guide to choosing the right mixing bowls and utensils.",hero=True)
     slides.append(f)
 
     for idx,(heading,summary) in enumerate(sections,start=2):
