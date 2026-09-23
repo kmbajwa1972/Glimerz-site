@@ -282,8 +282,8 @@ def main():
         "[0:v]scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2,setsar=1[hero];"
         "[1:v]scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2,setsar=1[slides];"
         "[hero][slides]concat=n=2:v=1:a=0[visual];"
-        "[3:a]volume=0.12[music];[2:a]volume=1.0[voice];"
-        "[voice][music]amix=inputs=2:duration=first:dropout_transition=2[a]",
+        "[3:a]volume=0.24[music];[2:a]volume=1.65[voice];"
+        "[voice][music]amix=inputs=2:duration=first:dropout_transition=2,loudnorm=I=-14:TP=-1.5:LRA=11[a]",
         "-map","[visual]","-map","[a]",
         "-c:v","libx264","-preset","veryfast","-crf","22","-r","30",
         "-pix_fmt","yuv420p","-c:a","aac","-b:a","192k","-shortest",
