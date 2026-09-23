@@ -183,4 +183,4 @@ Then think about the coffee itself. Whether you prefer a lighter roast, a darker
 
 Once the functional decisions are right, styling becomes easy. A tray, a useful container, a few accessible mugs, good coffee, and one or two personal details can turn an ordinary kitchen corner into a coffee station that looks intentional because it is genuinely useful.
 
-**\*Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the coffee-station decisions discussed above. This article is part of an Amazon affiliate campaign and contains required affiliate disclosures.*
+***\*Affiliate disclosure:** This article contains affiliate links. If you purchase through one of these links, Glimerz may earn a commission at no additional cost to you. Product suggestions are included because they relate to the coffee-station decisions discussed above. This article is part of an Amazon affiliate campaign and contains required affiliate disclosures.**
