@@ -5,7 +5,6 @@ from PIL import Image, ImageDraw, ImageFont
 
 W,H=1080,1920
 FAL_QUEUE_BASE = "https://queue.fal.run"
-FAL_VIDEO_MODEL = "fal-ai/wan-i2v"
 FAL_TTS_MODEL = "fal-ai/elevenlabs/tts/eleven-v3"
 FAL_MUSIC_MODEL = "fal-ai/stable-audio-25/text-to-audio"
 
@@ -236,20 +235,9 @@ def main():
         "-pix_fmt","yuv420p","-movflags","+faststart",str(slides_mp4)
     ],check=True)
 
-    # fal.ai: animate the hero image once per article, then add AI voiceover and original music.
-    # One video generation keeps fal.ai usage controlled while making the opening scene dynamic.
-    fal_video = fal_request(FAL_VIDEO_MODEL, {
-        "prompt": f"Tasteful vertical lifestyle video for a Glimerz home and kitchen article titled '{title}'. Gentle natural camera movement, subtle parallax, realistic lighting, premium editorial look. No text, captions, logos or invented objects.",
-        "image_url": image_url,
-        "resolution": "480p",
-        "num_frames": 81,
-        "frames_per_second": 16,
-        "aspect_ratio": "9:16",
-        "enable_prompt_expansion": True,
-    })
-    hero_video = out/"fal-hero.mp4"
-    download_url(fal_video["video"]["url"], hero_video)
-
+    # Keep video generation deterministic: use the rendered Glimerz slides as the visual track.
+    # This avoids the unpredictable queue time of generative video models while retaining
+    # natural ElevenLabs narration and original background music.
     voice_parts = [f"Today on Glimerz: {title}."]
     for heading, summary in sections[:4]:
         voice_parts.append(f"{heading}. {summary}")
@@ -274,17 +262,13 @@ def main():
     mp4=out/f"{args.slug}.mp4"
     subprocess.run([
         "ffmpeg","-y",
-        "-i",str(hero_video),
         "-i",str(slides_mp4),
         "-i",str(voice_file),
         "-stream_loop","-1","-i",str(music_file),
         "-filter_complex",
-        "[0:v]trim=duration=5,setpts=PTS-STARTPTS,scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2,setsar=1[hero];"
-        "[1:v]scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2,setsar=1[slides];"
-        "[hero][slides]concat=n=2:v=1:a=0[visual];"
-        "[3:a]volume=0.24[music];[2:a]volume=1.65[voice];"
+        "[2:a]volume=0.24[music];[1:a]volume=1.65[voice];"
         "[voice][music]amix=inputs=2:duration=first:dropout_transition=2,loudnorm=I=-14:TP=-1.5:LRA=11[a]",
-        "-map","[visual]","-map","[a]",
+        "-map","0:v","-map","[a]",
         "-c:v","libx264","-preset","veryfast","-crf","22","-r","30",
         "-pix_fmt","yuv420p","-c:a","aac","-b:a","192k","-shortest",
         "-movflags","+faststart",str(mp4)
@@ -292,8 +276,8 @@ def main():
 
     manifest={
         "title":title,"description":desc,"slug":args.slug,"video":str(mp4),
-        "duration_seconds":round(5 + len(slides)*5-0.35*(len(slides)-1),2),
-        "source_image":image_url,"slides":len(slides),"audio":{"voiceover":"fal.ai ElevenLabs Eleven v3","music":"fal.ai Stable Audio 2.5"},"fal_video_model":FAL_VIDEO_MODEL,"voice_model":FAL_TTS_MODEL,"music_model":FAL_MUSIC_MODEL,
+        "duration_seconds":round(len(slides)*5-0.35*(len(slides)-1),2),
+        "source_image":image_url,"slides":len(slides),"audio":{"voiceover":"fal.ai ElevenLabs Eleven v3","music":"fal.ai Stable Audio 2.5"},"voice_model":FAL_TTS_MODEL,"music_model":FAL_MUSIC_MODEL,
         "sections":[h for h,_ in sections],"voiceover_script":voice_script
     }
     (out/"manifest.json").write_text(json.dumps(manifest,indent=2))
