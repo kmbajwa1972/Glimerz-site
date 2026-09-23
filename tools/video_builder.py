@@ -279,6 +279,43 @@ def main():
         "-c:a", "pcm_s16le", str(music_file)
     ], check=True)
 
+    # Burn in our own captions in the reserved lower area.
+    # This keeps captions away from article photos and avoids YouTube's
+    # dynamic caption placement covering important visuals.
+    voice_duration=float(subprocess.check_output([
+        "ffprobe","-v","error","-show_entries","format=duration",
+        "-of","default=noprint_wrappers=1:nokey=1",str(voice_file)
+    ],text=True).strip())
+    caption_lines=[]
+    sentences=[s.strip() for s in re.split(r"(?<=[.!?])\\s+",voice_script) if s.strip()]
+    if not sentences:
+        sentences=[voice_script]
+    total_chars=max(1,sum(len(s) for s in sentences))
+    t=0.0
+    for sentence in sentences:
+        dur=max(1.2, voice_duration*len(sentence)/total_chars)
+        caption_lines.append((t,min(voice_duration,t+dur),sentence))
+        t += dur
+    if caption_lines:
+        caption_lines[-1]=(caption_lines[-1][0],voice_duration,caption_lines[-1][2])
+
+    def srt_time(seconds):
+        ms=int(round(seconds*1000))
+        h,ms=divmod(ms,3600000); m,ms=divmod(ms,60000); s,ms=divmod(ms,1000)
+        return f"{h:02d}:{m:02d}:{s:02d},{ms:03d}"
+
+    srt_file=out/"captions.srt"
+    with srt_file.open("w",encoding="utf-8") as sf:
+        for i,(start,end,text) in enumerate(caption_lines,1):
+            sf.write(f"{i}\\n{srt_time(start)} --> {srt_time(end)}\\n{textwrap.fill(text,42)}\\n\\n")
+
+    caption_filter = (
+        f"subtitles={srt_file}:force_style="
+        "FontName=DejaVu Sans,FontSize=22,PrimaryColour=&H00FFFFFF,"
+        "OutlineColour=&H80000000,BorderStyle=1,Outline=2,Shadow=0,"
+        "Alignment=2,MarginV=175"
+    )
+
     mp4=out/f"{args.slug}.mp4"
     subprocess.run([
         "ffmpeg","-y",
@@ -286,9 +323,10 @@ def main():
         "-i",str(voice_file),
         "-stream_loop","-1","-i",str(music_file),
         "-filter_complex",
+        f"[0:v]{caption_filter}[v];"
         "[2:a]volume=0.32[music];[1:a]volume=1.65[voice];"
         "[voice][music]amix=inputs=2:duration=first:dropout_transition=2,loudnorm=I=-14:TP=-1.5:LRA=11[a]",
-        "-map","0:v","-map","[a]",
+        "-map","[v]","-map","[a]",
         "-c:v","libx264","-preset","veryfast","-crf","22","-r","30",
         "-pix_fmt","yuv420p","-c:a","aac","-b:a","192k","-shortest",
         "-movflags","+faststart",str(mp4)
