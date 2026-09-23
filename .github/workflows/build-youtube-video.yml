@@ -25,6 +25,10 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg python3-pil
+      - name: Zero-cost article and image preflight
+        run: |
+          python3 tools/video_builder.py --slug "${{ inputs.slug }}" --preflight
+
       - name: Build 9:16 MP4 with fal.ai voiceover and local music
         env:
           FAL_KEY: ${{ secrets.FAL_KEY }}
