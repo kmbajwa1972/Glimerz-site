@@ -78,9 +78,13 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg python3-pil
 
-      - name: Build one YouTube Short
+      - name: Build one YouTube Short with fal.ai
         if: steps.check.outputs.exists != 'true'
-        run: python3 tools/video_builder.py --slug "${{ steps.select.outputs.slug }}"
+        env:
+          FAL_KEY: ${{ secrets.FAL_KEY }}
+        run: |
+          test -n "$FAL_KEY"
+          python3 tools/video_builder.py --slug "${{ steps.select.outputs.slug }}"
 
       - name: Upload video to Supabase Storage
         if: steps.check.outputs.exists != 'true'
