@@ -158,42 +158,32 @@ def main():
     title=fm.get("title",args.slug.replace("-"," ").title())
     desc=fm.get("description","")
 
-    # Use Glimerz-hosted static images for reliable video rendering.
-    # We intentionally do not depend on Amazon/external product image URLs.
-    is_kitchen = bool(re.search(r"kitchen|cook|knife|utensil|appliance|gadget", (title + " " + args.slug).lower()))
-    if is_kitchen:
-        # Use clean kitchen photography for video slides. Several older kitchen
-        # assets contain baked-in editorial text, which gets cropped in 9:16.
-        # Keep those out of the video source pool.
-        static_names = [
-            "kitchen-15.jpg", "kitchen-16.jpg", "kitchen-17.jpg",
-            "kitchen-18.jpg", "kitchen-19.jpg"
-        ]
-    else:
-        # Prefer the article's own Glimerz hero image when it is a local static asset.
-        local_hero = fm.get("image", "")
-        hero_name = Path(local_hero).name if local_hero.startswith("/images/") else "home-24.png"
-        home_pool = [hero_name, "home-21.png", "home-22.png", "home-23.png", "home-24.png", "home-15.jpg", "home-16.jpg"]
-        static_names = list(dict.fromkeys(home_pool))
-
+    # Build the visual pool from assets attached to THIS article only.
+    # Never use a generic kitchen/home image pool: that can accidentally pull
+    # photos belonging to another blog.
     static_images=[]
-    for n,name in enumerate(static_names, start=1):
+    image_sources=[]
+    local_hero = fm.get("image", "")
+    if local_hero.startswith("/images/"):
+        image_sources.append(("article-hero", f"https://raw.githubusercontent.com/{args.repo}/main/static/images/{Path(local_hero).name}"))
+    for idx, url in enumerate(fm.get("product_photos", []), start=1):
+        image_sources.append((f"article-product-{idx}", url))
+
+    for n,(label,url) in enumerate(image_sources, start=1):
         try:
-            p=out/f"static-{n}-{name}"
-            fetch(f"https://raw.githubusercontent.com/{args.repo}/main/static/images/{name}", p)
+            p=out/f"static-{n}-{label}"
+            fetch(url, p)
             static_images.append(Image.open(p).convert("RGB"))
-            print(f"Static image loaded: {name}")
+            print(f"Article image loaded: {label}")
         except Exception as e:
-            print(f"Static image skipped: {name} ({e})")
+            print(f"Article image skipped: {label} ({e})")
 
     if not static_images:
-        raise RuntimeError("No Glimerz static images could be loaded")
+        raise RuntimeError("No images attached to this article could be loaded")
 
-    # First image is used for the title slide; all content slides use the
-    # remaining static images in sequence. This guarantees visible imagery.
     image = static_images[0]
     visual_images = static_images
-    image_url = f"https://raw.githubusercontent.com/{args.repo}/main/static/images/{static_names[0]}"
+    image_url = image_sources[0][1] if image_sources else ""
 
     sections=extract_sections(body)
     if not sections:
