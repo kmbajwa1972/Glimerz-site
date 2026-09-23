@@ -11,14 +11,14 @@ categories:
 guest_post: false
 products:
   - product_name: Lifeboost Light Roast Low Acid Ground Coffee, Certified Organic, 12oz.
-    affiliate_link: https://link.amazon/B02ILJZBD?tag=hunterpro0e-20
+    affiliate_link: https://www.amazon.com/dp/B0899ZPSZ9?ref=t_ac_view_request_product_image&campaignId=amzn1.campaign.8EIZQ0D62PBV&linkCode=tr1&tag=hunterpro0e-20&linkId=amzn1.campaign.8EIZQ0D62PBV_1790189202612?tag=hunterpro0e-20
     photo: https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/6191nS-IExL._SL1500_.jpg
   - product_name: Airtight Glass Coffee Canister with Lid.
     affiliate_link: https://amzn.to/3UCBXvU?tag=hunterpro0e-20
     photo: https://m.media-amazon.com/images/I/61a5LMkmSWL._AC_SL1500_.jpg
 mid_products:
   - product_name: Lifeboost Medium Roast Low Acid Coffee Beans, Certified Organic, 12oz
-    affiliate_link: https://link.amazon/B0gRNyulv?tag=hunterpro0e-20
+    affiliate_link: https://www.amazon.com/dp/B0899ZYXXN?ref=t_ac_view_request_product_image&campaignId=amzn1.campaign.8EIZQ0D62PBV&linkCode=tr1&tag=hunterpro0e-20&linkId=amzn1.campaign.8EIZQ0D62PBV_1790189147345?tag=hunterpro0e-20
     photo: https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61hQJ33mpXL._SL1500_.jpg
   - product_name: Small Wall-Mounted Floating Shelf (Set of 2).
     affiliate_link: https://amzn.to/4hF9cIM?tag=hunterpro0e-20
