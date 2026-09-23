@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw, ImageFont
 W,H=1080,1920
 FAL_QUEUE_BASE = "https://queue.fal.run"
 FAL_VIDEO_MODEL = "fal-ai/wan-i2v"
-FAL_TTS_MODEL = "xai/tts/v1"
+FAL_TTS_MODEL = "fal-ai/elevenlabs/tts/eleven-v3"
 FAL_MUSIC_MODEL = "fal-ai/stable-audio-25/text-to-audio"
 
 def fal_request(model, payload, timeout=300):
@@ -254,7 +254,7 @@ def main():
     for heading, summary in sections[:4]:
         voice_parts.append(f"{heading}. {summary}")
     voice_script = clean_text(" ".join(voice_parts))[:750]
-    tts = fal_request(FAL_TTS_MODEL, {"text": voice_script, "voice": "ara", "language": "en"})
+    tts = fal_request(FAL_TTS_MODEL, {"text": voice_script, "voice": "Aria", "stability": 0.45, "similarity_boost": 0.8, "style": 0.25, "speed": 0.98, "language_code": "en", "apply_text_normalization": "auto", "output_format": "mp3_44100_128"})
     voice_file = out/"voiceover.mp3"
     download_url(tts["audio"]["url"], voice_file)
 
@@ -293,7 +293,7 @@ def main():
     manifest={
         "title":title,"description":desc,"slug":args.slug,"video":str(mp4),
         "duration_seconds":round(5 + len(slides)*5-0.35*(len(slides)-1),2),
-        "source_image":image_url,"slides":len(slides),"audio":{"voiceover":"fal.ai xAI TTS","music":"fal.ai Stable Audio 2.5"},"fal_video_model":FAL_VIDEO_MODEL,"voice_model":FAL_TTS_MODEL,"music_model":FAL_MUSIC_MODEL,
+        "source_image":image_url,"slides":len(slides),"audio":{"voiceover":"fal.ai ElevenLabs Eleven v3","music":"fal.ai Stable Audio 2.5"},"fal_video_model":FAL_VIDEO_MODEL,"voice_model":FAL_TTS_MODEL,"music_model":FAL_MUSIC_MODEL,
         "sections":[h for h,_ in sections],"voiceover_script":voice_script
     }
     (out/"manifest.json").write_text(json.dumps(manifest,indent=2))
