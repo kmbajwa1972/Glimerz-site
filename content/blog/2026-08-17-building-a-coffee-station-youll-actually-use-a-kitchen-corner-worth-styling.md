@@ -5,7 +5,7 @@ date: 2026-09-23T10:47:00.000-07:00
 description: A practical guide to designing a useful coffee station in a
   kitchen, including counter measurements, equipment choices, storage, four
   layout options, cleaning routines, and simple styling ideas.
-image: /images/kitchen-23.png
+image: /images/kitchen-25.png
 categories:
   - Kitchen Accessories
 guest_post: false
