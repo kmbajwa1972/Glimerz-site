@@ -748,7 +748,8 @@ CATEGORY_HASHTAGS = {
     "kitchen": ["#kitchenideas", "#kitchendecor", "#kitchenorganization", "#kitchentips"],
     "home": ["#homedecor", "#homedecorideas", "#interiordesign", "#hometips"],
 }
-SUBSCRIBE_LINE = "Subscribe to Glimerz for simple, practical home and kitchen ideas every week."
+SUBSCRIBE_LINE = ("Subscribe to Glimerz for simple, practical home and kitchen ideas: "
+                  "https://www.youtube.com/@Glimerz1?sub_confirmation=1")
 
 
 def chapters_from(scenes):
