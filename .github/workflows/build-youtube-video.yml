@@ -91,7 +91,7 @@ jobs:
           SLUG: ${{ inputs.slug }}
         run: |
           python3 - <<'PY'
-          import json, os, urllib.request
+          import json, os, urllib.request, urllib.error
           slug=os.environ["SLUG"]; base=os.environ["SUPABASE_URL"]; key=os.environ["SUPABASE_SERVICE_ROLE_KEY"]
           m=json.load(open("build/video/manifest.json"))
           payload=json.dumps({"item_type":"youtube_video","status":"pending_review","title":m["title"],
@@ -100,10 +100,17 @@ jobs:
             "created_by":"video-builder"}).encode()
           req=urllib.request.Request(f"{base}/rest/v1/content_items",data=payload,method="POST",
             headers={"apikey":key,"Authorization":f"Bearer {key}","Content-Type":"application/json","Prefer":"return=representation"})
-          with urllib.request.urlopen(req) as r: print(r.read().decode())
+          try:
+            with urllib.request.urlopen(req) as r: print(r.read().decode())
+          except urllib.error.HTTPError as e:
+            if e.code == 409:
+              print("::notice::This post already has a YouTube item in the dashboard, so no second item was created. The new video file is still in the artifact below.")
+            else:
+              raise
           PY
 
       - name: Save video as workflow artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: glimerz-youtube-video-${{ inputs.slug }}
