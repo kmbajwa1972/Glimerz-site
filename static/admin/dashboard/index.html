@@ -533,12 +533,14 @@ async function approveItem(id, card) {
   const approveBtn = card.querySelector(".btn-approve");
   const hint = card.querySelector(".save-hint");
 
+  // Lock the button straight away so a double-click can't publish twice.
+  if (approveBtn.disabled) return;
+  approveBtn.disabled = true;
+  approveBtn.textContent = "Publishing…";
+
   // Save any in-progress edits first, so what gets published matches
   // what's on screen.
   await saveEdits(id, card);
-
-  approveBtn.disabled = true;
-  approveBtn.textContent = "Publishing…";
   hint.textContent = "";
 
   // Mark reviewed, then hand off to the publish function. The function
