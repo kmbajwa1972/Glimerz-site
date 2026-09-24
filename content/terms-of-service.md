@@ -24,7 +24,9 @@ By connecting an account through the App, you represent that:
 - You are responsible for reviewing and approving any content before it is published to your connected account(s), and for the content that is ultimately published.
 
 You may disconnect any connected account at any time. See our [Privacy Policy](/privacy-policy/) for details on how account access and data are handled.
+## YouTube
 
+Glimerz publishes videos on its YouTube channel (https://www.youtube.com/@Glimerz1) using YouTube API Services. By watching or interacting with our videos on YouTube, you agree to be bound by the YouTube Terms of Service (https://www.youtube.com/t/terms). Google's handling of data is described in the Google Privacy Policy (https://policies.google.com/privacy).
 ## Intellectual Property
 
 All content on the Site — including text, graphics, and original images — is the property of Glimerz unless otherwise noted, and may not be reproduced without permission. Product images and links belong to their respective owners (e.g., Amazon.com and its sellers).
