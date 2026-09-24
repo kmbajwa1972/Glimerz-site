@@ -6,7 +6,6 @@
 <meta name="robots" content="noindex, nofollow" />
 <title>Glimerz — AI Manager</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js" crossorigin="anonymous"></script>
-<script src="/admin/dashboard/tiktok.js"></script>
 <style>
   :root {
     --cream: #fdfbf7;
@@ -265,6 +264,7 @@
 
   .item-actions {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 14px;
   }
@@ -275,6 +275,9 @@
   .btn-reject:hover { background: var(--rust); color: #fff; }
   .btn-save { background: transparent; color: var(--gold-deep); border: 1px solid var(--gold); }
   .btn-save:hover { background: var(--gold); color: #fff; }
+  .btn-download, .btn-copy { background: transparent; color: var(--gold-deep); border: 1px solid var(--gold); }
+  .btn-download:hover, .btn-copy:hover { background: var(--gold); color: #fff; }
+  .btn-download:disabled { opacity: .6; cursor: wait; }
 
   .save-hint {
     font-size: 0.78rem;
@@ -335,7 +338,6 @@
   </nav>
 
   <main>
-    <div id="tiktok-connect" style="margin-bottom:20px;"></div>
     <div id="pending-panel"></div>
     <div id="failed-panel" style="display:none;"></div>
     <div id="rejected-panel" style="display:none;"></div>
@@ -387,20 +389,10 @@ function showLogin() {
   document.getElementById("app").style.display = "none";
 }
 
-let tiktokReady = false;
 function showApp() {
   document.getElementById("login-screen").style.display = "none";
   document.getElementById("app").style.display = "block";
   loadPending();
-  if (!tiktokReady && window.GlimerzTikTok) {
-    tiktokReady = true;
-    GlimerzTikTok.init({
-      supabaseUrl: SUPABASE_URL,
-      anonKey: SUPABASE_ANON_KEY,
-      getAccessToken: async () => (await sb.auth.getSession()).data.session?.access_token,
-      mount: "#tiktok-connect",
-    });
-  }
 }
 
 document.getElementById("login-form").addEventListener("submit", async (e) => {
@@ -507,7 +499,11 @@ function renderItemCard(item) {
     <div class="item-actions">
       <button class="btn-edit">Edit</button>
       <button class="btn-save" style="display:none;">Save edits</button>
-      <button class="btn-approve">${item.item_type === "tiktok_video" ? "Post to TikTok" : "Approve"}</button>
+      ${item.item_type === "tiktok_video"
+        ? `<button class="btn-download">Download video</button>
+      <button class="btn-copy">Copy caption</button>
+      <button class="btn-approve">Mark as posted</button>`
+        : `<button class="btn-approve">Approve</button>`}
       <button class="btn-reject">Reject</button>
       <span class="save-hint"></span>
     </div>
@@ -538,24 +534,67 @@ function renderItemCard(item) {
     saveBtn.style.display = "none";
   });
 
-  card.querySelector(".btn-approve").addEventListener("click", () =>
-    item.item_type === "tiktok_video" ? openTikTokPost(item, card) : approveItem(item.id, card));
+  if (item.item_type === "tiktok_video") {
+    card.querySelector(".btn-download").addEventListener("click", (e) => downloadVideo(item, e.currentTarget));
+    card.querySelector(".btn-copy").addEventListener("click", (e) => copyCaption(card, e.currentTarget));
+    card.querySelector(".btn-approve").addEventListener("click", () => markTikTokPosted(item.id, card));
+  } else {
+    card.querySelector(".btn-approve").addEventListener("click", () => approveItem(item.id, card));
+  }
   card.querySelector(".btn-reject").addEventListener("click", () => rejectItem(item.id, card));
 
   return card;
 }
 
-// TikTok videos never auto-publish: they open the TikTok post screen,
-// where the privacy, interaction and consent choices are made by hand.
-async function openTikTokPost(item, card) {
-  if (card.querySelector(".item-body-textarea")) await saveEdits(item.id, card);
-  const bodyInput = card.querySelector(".item-body-textarea");
-  GlimerzTikTok.openPostDialog({
-    itemId: item.id,
-    videoUrl: item.media_urls && item.media_urls[0],
-    caption: bodyInput ? bodyInput.value : (item.body || item.title || ""),
-    onPublished: () => { card.remove(); refreshStatusLine(); },
-  });
+// ---------------------------------------------------------------
+// TikTok: posted by hand (TikTok app or TikTok Studio)
+// ---------------------------------------------------------------
+async function downloadVideo(item, btn) {
+  const url = item.media_urls && item.media_urls[0];
+  if (!url) { alert("This item has no video file."); return; }
+  const name = (item.title || "glimerz-video").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 80) + ".mp4";
+  const label = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = "Downloading…";
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(res.status);
+    const blobUrl = URL.createObjectURL(await res.blob());
+    const a = document.createElement("a");
+    a.href = blobUrl; a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(blobUrl), 60000);
+  } catch {
+    // Storage that blocks direct downloads: open the file so it can be saved from the browser.
+    window.open(url, "_blank", "noopener");
+  }
+  btn.disabled = false;
+  btn.textContent = label;
+}
+
+async function copyCaption(card, btn) {
+  const text = card.querySelector(".item-body-textarea").value.trim();
+  try {
+    await navigator.clipboard.writeText(text);
+    btn.textContent = "Copied ✓";
+  } catch {
+    prompt("Copy the caption:", text);
+  }
+  setTimeout(() => { btn.textContent = "Copy caption"; }, 2000);
+}
+
+async function markTikTokPosted(id, card) {
+  if (!confirm("Mark this video as posted on TikTok? It will leave the pending list.")) return;
+  await saveEdits(id, card);
+  const { error } = await sb.from("content_items").update({
+    status: "published",
+    reviewed_at: new Date().toISOString(),
+    published_at: new Date().toISOString(),
+    published_ref: "manual-tiktok",
+  }).eq("id", id);
+  if (error) { alert(`Couldn't update: ${error.message}`); return; }
+  card.remove();
+  refreshStatusLine();
 }
 
 async function saveEdits(id, card) {
@@ -686,12 +725,7 @@ function renderFailedCard(item) {
     </div>
   `;
 
-  card.querySelector(".btn-approve").addEventListener("click", async () => {
-    if (item.item_type !== "tiktok_video") return retryItem(item.id, card);
-    // Put it back to approved so the post screen can send it again.
-    await sb.from("content_items").update({ status: "approved", publish_error: null }).eq("id", item.id);
-    openTikTokPost(item, card);
-  });
+  card.querySelector(".btn-approve").addEventListener("click", () => retryItem(item.id, card));
   card.querySelector(".btn-reject").addEventListener("click", () => rejectItem(item.id, card, "failed-panel"));
 
   return card;
