@@ -744,17 +744,51 @@ def music_track(slug, seconds, out):
 
 
 # ------------------------------------------------------------------ description
-def build_description(fm, desc, slug, products, fmt):
+CATEGORY_HASHTAGS = {
+    "kitchen": ["#kitchenideas", "#kitchendecor", "#kitchenorganization", "#kitchentips"],
+    "home": ["#homedecor", "#homedecorideas", "#interiordesign", "#hometips"],
+}
+SUBSCRIBE_LINE = "Subscribe to Glimerz for simple, practical home and kitchen ideas every week."
+
+
+def chapters_from(scenes):
+    """YouTube chapters: first at 0:00, at least 3, each at least 10 seconds long."""
+    marks = []
+    for sc in scenes:
+        name = {"intro": "Intro", "outro": "Full guide on Glimerz"}.get(sc["kind"], sc["heading"])
+        t = max(0.0, sc["start"])
+        if not marks:
+            marks.append((0.0, name))
+        elif t - marks[-1][0] >= 10:
+            marks.append((t, name))
+    if len(marks) < 3:
+        return []
+    return [f"{int(t // 60)}:{int(t % 60):02d} {n}" for t, n in marks]
+
+
+def hashtags(fm, fmt):
+    cats = " ".join(str(c).lower() for c in (fm.get("categories") or []))
+    tags = []
+    if "kitchen" in cats:
+        tags += CATEGORY_HASHTAGS["kitchen"][:3]
+    if "home" in cats or "decor" in cats:
+        tags += CATEGORY_HASHTAGS["home"][:3]
+    if not tags:
+        tags = ["#homedecor", "#kitchenideas", "#hometips"]
+    tags = tags[:5] + ["#glimerz"]
+    if fmt == "short":
+        tags.append("#shorts")
+    return " ".join(dict.fromkeys(tags))
+
+
+def build_description(fm, desc, slug, fmt, chapters=None):
     lines = []
     if desc:
         lines += [desc, ""]
-    lines += [f"Read the full guide: {SITE}/blog/{slug}/"]
-    cats = fm.get("categories") or []
-    tags = ["#" + re.sub(r"[^A-Za-z0-9]", "", str(c)).lower() for c in cats]
-    if fmt == "short":
-        tags.append("#shorts")
-    if tags:
-        lines += ["", " ".join(tags)]
+    lines += [f"Read the full guide: {SITE}/blog/{slug}/", ""]
+    if chapters:
+        lines += ["Chapters:"] + chapters + [""]
+    lines += [SUBSCRIBE_LINE, f"More ideas: {SITE}", "", hashtags(fm, fmt)]
     return "\n".join(lines)[:4900]
 
 
@@ -798,7 +832,6 @@ def main():
         raise RuntimeError("No images attached to this post could be loaded")
     if not sections:
         raise RuntimeError("No '## ' sections found in this post")
-    products = products_of(fm)
     print(f"Post: {title}\nFormat: {fmt} ({W}x{H}, max {max_s}s)\nSections: {len(sections)}  Images: {len(images)}")
 
     if args.preflight:
@@ -887,7 +920,7 @@ def main():
     yt_title = script.get("youtube_title") or re.sub(r"\s*\([^)]*\)", "", title).strip()
     manifest = {
         "title": yt_title[:100],
-        "description": build_description(fm, desc, args.slug, products, fmt),
+        "description": build_description(fm, desc, args.slug, fmt, chapters_from(scenes) if fmt == "video" else None),
         "tags": script.get("tags") or default_tags(fm, title),
         "format": fmt, "width": W, "height": H,
         "duration_seconds": round(total, 2),
