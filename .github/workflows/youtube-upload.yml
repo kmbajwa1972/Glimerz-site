@@ -1,0 +1,51 @@
+name: Glimerz YouTube Uploader
+
+on:
+  workflow_dispatch:
+    inputs:
+      item_id:
+        description: "Dashboard item id (content_items.id). Leave empty for a slug test."
+        required: false
+        default: ""
+        type: string
+      slug:
+        description: "Test only: blog slug whose video is in Supabase storage"
+        required: false
+        default: ""
+        type: string
+      privacy:
+        description: "YouTube privacy (forced to private until the API audit is approved)"
+        required: false
+        default: "private"
+        type: choice
+        options: [private, unlisted, public]
+  repository_dispatch:
+    types: [youtube-upload]
+
+concurrency:
+  group: youtube-upload
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload to YouTube
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          ITEM_ID: ${{ inputs.item_id || github.event.client_payload.item_id }}
+          SLUG: ${{ inputs.slug }}
+          PRIVACY: ${{ inputs.privacy || github.event.client_payload.privacy || 'private' }}
+        run: |
+          args="--privacy $PRIVACY"
+          if [ -n "$ITEM_ID" ]; then args="$args --item-id $ITEM_ID"; else args="$args --slug $SLUG"; fi
+          python3 tools/youtube_upload.py $args
