@@ -55,6 +55,13 @@ def supa(method, path, payload=None):
     return json.loads(body) if body else None
 
 
+def log(item_id, action, details, level="info"):
+    try:
+        supa("POST", "activity_log", {"content_item_id": item_id, "action": action, "details": details, "level": level})
+    except Exception as e:
+        print(f"(activity log not written: {e})")
+
+
 def clean(s, limit):
     s = (s or "").replace("<", "‹").replace(">", "›")  # YouTube rejects < and >
     return s.strip()[:limit]
@@ -148,8 +155,12 @@ def main():
         vid = upload(access_token(), video, title, description, make_tags(title, target), args.privacy,
                      args.thumbnail or None)
         if item:
+            from datetime import datetime, timezone
             supa("PATCH", f"content_items?id=eq.{item['id']}",
-                 {"status": "published", "published_ref": vid, "publish_error": None})
+                 {"status": "published", "published_ref": vid, "publish_error": None,
+                  "published_at": datetime.now(timezone.utc).isoformat()})
+            log(item["id"], "publish_succeeded", {"published_ref": vid, "via": "github-actions",
+                                                  "url": f"https://youtu.be/{vid}"})
         out = os.environ.get("GITHUB_OUTPUT")
         if out:
             with open(out, "a") as f:
@@ -159,6 +170,7 @@ def main():
             try:
                 supa("PATCH", f"content_items?id=eq.{item['id']}",
                      {"status": "publish_failed", "publish_error": str(e)[:900]})
+                log(item["id"], "publish_failed", {"error": str(e)[:900], "via": "github-actions"}, "error")
             except Exception:
                 pass
         raise
