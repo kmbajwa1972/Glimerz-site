@@ -17,7 +17,21 @@ forces every API upload to Private, whatever --privacy says.
 import argparse, json, os, re, sys, tempfile, urllib.parse, urllib.request, urllib.error
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 SUPABASE_URL = os.environ.get("SUPABASE_URL", "https://yayljmqelmsmcsuhxqdj.supabase.co")
+
+
+def b2_client():
+    try:
+        import b2
+        return b2, b2.B2()
+    except Exception as e:
+        print(f"(B2 not available: {e})")
+        return None, None
+
+
+def is_b2(url):
+    return bool(url) and "/file/" in url and "backblazeb2.com" in url
 CATEGORY_HOWTO_STYLE = "26"
 
 
@@ -128,7 +142,7 @@ def main():
         sys.exit("Give --item-id or --slug")
 
     tmp = Path(tempfile.mkdtemp())
-    item = None
+    item, thumb_url = None, None
     if args.item_id:
         rows = supa("GET", f"content_items?id=eq.{urllib.parse.quote(args.item_id)}&select=*")
         if not rows:
@@ -139,7 +153,9 @@ def main():
         if item.get("status") == "published" and item.get("published_ref"):
             print(f"Already published: https://youtu.be/{item['published_ref']}")
             return
-        video_url = (item.get("media_urls") or [None])[0]
+        media = item.get("media_urls") or []
+        video_url = media[0] if media else None
+        thumb_url = media[1] if len(media) > 1 else None
         title, description = item.get("title") or "", item.get("body") or ""
         target = item.get("target_url") or ""
     else:
@@ -151,9 +167,29 @@ def main():
     try:
         if not video_url:
             raise RuntimeError("This item has no video URL")
-        video = download(video_url, tmp / "video.mp4")
-        vid = upload(access_token(), video, title, description, make_tags(title, target), args.privacy,
-                     args.thumbnail or None)
+        b2mod, b2 = b2_client() if (is_b2(video_url) or is_b2(thumb_url)) else (None, None)
+
+        def fresh(url):
+            # B2 links last 7 days; make a new one so late approvals still work.
+            if b2 and is_b2(url):
+                return b2.link(b2mod.name_from_url(url))
+            return url
+
+        video = download(fresh(video_url), tmp / "video.mp4")
+        thumb = args.thumbnail or None
+        if thumb_url:
+            try:
+                thumb = download(fresh(thumb_url), tmp / "thumb.jpg")
+            except Exception as e:
+                print(f"Thumbnail download skipped: {e}")
+        vid = upload(access_token(), video, title, description, make_tags(title, target), args.privacy, thumb)
+        if b2:
+            for u in (video_url, thumb_url):
+                if is_b2(u):
+                    try:
+                        b2.delete(b2mod.name_from_url(u))
+                    except Exception as e:
+                        print(f"(B2 cleanup skipped: {e})")
         if item:
             from datetime import datetime, timezone
             supa("PATCH", f"content_items?id=eq.{item['id']}",

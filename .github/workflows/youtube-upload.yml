@@ -42,6 +42,9 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          B2_KEY_ID: ${{ secrets.B2_KEY_ID }}
+          B2_APP_KEY: ${{ secrets.B2_APP_KEY }}
+          B2_BUCKET: ${{ secrets.B2_BUCKET }}
           ITEM_ID: ${{ inputs.item_id || github.event.client_payload.item_id }}
           SLUG: ${{ inputs.slug }}
           PRIVACY: ${{ inputs.privacy || github.event.client_payload.privacy || 'private' }}

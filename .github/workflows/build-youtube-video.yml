@@ -56,36 +56,27 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python tools/video_builder.py --slug "${{ inputs.slug }}" --format "${{ inputs.format }}"
 
-      - name: Check file size for storage
-        id: size
-        run: |
-          bytes=$(stat -c %s "build/video/${{ inputs.slug }}.mp4")
-          echo "Video size: $((bytes/1000000)) MB"
-          if [ "$bytes" -gt 49000000 ]; then
-            echo "ok=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::Video is over Supabase's 50 MB limit. It is saved as a workflow artifact only (B2 storage comes next)."
-          else
-            echo "ok=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Upload video to Supabase Storage
-        if: ${{ inputs.publish && steps.size.outputs.ok == 'true' }}
+      - name: Save video to B2 (private)
+        if: ${{ inputs.publish }}
         env:
-          SUPABASE_URL: https://yayljmqelmsmcsuhxqdj.supabase.co
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          B2_KEY_ID: ${{ secrets.B2_KEY_ID }}
+          B2_APP_KEY: ${{ secrets.B2_APP_KEY }}
+          B2_BUCKET: ${{ secrets.B2_BUCKET }}
           SLUG: ${{ inputs.slug }}
         run: |
-          test -n "$SUPABASE_SERVICE_ROLE_KEY"
-          curl --fail --retry 3 -X POST "$SUPABASE_URL/storage/v1/object/youtube-videos/$SLUG.mp4" \
-            -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" \
-            -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" \
-            -H "Content-Type: video/mp4" \
-            -H "x-upsert: true" \
-            --data-binary "@build/video/$SLUG.mp4"
+          thumb=$(ls build/video/*-thumbnail.jpg 2>/dev/null | head -n 1 || true)
+          if [ -n "$thumb" ]; then
+            python3 tools/b2.py upload --slug "$SLUG" --video "build/video/$SLUG.mp4" --thumb "$thumb" > build/b2.json
+          else
+            python3 tools/b2.py upload --slug "$SLUG" --video "build/video/$SLUG.mp4" > build/b2.json
+          fi
 
       - name: Create YouTube review item
-        if: ${{ inputs.publish && steps.size.outputs.ok == 'true' }}
+        if: ${{ inputs.publish }}
         env:
+          B2_KEY_ID: ${{ secrets.B2_KEY_ID }}
+          B2_APP_KEY: ${{ secrets.B2_APP_KEY }}
+          B2_BUCKET: ${{ secrets.B2_BUCKET }}
           SUPABASE_URL: https://yayljmqelmsmcsuhxqdj.supabase.co
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           SLUG: ${{ inputs.slug }}
@@ -93,17 +84,20 @@ jobs:
           python3 - <<'PY'
           import json, os, urllib.request, urllib.error
           slug=os.environ["SLUG"]; base=os.environ["SUPABASE_URL"]; key=os.environ["SUPABASE_SERVICE_ROLE_KEY"]
-          m=json.load(open("build/video/manifest.json"))
+          m=json.load(open("build/video/manifest.json")); b2=json.load(open("build/b2.json"))
           payload=json.dumps({"item_type":"youtube_video","status":"pending_review","title":m["title"],
             "body":m["description"],"target_url":f"https://glimerz.com/blog/{slug}/",
-            "media_urls":[f"{base}/storage/v1/object/public/youtube-videos/{slug}.mp4"],
+            "media_urls":[u for u in (b2["video_url"], b2.get("thumb_url")) if u],
             "created_by":"video-builder"}).encode()
           req=urllib.request.Request(f"{base}/rest/v1/content_items",data=payload,method="POST",
             headers={"apikey":key,"Authorization":f"Bearer {key}","Content-Type":"application/json","Prefer":"return=representation"})
           try:
-            with urllib.request.urlopen(req) as r: print(r.read().decode())
+            with urllib.request.urlopen(req) as r: print("Review item created:", json.loads(r.read())[0]["id"])
           except urllib.error.HTTPError as e:
             if e.code == 409:
+              import subprocess
+              for n in (b2.get("video_name"), b2.get("thumb_name")):
+                if n: subprocess.run(["python3","tools/b2.py","delete","--name",n])
               print("::notice::This post already has a YouTube item in the dashboard, so no second item was created. The new video file is still in the artifact below.")
             else:
               raise

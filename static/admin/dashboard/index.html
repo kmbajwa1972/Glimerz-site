@@ -239,6 +239,14 @@
     resize: vertical;
   }
 
+  .item-video {
+    display: block;
+    max-width: 260px;
+    max-height: 460px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: #000;
+  }
   .item-thumb {
     max-width: 140px;
     border-radius: 3px;
@@ -456,9 +464,12 @@ function renderItemCard(item) {
   card.className = `item-card type-${item.item_type}`;
   card.dataset.id = item.id;
 
-  const thumb = (item.media_urls && item.media_urls[0])
-    ? `<img class="item-thumb" src="${escapeAttr(item.media_urls[0])}" alt="" />`
-    : "";
+  const firstMedia = item.media_urls && item.media_urls[0];
+  const isVideo = item.item_type === "youtube_video" || /\.(mp4|webm|mov)(\?|$)/i.test(firstMedia || "");
+  const thumb = !firstMedia ? ""
+    : isVideo
+      ? `<video class="item-video" src="${escapeAttr(firstMedia)}" controls preload="metadata" playsinline></video>`
+      : `<img class="item-thumb" src="${escapeAttr(firstMedia)}" alt="" />`;
 
   const sourceLink = item.source_post_url
     ? `<a class="item-link" href="${escapeAttr(item.source_post_url)}" target="_blank" rel="noopener">View source post →</a>`
