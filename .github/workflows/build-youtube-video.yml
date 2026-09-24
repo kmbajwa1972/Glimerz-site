@@ -7,8 +7,14 @@ on:
         description: "Blog slug without .md"
         required: true
         type: string
+      format:
+        description: "auto = use the post's YouTube Format setting (default Short)"
+        required: false
+        default: "auto"
+        type: choice
+        options: [auto, short, video]
       publish:
-        description: "Upload video and create youtube_video item"
+        description: "Upload video and create youtube_video review item"
         required: false
         default: false
         type: boolean
@@ -16,36 +22,69 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     permissions:
       contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: tools/requirements-video.txt
+
+      - name: Cache voice model and fonts
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/glimerz-video
+          key: glimerz-video-assets-v1
+
       - name: Install video tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg python3-pil
-      - name: Zero-cost article and image preflight
-        run: |
-          python3 tools/video_builder.py --slug "${{ inputs.slug }}" --preflight
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+          pip install -r tools/requirements-video.txt
 
-      - name: Build 9:16 MP4 with fal.ai voiceover and local music
+      - name: Zero-cost article and image preflight
+        run: python tools/video_builder.py --slug "${{ inputs.slug }}" --format "${{ inputs.format }}" --preflight
+
+      - name: Build video (free voice, local render)
         env:
-          FAL_KEY: ${{ secrets.FAL_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python tools/video_builder.py --slug "${{ inputs.slug }}" --format "${{ inputs.format }}"
+
+      - name: Check file size for storage
+        id: size
         run: |
-          test -n "$FAL_KEY"
-          python3 tools/video_builder.py --slug "${{ inputs.slug }}"
+          bytes=$(stat -c %s "build/video/${{ inputs.slug }}.mp4")
+          echo "Video size: $((bytes/1000000)) MB"
+          if [ "$bytes" -gt 49000000 ]; then
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Video is over Supabase's 50 MB limit. It is saved as a workflow artifact only (B2 storage comes next)."
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Upload video to Supabase Storage
-        if: ${{ inputs.publish }}
+        if: ${{ inputs.publish && steps.size.outputs.ok == 'true' }}
         env:
           SUPABASE_URL: https://yayljmqelmsmcsuhxqdj.supabase.co
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           SLUG: ${{ inputs.slug }}
         run: |
           test -n "$SUPABASE_SERVICE_ROLE_KEY"
-          curl --fail --retry 3 -X POST "$SUPABASE_URL/storage/v1/object/youtube-videos/$SLUG.mp4" -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" -H "Content-Type: video/mp4" --data-binary "@build/video/$SLUG.mp4"
-      - name: Create YouTube content item
-        if: ${{ inputs.publish }}
+          curl --fail --retry 3 -X POST "$SUPABASE_URL/storage/v1/object/youtube-videos/$SLUG.mp4" \
+            -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" \
+            -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" \
+            -H "Content-Type: video/mp4" \
+            -H "x-upsert: true" \
+            --data-binary "@build/video/$SLUG.mp4"
+
+      - name: Create YouTube review item
+        if: ${{ inputs.publish && steps.size.outputs.ok == 'true' }}
         env:
           SUPABASE_URL: https://yayljmqelmsmcsuhxqdj.supabase.co
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
@@ -54,15 +93,22 @@ jobs:
           python3 - <<'PY'
           import json, os, urllib.request
           slug=os.environ["SLUG"]; base=os.environ["SUPABASE_URL"]; key=os.environ["SUPABASE_SERVICE_ROLE_KEY"]
-          manifest=json.load(open("build/video/manifest.json"))
-          url=f"{base}/storage/v1/object/public/youtube-videos/{slug}.mp4"
-          payload=json.dumps({"item_type":"youtube_video","status":"pending_review","title":manifest["title"],"body":manifest["description"],"target_url":f"https://glimerz.com/blog/{slug}/","media_urls":[url],"created_by":"video-builder"}).encode()
-          req=urllib.request.Request(f"{base}/rest/v1/content_items",data=payload,method="POST",headers={"apikey":key,"Authorization":f"Bearer {key}","Content-Type":"application/json","Prefer":"return=representation"})
+          m=json.load(open("build/video/manifest.json"))
+          payload=json.dumps({"item_type":"youtube_video","status":"pending_review","title":m["title"],
+            "body":m["description"],"target_url":f"https://glimerz.com/blog/{slug}/",
+            "media_urls":[f"{base}/storage/v1/object/public/youtube-videos/{slug}.mp4"],
+            "created_by":"video-builder"}).encode()
+          req=urllib.request.Request(f"{base}/rest/v1/content_items",data=payload,method="POST",
+            headers={"apikey":key,"Authorization":f"Bearer {key}","Content-Type":"application/json","Prefer":"return=representation"})
           with urllib.request.urlopen(req) as r: print(r.read().decode())
           PY
+
       - name: Save video as workflow artifact
         uses: actions/upload-artifact@v4
         with:
           name: glimerz-youtube-video-${{ inputs.slug }}
-          path: build/video/${{ inputs.slug }}.mp4
+          path: |
+            build/video/${{ inputs.slug }}.mp4
+            build/video/*-thumbnail.jpg
+            build/video/manifest.json
           retention-days: 7

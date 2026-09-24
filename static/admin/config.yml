@@ -93,3 +93,12 @@ collections:
         default: ""
         required: false
         hint: "Adds a call-to-action linking to the Glimerz AI app, placed automatically in the middle of the post."
+      - label: "YouTube Format"
+        name: "youtube_format"
+        widget: "select"
+        options:
+          - {label: "Short (vertical, up to 60 sec)", value: "short"}
+          - {label: "Video (horizontal, 2-4 min)", value: "video"}
+        default: "short"
+        required: false
+        hint: "The bot makes one YouTube video for this post. Short is the default."

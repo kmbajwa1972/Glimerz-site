@@ -11,10 +11,21 @@ on:
         required: false
         default: ""
         type: string
+      format:
+        description: "auto = use the post's YouTube Format setting (default Short)"
+        required: false
+        default: "auto"
+        type: choice
+        options: [auto, short, video]
+
+concurrency:
+  group: youtube-builder
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     permissions:
       contents: read
     steps:
@@ -35,7 +46,7 @@ jobs:
             echo "slug=$MANUAL_SLUG" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          changed=$(git diff --name-only "$BEFORE" "$SHA" -- 'content/blog/*.md' | head -n 1 || true)
+          changed=$(git diff --name-only --diff-filter=AM "$BEFORE" "$SHA" -- 'content/blog/*.md' 2>/dev/null | head -n 1 || true)
           if [ -n "$changed" ]; then
             slug=$(basename "$changed" .md)
           else
@@ -52,51 +63,76 @@ jobs:
         run: |
           python3 - <<'PY'
           import os, urllib.parse, urllib.request
-          base=os.environ["SUPABASE_URL"]
-          key=os.environ["SUPABASE_SERVICE_ROLE_KEY"]
-          slug=os.environ["SLUG"]
-          target=f"https://glimerz.com/blog/{slug}/"
-          params=urllib.parse.urlencode({
-            "select":"id,status,published_ref",
-            "item_type":"eq.youtube_video",
-            "target_url":f"eq.{target}",
-            "limit":"1"
-          })
-          req=urllib.request.Request(f"{base}/rest/v1/content_items?{params}",
-            headers={"apikey":key,"Authorization":f"Bearer {key}"})
-          with urllib.request.urlopen(req) as r:
-            data=r.read().decode()
-          exists=data not in ("[]","")
+          base=os.environ["SUPABASE_URL"]; key=os.environ["SUPABASE_SERVICE_ROLE_KEY"]; slug=os.environ["SLUG"]
+          params=urllib.parse.urlencode({"select":"id,status","item_type":"eq.youtube_video",
+            "target_url":f"eq.https://glimerz.com/blog/{slug}/","limit":"1"})
+          req=urllib.request.Request(f"{base}/rest/v1/content_items?{params}",headers={"apikey":key,"Authorization":f"Bearer {key}"})
+          with urllib.request.urlopen(req) as r: data=r.read().decode()
           with open(os.environ["GITHUB_OUTPUT"],"a") as out:
-            out.write(f"exists={'true' if exists else 'false'}\n")
+            out.write(f"exists={'true' if data not in ('[]','') else 'false'}\n")
           print(data)
           PY
+
+      - name: Set up Python
+        if: steps.check.outputs.exists != 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: tools/requirements-video.txt
+
+      - name: Cache voice model and fonts
+        if: steps.check.outputs.exists != 'true'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/glimerz-video
+          key: glimerz-video-assets-v1
 
       - name: Install video tools
         if: steps.check.outputs.exists != 'true'
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg python3-pil
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+          pip install -r tools/requirements-video.txt
 
-      - name: Build one YouTube Short with fal.ai
+      - name: Build video (free voice, local render)
         if: steps.check.outputs.exists != 'true'
         env:
-          FAL_KEY: ${{ secrets.FAL_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          test -n "$FAL_KEY"
-          python3 tools/video_builder.py --slug "${{ steps.select.outputs.slug }}"
+          python tools/video_builder.py --slug "${{ steps.select.outputs.slug }}" --format "${{ inputs.format || 'auto' }}"
+
+      - name: Check file size for storage
+        id: size
+        if: steps.check.outputs.exists != 'true'
+        env:
+          SLUG: ${{ steps.select.outputs.slug }}
+        run: |
+          bytes=$(stat -c %s "build/video/$SLUG.mp4")
+          echo "Video size: $((bytes/1000000)) MB"
+          if [ "$bytes" -gt 49000000 ]; then
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Video is over Supabase's 50 MB limit. It is saved as a workflow artifact only (B2 storage comes next)."
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Upload video to Supabase Storage
-        if: steps.check.outputs.exists != 'true'
+        if: steps.check.outputs.exists != 'true' && steps.size.outputs.ok == 'true'
         env:
           SUPABASE_URL: https://yayljmqelmsmcsuhxqdj.supabase.co
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           SLUG: ${{ steps.select.outputs.slug }}
         run: |
-          curl --fail --retry 3 -X POST "$SUPABASE_URL/storage/v1/object/youtube-videos/$SLUG.mp4"             -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY"             -H "apikey: $SUPABASE_SERVICE_ROLE_KEY"             -H "Content-Type: video/mp4"             --data-binary "@build/video/$SLUG.mp4"
+          curl --fail --retry 3 -X POST "$SUPABASE_URL/storage/v1/object/youtube-videos/$SLUG.mp4" \
+            -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" \
+            -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" \
+            -H "Content-Type: video/mp4" \
+            -H "x-upsert: true" \
+            --data-binary "@build/video/$SLUG.mp4"
 
       - name: Create exactly one YouTube review item
-        if: steps.check.outputs.exists != 'true'
+        if: steps.check.outputs.exists != 'true' && steps.size.outputs.ok == 'true'
         env:
           SUPABASE_URL: https://yayljmqelmsmcsuhxqdj.supabase.co
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
@@ -105,27 +141,30 @@ jobs:
           python3 - <<'PY'
           import json, os, urllib.request, urllib.error
           slug=os.environ["SLUG"]; base=os.environ["SUPABASE_URL"]; key=os.environ["SUPABASE_SERVICE_ROLE_KEY"]
-          manifest=json.load(open("build/video/manifest.json"))
-          url=f"{base}/storage/v1/object/public/youtube-videos/{slug}.mp4"
-          payload=json.dumps({
-            "item_type":"youtube_video",
-            "status":"pending_review",
-            "title":manifest["title"],
-            "body":manifest["description"],
-            "target_url":f"https://glimerz.com/blog/{slug}/",
-            "media_urls":[url],
-            "created_by":"video-builder"
-          }).encode()
+          m=json.load(open("build/video/manifest.json"))
+          payload=json.dumps({"item_type":"youtube_video","status":"pending_review","title":m["title"],
+            "body":m["description"],"target_url":f"https://glimerz.com/blog/{slug}/",
+            "media_urls":[f"{base}/storage/v1/object/public/youtube-videos/{slug}.mp4"],
+            "created_by":"video-builder"}).encode()
           req=urllib.request.Request(f"{base}/rest/v1/content_items",data=payload,method="POST",
             headers={"apikey":key,"Authorization":f"Bearer {key}","Content-Type":"application/json","Prefer":"return=representation"})
           try:
             with urllib.request.urlopen(req) as r: print(r.read().decode())
           except urllib.error.HTTPError as e:
-            if e.code == 409:
-              print("Duplicate prevented; no second YouTube item created.")
-            else:
-              raise
+            if e.code == 409: print("Duplicate prevented; no second YouTube item created.")
+            else: raise
           PY
+
+      - name: Save video as workflow artifact
+        if: steps.check.outputs.exists != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: glimerz-youtube-${{ steps.select.outputs.slug }}
+          path: |
+            build/video/${{ steps.select.outputs.slug }}.mp4
+            build/video/*-thumbnail.jpg
+            build/video/manifest.json
+          retention-days: 7
 
       - name: Skip duplicate
         if: steps.check.outputs.exists == 'true'
