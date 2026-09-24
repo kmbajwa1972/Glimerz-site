@@ -3,8 +3,8 @@
 Glimerz YouTube video builder (zero-cost edition).
 
 Turns one blog post into ONE YouTube-ready video:
-  * short -> vertical 1080x1920, max ~58 s  (YouTube treats it as a Short)
-  * video -> horizontal 1920x1080, ~2-4 min, plus a 1280x720 thumbnail
+  * short -> vertical 1440x2560, max ~58 s  (YouTube treats it as a Short)
+  * video -> horizontal 2560x1440, ~2-4 min, plus a 1280x720 thumbnail
 
 Everything runs on a normal CPU (GitHub Actions), no paid services:
   * voice    : Kokoro (open-source TTS, runs locally)
@@ -50,8 +50,8 @@ ACCENT_LIGHT = (160, 205, 160)
 HIGHLIGHT = (255, 214, 10)
 
 FORMATS = {
-    "short": {"w": 1080, "h": 1920, "max": SHORT_MAX_SECONDS},
-    "video": {"w": 1920, "h": 1080, "max": VIDEO_MAX_SECONDS},
+    "short": {"w": 1440, "h": 2560, "max": SHORT_MAX_SECONDS},
+    "video": {"w": 2560, "h": 1440, "max": VIDEO_MAX_SECONDS},
 }
 
 # ------------------------------------------------------------------ helpers
@@ -442,13 +442,13 @@ def photo_card(img, box_w, box_h, pad=22, radius=28, crop=True):
     return base
 
 
-def paste_card(canvas, card, x, y):
-    m = 50
+def paste_card(canvas, card, x, y, k=1.0):
+    m = round(50 * k)
     sh = Image.new("RGBA", (card.width + 2 * m, card.height + 2 * m), (0, 0, 0, 0))
     dark = Image.new("RGBA", card.size, (0, 0, 0, 160))
     dark.putalpha(card.split()[3].point(lambda a: a * 160 // 255))
-    sh.paste(dark, (m, m + 14), dark)
-    sh = sh.filter(ImageFilter.GaussianBlur(20))
+    sh.paste(dark, (m, m + round(14 * k)), dark)
+    sh = sh.filter(ImageFilter.GaussianBlur(20 * k))
     canvas.alpha_composite(sh, (x - m, y - m))
     canvas.alpha_composite(card, (x, y))
 
@@ -476,63 +476,98 @@ def fit_heading(draw, text, max_w, size, min_size, max_lines):
         size -= 4
 
 
-def draw_lines(draw, xy, lines, fnt, fill, line_h):
-    x, y = xy
+MEAS = ImageDraw.Draw(Image.new("RGB", (1, 1)))
+
+
+def chip(draw, x, y, label, k=1.0):
+    f = font("Bold", round(34 * k))
+    w = draw.textlength(label, font=f) + round(44 * k)
+    draw.rounded_rectangle((x, y, x + w, y + round(60 * k)), round(18 * k), fill=ACCENT)
+    draw.text((x + round(22 * k), y + round(8 * k)), label, font=f, fill=WHITE)
+
+
+class Overlay:
+    """Static text layer drawn at full output resolution with a soft shadow.
+    It sits on top of the moving picture, so text stays razor sharp."""
+
+    def __init__(self, w, h, k):
+        self.w, self.h, self.k = w, h, k
+        self.texts, self.chips = [], []
+
+    def text(self, xy, s, fnt, fill):
+        self.texts.append((xy, s, fnt, fill))
+
+    def chip(self, x, y, label):
+        self.chips.append((x, y, label))
+
+    def render(self):
+        k = self.k
+        img = Image.new("RGBA", (self.w, self.h), (0, 0, 0, 0))
+        sh = Image.new("RGBA", (self.w, self.h), (0, 0, 0, 0))
+        d = ImageDraw.Draw(sh)
+        for (x, y), s, f, _ in self.texts:
+            d.text((x, y + round(3 * k)), s, font=f, fill=(0, 0, 0, 190))
+        img.alpha_composite(sh.filter(ImageFilter.GaussianBlur(7 * k)))
+        d = ImageDraw.Draw(img)
+        for x, y, label in self.chips:
+            chip(d, x, y, label, k)
+        for (x, y), s, f, fill in self.texts:
+            d.text((x, y), s, font=f, fill=fill)
+        return img
+
+
+def layout_short(sc, img, number, W, H):
+    k = W / 1080
+
+    def P(v):
+        return round(v * k)
+    bg = backdrop(img, W, H)
+    ov = Overlay(W, H, k)
+    x0, maxw, y = P(70), P(940), P(150)
+    ov.text((x0, y), "G L I M E R Z", font("Bold", P(30)), ACCENT_LIGHT)
+    y += P(70)
+    if sc["kind"] == "section":
+        ov.chip(x0, y, f"{number:02d}")
+        y += P(90)
+    size = P({"intro": 78, "section": 66, "outro": 80}[sc["kind"]])
+    f, lines, sz = fit_heading(MEAS, sc["heading"], maxw, size, P(46), 4 if sc["kind"] == "intro" else 3)
     for ln in lines:
-        draw.text((x + 3, y + 4), ln, font=fnt, fill=(0, 0, 0, 120))
-        draw.text((x, y), ln, font=fnt, fill=fill)
-        y += line_h
-    return y
-
-
-def chip(draw, x, y, label):
-    f = font("Bold", 34)
-    w = draw.textlength(label, font=f) + 44
-    draw.rounded_rectangle((x, y, x + w, y + 60), 18, fill=ACCENT)
-    draw.text((x + 22, y + 8), label, font=f, fill=WHITE)
-
-
-def frame_short(sc, img, number):
-    W, H = 1080, 1920
-    cv = backdrop(img, W, H)
-    d = ImageDraw.Draw(cv)
-    x0, maxw, y = 70, 940, 150
-    d.text((x0, y), "G L I M E R Z", font=font("Bold", 30), fill=ACCENT_LIGHT)
-    y += 70
-    if sc["kind"] == "section":
-        chip(d, x0, y, f"{number:02d}")
-        y += 90
-    size = {"intro": 78, "section": 66, "outro": 80}[sc["kind"]]
-    f, lines, sz = fit_heading(d, sc["heading"], maxw, size, 46, 4 if sc["kind"] == "intro" else 3)
-    y = draw_lines(d, (x0, y), lines, f, WHITE, int(sz * 1.18))
+        ov.text((x0, y), ln, f, WHITE)
+        y += int(sz * 1.18)
     if sc["kind"] == "outro":
-        y = draw_lines(d, (x0, y + 6), ["glimerz.com"], font("ExtraBold", 84), HIGHLIGHT, 100)
-    top, bottom = y + 45, 1400
-    card = photo_card(img, 960, max(420, bottom - top), crop=sc["kind"] == "section")
-    paste_card(cv, card, (W - card.width) // 2, top + max(0, (bottom - top - card.height) // 2))
-    return cv.convert("RGB")
+        ov.text((x0, y + P(6)), "glimerz.com", font("ExtraBold", P(84)), HIGHLIGHT)
+        y += P(106)
+    top, bottom = y + P(45), P(1400)
+    card = photo_card(img, P(960), max(P(420), bottom - top), pad=P(22), radius=P(28), crop=sc["kind"] == "section")
+    paste_card(bg, card, (W - card.width) // 2, top + max(0, (bottom - top - card.height) // 2), k)
+    return bg.convert("RGB"), ov.render()
 
 
-def frame_video(sc, img, number):
-    W, H = 1920, 1080
-    cv = backdrop(img, W, H)
-    d = ImageDraw.Draw(cv)
-    card = photo_card(img, 900, 740, crop=sc["kind"] == "section")
-    paste_card(cv, card, 90 + (900 - card.width) // 2, 110 + (740 - card.height) // 2)
-    x0, maxw = 1080, 750
-    size = {"intro": 70, "section": 62, "outro": 72}[sc["kind"]]
-    f, lines, sz = fit_heading(d, sc["heading"], maxw, size, 44, 5 if sc["kind"] == "intro" else 4)
-    block = 70 + (90 if sc["kind"] == "section" else 0) + len(lines) * int(sz * 1.18) + (110 if sc["kind"] == "outro" else 0)
-    y = max(110, 110 + (740 - block) // 2)
-    d.text((x0, y), "G L I M E R Z", font=font("Bold", 28), fill=ACCENT_LIGHT)
-    y += 70
+def layout_video(sc, img, number, W, H):
+    k = W / 1920
+
+    def P(v):
+        return round(v * k)
+    bg = backdrop(img, W, H)
+    ov = Overlay(W, H, k)
+    card = photo_card(img, P(880), P(740), pad=P(22), radius=P(28), crop=sc["kind"] == "section")
+    paste_card(bg, card, P(100) + (P(880) - card.width) // 2, P(110) + (P(740) - card.height) // 2, k)
+    x0, maxw = P(1090), P(740)
+    size = P({"intro": 70, "section": 62, "outro": 72}[sc["kind"]])
+    f, lines, sz = fit_heading(MEAS, sc["heading"], maxw, size, P(44), 5 if sc["kind"] == "intro" else 4)
+    block = P(70) + (P(90) if sc["kind"] == "section" else 0) + len(lines) * int(sz * 1.18) + (P(110) if sc["kind"] == "outro" else 0)
+    y = max(P(110), P(110) + (P(740) - block) // 2)
+    ov.text((x0, y), "G L I M E R Z", font("Bold", P(28)), ACCENT_LIGHT)
+    y += P(70)
     if sc["kind"] == "section":
-        chip(d, x0, y, f"{number:02d}")
-        y += 90
-    y = draw_lines(d, (x0, y), lines, f, WHITE, int(sz * 1.18))
+        ov.chip(x0, y, f"{number:02d}")
+        y += P(90)
+    for ln in lines:
+        ov.text((x0, y), ln, f, WHITE)
+        y += int(sz * 1.18)
     if sc["kind"] == "outro":
-        draw_lines(d, (x0, y + 10), ["glimerz.com"], font("ExtraBold", 80), HIGHLIGHT, 96)
-    return cv.convert("RGB")
+        ov.text((x0, y + P(10)), "glimerz.com", font("ExtraBold", P(80)), HIGHLIGHT)
+    return bg.convert("RGB"), ov.render()
 
 
 def thumbnail(title, img, path):
@@ -557,21 +592,24 @@ def thumbnail(title, img, path):
 
 
 MOTIONS = [
-    ("1+0.07*on/{n}", "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"),            # push in
-    ("1.07-0.07*on/{n}", "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"),         # pull out
-    ("1.07", "(iw-iw/zoom)*on/{n}", "ih/2-(ih/zoom/2)"),                  # pan right
-    ("1.07", "(iw-iw/zoom)*(1-on/{n})", "ih/2-(ih/zoom/2)"),              # pan left
+    ("1+0.06*on/{n}", "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"),            # push in
+    ("1.06-0.06*on/{n}", "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"),         # pull out
+    ("1.05", "(iw-iw/zoom)*on/{n}", "ih/2-(ih/zoom/2)"),                  # pan right
+    ("1.05", "(iw-iw/zoom)*(1-on/{n})", "ih/2-(ih/zoom/2)"),              # pan left
 ]
 
 
-def render_segment(frame, frames, motion, w, h, path):
-    big = frame.resize((w * UPSCALE, h * UPSCALE), Image.LANCZOS)
-    png = str(path) + ".png"
-    big.save(png)
+def render_segment(layers, frames, motion, w, h, path):
+    bg, overlay = layers
+    big = bg.resize((w * UPSCALE, h * UPSCALE), Image.LANCZOS)
+    bg_png, ov_png = str(path) + ".bg.png", str(path) + ".ov.png"
+    big.save(bg_png)
+    overlay.save(ov_png)
     z, x, y = (m.format(n=max(1, frames - 1)) for m in motion)
-    ff("-i", png, "-vf",
-       f"zoompan=z='{z}':x='{x}':y='{y}':d={frames}:s={w}x{h}:fps={FPS},format=yuv420p",
-       "-frames:v", str(frames), "-c:v", "libx264", "-preset", "ultrafast", "-crf", "12", str(path))
+    ff("-i", bg_png, "-i", ov_png, "-filter_complex",
+       f"[0:v]zoompan=z='{z}':x='{x}':y='{y}':d={frames}:s={w}x{h}:fps={FPS}[b];"
+       f"[b][1:v]overlay=0:0:format=auto,format=yuv420p[v]",
+       "-map", "[v]", "-frames:v", str(frames), "-c:v", "libx264", "-preset", "ultrafast", "-crf", "10", str(path))
 
 
 # ------------------------------------------------------------------ captions
@@ -604,9 +642,12 @@ def chunk_words(words, max_words, max_chars):
 def write_ass(path, cues, fmt):
     W, H = FORMATS[fmt]["w"], FORMATS[fmt]["h"]
     if fmt == "short":
+        k = W / 1080
         size, outline, margin_v, mw, mc = 76, 6, 360, 4, 22
     else:
+        k = W / 1920
         size, outline, margin_v, mw, mc = 62, 5, 55, 6, 40
+    size, outline, margin_v, side = round(size * k), round(outline * k), round(margin_v * k), round(80 * k)
     name = caption_font_name()
     lines = [
         "[Script Info]", "ScriptType: v4.00+", f"PlayResX: {W}", f"PlayResY: {H}",
@@ -616,7 +657,7 @@ def write_ass(path, cues, fmt):
         "Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, "
         "MarginR, MarginV, Encoding",
         f"Style: Cap,{name},{size},&H000AD6FF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,0,0,1,"
-        f"{outline},2,2,80,80,{margin_v},1",
+        f"{outline},{round(2 * k)},2,{side},{side},{margin_v},1",
         "", "[Events]",
         "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text",
     ]
@@ -807,10 +848,12 @@ def main():
     # scene clips
     segs = []
     for i, sc in enumerate(scenes):
-        frame = (frame_short if fmt == "short" else frame_video)(sc, sc["img"], sc["number"])
-        frame.save(out / f"frame-{i:02d}.jpg", quality=85)
+        bg, ov = (layout_short if fmt == "short" else layout_video)(sc, sc["img"], sc["number"], W, H)
+        preview = bg.convert("RGBA")
+        preview.alpha_composite(ov)
+        preview.convert("RGB").save(out / f"frame-{i:02d}.jpg", quality=85)
         seg = out / f"scene-{i:02d}.mp4"
-        render_segment(frame, sc["frames"], MOTIONS[i % len(MOTIONS)], W, H, seg)
+        render_segment((bg, ov), sc["frames"], MOTIONS[i % len(MOTIONS)], W, H, seg)
         segs.append(seg)
         print(f"Scene {i + 1}/{len(scenes)} rendered ({sc['dur']:.1f}s): {sc['heading']}")
 
@@ -837,7 +880,7 @@ def main():
     graph.append("[va][duck]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]")
     final = out / f"{args.slug}.mp4"
     ff(*inputs, "-filter_complex", ";".join(graph), "-map", "[v]", "-map", "[a]", "-t", f"{total:.3f}",
-       "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-profile:v", "high", "-pix_fmt", "yuv420p",
+       "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-profile:v", "high", "-pix_fmt", "yuv420p",
        "-r", str(FPS), "-g", str(FPS // 2), "-bf", "2",
        "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-movflags", "+faststart", str(final))
 
