@@ -748,12 +748,7 @@ def build_description(fm, desc, slug, products, fmt):
     lines = []
     if desc:
         lines += [desc, ""]
-    lines += [f"Read the full guide: {SITE}/blog/{slug}/", ""]
-    linked = [p for p in products if p["link"]]
-    if linked:
-        lines.append("Products mentioned:")
-        lines += [f"• {p['name']}: {p['link']}" for p in linked]
-        lines += ["", "As an Amazon Associate, Glimerz earns from qualifying purchases."]
+    lines += [f"Read the full guide: {SITE}/blog/{slug}/"]
     cats = fm.get("categories") or []
     tags = ["#" + re.sub(r"[^A-Za-z0-9]", "", str(c)).lower() for c in cats]
     if fmt == "short":
