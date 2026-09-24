@@ -33,7 +33,7 @@ Newsletter subscriptions are processed through our third-party database service,
 
 Our Site contains links to Amazon.com and other third-party websites as part of our participation in the Amazon Services LLC Associates Program (see our [Affiliate Disclosure](/affiliate-disclosure/)). We are not responsible for the privacy practices or content of these third-party sites. We encourage you to review their privacy policies separately.
 
-## Social Media Account Connections (Facebook, Instagram, Pinterest)
+## Social Media Account Connections (Facebook, Instagram, Pinterest, Youtube)
 
 Glimerz offers an integration ("the App") that allows a business to connect their own Facebook Page, Instagram Business account, and/or Pinterest account so that content can be published to those accounts on their behalf.
 
@@ -52,6 +52,14 @@ We do not access your personal messages, contacts, or any data unrelated to publ
 **Your control.** You may disconnect any connected account at any time, which revokes the App's access. You can do this either by contacting us at the email below, or directly through the account settings of the platform you connected (Facebook, Instagram, or Pinterest each let you revoke third-party app access from their own settings).
 
 **Data retention.** Stored tokens are retained only for as long as your account remains connected, or until you request disconnection, whichever comes first.
+
+## YouTube API Services
+
+Glimerz uses YouTube API Services to upload videos that we create from our own blog posts to our own YouTube channel (@Glimerz1). We do not access, collect or store data from other YouTube users or channels.
+
+By watching or interacting with our videos on YouTube, you agree to the YouTube Terms of Service (https://www.youtube.com/t/terms). YouTube's use of your data is governed by the Google Privacy Policy (https://policies.google.com/privacy).
+
+Glimerz stores only the upload permission for our own channel, securely on our servers. You can review or revoke third-party access to a Google account at https://security.google.com/settings/security/permissions.
 
 ## How We Use Information
 
