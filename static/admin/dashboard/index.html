@@ -146,6 +146,14 @@
   }
   .signout-btn:hover { color: var(--ink); border-color: var(--muted); }
 
+  .btn-pinterest {
+    background: #c8232c;
+    color: #fff;
+    border: 1px solid #c8232c;
+  }
+  .btn-pinterest:hover { filter: brightness(0.92); }
+  .btn-pinterest:disabled { opacity: .65; cursor: wait; }
+
   nav.tabs {
     display: flex;
     gap: 4px;
@@ -327,7 +335,10 @@
   <header class="top">
     <h1 class="brand">Glimerz AI Manager</h1>
     <div class="status-line" id="status-line">Loading…</div>
-    <button class="signout-btn" id="signout-btn">Sign out</button>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <button class="btn-pinterest" id="pinterest-connect-btn">Connect Pinterest</button>
+      <button class="signout-btn" id="signout-btn">Sign out</button>
+    </div>
   </header>
 
   <nav class="tabs">
@@ -392,6 +403,7 @@ function showLogin() {
 function showApp() {
   document.getElementById("login-screen").style.display = "none";
   document.getElementById("app").style.display = "block";
+  handlePinterestCallbackMessage();
   loadPending();
 }
 
@@ -414,6 +426,58 @@ document.getElementById("signout-btn").addEventListener("click", async () => {
   await sb.auth.signOut();
   showLogin();
 });
+
+const PINTEREST_OAUTH_URL = SUPABASE_URL + "/functions/v1/pinterest-oauth";
+
+document.getElementById("pinterest-connect-btn").addEventListener("click", async () => {
+  const btn = document.getElementById("pinterest-connect-btn");
+  const { data } = await sb.auth.getSession();
+  const token = data.session?.access_token;
+  if (!token) {
+    alert("Please sign in to the Glimerz Admin first.");
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = "Opening Pinterest…";
+  try {
+    const res = await fetch(PINTEREST_OAUTH_URL + "/start", {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + token,
+        "Content-Type": "application/json"
+      },
+      body: "{}"
+    });
+    const payload = await res.json().catch(() => ({}));
+    if (!res.ok || !payload.authorization_url) {
+      throw new Error(payload.error || "Could not start Pinterest authorization.");
+    }
+    window.location.href = payload.authorization_url;
+  } catch (err) {
+    alert("Pinterest connection could not be started: " + (err?.message || err));
+    btn.disabled = false;
+    btn.textContent = "Connect Pinterest";
+  }
+});
+
+function handlePinterestCallbackMessage() {
+  const params = new URLSearchParams(window.location.search);
+  const result = params.get("pinterest");
+  if (!result) return;
+
+  if (result === "connected") {
+    document.getElementById("status-line").textContent = "Pinterest connected — OAuth authorization completed";
+    document.getElementById("pinterest-connect-btn").textContent = "Reconnect Pinterest";
+    alert("Pinterest connected successfully. OAuth authorization and token storage are complete.");
+  } else if (result === "error") {
+    const message = params.get("message") || "Pinterest authorization failed.";
+    alert("Pinterest authorization failed: " + message);
+  }
+
+  const clean = window.location.pathname;
+  window.history.replaceState({}, document.title, clean);
+}
 
 // ---------------------------------------------------------------
 // Tabs
