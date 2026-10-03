@@ -8,8 +8,6 @@ description: Discover 12 simple kitchen inspiration ideas that make your space
 image: /images/kitchen-21.png
 categories:
   - Kitchen Accessories
-guest_post: true
-author: Khalid Mehmood
 products:
   - product_name: TempPro TempSwift 1 Sec Instant Read Meat Thermometer Digital.
     affiliate_link: https://amzn.to/4yt3cb9?tag=hunterpro0e-20
