@@ -441,19 +441,9 @@ document.getElementById("pinterest-connect-btn").addEventListener("click", async
   btn.disabled = true;
   btn.textContent = "Opening Pinterest…";
   try {
-    const res = await fetch(PINTEREST_OAUTH_URL + "/start", {
-      method: "POST",
-      headers: {
-        "Authorization": "Bearer " + token,
-        "Content-Type": "application/json"
-      },
-      body: "{}"
-    });
-    const payload = await res.json().catch(() => ({}));
-    if (!res.ok || !payload.authorization_url) {
-      throw new Error(payload.error || "Could not start Pinterest authorization.");
-    }
-    window.location.href = payload.authorization_url;
+    // Use a top-level browser navigation rather than fetch so the OAuth
+    // hand-off is not blocked by browser CORS/preflight handling.
+    window.location.href = PINTEREST_OAUTH_URL + "/start?access_token=" + encodeURIComponent(token);
   } catch (err) {
     alert("Pinterest connection could not be started: " + (err?.message || err));
     btn.disabled = false;
