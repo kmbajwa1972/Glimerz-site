@@ -5,8 +5,6 @@ description: A practical table-setting guide for casual dinners and gatherings, 
 image: /images/kitchen-08.jpg
 categories:
   - Kitchen Accessories
-guest_post: true
-author: Duaf, Germany.
 products:
   - product_name: Unbreakable Vintage-Style Wine Glasses.
     affiliate_link: https://amzn.to/4hyRCWu?tag=hunterpro0e-20
