@@ -31,7 +31,7 @@
     {{ end }}
     <a href="{{ $backURL }}" class="back-link">← {{ $backLabel }}</a>
     <h1>{{ .Title }}</h1>
-    <div class="meta">Published on {{ .Date.Format "January 2, 2006" }} · By {{ if .Params.author }}{{ .Params.author }}{{ else }}Glimerz Editorial Team{{ end }}{{ if .Params.guest_post }} · <span style="background:#aa8453;color:#fff;padding:2px 8px;border-radius:10px;font-size:.7rem;letter-spacing:.5px;">GUEST POST</span>{{ end }}</div>
+    <div class="meta">Published on {{ .Date.Format "January 2, 2006" }} · Editorially reviewed by Glimerz Editorial Team</div>
     <div class="author-note">Glimerz Editorial Team reviews articles for usefulness, clarity, originality, and relevance before publication. <a href="/editorial-policy/">Read our editorial policy.</a></div>
     {{ if .Params.image }}
       {{ if .Params.hero_link }}
