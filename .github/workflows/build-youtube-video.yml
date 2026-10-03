@@ -82,7 +82,7 @@ jobs:
           SLUG: ${{ inputs.slug }}
         run: |
           python3 - <<'PY'
-          import json, os, urllib.request, urllib.error
+          import json, os, urllib.parse, urllib.request, urllib.error
           slug=os.environ["SLUG"]; base=os.environ["SUPABASE_URL"]; key=os.environ["SUPABASE_SERVICE_ROLE_KEY"]
           m=json.load(open("build/video/manifest.json")); b2=json.load(open("build/b2.json"))
           payload=json.dumps({"item_type":"youtube_video","status":"pending_review","title":m["title"],
@@ -95,10 +95,36 @@ jobs:
             with urllib.request.urlopen(req) as r: print("Review item created:", json.loads(r.read())[0]["id"])
           except urllib.error.HTTPError as e:
             if e.code == 409:
-              import subprocess
-              for n in (b2.get("video_name"), b2.get("thumb_name")):
-                if n: subprocess.run(["python3","tools/b2.py","delete","--name",n])
-              print("::notice::This post already has a YouTube item in the dashboard, so no second item was created. The new video file is still in the artifact below.")
+              # A YouTube item already exists for this blog. Keep the newly
+              # uploaded B2 media and repair/update the existing YouTube +
+              # TikTok review rows to point at the fresh files. The old code
+              # deleted the fresh files here, which left the dashboard's
+              # TikTok download pointing at a missing B2 object.
+              target_url = f"https://glimerz.com/blog/{slug}/"
+              encoded_target = urllib.parse.quote(target_url, safe="")
+              rest_headers = {"apikey": key, "Authorization": f"Bearer {key}", "Content-Type": "application/json"}
+              media = [u for u in (b2["video_url"], b2.get("thumb_url")) if u]
+              patch_payload = json.dumps({"media_urls": media}).encode()
+
+              patch_yt = urllib.request.Request(
+                f"{base}/rest/v1/content_items?item_type=eq.youtube_video&target_url=eq.{encoded_target}",
+                data=patch_payload, method="PATCH",
+                headers={**rest_headers, "Prefer": "return=minimal"},
+              )
+              with urllib.request.urlopen(patch_yt):
+                pass
+
+              # TikTok uses only the video URL, not the thumbnail.
+              tiktok_payload = json.dumps({"media_urls": [b2["video_url"]]}).encode()
+              patch_tt = urllib.request.Request(
+                f"{base}/rest/v1/content_items?item_type=eq.tiktok_video&target_url=eq.{encoded_target}&status=eq.pending_review",
+                data=tiktok_payload, method="PATCH",
+                headers={**rest_headers, "Prefer": "return=minimal"},
+              )
+              with urllib.request.urlopen(patch_tt):
+                pass
+
+              print("::notice::Existing dashboard item found. Its YouTube and pending TikTok media URLs were refreshed to the new B2 file.")
             else:
               raise
           PY
