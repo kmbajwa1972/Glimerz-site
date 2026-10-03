@@ -5,8 +5,6 @@ description: "A practical new-build renovation plan covering builder defects, el
 image: /images/home-03.jpg
 categories:
   - Home Decor
-guest_post: true
-author: Moneeza. USA.
 products:
   - product_name: Smart dimmer switch
     affiliate_link: https://a.co/d/06sJPCko?tag=hunterpro0e-20
