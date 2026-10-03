@@ -184,12 +184,30 @@ def main():
                 print(f"Thumbnail download skipped: {e}")
         vid = upload(access_token(), video, title, description, make_tags(title, target), args.privacy, thumb)
         if b2:
-            for u in (video_url, thumb_url):
-                if is_b2(u):
-                    try:
-                        b2.delete(b2mod.name_from_url(u))
-                    except Exception as e:
-                        print(f"(B2 cleanup skipped: {e})")
+            # Keep the B2 video while its paired TikTok review item is pending.
+            # The dashboard downloads the TikTok copy from this same B2 object.
+            # Previously we deleted the source immediately after the YouTube
+            # upload, leaving the TikTok item with a dead 404 URL.
+            keep_for_tiktok = False
+            if item and target:
+                try:
+                    qtarget = urllib.parse.quote(target, safe="")
+                    rows = supa(
+                        "GET",
+                        f"content_items?item_type=eq.tiktok_video&target_url=eq.{qtarget}&status=eq.pending_review&select=id",
+                    )
+                    keep_for_tiktok = bool(rows)
+                except Exception as e:
+                    print(f"(TikTok retention check skipped: {e})")
+            if keep_for_tiktok:
+                print("Keeping B2 media for the pending TikTok review item.")
+            else:
+                for u in (video_url, thumb_url):
+                    if is_b2(u):
+                        try:
+                            b2.delete(b2mod.name_from_url(u))
+                        except Exception as e:
+                            print(f"(B2 cleanup skipped: {e})")
         if item:
             from datetime import datetime, timezone
             supa("PATCH", f"content_items?id=eq.{item['id']}",
