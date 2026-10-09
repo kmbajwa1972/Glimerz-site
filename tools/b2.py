@@ -58,10 +58,19 @@ class B2:
             "X-Bz-Content-Sha1": hashlib.sha1(data).hexdigest()})
         print(f"B2: uploaded {name} ({len(data) / 1e6:.1f} MB)", file=sys.stderr)
 
-    def link(self, name):
+    def link(self, name, download_name=None):
+        # Bind Content-Disposition to the download token so B2 serves the MP4
+        # as an attachment instead of opening its inline video player.
+        disposition = f'attachment; filename="{download_name or Path(name).name}"'
         r = call(f"{self.api}/b2api/v3/b2_get_download_authorization",
-                 {"bucketId": self.bucket_id, "fileNamePrefix": name, "validDurationInSeconds": LINK_SECONDS}, self.h())
-        return f"{self.dl}/file/{self.bucket}/{urllib.parse.quote(name)}?Authorization={urllib.parse.quote(r['authorizationToken'])}"
+                 {"bucketId": self.bucket_id, "fileNamePrefix": name,
+                  "validDurationInSeconds": LINK_SECONDS,
+                  "b2ContentDisposition": disposition}, self.h())
+        query = urllib.parse.urlencode({
+            "Authorization": r["authorizationToken"],
+            "b2ContentDisposition": disposition,
+        })
+        return f"{self.dl}/file/{self.bucket}/{urllib.parse.quote(name)}?{query}"
 
     def delete(self, name):
         if not name.startswith(PREFIX):
@@ -99,11 +108,11 @@ def main():
         base = f"{PREFIX}{args.slug}-{secrets.token_hex(4)}"
         out = {"video_name": base + ".mp4"}
         b2.upload(args.video, out["video_name"], "video/mp4")
-        out["video_url"] = b2.link(out["video_name"])
+        out["video_url"] = b2.link(out["video_name"], args.slug + ".mp4")
         if args.thumb and Path(args.thumb).exists():
             out["thumb_name"] = base + "-thumb.jpg"
             b2.upload(args.thumb, out["thumb_name"], "image/jpeg")
-            out["thumb_url"] = b2.link(out["thumb_name"])
+            out["thumb_url"] = b2.link(out["thumb_name"], args.slug + "-thumbnail.jpg")
         print(json.dumps(out))
     else:
         name = args.name or name_from_url(args.url)
