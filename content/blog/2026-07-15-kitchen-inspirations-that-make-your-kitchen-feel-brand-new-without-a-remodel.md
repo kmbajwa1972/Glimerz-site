@@ -1,12 +1,14 @@
 ---
 title: Kitchen Inspirations That Make Your Kitchen Feel Brand New — Without a Remodel
 date: 2026-07-15T16:36:00.000+05:00
-description: A practical kitchen refresh guide for updating an existing kitchen without a full remodel, covering lighting, backsplash, faucets, shelving, countertop styling, color, plants, and upgrade priorities.
+description: A practical kitchen refresh guide for updating an existing kitchen
+  without a full remodel, covering lighting, backsplash, faucets, shelving,
+  countertop styling, color, plants, and upgrade priorities.
 image: /images/kitchen.jpg
 categories:
   - Kitchen Accessories
-guest_post: true
-author: Dee, University of London.
+guest_post: false
+author: ""
 products:
   - product_name: under-cabinet LED lights.
     affiliate_link: https://a.co/d/0c9I6y8o?tag=hunterpro0e-20
