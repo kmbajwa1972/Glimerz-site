@@ -117,7 +117,7 @@ jobs:
               # TikTok uses only the video URL, not the thumbnail.
               tiktok_payload = json.dumps({"media_urls": [b2["video_url"]]}).encode()
               patch_tt = urllib.request.Request(
-                f"{base}/rest/v1/content_items?item_type=eq.tiktok_video&target_url=eq.{encoded_target}&status=eq.pending_review",
+                f"{base}/rest/v1/content_items?item_type=eq.tiktok_video&target_url=eq.{encoded_target}&status=in.(pending_review,rejected)",
                 data=tiktok_payload, method="PATCH",
                 headers={**rest_headers, "Prefer": "return=minimal"},
               )
