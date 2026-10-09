@@ -618,12 +618,20 @@ async function downloadVideo(item, btn) {
     a.href = blobUrl; a.download = name;
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(blobUrl), 60000);
-  } catch {
-    // Storage that blocks direct downloads: open the file so it can be saved from the browser.
-    window.open(url, "_blank", "noopener");
+  } catch (err) {
+    // Backblaze may display MP4s inline when cross-origin fetch/download is blocked.
+    // Ask B2 to return this file as an attachment instead of opening its video player.
+    try {
+      const downloadUrl = new URL(url);
+      downloadUrl.searchParams.set("b2ContentDisposition", 'attachment; filename="' + name + '"');
+      window.location.href = downloadUrl.toString();
+    } catch {
+      alert("Download failed. Please try again or open the video and use Save video as.");
+    }
+  } finally {
+    btn.disabled = false;
+    btn.textContent = label;
   }
-  btn.disabled = false;
-  btn.textContent = label;
 }
 
 async function copyCaption(card, btn) {
