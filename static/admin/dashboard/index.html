@@ -619,15 +619,9 @@ async function downloadVideo(item, btn) {
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(blobUrl), 60000);
   } catch (err) {
-    // Backblaze may display MP4s inline when cross-origin fetch/download is blocked.
-    // Ask B2 to return this file as an attachment instead of opening its video player.
-    try {
-      const downloadUrl = new URL(url);
-      downloadUrl.searchParams.set("b2ContentDisposition", 'attachment; filename="' + name + '"');
-      window.location.href = downloadUrl.toString();
-    } catch {
-      alert("Download failed. Please try again or open the video and use Save video as.");
-    }
+    // The signed B2 URL already contains the exact Content-Disposition
+    // authorized when the link was created. Do not modify its query string.
+    window.location.href = url;
   } finally {
     btn.disabled = false;
     btn.textContent = label;
