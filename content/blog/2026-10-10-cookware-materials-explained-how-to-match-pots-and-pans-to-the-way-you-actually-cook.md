@@ -10,6 +10,20 @@ image: /images/kitchen26.png
 categories:
   - Kitchen Accessories
 guest_post: false
+products:
+  - product_name: Stainless steel frying pan.
+    affiliate_link: https://link.amazon/B09wlcWJH?tag=hunterpro0e-20
+    photo: https://m.media-amazon.com/images/I/71y6IpT+jwL._AC_SL1500_.jpg
+  - product_name: Carbon steel frying pan.
+    affiliate_link: https://link.amazon/B05obY1ep?tag=hunterpro0e-20
+    photo: https://m.media-amazon.com/images/I/61hhmasyM5L._AC_SL1500_.jpg
+mid_products:
+  - product_name: Nonstick frying pan.
+    affiliate_link: https://link.amazon/B0hHzUdKV?tag=hunterpro0e-20
+    photo: https://m.media-amazon.com/images/I/71FheZz5ZVL._AC_SL1500_.jpg
+  - product_name: Pre-seasoned cast iron skillet.
+    affiliate_link: https://link.amazon/B0fEdzdIm?tag=hunterpro0e-20
+    photo: https://m.media-amazon.com/images/I/71uh7OjLpFL._AC_SL1500_.jpg
 ---
 ## Why Material Matters More Than Brand
 
