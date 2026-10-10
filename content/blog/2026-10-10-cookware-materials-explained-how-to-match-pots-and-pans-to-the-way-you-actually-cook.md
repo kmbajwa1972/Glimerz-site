@@ -6,7 +6,7 @@ description: Choosing cookware is easier when you understand what each material
   does well and where it falls short. This guide breaks down the real-world
   trade-offs of stainless steel, nonstick, cast iron, carbon steel, and ceramic
   so you can build a set that works for your kitchen.
-image: /images/kitchen-25.png
+image: /images/kitchen25.png
 categories:
   - Kitchen Accessories
 guest_post: false
