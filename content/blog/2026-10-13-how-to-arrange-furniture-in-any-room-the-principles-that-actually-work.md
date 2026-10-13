@@ -1,5 +1,5 @@
 ---
-title: "How to Arrange Furniture in Any Room: The Principles That Actually Work"
+title: "Furniture Arrangement Ideas That Make Every Room Feel Bigger"
 date: 2026-10-13T13:25:21.571Z
 description: "Furniture arrangement can make or break how a room feels to live in. This guide explains the spatial rules, common mistakes, and practical decisions that lead to layouts you won’t want to change."
 categories:
