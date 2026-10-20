@@ -4,7 +4,7 @@ date: 2026-10-20T11:39:00.000-07:00
 description: Explore room ceiling design ideas, from simple and modern ceilings
   to gypsum, POP, PVC, wooden, and stretch ceilings. Compare materials, costs,
   pros and cons, lighting options, and the best choices for every room.
-image: /images/modern-living-room-ceiling-design-guide.png
+image: /images/mumnnn-living-room-2525161_1920.jpg
 categories:
   - Home Decor
 guest_post: false
