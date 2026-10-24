@@ -46,7 +46,7 @@ The area beneath a staircase can provide valuable storage in a small home. Inste
 
 **Design tip:** Plan the storage around the staircase rather than altering the staircase to accommodate storage. Keep the required walking width and headroom unobstructed, and do not compromise structural elements, fire protection, or access to building services. Storage near heating equipment must also follow the applicable safety requirements.
 
-## 4. Consider Alternating-Tread Stairs Only for Suitable Spaces.
+## 4. Consider Alternating Tread Stairs Only for Suitable Spaces.
 
 Alternating-tread stairs use alternating left and right foot treads to create a steep climb with a shorter horizontal run. They sometimes appear in lofts, compact recreational spaces, and specialized access areas.
 
