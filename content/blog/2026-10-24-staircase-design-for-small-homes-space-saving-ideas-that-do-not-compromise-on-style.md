@@ -1,5 +1,5 @@
 ---
-title: "Staircase Design for Small Homes: Space-Saving Ideas That Do Not Compromise on Style"
+title: "Staircase Design for Small Homes: Space Saving Ideas That Do Not Compromise on Style"
 date: 2026-10-24T14:53:00.000+05:00
 description: Discover space-saving staircase designs for small homes, including
   smart under-stair storage, compact layouts, stylish materials, and essential
@@ -48,7 +48,7 @@ The area beneath a staircase can provide valuable storage in a small home. Inste
 
 ## 4. Consider Alternating Tread Stairs Only for Suitable Spaces.
 
-Alternating-tread stairs use alternating left and right foot treads to create a steep climb with a shorter horizontal run. They sometimes appear in lofts, compact recreational spaces, and specialized access areas.
+Alternating tread stairs use alternating left and right foot treads to create a steep climb with a shorter horizontal run. They sometimes appear in lofts, compact recreational spaces, and specialized access areas.
 
 Although they can save space, their steep geometry makes them less convenient for many users, especially children, older adults, or anyone carrying objects. They should not be treated as a simple replacement for an ordinary residential staircase.
 
