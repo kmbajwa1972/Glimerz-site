@@ -9,8 +9,7 @@ image: /images/staircase-01.webp
 categories:
   - Home Decor
 guest_post: true
-author: Practical staircase design ideas and space-saving tips contributed by
-  Stairscalculator.net for Glimerz readers.
+author: Stairscalculator.net
 ai_promo: ""
 youtube_format: short
 ---
