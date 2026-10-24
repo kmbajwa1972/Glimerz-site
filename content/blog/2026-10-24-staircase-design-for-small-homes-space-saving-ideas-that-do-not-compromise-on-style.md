@@ -10,8 +10,7 @@ categories:
   - Home Decor
 guest_post: true
 author: Practical staircase design ideas and space-saving tips contributed by
-  Stairscalculator.net for Glimerz readers..The views and recommendations
-  expressed in guest articles belong to their respective authors.
+  Stairscalculator.net for Glimerz readers.
 ai_promo: ""
 youtube_format: short
 ---
