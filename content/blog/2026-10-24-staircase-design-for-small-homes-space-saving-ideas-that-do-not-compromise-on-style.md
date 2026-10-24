@@ -62,9 +62,9 @@ The best choice depends on the home’s overall style, the needs of its occupant
 
 **Design tip:** A timber handrail paired with slim dark metal balusters can provide a warm, contemporary look. Whichever style you choose, make sure the handrail is comfortable to grasp and that the guard provides appropriate protection.
 
-**Code consideration:** Under the 2021 IRC, guards are generally required on open-sided walking surfaces, including stairways and landings, where the drop exceeds 30 inches within the specified horizontal distance. The code includes provisions for guard height and openings, as well as exceptions. The exact requirements should be checked against the locally adopted code.
+**Code consideration:** Under the 2021 IRC, guards are generally required on open-sided walking surfaces, including stairways and landings, where the drop exceeds 30 inches (762 mm) within 36 inches (914 mm) horizontally from the edge, subject to the code’s exceptions. The code includes provisions for guard height and openings, as well as exceptions. The exact requirements should be checked against the locally adopted code.
 
-![](/images/staircase-02.webp)
+![Staircase design showing space-saving stairs in a small home](/images/staircase-02.webp)
 
 ## 6. Make Handrails and Walking Surfaces a Priority.
 
@@ -90,7 +90,7 @@ Then calculate the tread depth, riser height, headroom, and clear width. Check t
 
 A reliable stair calculator can help with preliminary geometry and identify dimensions that need closer attention. For example, the free tools at **Stairscalculator.net** may be useful during the planning stage. Calculator results should still be checked against the actual site conditions and local building regulations.
 
-# A Practical Checklist for Small-Home Staircases
+# A Practical Checklist for Staircases in Small Homes
 
 * Choose a layout that suits the floor plan and the people who will use it.
 * Measure the floor-to-floor rise and the available horizontal run.
