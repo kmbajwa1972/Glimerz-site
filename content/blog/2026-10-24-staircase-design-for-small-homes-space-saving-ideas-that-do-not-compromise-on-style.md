@@ -105,7 +105,7 @@ A reliable stair calculator can help with preliminary geometry and identify dime
 
 A well-planned staircase can make a small home more functional, comfortable, and visually appealing. A straight flight with built-in storage, an L-shaped stair near a window, or a carefully detailed railing can all contribute to a better use of space. The right choice depends on the home's layout, the people who live there, and the applicable safety requirements.
 
-Plan the dimensions first, make safety a priority, and then choose the materials and details that suit your interior. With thoughtful design, astaircase can become one of the most useful and attractive features of a compact home.
+Plan the dimensions first, make safety a priority, and then choose the materials and details that suit your interior. With thoughtful design, a staircase can become one of the most useful and attractive features of a compact home.
 
 # References
 
