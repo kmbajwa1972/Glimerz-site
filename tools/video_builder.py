@@ -151,13 +151,19 @@ def load_post(slug, repo):
 
 
 def extract_sections(body):
-    matches = list(re.finditer(r"^##\s+(.+?)\s*$", body, re.M))
+    # Accept standard Markdown headings and bold section headings used by
+    # existing Glimerz articles.
+    pattern = re.compile(
+        r"^(?:##\\s+(.+?)\\s*|(?:\\*\\*|__)(.+?)(?:\\*\\*|__))\\s*$",
+        re.M,
+    )
+    matches = list(pattern.finditer(body))
     out = []
     for i, m in enumerate(matches):
-        heading = clean_text(m.group(1))
+        heading = clean_text(m.group(1) or m.group(2) or "")
         chunk = body[m.end(): matches[i + 1].start() if i + 1 < len(matches) else len(body)]
-        chunk = re.sub(r"^###.*$", "", chunk, flags=re.M)
-        paras = [clean_text(p) for p in re.split(r"\n\s*\n", chunk)]
+        chunk = re.sub(r"^#{3,}.*$", "", chunk, flags=re.M)
+        paras = [clean_text(p) for p in re.split(r"\\n\\s*\\n", chunk)]
         paras = [p for p in paras if len(p.split()) > 5]
         if heading and paras and not re.search(r"disclosure|affiliate", heading, re.I):
             out.append((heading, paras))
@@ -187,22 +193,32 @@ def open_image(path):
         return Image.open(png).convert("RGB")
 
 
-def load_images(fm, repo, out):
+def load_images(fm, repo, out, body=""):
     sources = []
-    hero = str(fm.get("image") or "")
-    if hero:
-        if hero.startswith("/images/"):
-            local = REPO_ROOT / "static" / "images" / Path(hero).name
-            sources.append(("hero", str(local) if local.exists()
-                            else f"https://raw.githubusercontent.com/{repo}/main/static/images/{Path(hero).name}"))
-        elif hero.startswith("http"):
-            sources.append(("hero", hero))
+    seen = set()
+
+    def add_source(label, src):
+        src = str(src or "").strip()
+        if not src:
+            return
+        if src.startswith("/images/"):
+            name = Path(src).name
+            local = REPO_ROOT / "static" / "images" / name
+            src = str(local) if local.exists() else (
+                f"https://raw.githubusercontent.com/{repo}/main/static/images/{name}"
+            )
+        if src.startswith("http") or Path(src).is_file():
+            if src not in seen:
+                seen.add(src)
+                sources.append((label, src))
+
+    # Include the featured image, product images, and images embedded in the post.
+    add_source("hero", fm.get("image"))
     for i, p in enumerate(products_of(fm), 1):
-        if p["photo"]:
-            src = p["photo"]
-            if src.startswith("/images/"):
-                src = str(REPO_ROOT / "static" / "images" / Path(src).name)
-            sources.append((f"product-{i}", src))
+        add_source(f"product-{i}", p.get("photo"))
+    for i, match in enumerate(re.finditer(r"!\\[[^\\]]*\\]\\(([^)]+)\\)", body), 1):
+        add_source(f"article-{i}", match.group(1).strip().split()[0].strip("<>"))
+
     loaded = []
     for n, (label, src) in enumerate(sources, 1):
         try:
@@ -828,7 +844,7 @@ def main():
         fmt = DEFAULT_FORMAT
     W, H, max_s = FORMATS[fmt]["w"], FORMATS[fmt]["h"], FORMATS[fmt]["max"]
     sections = extract_sections(body)
-    images = load_images(fm, args.repo, out)
+    images = load_images(fm, args.repo, out, body)
     if not images:
         raise RuntimeError("No images attached to this post could be loaded")
     if not sections:
