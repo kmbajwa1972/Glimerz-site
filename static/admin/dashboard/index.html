@@ -107,11 +107,46 @@
   }
   .btn-primary:hover { background: var(--gold-deep); }
 
-  #login-error {
+  #login-error, .auth-message {
     color: var(--rust-deep);
     font-size: 0.85rem;
     margin-top: 14px;
     min-height: 1em;
+    line-height: 1.45;
+  }
+  .auth-links { margin-top: 14px; }
+  .auth-link {
+    background: transparent;
+    color: var(--gold-deep);
+    border: 0;
+    padding: 6px 4px;
+    text-decoration: underline;
+    font-size: 0.85rem;
+  }
+  .auth-panel { margin-top: 8px; text-align: left; }
+  .auth-panel h2 { font-size: 1.1rem; font-weight: 500; color: var(--gold-deep); }
+  .auth-panel p { color: var(--muted); font-size: 0.85rem; line-height: 1.5; }
+  .auth-panel input { margin-bottom: 12px; }
+  .auth-panel .btn-primary { margin-top: 2px; }
+  .password-change-panel {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 32px;
+  }
+  .password-change-card {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+  .password-change-card input { margin-bottom: 12px; }
+  .password-change-card h2 { margin-top: 0; font-weight: 500; color: var(--gold-deep); }
+  .password-change-actions { display: flex; gap: 10px; }
+  .btn-secondary {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
   }
 
   /* ---------- App shell ---------- */
@@ -326,7 +361,25 @@
       <input type="password" id="login-password" placeholder="Password" autocomplete="current-password" required />
       <button type="submit" class="btn-primary">Sign in</button>
     </form>
-    <div id="login-error"></div>
+    <div class="auth-links" id="login-links">
+      <button type="button" class="auth-link" id="forgot-password-btn">Forgot password?</button>
+    </div>
+    <form id="recovery-request-form" class="auth-panel" style="display:none;">
+      <h2>Reset your password</h2>
+      <p>We'll email a secure, time-limited password reset link to your account.</p>
+      <input type="email" id="recovery-email" placeholder="Account email" autocomplete="email" required />
+      <button type="submit" class="btn-primary" id="recovery-request-submit">Send reset link</button>
+      <button type="button" class="auth-link" id="recovery-request-cancel">Back to sign in</button>
+    </form>
+    <form id="recovery-complete-form" class="auth-panel" style="display:none;">
+      <h2>Choose a new password</h2>
+      <p>Use a unique password you don't use on other websites.</p>
+      <input type="password" id="recovery-new-password" placeholder="New password (at least 12 characters)" autocomplete="new-password" minlength="12" required />
+      <input type="password" id="recovery-confirm-password" placeholder="Confirm new password" autocomplete="new-password" minlength="12" required />
+      <button type="submit" class="btn-primary" id="recovery-complete-submit">Update password</button>
+      <button type="button" class="auth-link" id="recovery-complete-cancel">Back to sign in</button>
+    </form>
+    <div id="login-error" role="status" aria-live="polite"></div>
   </div>
 </div>
 
@@ -337,9 +390,26 @@
     <div class="status-line" id="status-line">Loading…</div>
     <div style="display:flex;align-items:center;gap:10px;">
       <button class="btn-pinterest" id="pinterest-connect-btn">Connect Pinterest</button>
+      <button class="signout-btn" id="change-password-btn">Change password</button>
       <button class="signout-btn" id="signout-btn">Sign out</button>
     </div>
   </header>
+  <section id="password-change-panel" class="password-change-panel" style="display:none;">
+    <div class="password-change-card">
+      <h2>Change password</h2>
+      <p>Confirm your current password, then choose a new unique password.</p>
+      <form id="password-change-form">
+        <input type="password" id="current-password" placeholder="Current password" autocomplete="current-password" required />
+        <input type="password" id="new-password" placeholder="New password (at least 12 characters)" autocomplete="new-password" minlength="12" required />
+        <input type="password" id="confirm-new-password" placeholder="Confirm new password" autocomplete="new-password" minlength="12" required />
+        <div class="password-change-actions">
+          <button type="submit" class="btn-primary" id="password-change-submit">Update password</button>
+          <button type="button" class="btn-secondary" id="password-change-cancel">Cancel</button>
+        </div>
+      </form>
+      <div id="password-change-message" class="auth-message" role="status" aria-live="polite"></div>
+    </div>
+  </section>
 
   <nav class="tabs">
     <button class="tab-btn active" data-tab="pending">Pending review</button>
@@ -398,14 +468,153 @@ async function checkSession() {
 function showLogin() {
   document.getElementById("login-screen").style.display = "flex";
   document.getElementById("app").style.display = "none";
+  document.getElementById("login-form").style.display = "block";
+  document.getElementById("login-links").style.display = "block";
+  document.getElementById("recovery-request-form").style.display = "none";
+  document.getElementById("recovery-complete-form").style.display = "none";
+  document.getElementById("password-change-panel").style.display = "none";
+}
+
+function showRecoveryForm() {
+  document.getElementById("login-screen").style.display = "flex";
+  document.getElementById("app").style.display = "none";
+  document.getElementById("login-form").style.display = "none";
+  document.getElementById("login-links").style.display = "none";
+  document.getElementById("recovery-request-form").style.display = "none";
+  document.getElementById("recovery-complete-form").style.display = "block";
+  document.getElementById("login-error").textContent = "Password reset link verified. Choose a new password.";
 }
 
 function showApp() {
   document.getElementById("login-screen").style.display = "none";
   document.getElementById("app").style.display = "block";
+  document.getElementById("password-change-panel").style.display = "none";
   handlePinterestCallbackMessage();
   loadPending();
 }
+
+document.getElementById("forgot-password-btn").addEventListener("click", () => {
+  document.getElementById("login-error").textContent = "";
+  document.getElementById("login-form").style.display = "none";
+  document.getElementById("login-links").style.display = "none";
+  document.getElementById("recovery-request-form").style.display = "block";
+  document.getElementById("recovery-email").value = document.getElementById("login-email").value.trim();
+  document.getElementById("recovery-email").focus();
+});
+
+document.getElementById("recovery-request-cancel").addEventListener("click", showLogin);
+document.getElementById("recovery-complete-cancel").addEventListener("click", async () => {
+  await sb.auth.signOut();
+  showLogin();
+});
+
+document.getElementById("recovery-request-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const submit = document.getElementById("recovery-request-submit");
+  const email = document.getElementById("recovery-email").value.trim();
+  const errorEl = document.getElementById("login-error");
+  submit.disabled = true;
+  submit.textContent = "Sending…";
+  errorEl.textContent = "";
+  try {
+    const redirectTo = window.location.origin + window.location.pathname;
+    const { error } = await sb.auth.resetPasswordForEmail(email, { redirectTo });
+    // Keep the response generic to avoid disclosing whether an account exists.
+    errorEl.textContent = error
+      ? "We couldn't send the reset email. Please try again later or contact the site administrator."
+      : "If an account exists for that address, a password reset link has been sent. Check your inbox and spam folder.";
+  } catch {
+    errorEl.textContent = "We couldn't send the reset email. Please try again later or contact the site administrator.";
+  } finally {
+    submit.disabled = false;
+    submit.textContent = "Send reset link";
+  }
+});
+
+document.getElementById("recovery-complete-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const password = document.getElementById("recovery-new-password").value;
+  const confirmation = document.getElementById("recovery-confirm-password").value;
+  const submit = document.getElementById("recovery-complete-submit");
+  const errorEl = document.getElementById("login-error");
+  if (password.length < 12) {
+    errorEl.textContent = "Choose a password with at least 12 characters.";
+    return;
+  }
+  if (password !== confirmation) {
+    errorEl.textContent = "The new passwords do not match.";
+    return;
+  }
+  submit.disabled = true;
+  submit.textContent = "Updating…";
+  errorEl.textContent = "";
+  try {
+    const { error } = await sb.auth.updateUser({ password });
+    if (error) throw error;
+    await sb.auth.signOut();
+    showLogin();
+    errorEl.textContent = "Password updated. Please sign in with your new password.";
+  } catch (err) {
+    errorEl.textContent = err?.message || "Password update failed. Please use the latest reset email and try again.";
+  } finally {
+    submit.disabled = false;
+    submit.textContent = "Update password";
+  }
+});
+
+document.getElementById("change-password-btn").addEventListener("click", () => {
+  document.getElementById("password-change-panel").style.display = "block";
+  document.getElementById("password-change-message").textContent = "";
+  document.getElementById("password-change-form").reset();
+  document.getElementById("current-password").focus();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+document.getElementById("password-change-cancel").addEventListener("click", () => {
+  document.getElementById("password-change-panel").style.display = "none";
+  document.getElementById("password-change-form").reset();
+});
+
+document.getElementById("password-change-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const currentPassword = document.getElementById("current-password").value;
+  const password = document.getElementById("new-password").value;
+  const confirmation = document.getElementById("confirm-new-password").value;
+  const submit = document.getElementById("password-change-submit");
+  const message = document.getElementById("password-change-message");
+  if (password.length < 12) {
+    message.textContent = "Choose a new password with at least 12 characters.";
+    return;
+  }
+  if (password !== confirmation) {
+    message.textContent = "The new passwords do not match.";
+    return;
+  }
+  if (password === currentPassword) {
+    message.textContent = "Your new password must be different from the current password.";
+    return;
+  }
+  submit.disabled = true;
+  submit.textContent = "Updating…";
+  message.textContent = "";
+  try {
+    const { error } = await sb.auth.updateUser({ password, current_password: currentPassword });
+    if (error) throw error;
+    message.textContent = "Password updated successfully. Sign out and back in on your other devices.";
+    document.getElementById("password-change-form").reset();
+  } catch (err) {
+    message.textContent = err?.message || "Password update failed. Check your current password and try again.";
+  } finally {
+    submit.disabled = false;
+    submit.textContent = "Update password";
+  }
+});
+
+sb.auth.onAuthStateChange((event, session) => {
+  if (event === "PASSWORD_RECOVERY" && session) {
+    showRecoveryForm();
+  }
+});
 
 document.getElementById("login-form").addEventListener("submit", async (e) => {
   e.preventDefault();
