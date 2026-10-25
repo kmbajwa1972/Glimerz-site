@@ -611,7 +611,19 @@ document.getElementById("password-change-form").addEventListener("submit", async
   submit.textContent = "Updating…";
   message.textContent = "";
   try {
-    const { error } = await sb.auth.updateUser({ password, current_password: currentPassword });
+    // Reauthenticate against the signed-in account so the current password is
+    // verified even if the project's optional "secure password change" setting
+    // is not enabled.
+    const { data: userData, error: userError } = await sb.auth.getUser();
+    if (userError || !userData.user?.email) {
+      throw new Error("Your session has expired. Sign in again and retry.");
+    }
+    const { error: reauthError } = await sb.auth.signInWithPassword({
+      email: userData.user.email,
+      password: currentPassword
+    });
+    if (reauthError) throw new Error("Current password is incorrect.");
+    const { error } = await sb.auth.updateUser({ password });
     if (error) throw error;
     message.textContent = "Password updated successfully. Sign out and back in on your other devices.";
     document.getElementById("password-change-form").reset();
