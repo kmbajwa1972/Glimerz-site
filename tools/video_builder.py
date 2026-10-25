@@ -154,7 +154,7 @@ def extract_sections(body):
     # Accept standard Markdown headings and bold section headings used by
     # existing Glimerz articles.
     pattern = re.compile(
-        r"^(?:##\\s+(.+?)\\s*|(?:\\*\\*|__)(.+?)(?:\\*\\*|__))\\s*$",
+        r"^(?:##\s+(.+?)\s*|(?:\*\*|__)(.+?)(?:\*\*|__))\s*$",
         re.M,
     )
     matches = list(pattern.finditer(body))
@@ -163,7 +163,7 @@ def extract_sections(body):
         heading = clean_text(m.group(1) or m.group(2) or "")
         chunk = body[m.end(): matches[i + 1].start() if i + 1 < len(matches) else len(body)]
         chunk = re.sub(r"^#{3,}.*$", "", chunk, flags=re.M)
-        paras = [clean_text(p) for p in re.split(r"\\n\\s*\\n", chunk)]
+        paras = [clean_text(p) for p in re.split(r"\n\s*\n", chunk)]
         paras = [p for p in paras if len(p.split()) > 5]
         if heading and paras and not re.search(r"disclosure|affiliate", heading, re.I):
             out.append((heading, paras))
@@ -216,7 +216,7 @@ def load_images(fm, repo, out, body=""):
     add_source("hero", fm.get("image"))
     for i, p in enumerate(products_of(fm), 1):
         add_source(f"product-{i}", p.get("photo"))
-    for i, match in enumerate(re.finditer(r"!\\[[^\\]]*\\]\\(([^)]+)\\)", body), 1):
+    for i, match in enumerate(re.finditer(r"!\[[^\]]*\]\(([^)]+)\)", body), 1):
         add_source(f"article-{i}", match.group(1).strip().split()[0].strip("<>"))
 
     loaded = []
