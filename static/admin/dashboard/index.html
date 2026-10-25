@@ -458,6 +458,14 @@ const ITEM_TYPE_LABELS = {
 // ---------------------------------------------------------------
 async function checkSession() {
   const { data } = await sb.auth.getSession();
+  // A recovery link returns to this page with type=recovery in the URL hash.
+  // Supabase processes the tokens into a session; don't let the normal session
+  // check switch away from the password-reset form.
+  const hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ""));
+  if (hashParams.get("type") === "recovery" || document.getElementById("recovery-complete-form").style.display === "block") {
+    if (data.session) showRecoveryForm();
+    return;
+  }
   if (data.session) {
     showApp();
   } else {
@@ -476,6 +484,11 @@ function showLogin() {
 }
 
 function showRecoveryForm() {
+  // Supabase has already consumed the recovery tokens into the current session.
+  // Remove them from the address bar to reduce accidental token exposure.
+  if (window.location.hash) {
+    window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
+  }
   document.getElementById("login-screen").style.display = "flex";
   document.getElementById("app").style.display = "none";
   document.getElementById("login-form").style.display = "none";
