@@ -463,7 +463,14 @@ async function checkSession() {
   // check switch away from the password-reset form.
   const hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ""));
   if (hashParams.get("type") === "recovery" || document.getElementById("recovery-complete-form").style.display === "block") {
-    if (data.session) showRecoveryForm();
+    if (data.session) {
+      showRecoveryForm();
+    } else if (hashParams.get("type") === "recovery") {
+      // Invalid or expired recovery links must not leave the dashboard blank.
+      showLogin();
+      document.getElementById("login-error").textContent =
+        "This password reset link is invalid or expired. Request a new reset email and open the latest link.";
+    }
     return;
   }
   if (data.session) {
