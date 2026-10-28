@@ -76,4 +76,4 @@ We may update these Terms from time to time to reflect changes to the Site, App,
 
 ## 12. Contact Us
 
-If you have questions about these Terms, please use our [Contact page](/contact/) or email [help.glimerz@gmail.com](mailto:help.glimerz@gmail.com).
+If you have questions about these Terms, please use our [Contact page](/contact/) or email [support@glimerz.com](mailto:support@glimerz.com).
