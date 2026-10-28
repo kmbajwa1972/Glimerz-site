@@ -30,6 +30,9 @@
     <div class="wrapper">
         <h1>{{ .Title }}</h1>
         <div class="content">{{ .Content }}</div>
+        {{ if eq .RelPermalink "/contact/" }}
+        <p style="text-align:center;margin-top:2rem;"><a href="/admin/index.html" title="Admin" aria-label="Admin login" style="color:#ccc;text-decoration:none;font-size:8px;line-height:1;opacity:0.18;vertical-align:middle;" onmouseover="this.style.opacity='0.55'" onmouseout="this.style.opacity='0.18'">&#128274;</a></p>
+        {{ end }}
     </div>
     <a href="/" class="back-link">← Back to Home</a>
     {{ partial "footer.html" . }}
