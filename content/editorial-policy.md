@@ -25,7 +25,7 @@ Sponsored or guest content is reviewed before publication and is clearly identif
 
 ## Updates and Corrections
 
-We may update articles when information becomes outdated or when a factual error is identified. If you notice an error or have useful information to add, please contact us at [help.glimerz@gmail.com](mailto:help.glimerz@gmail.com).
+We may update articles when information becomes outdated or when a factual error is identified. If you notice an error or have useful information to add, please contact us at [support@glimerz.com](mailto:support@glimerz.com).
 
 ## Our Standard
 
