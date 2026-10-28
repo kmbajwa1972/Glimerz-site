@@ -50,7 +50,8 @@
     <nav class="glimerz-footer-column" aria-label="Popular topics">
       <h2>INSPIRATION</h2>
       {{ $footerPosts := where .Site.RegularPages "Section" "blog" }}
-      {{ range first 5 (sort $footerPosts "Date" "desc") }}
+      {{ $footerPosts = sort $footerPosts "Date" "desc" }}
+      {{ range first 5 (after 3 $footerPosts) }}
       <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
     </nav>
