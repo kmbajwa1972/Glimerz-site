@@ -20,6 +20,6 @@
 <div class="articles">{{ $posts := where .Site.RegularPages "Section" "blog" }}{{ range $posts.ByDate.Reverse }}<a class="card" href="{{ .RelPermalink }}">{{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">{{ end }}<div class="card-body"><div class="meta">{{ with .Params.categories }}{{ index . 0 }} · {{ end }}{{ .Date.Format "Jan 2, 2006" }}</div><h3>{{ .Title }}</h3><p>{{ .Description | default (.Summary | plainify) | truncate 190 }}</p></div></a>{{ end }}</div><p class="count"><strong>{{ len $posts }}</strong> published articles available to explore.</p>
 <div class="closing"><div class="eyebrow">Our editorial approach</div><h2>Useful first. Commercial second.</h2><p>Glimerz articles are reviewed for usefulness, clarity, originality, and relevance. Product recommendations are optional resources within the editorial content, and affiliate relationships do not determine our conclusions.</p><div class="intro-links"><a class="btn btn-dark" href="/editorial-policy/">Read our Editorial Policy</a><a class="btn btn-light" href="/about/">About Glimerz</a></div></div></section>
 </main>
-{{ partial "footer.html" . }}
+<script src="/js/chatbot-widget.js" defer></script>
 </body>
 </html>
