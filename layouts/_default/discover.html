@@ -84,15 +84,44 @@
 
   <p class="browse">Want more than the latest six? Visit the full <a href="/home-decor/">Home Decor</a> or <a href="/kitchen/">Kitchen</a> collection to work through the complete set of guides.</p>
 
-  <section class="watch">
-    <h2>Watch &amp; Explore</h2>
-    <p class="section-note">Short visual features can complement the guides when you want to see the atmosphere behind the ideas.</p>
-    <div class="watch-links">
-      <a href="/videos/glimerz-home.mp4" target="_blank" rel="noopener"><strong>Glimerz Home</strong>See a visual look at warm, intentional home spaces and the details that help them feel finished.</a>
-      <a href="/videos/glimerz-kitchen.mp4" target="_blank" rel="noopener"><strong>Glimerz Kitchen</strong>See a visual look at kitchens designed around everyday function and refined style.</a>
-    </div>
+  <section class="newsletter" aria-labelledby="newsletter-title" style="max-width:640px;margin:48px auto 0;padding:28px;border:1px solid #eee7dd;border-radius:12px;background:#fff;text-align:center;">
+    <h2 id="newsletter-title" style="margin:0 0 8px;font-size:1.7rem;">Get new posts in your inbox</h2>
+    <p style="margin:0 0 18px;color:#666;">Home decor &amp; kitchen inspiration, once a week. No spam, unsubscribe anytime.</p>
+    <form id="glimerz-newsletter-form" style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+      <input type="email" id="glimerz-newsletter-email" placeholder="you@example.com" aria-label="Email address" required style="flex:1;min-width:200px;padding:11px 12px;border:1px solid #ccc;border-radius:6px;font-size:1rem;">
+      <button type="submit" style="padding:11px 18px;background:#aa8453;color:#fff;border:0;border-radius:6px;font-size:.95rem;cursor:pointer;">Subscribe</button>
+    </form>
+    <p style="margin:12px 0 0;font-size:.8rem;color:#888;">By subscribing, you agree to our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+    <p id="glimerz-newsletter-message" role="status" aria-live="polite" style="margin:10px 0 0;font-size:.85rem;"></p>
   </section>
 </main>
-{{ partial "footer.html" . }}
+<script>
+(function () {
+  const SUPABASE_URL = "https://yayljmqelmsmcsuhxqdj.supabase.co";
+  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ5YXlsam1xZWxtc21jc3VoeHFkaiIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzgzNzg1MjkzLCJleHAiOjIwOTkzNjEyOTN9.XITDKls3bKtsXVssJuGQvy8iE4gwl2VtDF1F3dbrDcs";
+  const form = document.getElementById("glimerz-newsletter-form");
+  const emailInput = document.getElementById("glimerz-newsletter-email");
+  const message = document.getElementById("glimerz-newsletter-message");
+  if (!form || !emailInput || !message) return;
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+    if (!email) return;
+    message.style.color = "#777";
+    message.textContent = "Submitting…";
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/newsletter_subscribers`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}`, Prefer: "return=minimal" },
+        body: JSON.stringify({ email: email, source: "glimerz.com/discover" })
+      });
+      if (res.ok) { message.style.color = "green"; message.textContent = "You're subscribed! Thanks for joining."; emailInput.value = ""; }
+      else if (res.status === 409) { message.style.color = "#a86b00"; message.textContent = "You're already subscribed!"; }
+      else { message.style.color = "red"; message.textContent = "Something went wrong. Please try again."; }
+    } catch (err) { message.style.color = "red"; message.textContent = "Network error. Please try again."; }
+  });
+})();
+</script>
+
 </body>
 </html>
