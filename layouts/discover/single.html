@@ -18,8 +18,45 @@
 <section class="hub"><div class="section-head"><div class="eyebrow">Browse by category</div><h2>Start with the room or problem you are solving.</h2><p>Each category combines inspiration with practical guidance, so you can move from an idea to a decision that fits your space, budget, and routine.</p></div><div class="category-grid"><a class="category" href="/home-decor/"><div class="eyebrow">Home & Decor</div><h3>Rooms, styling, renovation and organization</h3><p>Explore guidance on color, lighting, furniture scale, curtains, wall art, plants, home offices, rentals, small spaces, and thoughtful decorative updates.</p></a><a class="category" href="/kitchen/"><div class="eyebrow">Kitchen</div><h3>Storage, workflow, equipment and design</h3><p>Find practical ideas for kitchen organization, lighting, countertops, ventilation, meal prep, cooking tools, storage systems, and everyday improvements.</p></a></div>
 <div class="section-head"><div class="eyebrow">Latest articles</div><h2>Fresh guides from the Glimerz editorial team.</h2><p>Read the newest articles first, or use the category pages above to explore a specific area.</p></div>
 <div class="articles">{{ $posts := where .Site.RegularPages "Section" "blog" }}{{ range $posts.ByDate.Reverse }}<a class="card" href="{{ .RelPermalink }}">{{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">{{ end }}<div class="card-body"><div class="meta">{{ with .Params.categories }}{{ index . 0 }} · {{ end }}{{ .Date.Format "Jan 2, 2006" }}</div><h3>{{ .Title }}</h3><p>{{ .Description | default (.Summary | plainify) | truncate 190 }}</p></div></a>{{ end }}</div><p class="count"><strong>{{ len $posts }}</strong> published articles available to explore.</p>
-<div class="closing"><div class="eyebrow">Our editorial approach</div><h2>Useful first. Commercial second.</h2><p>Glimerz articles are reviewed for usefulness, clarity, originality, and relevance. Product recommendations are optional resources within the editorial content, and affiliate relationships do not determine our conclusions.</p><div class="intro-links"><a class="btn btn-dark" href="/editorial-policy/">Read our Editorial Policy</a><a class="btn btn-light" href="/about/">About Glimerz</a></div></div></section>
+<div class="closing"><div class="eyebrow">Our editorial approach</div><h2>Useful first. Commercial second.</h2><p>Glimerz articles are reviewed for usefulness, clarity, originality, and relevance. Product recommendations are optional resources within the editorial content, and affiliate relationships do not determine our conclusions.</p><div class="intro-links"><a class="btn btn-dark" href="/editorial-policy/">Read our Editorial Policy</a><a class="btn btn-light" href="/about/">About Glimerz</a></div></div>
+<div class="newsletter" style="max-width:640px;margin:54px auto 0;padding:28px;border:1px solid var(--line);border-radius:22px;background:#f7f5f2;text-align:center;">
+  <h2 style="font:400 1.8rem Georgia,serif;margin:0 0 10px;">Get new posts in your inbox</h2>
+  <p style="color:var(--muted);line-height:1.65;margin:0 0 18px;">Home decor and kitchen inspiration, once a week. No spam, unsubscribe anytime.</p>
+  <form id="glimerz-newsletter-form" style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+    <input type="email" id="glimerz-newsletter-email" placeholder="you@example.com" required aria-label="Email address" style="flex:1;min-width:200px;padding:12px;border:1px solid #ccc;border-radius:8px;font-size:1rem;">
+    <button type="submit" style="padding:12px 18px;background:#aa8453;color:#fff;border:0;border-radius:8px;font-size:.95rem;cursor:pointer;">Subscribe</button>
+  </form>
+  <p style="margin:12px 0 0;font-size:.8rem;color:#888;">By subscribing, you agree to our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+  <p id="glimerz-newsletter-message" role="status" aria-live="polite" style="margin:12px 0 0;font-size:.88rem;"></p>
+</div></section>
 </main>
+<script>
+(function () {
+  const SUPABASE_URL = "https://yayljmqelmsmcsuhxqdj.supabase.co";
+  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ5YXlsam1xZWxtc21jc3VoeHFkaiIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzgzNzg1MjkzLCJleHAiOjIwOTkzNjEyOTN9.XITDKls3bKtsXVssJuGQvy8iE4gwl2VtDF1F3dbrDcs";
+  const form = document.getElementById("glimerz-newsletter-form");
+  const emailInput = document.getElementById("glimerz-newsletter-email");
+  const message = document.getElementById("glimerz-newsletter-message");
+  if (!form || !emailInput || !message) return;
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+    if (!email) return;
+    message.style.color = "#777";
+    message.textContent = "Submitting…";
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/newsletter_subscribers`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}`, Prefer: "return=minimal" },
+        body: JSON.stringify({ email: email, source: "glimerz.com/discover" })
+      });
+      if (res.ok) { message.style.color = "green"; message.textContent = "You're subscribed! Thanks for joining."; emailInput.value = ""; }
+      else if (res.status === 409) { message.style.color = "#a86b00"; message.textContent = "You're already subscribed!"; }
+      else { message.style.color = "red"; message.textContent = "Something went wrong. Please try again."; }
+    } catch (err) { message.style.color = "red"; message.textContent = "Network error. Please try again."; }
+  });
+})();
+</script>
 <script src="/js/chatbot-widget.js" defer></script>
 </body>
 </html>
