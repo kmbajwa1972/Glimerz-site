@@ -77,4 +77,4 @@ We may update this Privacy Policy from time to time. Changes will be posted on t
 
 ## Contact Us
 
-If you have questions about this Privacy Policy, reach us at [help.glimerz@gmail.com](mailto:help.glimerz@gmail.com).
+If you have questions about this Privacy Policy, reach us at [support@glimerz.com](mailto:support@glimerz.com).
