@@ -1,56 +1,79 @@
 ---
 title: "Terms of Service"
 layout: "static"
-description: "The terms that govern use of glimerz.com and our social media publishing integration."
+description: "Terms governing use of the Glimerz website and its social media publishing integration."
+aliases:
+  - "/terms-of-use/"
 ---
-_Last updated: July 2026_
 
-These Terms of Service ("Terms") govern your access to and use of glimerz.com (the "Site") and our social media publishing integration ("the App"). By using the Site or the App, you agree to these Terms. If you do not agree, please do not use the Site or the App.
+_Last updated: October 28, 2026_
 
-## Use of the Site
+These Terms of Service ("Terms") govern your access to and use of **glimerz.com** (the "Site") and the Glimerz social media publishing integration (the "App"), where applicable. By accessing or using the Site or App, you agree to these Terms. If you do not agree, please do not use the relevant Site or App.
 
-Glimerz provides home decor and kitchen-related content, including product recommendations. Some links on the Site are affiliate links, meaning we may earn a commission on qualifying purchases at no additional cost to you — see our [Affiliate Disclosure](/affiliate-disclosure/) for details.
+## 1. Use of the Site
 
-You agree to use the Site only for lawful purposes and in a way that does not infringe the rights of, or restrict or inhibit the use and enjoyment of, the Site by anyone else.
+Glimerz publishes articles, guides, ideas, product information, and other editorial content related to home decor, kitchens, and everyday living. The content is provided for general informational and inspirational purposes.
 
-## The App (Social Media Publishing Integration)
+You agree to use the Site lawfully and not to interfere with its operation, attempt unauthorized access, infringe others' rights, or restrict another person's use of the Site.
 
-Glimerz offers an integration ("the App") that allows a business to connect its own Facebook Page, Instagram Business account, and/or Pinterest account so that content can be published to those accounts on the account holder's behalf, either directly or through an authorized AI agent.
+## 2. Content and Intellectual Property
 
-By connecting an account through the App, you represent that:
+Unless otherwise stated, Glimerz owns or is licensed to use the Site's text, branding, original images, graphics, layouts, and other materials, which may be protected by applicable intellectual-property laws.
 
-- You are the authorized owner or administrator of the account(s) you connect, or have explicit permission to manage them.
-- You will use the App in compliance with the terms of service of the relevant platform (Facebook, Instagram, and/or Pinterest), including their developer policies and content guidelines.
-- You are responsible for reviewing and approving any content before it is published to your connected account(s), and for the content that is ultimately published.
+You may read, share, and link to Glimerz content for personal, non-commercial purposes, provided you retain attribution and do not present our work as your own. You may not republish substantial portions of our content or use our materials commercially without permission, except where applicable law allows otherwise.
 
-You may disconnect any connected account at any time. See our [Privacy Policy](/privacy-policy/) for details on how account access and data are handled.
-## YouTube
+Product images, trademarks, and other materials belonging to retailers, manufacturers, contributors, or other third parties remain the property of their respective owners and are subject to their terms and rights.
 
-Glimerz publishes videos on its YouTube channel (https://www.youtube.com/@Glimerz1) using YouTube API Services. By watching or interacting with our videos on YouTube, you agree to be bound by the YouTube Terms of Service (https://www.youtube.com/t/terms). Google's handling of data is described in the Google Privacy Policy (https://policies.google.com/privacy).
-## Intellectual Property
+## 3. Product Information, Affiliate Links, and Third-Party Websites
 
-All content on the Site — including text, graphics, and original images — is the property of Glimerz unless otherwise noted, and may not be reproduced without permission. Product images and links belong to their respective owners (e.g., Amazon.com and its sellers).
+Glimerz may include product recommendations and links to retailers, marketplaces, and other third-party websites. Some links are affiliate links, which may earn Glimerz a commission on qualifying purchases at no additional cost to you. See our [Affiliate Disclosure](/affiliate-disclosure/) for details.
 
-## No Professional Advice
+Product prices, availability, specifications, and retailer policies may change. We make reasonable efforts to provide useful information but cannot guarantee that third-party information is complete, current, or accurate. Please verify details with the retailer before purchasing.
 
-Content on the Site is provided for general informational and inspirational purposes only. It does not constitute professional design, contracting, or safety advice. Always use your own judgment, and consult a qualified professional for structural, electrical, or safety-related home projects.
+Glimerz does not control third-party websites and is not responsible for their content, availability, privacy practices, policies, products, services, or transactions. Your use of a third-party site is subject to that site's own terms and policies.
 
-## Disclaimer of Warranties
+## 4. No Professional Advice
 
-The Site and the App are provided "as is" and "as available," without warranties of any kind, either express or implied. We do not guarantee that the Site or the App will be uninterrupted, error-free, or free of harmful components.
+The Site's content is general informational and inspirational material. It is not professional architectural, engineering, construction, electrical, safety, financial, legal, medical, or other specialist advice. Use appropriate judgment and consult a qualified professional when a project or decision requires specialist guidance, particularly for structural, electrical, or safety-related work.
 
-## Limitation of Liability
+## 5. Accuracy and Availability
 
-To the fullest extent permitted by law, Glimerz shall not be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with your use of the Site or the App, including any content published to a connected account.
+We make reasonable efforts to keep content useful and accurate, but we do not guarantee that every article or other item is complete, current, or error-free. We may correct, update, change, or remove content at any time.
 
-## Third-Party Links and Platforms
+We do not guarantee that the Site will always be available, uninterrupted, secure, or free from technical problems or harmful components.
 
-The Site links to Amazon.com and other third-party sites, and the App interacts with third-party platforms (Facebook, Instagram, Pinterest). We are not responsible for the content, policies, or practices of these third parties. Your use of those platforms is governed by their own terms.
+## 6. Social Media Publishing Integration
 
-## Changes to These Terms
+Where available, the App allows an authorized business or account holder to connect its own Facebook Page, Instagram Business account, and/or Pinterest account so that content can be published to those accounts directly or through an authorized AI agent.
 
-We may update these Terms from time to time. Changes will be posted on this page with an updated revision date. Continued use of the Site or the App after changes are posted constitutes acceptance of the updated Terms.
+By connecting an account, you confirm that you own or administer it, or have explicit permission to manage it. You agree to comply with the relevant platform's terms, developer policies, and content rules.
 
-## Contact Us
+You are responsible for reviewing and approving content as appropriate, the content ultimately published to your connected accounts, and ensuring you have the rights and permissions needed to publish it. You may disconnect an account at any time through the relevant platform settings or by contacting us. See our [Privacy Policy](/privacy-policy/) for information about connected-account access and data handling.
 
-If you have questions about these Terms, reach us at [help.glimerz@gmail.com](mailto:help.glimerz@gmail.com).
+The App depends on third-party platforms and their services, permissions, and APIs. We cannot guarantee that a platform will continue to provide a particular feature or that publishing will always succeed.
+
+## 7. YouTube API Services
+
+Glimerz uses YouTube API Services to publish videos to its own YouTube channel. Your use of YouTube and interaction with YouTube content are governed by the [YouTube Terms of Service](https://www.youtube.com/t/terms). Google's handling of data is described in the [Google Privacy Policy](https://policies.google.com/privacy).
+
+## 8. External Services
+
+The Site or App may rely on third-party services, including analytics, advertising, social media platforms, hosting providers, and external retailers. Those services operate under their own terms and policies. Glimerz is not responsible for third-party services outside its control.
+
+## 9. Disclaimer of Warranties
+
+To the extent permitted by applicable law, the Site and App are provided on an "as is" and "as available" basis, without warranties of any kind, express or implied. We do not warrant that the Site, App, content, or connected-platform functions will be uninterrupted, error-free, always available, or suitable for every purpose.
+
+## 10. Limitation of Liability
+
+To the extent permitted by applicable law, Glimerz and its owners, contributors, and service providers will not be liable for indirect, incidental, special, consequential, or similar losses arising from or related to your use of the Site or App, reliance on Site content, third-party websites or services, or content published to connected accounts.
+
+Nothing in these Terms excludes or limits liability where doing so would be unlawful under applicable law.
+
+## 11. Changes to These Terms
+
+We may update these Terms from time to time to reflect changes to the Site, App, our practices, or applicable requirements. We will post the revised Terms on this page and update the revision date. Your continued use after the revised Terms are posted indicates acceptance of the updated Terms to the extent permitted by applicable law.
+
+## 12. Contact Us
+
+If you have questions about these Terms, please use our [Contact page](/contact/) or email [help.glimerz@gmail.com](mailto:help.glimerz@gmail.com).
