@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "How to Choose the Right Kitchen Range Hood: Sizing, Airflow and Installation"
 date: 2026-10-29T10:00:00.000-07:00
 description: Learn how to choose a kitchen range hood with practical guidance on
