@@ -17,7 +17,7 @@ products:
   - product_name: Easy Apply Range Hood Grease Filter Paper, Cut-to-Fit 141in, Peel & Stick
     affiliate_link: https://link.amazon/B0iJyJpJV?tag=hunterpro0e-20
     photo: https://m.media-amazon.com/images/I/71W98-7qeUL._AC_SL1500_.jpg
-lastmod: 2026-10-29T09:30:00.000-07:00
+lastmod: 2026-10-29T09:50:00.000-07:00
 mid_products:
   - product_name: Thickened Oil Absorbing Cotton for Range Hood Grease Trap
       Leakproof Kitchen Accessory Range Hood Oil Pad
@@ -61,8 +61,6 @@ A ductless hood draws cooking air through grease filters and, where fitted, char
 However, recirculating systems do not exhaust cooking air outdoors. They therefore cannot remove heat and moisture from the kitchen in the same way as a ducted hood, and they do not provide the same removal of combustion pollutants from gas cooking.
 
 Filter replacement requirements vary by model and cooking frequency. Follow the manufacturer's instructions rather than assuming that every charcoal filter needs replacement on the same schedule.
-
- 
 
 ![Kitchen range hood illustrating a ductless or recirculating design](/images/hood-01.jpg)
 
