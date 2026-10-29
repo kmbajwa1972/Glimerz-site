@@ -1,15 +1,29 @@
 ---
+draft: true
 title: "How to Choose the Right Kitchen Range Hood: Sizing, Airflow and Installation"
 date: 2026-10-29T10:00:00.000-07:00
-lastmod: 2026-10-29T10:00:00.000-07:00
-description: "Learn how to choose a kitchen range hood with practical guidance on hood types, CFM, dimensions, duct sizes, noise levels, filters, installation and costs."
+description: Learn how to choose a kitchen range hood with practical guidance on
+  hood types, CFM, dimensions, duct sizes, noise levels, filters, installation
+  and costs.
 image: /images/kitchen-19.jpg
 categories:
   - Kitchen Accessories
 guest_post: false
-draft: true
+products:
+  - product_name: Black Wall Mount Range Hood Extension Duct, Adjustable Chimney
+      Cover for 8–9 Ft Ceilings
+    affiliate_link: https://link.amazon/B00r6XwJO?tag=hunterpro0e-20
+    photo: https://m.media-amazon.com/images/I/71ilNPFUmhL._AC_SL1500_.jpg
+  - product_name: Easy Apply Range Hood Grease Filter Paper, Cut-to-Fit 141in, Peel & Stick
+    affiliate_link: https://link.amazon/B0iJyJpJV?tag=hunterpro0e-20
+    photo: https://m.media-amazon.com/images/I/71W98-7qeUL._AC_SL1500_.jpg
+lastmod: 2026-10-29T10:00:00.000-07:00
+mid_products:
+  - product_name: Thickened Oil Absorbing Cotton for Range Hood Grease Trap
+      Leakproof Kitchen Accessory Range Hood Oil Pad
+    affiliate_link: https://link.amazon/B013ALV6Y?tag=hunterpro0e-20
+    photo: https://m.media-amazon.com/images/I/61My0X4tfhL._AC_SL1500_.jpg
 ---
-
 A kitchen range hood does more than complete the look of a modern kitchen. It helps capture smoke, grease, cooking odors and airborne particles before they spread throughout the house. The right ventilation system can also help manage moisture produced during cooking, keeping cabinets and surrounding surfaces cleaner. Choosing a suitable hood requires more than comparing designs or selecting the model with the highest airflow rating.
 
 Hood width, mounting height, fan capacity, duct layout and filter design all affect performance. A powerful fan connected to an undersized duct may be noisy without delivering the expected results, while a well-designed hood with suitable airflow can perform effectively without unnecessary expense. Understanding these factors before buying helps you choose a ventilation system that suits your cooking habits, kitchen layout and installation budget.
@@ -25,6 +39,8 @@ Wall-mounted chimney hoods are installed above a cooktop positioned against a wa
 Depending on the model, specifications may include airflow capacities of approximately 300–900 CFM, multiple fan speeds, LED lighting and stainless-steel grease filters. These are illustrative ranges rather than specifications for every wall-mounted hood. Always check the individual model's published performance data.
 
 A wall-mounted hood is a practical choice when the cooktop has a clear wall behind it and there is a suitable route for ductwork.
+
+![](/images/hood-02.jpg)
 
 ### Under-Cabinet Range Hoods
 
@@ -46,7 +62,9 @@ However, recirculating systems do not exhaust cooking air outdoors. They therefo
 
 Filter replacement requirements vary by model and cooking frequency. Follow the manufacturer's instructions rather than assuming that every charcoal filter needs replacement on the same schedule.
 
-<!-- Add photos of wall-mounted, under-cabinet, island and ductless range hoods here. -->
+ 
+
+![](/images/hood-01.jpg)
 
 ## 2. Ducted vs. Ductless: Which System Is Better?
 
@@ -71,10 +89,11 @@ The required airflow depends on cooktop width, burner output, cooking style, hoo
 A commonly used planning guideline for wall-mounted hoods is approximately 100 CFM per linear foot of cooktop width. For island installations, a higher preliminary allowance of around 150 CFM per linear foot is sometimes used because the hood has less surrounding structure to help contain rising cooking emissions.
 
 Using these guidelines:
-- A 30-inch wall-mounted cooktop gives an estimate of approximately 250 CFM.
-- A 36-inch wall-mounted cooktop gives an estimate of approximately 300 CFM.
-- A 30-inch island cooktop gives an estimate of approximately 375 CFM.
-- A 36-inch island cooktop gives an estimate of approximately 450 CFM.
+
+* A 30-inch wall-mounted cooktop gives an estimate of approximately 250 CFM.
+* A 36-inch wall-mounted cooktop gives an estimate of approximately 300 CFM.
+* A 30-inch island cooktop gives an estimate of approximately 375 CFM.
+* A 36-inch island cooktop gives an estimate of approximately 450 CFM.
 
 These are starting estimates, not guaranteed minimums or substitutes for the hood manufacturer's sizing guidance and applicable local requirements.
 
@@ -84,12 +103,12 @@ Another preliminary method divides the combined maximum burner input, measured i
 
 ### Example Airflow Planning Table
 
-| Cooking setup | Preliminary airflow estimate |
-|---|---:|
-| 30-inch wall-mounted cooktop | Around 250 CFM |
-| 36-inch wall-mounted cooktop | Around 300 CFM |
-| 30-inch island cooktop | Around 375 CFM |
-| 36-inch island cooktop | Around 450 CFM |
+| Cooking setup                   | Preliminary airflow estimate                   |
+| ------------------------------- | ---------------------------------------------- |
+| 30-inch wall-mounted cooktop    | Around 250 CFM                                 |
+| 36-inch wall-mounted cooktop    | Around 300 CFM                                 |
+| 30-inch island cooktop          | Around 375 CFM                                 |
+| 36-inch island cooktop          | Around 450 CFM                                 |
 | Gas range rated at 60,000 BTU/h | Around 600 CFM using the BTU-based calculation |
 
 These figures illustrate planning calculations, not a universal product-selection chart. A hood's actual capture performance, installation design and cooking intensity must also be considered.
@@ -197,6 +216,7 @@ As broad illustrative US retail estimates, basic under-cabinet hoods may cost ar
 Installation costs vary considerably. Replacing an existing hood with a compatible model may be relatively straightforward, whereas creating a new route through a wall or roof can involve additional labour, materials and finishing work.
 
 The most useful way to allocate the budget is to prioritize the ventilation system itself:
+
 1. Confirm that the hood suits the cooktop and provides an appropriate capture area.
 2. Plan the correct duct size and a practical route to the outdoors.
 3. Compare delivered airflow and noise at normal operating speeds.
@@ -204,6 +224,8 @@ The most useful way to allocate the budget is to prioritize the ventilation syst
 5. Consider finishes, lighting and smart controls after the essential performance requirements are met.
 
 This approach helps avoid spending heavily on appearance while overlooking the installation details that determine whether the hood performs well.
+
+![](/images/hood-03.jpg)
 
 ## 9. Common Range Hood Buying Mistakes
 
@@ -225,16 +247,16 @@ Several avoidable mistakes can reduce performance or increase the cost of a kitc
 
 Before placing an order, work through the following checks:
 
-- Measure the cooktop width and the available installation space.
-- Identify whether the hood will be wall-mounted, under-cabinet, island-mounted or ductless.
-- Confirm the airflow requirements for your appliance and cooking habits.
-- Check the manufacturer's specified hood height and required clearances.
-- Verify duct diameter, allowable duct length and compatible fittings.
-- Compare noise ratings at the fan speeds you are likely to use.
-- Confirm filter type, cleaning instructions and replacement availability.
-- Check electrical requirements, mounting support and exterior termination details.
-- Review applicable local ventilation and makeup air requirements.
-- Calculate the total installed cost, including accessories and maintenance.
+* Measure the cooktop width and the available installation space.
+* Identify whether the hood will be wall-mounted, under-cabinet, island-mounted or ductless.
+* Confirm the airflow requirements for your appliance and cooking habits.
+* Check the manufacturer's specified hood height and required clearances.
+* Verify duct diameter, allowable duct length and compatible fittings.
+* Compare noise ratings at the fan speeds you are likely to use.
+* Confirm filter type, cleaning instructions and replacement availability.
+* Check electrical requirements, mounting support and exterior termination details.
+* Review applicable local ventilation and makeup air requirements.
+* Calculate the total installed cost, including accessories and maintenance.
 
 A little planning at this stage can prevent expensive changes after cabinets and other kitchen finishes have been installed.
 
