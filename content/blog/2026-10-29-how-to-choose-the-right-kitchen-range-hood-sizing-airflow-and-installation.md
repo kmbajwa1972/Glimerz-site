@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "How to Choose the Right Kitchen Range Hood: Sizing, Airflow and Installation"
-date: 2026-10-29T10:00:00.000-07:00
+date: 2026-10-29T09:00:00.000-07:00
 description: Learn how to choose a kitchen range hood with practical guidance on
   hood types, CFM, dimensions, duct sizes, noise levels, filters, installation
   and costs.
@@ -17,7 +17,7 @@ products:
   - product_name: Easy Apply Range Hood Grease Filter Paper, Cut-to-Fit 141in, Peel & Stick
     affiliate_link: https://link.amazon/B0iJyJpJV?tag=hunterpro0e-20
     photo: https://m.media-amazon.com/images/I/71W98-7qeUL._AC_SL1500_.jpg
-lastmod: 2026-10-29T10:00:00.000-07:00
+lastmod: 2026-10-29T09:30:00.000-07:00
 mid_products:
   - product_name: Thickened Oil Absorbing Cotton for Range Hood Grease Trap
       Leakproof Kitchen Accessory Range Hood Oil Pad
@@ -40,7 +40,7 @@ Depending on the model, specifications may include airflow capacities of approxi
 
 A wall-mounted hood is a practical choice when the cooktop has a clear wall behind it and there is a suitable route for ductwork.
 
-![](/images/hood-02.jpg)
+![Wall-mounted kitchen range hood above a cooking surface](/images/hood-02.jpg)
 
 ### Under-Cabinet Range Hoods
 
@@ -64,7 +64,7 @@ Filter replacement requirements vary by model and cooking frequency. Follow the 
 
  
 
-![](/images/hood-01.jpg)
+![Kitchen range hood illustrating a ductless or recirculating design](/images/hood-01.jpg)
 
 ## 2. Ducted vs. Ductless: Which System Is Better?
 
@@ -165,7 +165,6 @@ Before installation, confirm the location of electrical connections, cabinet sup
 
 Gas, electrical and structural work should be carried out by qualified professionals where required. Do not improvise duct reductions or bypass manufacturer-specified clearances to make a product fit.
 
-<!-- Add photos of rigid metal ducting, elbows, a backdraft damper and an exterior wall vent cap here. -->
 
 ## 6. Noise Ratings, Fan Speeds and Controls
 
@@ -205,7 +204,7 @@ Before purchasing a ductless model, check the price and availability of the corr
 
 Switch on the hood whenever cooking produces smoke, steam or strong odors. Clean grease filters at the interval recommended by the manufacturer, inspect the accessible duct and exterior termination when appropriate, and replace odor-control filters as directed.
 
-After cooking, leave the fan running long enough to clear lingering airborne emissions. The US Environmental Protection Agency recommends using an outdoor-vented range hood during cooking and leaving it on for approximately 10–20 minutes afterward when practical.
+After cooking, leave the fan running long enough to clear lingering airborne emissions. The [US Environmental Protection Agency recommends using an outdoor-vented range hood during cooking and leaving it on for approximately 10–20 minutes afterward when practical](https://www.epa.gov/indoor-air-quality-iaq/strategies-improving-indoor-air-quality-while-cooking).
 
 ## 8. What Does a Kitchen Range Hood Cost?
 
@@ -225,7 +224,7 @@ The most useful way to allocate the budget is to prioritize the ventilation syst
 
 This approach helps avoid spending heavily on appearance while overlooking the installation details that determine whether the hood performs well.
 
-![](/images/hood-03.jpg)
+![Kitchen range hood installed above a cooktop](/images/hood-03.jpg)
 
 ## 9. Common Range Hood Buying Mistakes
 
@@ -293,3 +292,5 @@ Choosing the right kitchen range hood means balancing airflow, capture area, duc
 Start by measuring the cooktop, selecting a suitable hood type and planning the exhaust route. Then compare verified product specifications, confirm the manufacturer's installation requirements and account for maintenance costs. Whether you choose an under-cabinet model, a wall-mounted chimney hood or an island design, a carefully planned ventilation system is a more dependable investment than choosing a hood based on appearance or maximum airflow alone.
 
 For a coordinated kitchen design, explore our guides to [layered kitchen lighting](https://glimerz.com/blog/2026-07-17-kitchen-lighting-done-right-the-three-layer-approach-designers-swear-by/), [choosing kitchen countertops](https://glimerz.com/blog/2026-08-24-kitchen-countertops-how-to-choose-the-right-material-color-and-finish-for-your-kitchen/) and [cookware materials](https://glimerz.com/blog/2026-10-10-cookware-materials-explained-how-to-match-pots-and-pans-to-the-way-you-actually-cook/). Each decision contributes to a kitchen that looks good and works well for everyday cooking.
+
+**Affiliate disclosure:** This article includes product links that may earn Glimerz a commission if you make a qualifying purchase, at no additional cost to you. Product links are optional; choose equipment based on the manufacturer’s specifications and your installation requirements.
