@@ -37,6 +37,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Post Title", name: "title", widget: "string"}
+      - {label: "Draft (keep enabled until ready to publish)", name: "draft", widget: "boolean", default: false, required: false}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "SEO Description", name: "description", widget: "text", required: false, hint: "Shown in Google search results and social shares. ~160 characters. Leave blank to auto-generate from post content."}
       - {label: "Featured Image", name: "image", widget: "image"}
