@@ -1,7 +1,7 @@
 ---
 title: "Home Decor Renovation Tips on a Budget: A Room-by-Room Plan That Avoids Waste"
 date: 2026-07-11T13:42:00.000+05:00
-description: "A practical budget renovation plan for refreshing your home without overspending. Learn what to fix first, where paint and storage upgrades matter, and how to prioritize each room."
+description: "Planning a home refresh? Prioritize repairs, paint, lighting and storage room by room, with a sensible order of work that helps control costs and avoid redoing tasks."
 image: /images/home-renovation.jpg
 categories:
   - Home Decor
