@@ -1,7 +1,7 @@
 ---
 title: "Layering Textures: How Throw Pillows, Rugs, and Blankets Turn a Plain Room Into a Cozy One."
 date: 2026-07-22T09:49:00.000-07:00
-description: Learn how to layer fabrics, rugs, curtains, wood, metal, and other materials to make a room feel warmer and more finished without relying on more color.
+description: "A room can feel flat even with good furniture and color. See how rugs, fabrics, curtains and natural materials add warmth and depth without adding more color."
 image: /images/home-07.jpg
 categories:
   - Home Decor
