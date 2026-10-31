@@ -1,8 +1,7 @@
 ---
 title: How to Make Your Home Feel More Expensive Without Spending a Fortune
 date: 2026-09-14T08:45:00.000-07:00
-description: Discover simple home decor ideas to make your home feel warmer,
-  more stylish, and thoughtfully designed without spending a fortune.
+description: "A polished home is more about proportion, lighting, tidy finishes and thoughtful details than expensive purchases. Try these budget-conscious ways to elevate each room."
 image: /images/home-21.png
 categories:
   - Home Decor
