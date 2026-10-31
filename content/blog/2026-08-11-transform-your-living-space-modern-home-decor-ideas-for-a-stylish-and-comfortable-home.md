@@ -1,7 +1,7 @@
 ---
 title: "Transform Your Living Space: Modern Home Decor Ideas for a Stylish and Comfortable Home."
 date: 2026-08-11T11:16:00.000-07:00
-description: A practical whole-home decorating system for creating a modern, comfortable interior. Learn how to connect rooms through style, color, furniture scale, lighting, texture, storage, and personal details without buying everything at once.
+description: "Create a more cohesive home with thoughtful color, furniture scale, lighting, texture and storage. These ideas help rooms feel connected without replacing everything."
 image: /images/home-13.jpg
 categories:
   - Home Decor
