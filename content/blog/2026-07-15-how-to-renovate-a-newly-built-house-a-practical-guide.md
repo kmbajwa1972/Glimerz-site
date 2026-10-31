@@ -1,7 +1,7 @@
 ---
 title: "How to Renovate a Newly Built House: A Practical Guide"
 date: 2026-07-15T15:43:00.000+05:00
-description: "A practical new-build renovation plan covering builder defects, electrical and plumbing upgrades, kitchen and bathroom improvements, lighting, flooring, budgeting, and the correct order of work."
+description: "Before upgrading a newly built home, check defects, wiring, plumbing and finishes. This guide sets out a practical renovation sequence, budget priorities and key checks."
 image: /images/home-03.jpg
 categories:
   - Home Decor
