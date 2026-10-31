@@ -47,7 +47,7 @@ Laminate and engineered wood flooring can swell, buckle, or separate after prolo
 
 Do not assume that flooring is safe simply because it feels dry. Where water may have reached the subfloor, the affected area should be inspected and moisture levels assessed before the floor is closed up again.
 
-![](/images/kitchen_under_sink_leak.jpg)
+![Water leaking from pipes beneath a kitchen sink into a cabinet](/images/kitchen_under_sink_leak.jpg)
 
 ### Drywall and Insulation
 
@@ -69,6 +69,8 @@ Drying should be verified rather than judged by appearance alone. A surface may 
 
 For extensive damage, hidden moisture, or uncertainty about the water source, consider engaging a qualified water-damage restoration professional. Completing repairs before confirming that affected materials are adequately dry can create problems later.
 
+![Air movers and a dehumidifier drying a water-damaged kitchen](/images/kitchen_drying_restoration.jpg)
+
 ## Clean Before Starting Reconstruction
 
 Once the affected areas have been adequately dried and assessed, clean suitable surfaces before rebuilding.
@@ -78,8 +80,6 @@ Hard, nonporous surfaces may often be cleaned and, where appropriate, disinfecte
 Porous materials that remain contaminated or cannot be adequately cleaned and dried may need to be discarded. This can include severely swollen cabinet components, saturated insulation, and water-damaged items stored under the sink.
 
 Appliances also require attention. A dishwasher or refrigerator that has been exposed to water should be inspected before being returned to service. If water may have reached electrical components, have the appliance checked by a qualified technician rather than testing it yourself.
-
-![](/images/kitchen_drying_restoration.jpg)
 
 ## Plan the Rebuild to Reduce Future Risk
 
