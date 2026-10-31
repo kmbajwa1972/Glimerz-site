@@ -1,7 +1,7 @@
 ---
 title: "Mixing Metals in Your Home: The Simple Rules That Make It Actually Work."
 date: 2026-08-09T08:23:00.000-07:00
-description: How to mix metal finishes at home without making the room feel random. Learn how to choose a dominant finish, compare warm and cool metals, group finishes by zone, and test combinations before buying.
+description: "Warm brass, cool chrome and dark iron can work together when finishes have a clear balance. Use these simple rules to combine metal accents across rooms."
 image: /images/home-12.jpg
 categories:
   - Home Decor
