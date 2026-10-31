@@ -1,9 +1,7 @@
 ---
 title: "Staircase Design for Small Homes: Space Saving Ideas That Do Not Compromise on Style"
 date: 2026-10-24T14:53:00.000+05:00
-description: Discover space-saving staircase designs for small homes, including
-  smart under-stair storage, compact layouts, stylish materials, and essential
-  staircase safety tips.
+description: "Short on floor space? Compare compact staircase layouts, storage ideas, materials and safety considerations for small homes without sacrificing everyday comfort."
 image: /images/staircase-01.webp
 categories:
   - Home Decor
