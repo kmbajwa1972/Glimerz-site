@@ -2,9 +2,7 @@
 title: "How to Choose the Right Kitchen Range Hood: Sizing, Airflow and Installation"
 draft: false
 date: 2026-10-29T09:43:00.000-07:00
-description: Learn how to choose a kitchen range hood with practical guidance on
-  hood types, CFM, dimensions, duct sizes, noise levels, filters, installation
-  and costs.
+description: "Choosing a range hood starts with the cooktop, room layout and duct route. Compare hood styles, airflow, noise, sizing and installation details before buying."
 image: /images/hood-main.jpg
 categories:
   - Kitchen Accessories
