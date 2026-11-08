@@ -114,6 +114,4 @@ A well-chosen kitchen backsplash should make everyday cooking and cleaning easie
 
 You do not need an expensive stone slab or an elaborate pattern to create an attractive kitchen. Even a simple ceramic backsplash can look excellent when its colour, proportions and finish are chosen carefully. The best design is one that feels right in your kitchen and continues to work well long after the installation is complete.
 
-
-
-*Images courtesy  : Pexels*
+*Images courtesy of Pexels*
