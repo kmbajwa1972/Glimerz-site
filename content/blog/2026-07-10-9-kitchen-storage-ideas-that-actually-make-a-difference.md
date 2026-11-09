@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /blog/2026-07-16-small-kitchen-organization-ideas-for-renters-no-drilling-required/
 title: 9 Kitchen Storage Ideas That Actually Make a Difference
 date: 2026-07-10T12:55:00.000-07:00
 description: A practical kitchen storage guide covering drawers, cabinets, pantry space, countertop clutter, measurements, installation choices, and how to choose the right organizer for each problem.
