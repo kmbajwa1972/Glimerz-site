@@ -10,6 +10,7 @@ categories:
   - Kitchen Accessories
 guest_post: true
 author: Ella Knight
+author_url: https://homeisdecor.com/
 ai_promo: ""
 youtube_format: short
 ---
