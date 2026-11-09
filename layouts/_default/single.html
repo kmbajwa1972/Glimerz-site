@@ -31,7 +31,8 @@
     {{ end }}
     <a href="{{ $backURL }}" class="back-link">← {{ $backLabel }}</a>
     <h1>{{ .Title }}</h1>
-    <div class="meta">Published on {{ .Date.Format "January 2, 2006" }}{{ if and .Params.guest_post .Params.author }} · Guest contributor: {{ .Params.author }}{{ end }}</div>
+    <div class="meta">Published on {{ .Date.Format "January 2, 2006" }}</div>
+    {{ if and .Params.guest_post .Params.author }}<p class="author-byline" style="font-style:italic;color:#777;font-size:.95rem;margin:-18px 0 28px;">By {{ .Params.author }}{{ with .Params.author_url }} · <a href="{{ . }}" target="_blank" rel="noopener">Home Is Decor</a>{{ end }}</p>{{ end }}
     <div class="author-note">Glimerz Editorial Team reviews articles for usefulness, clarity, originality, and relevance before publication. <a href="/editorial-policy/">Read our editorial policy.</a></div>
     {{ if .Params.image }}
       {{ if .Params.hero_link }}
