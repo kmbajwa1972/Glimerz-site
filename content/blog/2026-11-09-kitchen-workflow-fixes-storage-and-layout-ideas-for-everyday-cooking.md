@@ -70,3 +70,5 @@ What should change by Monday? Fewer steps per meal, because the things you need 
 Fix the workflow first and shop second. Buy the organizer only after the layout has earned it — then you will know exactly what you need, and the money will go to the one thing that actually saves steps.
 
 ![](/images/weekend-plan.webp)
+
+*By Ella Knight — [Home Is Decor](https://homeisdecor.com/).*
