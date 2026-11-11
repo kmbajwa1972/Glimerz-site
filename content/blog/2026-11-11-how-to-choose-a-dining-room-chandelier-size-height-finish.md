@@ -118,10 +118,8 @@ Before placing a custom order, put the measured table dimensions, finished ceili
 
 ---
 
-## Editorial and Installation Disclaimer
+## Disclaimer
 
-This article is provided for general home décor and lighting-planning information. The dimensions, clearances and hanging-height figures are starting guidelines and examples, not universal specifications. The correct choice depends on the actual table, room layout, fixture dimensions, ceiling conditions, light distribution and manufacturer instructions. Measure the actual fixture, including projecting arms and decorative elements, before making a purchase.
+Measurements are general guidelines; confirm fixture dimensions and installation requirements with the manufacturer. Electrical work and mounting should be handled by a qualified professional.
 
-Electrical work, mounting, wiring, ceiling support and installation must be assessed and completed by a qualified professional in accordance with applicable local requirements. Do not rely on this guide as a substitute for the fixture manufacturer's installation instructions, an on-site assessment or professional electrical advice. Glimerz and the contributor are not responsible for installation decisions made solely on the basis of this article.
-
-**Contributor disclosure:** This article was contributed by Xingbin Liu, who writes from HEMIAOLANY, a custom decorative lighting manufacturer in Zhongshan, China. The contributor's professional affiliation is disclosed for transparency. This article contains no paid product placement or promotional links.
+**Contributor disclosure:** Written by Xingbin Liu of HEMIAOLANY, a decorative lighting manufacturer in China.
