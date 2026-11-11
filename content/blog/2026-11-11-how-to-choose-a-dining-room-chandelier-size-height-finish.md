@@ -9,7 +9,7 @@ image: /images/picture1.png
 categories:
   - Home Decor
 guest_post: true
-author: Xingbin Liu, China
+author: Xingbin Liu
 products: []
 keywords: dining room chandelier, chandelier size guide, dining table lighting,
   chandelier hanging height, dining room lighting ideas, chandelier finishes
@@ -41,7 +41,7 @@ A round chandelier usually works well with either shape. Use the diameter of a r
 
 An elongated or linear chandelier can also work over a round table, but consider both its proportions and its light distribution. An overly long fixture may extend beyond the tabletop, while a narrow beam may leave the table edges dim. Even illumination also depends on the shades, beam angles and other lighting in the room; the fixture’s shape alone does not determine the result.
 
-![](/images/picture2.png)
+![A dining room with a chandelier above the dining table](/images/picture2.png)
 
 ### Rectangular and Oval Dining Tables
 
@@ -57,18 +57,18 @@ Elongated fixtures and linear chandeliers usually suit these tables, with the fi
 
 A rectangular table can also work with a round chandelier. For a table measuring 72 × 38 in (182.9 × 96.5 cm), using the shorter side as a starting point gives a fixture diameter of about 19–25.3 in (48.3–64.3 cm). To ensure the end seats receive enough light, also consider the light-source arrangement, shade openings and existing room lighting.
 
-![](/images/picture3.png)
+![A contemporary dining room with a linear chandelier](/images/picture3.png)
 
 ## How Much Space Is Left Between the Fixture and the Table Edges?
 
-Imagine the fixture’s outer outline as a paper shape laid on the tabletop. With the fixture centered, subtract its dimension from the table dimension in the same direction, then divide by two to find the clearance on each side. Include any projecting arms, glass or crystal when measuring the fixture.
+Imagine the fixture’s outer outline as a paper shape laid on the tabletop. With the fixture centred, subtract its dimension from the table dimension in the same direction, then divide by two to find the clearance on each side. Include any projecting arms, glass or crystal when measuring the fixture.
 
 * **Rectangular table:** clearance at each end = (table length − fixture length) ÷ 2; clearance along each side = (table width − fixture width) ÷ 2.
 * **Round table with a round fixture:** when both are centered on the same point, clearance on any side = (table diameter − fixture diameter) ÷ 2.
 
-  ![](/images/picture5.png)
-
 **Top-view example:** A 72 × 38 in (182.9 × 96.5 cm) table with a 40 × 10 in (101.6 × 25.4 cm) fixture leaves 16 in (40.6 cm) at each end and 14 in (35.6 cm) along each side. These measurements describe the fixture’s footprint only; actual illumination also depends on how the shades direct the light.
+
+![Diagram showing the clearance between a dining table and a centered chandelier](/images/picture5.png)
 
 ## Chandelier Height Above the Table
 
@@ -112,7 +112,7 @@ Once you have chosen the materials, consider the frame’s surface colour, sheen
 
 
 
-![](/images/picture4.png)
+![Comparison of brass-tone, matte black and chrome chandelier finishes](/images/picture4.png)
 
 To mix metals, let one finish echo the existing hardware and use another as an accent; every metal surface does not have to match. Look at a physical sample in daylight and under your evening dining lights, comparing its tone, reflectivity and brushing pattern. Warm light may make the metal look different from product photographs, and glossy surfaces reflect nearby wall and furniture colours. Confirm the sample reference, protective coating and cleaning instructions before ordering so the expected result is clearly defined.
 
@@ -122,7 +122,7 @@ To mix metals, let one finish echo the existing hardware and use another as an a
 
 ### Colour Temperature and Colour Rendering
 
-For a warm evening atmosphere, start by trying 2700 K. If you also read at the table or prefer white crockery to look a little crisper, compare it with 3000 K. Look at a white plate and a few tomato slices under both. If food and skin tones matter to you, prioritize a CRI of 90 or higher; compare R9 values as well if red colour rendering is especially important.
+For a warm evening atmosphere, start by trying 2700 K. If you also read at the table or prefer white crockery to look a little crisper, compare it with 3000 K. Look at a white plate and a few tomato slices under both. If food and skin tones matter to you, prioritise a CRI of 90 or higher; compare R9 values as well if red colour rendering is especially important.
 
 ### Dimming and Maintenance
 
