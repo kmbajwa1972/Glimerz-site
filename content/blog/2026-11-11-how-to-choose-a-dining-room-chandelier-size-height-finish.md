@@ -125,5 +125,3 @@ This article is provided for general home décor and lighting-planning informati
 Electrical work, mounting, wiring, ceiling support and installation must be assessed and completed by a qualified professional in accordance with applicable local requirements. Do not rely on this guide as a substitute for the fixture manufacturer's installation instructions, an on-site assessment or professional electrical advice. Glimerz and the contributor are not responsible for installation decisions made solely on the basis of this article.
 
 **Contributor disclosure:** This article was contributed by Xingbin Liu, who writes from HEMIAOLANY, a custom decorative lighting manufacturer in Zhongshan, China. The contributor's professional affiliation is disclosed for transparency. This article contains no paid product placement or promotional links.
-
-**Image note:** Interior and finish visuals accompanying this guide are illustrative and should not be interpreted as photographs of completed HEMIAOLANY projects or as exact representations of a product finish.
