@@ -9,11 +9,11 @@ image: /images/picture1.png
 categories:
   - Home Decor
 guest_post: true
-author: Xingbin Liu
+author: Xingbin Lu, China
 products: []
 keywords: dining room chandelier, chandelier size guide, dining table lighting,
   chandelier hanging height, dining room lighting ideas, chandelier finishes
-author_bio: Xingbin Liu writes from HEMIAOLANY, a custom decorative lighting
+author_bio: Xingbin Lu writes from HEMIAOLANY, a custom decorative lighting
   manufacturer in Zhongshan, China, serving hotels, restaurants and homes.
 mid_products: []
 ---
