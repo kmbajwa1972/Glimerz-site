@@ -21,6 +21,10 @@ mid_products:
     affiliate_link: https://amzn.to/4gt5hh8?tag=hunterpro0e-20
     photo: https://m.media-amazon.com/images/I/6149ljNgWrL._AC_SL1500_.jpg
 ai_promo: ""
+aliases:
+  - "/blog/2026-09-01-paint-finish-mistakes-that-can-make-a-room-look-worse---and-what-to-use-instead/"
+  - "/blog/2026-08-13-choosing-the-right-paint-finish-matte-eggshell-satin-and-semi-gloss-explained/"
+
 ---
 Choosing paint usually begins with color, but the finish can be just as important to the final appearance. Matte, eggshell, satin, and semi-gloss do not simply create different amounts of shine. They also change how strongly light reflects from the surface and how forgiving the paint may be when the wall has small imperfections.
 
