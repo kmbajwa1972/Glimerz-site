@@ -1,48 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics (GA4) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fdfbf7">
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="This Glimerz page could not be found. Visit our home, home decor, kitchen and discovery pages.">
+    <title>Page Not Found | Glimerz</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- GA4: record 404 visits without counting them as ordinary page views. -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-60HKERB91Z"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag(){ window.dataLayer.push(arguments); }
       gtag("js", new Date());
       gtag("config", "G-60HKERB91Z", { send_page_view: false });
       gtag("event", "page_not_found", {
         page_location: window.location.href,
         page_path: window.location.pathname,
+        page_title: document.title,
         page_referrer: document.referrer || "(direct)"
       });
     </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <meta charset="UTF-8">
-    <title>Page Not Found | Glimerz</title>
-    <meta name="robots" content="noindex, follow">
+
     <style>
-        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; background: #fdfbf7; color: #2c2c2c; }
-        .wrapper { max-width: 600px; margin: 100px auto; text-align: center; padding: 40px 20px; }
-        h1 { font-size: 5rem; margin: 0; color: #aa8453; font-weight: 400; }
-        h2 { font-size: 1.6rem; font-weight: 400; margin: 10px 0 20px; }
-        p { color: #666; font-size: 1.05rem; margin-bottom: 30px; }
-        .btn { display: inline-block; padding: 12px 28px; background: #aa8453; color: #fff; text-decoration: none; border-radius: 4px; font-size: 0.95rem; letter-spacing: 0.5px; }
-        .btn:hover { background: #8a6a41; }
-        .links { margin-top: 25px; font-size: 0.9rem; }
-        .links a { color: #aa8453; text-decoration: none; margin: 0 10px; }
+      :root {
+        color-scheme: light;
+        --ink: #292720;
+        --muted: #706b62;
+        --gold: #aa8453;
+        --paper: #fdfbf7;
+        --line: #e9e1d6;
+      }
+      * { box-sizing: border-box; }
+      body {
+        min-height: 100vh;
+        margin: 0;
+        padding: 24px;
+        display: grid;
+        place-items: center;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+      main {
+        width: min(100%, 680px);
+        padding: clamp(30px, 7vw, 64px) clamp(22px, 6vw, 56px);
+        text-align: center;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: 0 18px 60px rgba(54, 43, 28, .06);
+      }
+      .brand {
+        display: inline-block;
+        margin-bottom: 28px;
+        color: var(--ink);
+        font-family: Georgia, serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: .24em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .code {
+        margin: 0;
+        color: var(--gold);
+        font-family: Georgia, serif;
+        font-size: clamp(5rem, 18vw, 8rem);
+        font-weight: 400;
+        line-height: .95;
+        letter-spacing: -.06em;
+      }
+      h1 {
+        margin: 18px 0 10px;
+        font-family: Georgia, serif;
+        font-size: clamp(1.6rem, 5vw, 2.15rem);
+        font-weight: 400;
+      }
+      .message {
+        max-width: 480px;
+        margin: 0 auto;
+        color: var(--muted);
+        font-size: 1rem;
+      }
+      .home-link {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 28px;
+        padding: 12px 25px;
+        border: 1px solid var(--gold);
+        border-radius: 999px;
+        background: var(--gold);
+        color: #fff;
+        font-size: .92rem;
+        font-weight: 650;
+        text-decoration: none;
+        transition: background .18s ease, border-color .18s ease;
+      }
+      .home-link:hover { background: #8a6a41; border-color: #8a6a41; }
+      .home-link:focus-visible, .quick-links a:focus-visible, .brand:focus-visible {
+        outline: 3px solid #292720;
+        outline-offset: 4px;
+      }
+      .quick-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 24px;
+        margin-top: 30px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+      }
+      .quick-links a {
+        color: #80613b;
+        font-size: .92rem;
+        text-decoration: none;
+      }
+      .quick-links a:hover { text-decoration: underline; }
+      @media (max-width: 480px) {
+        body { padding: 14px; }
+        main { border-radius: 18px; }
+        .quick-links { gap: 12px 18px; }
+      }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <h1>404</h1>
-        <h2>This page wandered off</h2>
-        <p>The page you're looking for doesn't exist or may have moved. Let's get you back to the good stuff.</p>
-        <a href="/" class="btn">Back to Homepage</a>
-        <div class="links">
-            <a href="/categories/home-decor/">Home Decor</a> ·
-            <a href="/categories/kitchen-accessories/">Kitchen Accessories</a> ·
-            <a href="/discover/">Discover</a>
-        </div>
-    </div>
+    <main>
+      <a class="brand" href="/" aria-label="Glimerz home">Glimerz</a>
+      <p class="code" aria-hidden="true">404</p>
+      <h1>This page couldn’t be found</h1>
+      <p class="message">The address may be incorrect, or the page may have moved. Try one of the links below to continue exploring Glimerz.</p>
+      <a class="home-link" href="/">Back to Homepage</a>
+      <nav class="quick-links" aria-label="Explore Glimerz">
+        <a href="/home-decor/">Home &amp; Decor</a>
+        <a href="/kitchen/">Kitchen</a>
+        <a href="/discover/">Discover</a>
+      </nav>
+    </main>
 </body>
 </html>
