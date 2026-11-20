@@ -1,4 +1,4 @@
-{{ if .IsPage }}
+{{ if and .IsPage (eq .Section "blog") }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -25,10 +25,10 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Glimerz",
-  "url": "https://glimerz.com",
-  "description": "Curated home decor and kitchen inspiration, practical guidance, and carefully selected product recommendations.",
+  "@type": "{{ if .IsHome }}WebSite{{ else }}WebPage{{ end }}",
+  "name": {{ if .Title }}{{ .Title | jsonify }}{{ else }}"Glimerz"{{ end }},
+  "url": {{ .Permalink | jsonify }},
+  "description": {{ if .Params.description }}{{ .Params.description | jsonify }}{{ else }}"Curated home decor and kitchen inspiration, practical guidance, and carefully selected product recommendations."{{ end }},
   "publisher": { "@type": "Organization", "name": "Glimerz", "url": "https://glimerz.com" }
 }
 </script>
