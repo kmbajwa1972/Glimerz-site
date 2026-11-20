@@ -14,8 +14,9 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} | Glimerz</title>
+    <title>{{ if strings.HasSuffix .Title " | Glimerz" }}{{ .Title }}{{ else }}{{ .Title }} | Glimerz{{ end }}</title>
     {{ partial "seo-meta.html" . }}
+    {{ partial "article-jsonld.html" . }}
     <style>
         body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; background: #fdfbf7; color: #2c2c2c; }
         .wrapper { max-width: 700px; margin: 60px auto; background: #fff; padding: 50px; box-shadow: 0 6px 20px rgba(170,132,83,0.04); border: 1px solid #f4f0ea; border-radius: 4px; }
