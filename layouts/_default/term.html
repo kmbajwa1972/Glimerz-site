@@ -23,8 +23,8 @@
     <title>Redirecting to {{ .Title }} | Glimerz</title>
     <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="{{ $redirect | absURL }}">
-    <meta http-equiv="refresh" content="0; url={{ $redirect }}">
-    <script>window.location.replace({{ $redirect | jsonify }});</script>
+    <meta http-equiv="refresh" content="0; url={{ $redirect | absURL }}">
+    <script>window.location.replace("{{ $redirect }}");</script>
     {{ else }}
     <title>{{ if strings.HasSuffix .Title " | Glimerz" }}{{ .Title }}{{ else }}{{ .Title }} | Glimerz{{ end }}</title>
     {{ partial "seo-meta.html" . }}
