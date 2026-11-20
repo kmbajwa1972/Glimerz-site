@@ -24,7 +24,7 @@
         }
 
 
-        /* Force a consistent 200px desktop image height for all four images in the colander article */
+        /* Set all four colander article images to 300px on desktop */
         img[src*="colanders-03.jpg"],
         .content img[src*="colanders-01.jpg"],
         .content img[src*="colander-02.jpg"],
@@ -32,14 +32,14 @@
           display:block;
           width:100%;
           max-width:620px;
-          height:200px !important;
-          max-height:200px !important;
+          height:300px !important;
+          max-height:300px !important;
           object-fit:cover;
           object-position:center;
           margin:1.5em auto;
         }
         img[src*="colanders-03.jpg"]{margin:24px auto 30px;}
-    </style>
+        </style>
 </head>
 <body>
 <div class="wrapper{{ if eq .File.BaseFileName "2026-11-20-colanders-strainers-and-sieves-choose-the-right-one-for-your-kitchen" }} article-colanders{{ end }}">
