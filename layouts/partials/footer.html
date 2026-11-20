@@ -12,7 +12,7 @@
 <script>
 (function () {
   const SUPABASE_URL = "https://yayljmqelmsmcsuhxqdj.supabase.co";
-  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ5YXlsam1xZWxtc21jc3VoeHFkaiIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzgzNzg1MjkzLCJleHAiOjIwOTkzNjEyOTN9.XITDKls3bKtsXVssJuGQvy8iE4gwl2VtDF1F3dbrDcs";
+  const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_cerBO9K4A2_psSMvTFP8bw_QSSIgtb2";
   const form = document.getElementById("glimerz-newsletter-form");
   const emailInput = document.getElementById("glimerz-newsletter-email");
   const message = document.getElementById("glimerz-newsletter-message");
@@ -23,10 +23,10 @@
     message.style.color = "#777";
     message.textContent = "Submitting…";
     try {
-      const res = await fetch(`${SUPABASE_URL}/rest/v1/newsletter_subscribers`, { method: "POST", headers: { "Content-Type": "application/json", apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}`, Prefer: "return=minimal" }, body: JSON.stringify({ email: email, source: "glimerz.com" }) });
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/newsletter_subscribers`, { method: "POST", headers: { "Content-Type": "application/json", apikey: SUPABASE_PUBLISHABLE_KEY, Prefer: "return=minimal" }, body: JSON.stringify({ email: email, source: "glimerz.com" }) });
       if (res.ok) { message.style.color = "green"; message.textContent = "You're subscribed! Thanks for joining."; emailInput.value = ""; }
       else if (res.status === 409) { message.style.color = "#a86b00"; message.textContent = "You're already subscribed!"; }
-      else { message.style.color = "red"; message.textContent = "Something went wrong. Please try again."; }
+      else { const detail = await res.json().catch(() => ({})); console.error("Glimerz newsletter signup failed:", res.status, detail); message.style.color = "red"; message.textContent = res.status === 401 ? "Newsletter service configuration error. Please try again later." : "Something went wrong. Please try again."; }
     } catch (err) { message.style.color = "red"; message.textContent = "Network error. Please try again."; }
   });
 })();
