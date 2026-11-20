@@ -21,6 +21,9 @@ mid_products:
     affiliate_link: https://link.amazon/B0bq71tN0?tag=hunterpro0e-20
     photo: https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/81uilbZvOeL._AC_SL1500_.jpg
 ai_promo: ""
+aliases:
+  - "/blog/2026-09-14-how-to-make-your-home-feel-more-expensive-without-spending-a-fortune/Umbra Prisma Picture Frame"
+
 ---
 There is a certain feeling you get when you walk into a beautifully decorated home. It may not be filled with expensive furniture or designer accessories, and there may not be anything particularly extravagant about it. Yet somehow, everything seems to work together—the lighting feels comfortable, the furniture looks balanced, the colors feel connected, and the room has just enough personality without becoming crowded.
 
