@@ -14,8 +14,19 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>{{ .Title }} | Glimerz</title>
+    {{ $redirect := "" }}
+    {{ if eq (lower .Title) "home decor" }}{{ $redirect = "/home-decor/" }}{{ end }}
+    {{ if eq (lower .Title) "kitchen accessories" }}{{ $redirect = "/kitchen/" }}{{ end }}
+    {{ if $redirect }}
+    <title>Redirecting to {{ .Title }} | Glimerz</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="{{ $redirect | absURL }}">
+    <meta http-equiv="refresh" content="0; url={{ $redirect }}">
+    <script>window.location.replace({{ $redirect | jsonify }});</script>
+    {{ else }}
+    <title>{{ if strings.HasSuffix .Title " | Glimerz" }}{{ .Title }}{{ else }}{{ .Title }} | Glimerz{{ end }}</title>
     {{ partial "seo-meta.html" . }}
+    {{ end }}
     <style>
         body { font-family: 'Georgia', serif; margin: 0; padding: 0; color: #2c2c2c; background: #fdfbf7; }
         header { text-align: center; padding: 60px 20px; background: #fff; border-bottom: 1px solid #f4f0ea; }
