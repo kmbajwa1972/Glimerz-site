@@ -14,9 +14,11 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+    {{ $termSlug := urlize .Data.Term }}
+    {{ $titleSlug := urlize .Title }}
     {{ $redirect := "" }}
-    {{ if eq (lower .Title) "home decor" }}{{ $redirect = "/home-decor/" }}{{ end }}
-    {{ if eq (lower .Title) "kitchen accessories" }}{{ $redirect = "/kitchen/" }}{{ end }}
+    {{ if or (eq $termSlug "home-decor") (eq $titleSlug "home-decor") }}{{ $redirect = "/home-decor/" }}{{ end }}
+    {{ if or (eq $termSlug "kitchen-accessories") (eq $titleSlug "kitchen-accessories") }}{{ $redirect = "/kitchen/" }}{{ end }}
     {{ if $redirect }}
     <title>Redirecting to {{ .Title }} | Glimerz</title>
     <meta name="robots" content="noindex, follow">
@@ -41,6 +43,13 @@
     </style>
 </head>
 <body>
+    {{ if $redirect }}
+    <main class="container">
+        <h1>This category has moved</h1>
+        <p>You are being redirected to the updated Glimerz page.</p>
+        <p><a href="{{ $redirect }}">Continue to {{ if eq $redirect "/home-decor/" }}Home Decor{{ else }}Kitchen{{ end }}</a></p>
+    </main>
+    {{ else }}
     <header>
         <h1>{{ .Title }}</h1>
     </header>
@@ -61,5 +70,6 @@
         {{ end }}
     </div>
     {{ partial "footer.html" . }}
+    {{ end }}
 </body>
 </html>
