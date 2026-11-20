@@ -7,7 +7,12 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag("js", new Date());
-      gtag("config", "G-60HKERB91Z");
+      gtag("config", "G-60HKERB91Z", { send_page_view: false });
+      gtag("event", "page_not_found", {
+        page_location: window.location.href,
+        page_path: window.location.pathname,
+        page_referrer: document.referrer || "(direct)"
+      });
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
